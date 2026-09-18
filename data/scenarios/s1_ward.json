@@ -1,0 +1,147 @@
+{
+  "scenario": "s1_ward",
+  "title": "Ward deterioration huddle",
+  "setting": "Acute medical ward, 20 inpatients, evening safety huddle. Charted observations plus the nurse's latest progress note.",
+  "cases": [
+    {
+      "patient": "ad0c082f",
+      "admission": "Inferior STEMI, day 3 post primary PCI",
+      "obs": {"rr": 16, "spo2": 97, "on_o2": false, "sbp": 124, "hr": 68, "temp": 36.7, "acvpu": "A", "spo2_scale": 1},
+      "note": "Chest pain free since PCI. Mobilised to bathroom independently, walked the corridor with physio. Radial site clean, no haematoma. BMs 7-9 on usual insulin. Eating and drinking well. Wife visited. Plan cardiac rehab referral, likely home tomorrow.",
+      "reference": {"new_confusion": false, "infection": false, "concern": 0, "pattern": ["no_acute_change"]}
+    },
+    {
+      "patient": "8f31c869",
+      "admission": "Unwitnessed fall at home, on warfarin for AF",
+      "obs": {"rr": 14, "spo2": 96, "on_o2": false, "sbp": 168, "hr": 58, "temp": 36.8, "acvpu": "V", "spo2_scale": 1},
+      "note": "Complained of a headache after lunch, which is unusual for him. Now much harder to rouse for evening meds, only opens eyes when I call his name loudly, and speech is slurred. Left pupil looked sluggish compared to right. INR on admission 3.4. Has not had a CT head yet.",
+      "reference": {"new_confusion": true, "infection": false, "concern": 3, "pattern": ["neurological", "bleeding"]}
+    },
+    {
+      "patient": "8853bb83",
+      "admission": "Infective exacerbation of COPD, day 4 of antibiotics",
+      "obs": {"rr": 22, "spo2": 90, "on_o2": true, "sbp": 128, "hr": 96, "temp": 37.6, "acvpu": "A", "spo2_scale": 2},
+      "note": "Target saturations 88-92% per respiratory team, sats 90% on 2L nasal specs. Talking in full sentences, sputum now white rather than green. Daughter says breathing is back to her usual. Mobilising to commode with frame. Continue current plan and oral antibiotics.",
+      "reference": {"new_confusion": false, "infection": true, "concern": 1, "pattern": ["respiratory", "no_acute_change"]}
+    },
+    {
+      "patient": "f64ff720",
+      "admission": "Hypercalcaemia secondary to multiple myeloma, on IV fluids",
+      "obs": {"rr": 18, "spo2": 95, "on_o2": false, "sbp": 112, "hr": 98, "temp": 37.2, "acvpu": "A", "spo2_scale": 1},
+      "note": "Non-verbal at baseline (cerebral palsy, learning disability). Her carer of 10 years says she is much quieter than usual this afternoon, not responding to her music which normally makes her smile, and she pushed away her drinks. Grimacing when turned. Hard to assess pain. Carer is worried.",
+      "reference": {"new_confusion": true, "infection": false, "concern": 2, "pattern": ["metabolic_renal", "other"], "ambiguous": ["new_confusion"]}
+    },
+    {
+      "patient": "8f23e265",
+      "admission": "NSTEMI, awaiting angiography",
+      "obs": {"rr": 20, "spo2": 95, "on_o2": false, "sbp": 104, "hr": 102, "temp": 36.5, "acvpu": "A", "spo2_scale": 1},
+      "note": "Called at 03:00 with central chest tightness radiating to his jaw, clammy and grey. GTN spray x2 with only partial relief, still rating pain 6/10. ECG done and attached to notes, awaiting doctor review.",
+      "reference": {"new_confusion": false, "infection": false, "concern": 3, "pattern": ["cardiac"]}
+    },
+    {
+      "patient": "9beecf02",
+      "admission": "Elective admission for respite and medication review",
+      "obs": {"rr": 16, "spo2": 97, "on_o2": false, "sbp": 132, "hr": 72, "temp": 36.6, "acvpu": "A", "spo2_scale": 1},
+      "note": "Known Alzheimer's dementia. Care home report he is always pleasantly confused and orientated to person only, and that is how he is tonight. Settled, ate all his dinner, watching TV. No change from his baseline.",
+      "reference": {"new_confusion": false, "infection": false, "concern": 0, "pattern": ["no_acute_change"]}
+    },
+    {
+      "patient": "ca427bc4",
+      "admission": "Right total knee replacement, post-op day 1",
+      "obs": {"rr": 16, "spo2": 96, "on_o2": false, "sbp": 138, "hr": 92, "temp": 37.4, "acvpu": "A", "spo2_scale": 1},
+      "note": "Pain controlled on regular paracetamol and PRN oxycodone. Mobilised with physio using a frame. Wound dressing dry and intact. Passed urine. Tolerating diet. No concerns.",
+      "reference": {"new_confusion": false, "infection": false, "concern": 0, "pattern": ["no_acute_change"]}
+    },
+    {
+      "patient": "1c3d69ba",
+      "admission": "Pyelonephritis, day 2",
+      "obs": {"rr": 24, "spo2": 94, "on_o2": false, "sbp": 96, "hr": 118, "temp": 38.6, "acvpu": "A", "spo2_scale": 1},
+      "note": "Spiked 38.6 with rigors at 14:00. This afternoon she thinks she is at home and keeps trying to climb out of bed; this morning she was chatting and knew she was in hospital. Urine output 15 ml/hr for the last 3 hours. Blood cultures taken.",
+      "reference": {"new_confusion": true, "infection": true, "concern": 3, "pattern": ["sepsis_infection"]}
+    },
+    {
+      "patient": "77a3db04",
+      "admission": "Fractured neck of femur, post-op day 2 hemiarthroplasty",
+      "obs": {"rr": 18, "spo2": 95, "on_o2": false, "sbp": 132, "hr": 94, "temp": 37.4, "acvpu": "A", "spo2_scale": 1},
+      "note": "Has Alzheimer's, but his son says he is normally chatty and knows he lives at the nursing home. Today he is muddled, picking at the sheets, pulled out his cannula and thinks it is 1970. Did not sleep last night. Bowels not opened for 4 days.",
+      "reference": {"new_confusion": true, "infection": false, "concern": 2, "pattern": ["neurological", "other"]}
+    },
+    {
+      "patient": "86a5dd2a",
+      "admission": "Acute kidney injury on CKD stage 3",
+      "obs": {"rr": 9, "spo2": 91, "on_o2": false, "sbp": 110, "hr": 64, "temp": 36.2, "acvpu": "V", "spo2_scale": 1},
+      "note": "Drowsy, only rousable to voice. Pupils pinpoint. Had PRN oxycodone three times overnight on top of his regular tramadol. Creatinine has risen since admission. Breathing slow and shallow.",
+      "reference": {"new_confusion": true, "infection": false, "concern": 3, "pattern": ["drug_or_substance", "respiratory"]}
+    },
+    {
+      "patient": "b0eefa7b",
+      "admission": "Fall at home, no injury, awaiting OT assessment",
+      "obs": {"rr": 18, "spo2": 96, "on_o2": false, "sbp": 124, "hr": 92, "temp": 37.3, "acvpu": "A", "spo2_scale": 1},
+      "note": "Observations within normal limits. Daughter visited and is worried: 'Mum's just not right, she's not herself, she didn't even ask about the cat.' Off her food today. Mentioned some discomfort low in her tummy when passing urine. History of recurrent UTIs.",
+      "reference": {"new_confusion": true, "infection": true, "concern": 2, "pattern": ["sepsis_infection"], "ambiguous": ["new_confusion", "infection"]}
+    },
+    {
+      "patient": "c951b524",
+      "admission": "Acute asthma, day 2",
+      "obs": {"rr": 20, "spo2": 95, "on_o2": false, "sbp": 138, "hr": 104, "temp": 36.9, "acvpu": "A", "spo2_scale": 1},
+      "note": "Wheeze much improved after nebulisers. Peak flow 65% of predicted, up from 40% on admission. Talking in full sentences. Slight tremor from salbutamol. Keen to go home.",
+      "reference": {"new_confusion": false, "infection": false, "concern": 0, "pattern": ["no_acute_change", "respiratory"]}
+    },
+    {
+      "patient": "2030b2b1",
+      "admission": "Chest infection; on warfarin for AF",
+      "obs": {"rr": 20, "spo2": 97, "on_o2": false, "sbp": 98, "hr": 112, "temp": 36.4, "acvpu": "A", "spo2_scale": 1},
+      "note": "Two episodes of black, tarry stool overnight. Feels dizzy on standing and looks pale. INR this morning 4.2. Has been taking his own ibuprofen from home for knee pain.",
+      "reference": {"new_confusion": false, "infection": true, "concern": 3, "pattern": ["bleeding"], "ambiguous": ["infection"]}
+    },
+    {
+      "patient": "67d3388a",
+      "admission": "Syncope under investigation, on telemetry",
+      "obs": {"rr": 16, "spo2": 96, "on_o2": false, "sbp": 118, "hr": 62, "temp": 36.5, "acvpu": "A", "spo2_scale": 1},
+      "note": "Another dizzy episode on the commode at 19:30 with a brief loss of consciousness, about 10 seconds. Heart rate dropped to 38 on the monitor at the time. Now back in the 60s, chatty and says she feels fine.",
+      "reference": {"new_confusion": false, "infection": false, "concern": 2, "pattern": ["cardiac"]}
+    },
+    {
+      "patient": "7da43fe0",
+      "admission": "NSTEMI, day 2",
+      "obs": {"rr": 22, "spo2": 96, "on_o2": false, "sbp": 158, "hr": 116, "temp": 37.9, "acvpu": "A", "spo2_scale": 1},
+      "note": "Agitated, sweaty and tremulous. Keeps asking for 'his pills'. Says there are spiders on the wall. Family say he takes extra hydrocodone at home and drinks most days; last drink unknown.",
+      "reference": {"new_confusion": true, "infection": false, "concern": 3, "pattern": ["drug_or_substance", "neurological"]}
+    },
+    {
+      "patient": "92654176",
+      "admission": "Dehydration and AKI after gastroenteritis",
+      "obs": {"rr": 16, "spo2": 97, "on_o2": false, "sbp": 134, "hr": 76, "temp": 36.6, "acvpu": "A", "spo2_scale": 1},
+      "note": "Diarrhoea has settled. Drinking well, fluid balance positive 800 ml today. Creatinine improving on this morning's bloods. Walking to the bathroom independently.",
+      "reference": {"new_confusion": false, "infection": false, "concern": 0, "pattern": ["no_acute_change"]}
+    },
+    {
+      "patient": "50e65e92",
+      "admission": "Community-acquired pneumonia",
+      "obs": {"rr": 28, "spo2": 91, "on_o2": true, "sbp": 118, "hr": 108, "temp": 38.3, "acvpu": "A", "spo2_scale": 1},
+      "note": "Now on 4L oxygen, was on 2L this morning. Breathing faster and using her neck muscles to breathe. More drowsy since lunch, not really engaging. Coughing up green sputum.",
+      "reference": {"new_confusion": true, "infection": true, "concern": 3, "pattern": ["respiratory", "sepsis_infection"]}
+    },
+    {
+      "patient": "dd6bbdbe",
+      "admission": "Diabetic foot cellulitis, on IV antibiotics",
+      "obs": {"rr": 16, "spo2": 97, "on_o2": false, "sbp": 136, "hr": 80, "temp": 36.8, "acvpu": "A", "spo2_scale": 1},
+      "note": "Redness has receded well inside the marked line. Afebrile for 24 hours, pain improved. BMs 14-18 today; not eating hospital food and snacking from the shop. Diabetes nurse aware.",
+      "reference": {"new_confusion": false, "infection": true, "concern": 1, "pattern": ["no_acute_change", "metabolic_renal"]}
+    },
+    {
+      "patient": "ff269b67",
+      "admission": "Community-acquired pneumonia, day 4",
+      "obs": {"rr": 16, "spo2": 96, "on_o2": false, "sbp": 128, "hr": 74, "temp": 36.7, "acvpu": "A", "spo2_scale": 1},
+      "note": "No chest pain. No shortness of breath. No confusion. No fevers overnight. Denies rigors. Does not look septic. Eating and drinking. Plan home tomorrow if bloods OK.",
+      "reference": {"new_confusion": false, "infection": false, "concern": 0, "pattern": ["no_acute_change"], "ambiguous": ["infection"]}
+    },
+    {
+      "patient": "487e5045",
+      "admission": "Fall with head strike, head injury observations",
+      "obs": {"rr": 16, "spo2": 97, "on_o2": false, "sbp": 142, "hr": 70, "temp": 36.6, "acvpu": "A", "spo2_scale": 1},
+      "note": "Hourly head injury obs: GCS dropped from 15 to 14 at 22:00 (E4 V4 M6), now muddled about where she is. Vomited twice. Says this headache is worse than her usual migraines.",
+      "reference": {"new_confusion": true, "infection": false, "concern": 3, "pattern": ["neurological"]}
+    }
+  ]
+}

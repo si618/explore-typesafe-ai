@@ -1,0 +1,416 @@
+{
+  "scenario": "s2_discharge",
+  "title": "Discharge medication reconciliation",
+  "setting": "Pharmacy discharge check. Pre-admission medications come from the FHIR record; the discharge summary medication section is free text written by the discharging doctor.",
+  "cases": [
+    {
+      "patient": "7608e330",
+      "admission": "Left lower leg cellulitis",
+      "discharge_text": "Cellulitis improving on IV flucloxacillin. Step down to oral co-amoxiclav 875/125 mg twice daily for 5 more days. Doxycycline course completed, stopped. All other regular medications continued unchanged.",
+      "reference": {
+        "med_status": {
+          "hydrochlorothiazide": "continued",
+          "metformin": "continued",
+          "clopidogrel": "continued",
+          "simvastatin": "continued",
+          "metoprolol": "continued",
+          "nitroglycerin": "continued",
+          "doxycycline": "stopped",
+          "fexofenadine": "continued",
+          "epinephrine": "continued",
+          "hydrocortisone": "continued"
+        },
+        "allergy_conflict": true,
+        "duplicate_therapy": false,
+        "interaction": false,
+        "justification": 2
+      }
+    },
+    {
+      "patient": "98022319",
+      "admission": "Pyelonephritis with acute kidney injury",
+      "discharge_text": "Naproxen STOPPED: acute kidney injury, avoid NSAIDs. New: cefalexin 500 mg three times daily for 7 days to complete treatment of pyelonephritis. Continue clopidogrel, simvastatin, metoprolol, GTN spray, NuvaRing, hydrocortisone cream and chlorphenamine as before. Hydrocodone/paracetamol reduced to as needed only, maximum 4 tablets a day, while kidney function recovers.",
+      "reference": {
+        "med_status": {
+          "nuvaring": "continued",
+          "hydrocodone": "dose_changed",
+          "clopidogrel": "continued",
+          "simvastatin": "continued",
+          "metoprolol": "continued",
+          "nitroglycerin": "continued",
+          "naproxen": "stopped",
+          "hydrocortisone": "continued",
+          "chlorpheniramine": "continued"
+        },
+        "allergy_conflict": false,
+        "duplicate_therapy": false,
+        "interaction": false,
+        "justification": 3
+      }
+    },
+    {
+      "patient": "e2aaac15",
+      "admission": "Delirium secondary to anticholinergic burden",
+      "discharge_text": "Diphenhydramine STOPPED: strongly anticholinergic, likely contributed to delirium in the context of Alzheimer's disease. New: melatonin 2 mg at night for sleep. Continue simvastatin 20 mg, lisinopril, amlodipine, donepezil/memantine, clopidogrel, metoprolol and GTN spray.",
+      "reference": {
+        "med_status": {
+          "simvastatin 10": "not_mentioned",
+          "lisinopril": "continued",
+          "amlodipine": "continued",
+          "donepezil": "continued",
+          "clopidogrel": "continued",
+          "simvastatin 20": "continued",
+          "metoprolol": "continued",
+          "nitroglycerin": "continued",
+          "diphenhydramine": "stopped"
+        },
+        "allergy_conflict": false,
+        "duplicate_therapy": false,
+        "interaction": false,
+        "justification": 3,
+        "ambiguous": [
+          "duplicate_therapy"
+        ]
+      }
+    },
+    {
+      "patient": "b6a57ee2",
+      "admission": "NSTEMI",
+      "discharge_text": "Continue all regular medications. New: atorvastatin 80 mg at night.",
+      "reference": {
+        "med_status": {
+          "simvastatin 10": "continued",
+          "lisinopril": "continued",
+          "clopidogrel": "continued",
+          "simvastatin 20": "continued",
+          "metoprolol": "continued",
+          "nitroglycerin": "continued",
+          "naproxen": "continued",
+          "aspirin": "continued",
+          "propranolol": "continued",
+          "rosuvastatin": "continued",
+          "prasugrel": "continued"
+        },
+        "allergy_conflict": false,
+        "duplicate_therapy": true,
+        "interaction": false,
+        "justification": 0
+      }
+    },
+    {
+      "patient": "5f37c925",
+      "admission": "NSTEMI treated with PCI",
+      "discharge_text": "Alteplase: inpatient only, not continued. Lovastatin and simvastatin STOPPED, replaced by atorvastatin 80 mg (high-intensity statin after NSTEMI). Clopidogrel STOPPED as now on prasugrel 10 mg with aspirin 81 mg (dual antiplatelet therapy for 12 months). Propranolol STOPPED: duplicate beta-blocker, continue metoprolol. Continue amlodipine/benazepril and GTN spray.",
+      "reference": {
+        "med_status": {
+          "simvastatin": "stopped",
+          "metoprolol": "continued",
+          "nitroglycerin": "continued",
+          "aspirin": "continued",
+          "propranolol": "stopped",
+          "lovastatin": "stopped",
+          "benazepril": "continued",
+          "prasugrel": "continued",
+          "clopidogrel": "stopped",
+          "alteplase": "stopped"
+        },
+        "allergy_conflict": false,
+        "duplicate_therapy": false,
+        "interaction": false,
+        "justification": 3
+      }
+    },
+    {
+      "patient": "011fd88e",
+      "admission": "Acute asthma with lower respiratory tract infection",
+      "discharge_text": "Penicillin allergy noted. New: clarithromycin 500 mg twice daily for 5 days. New: prednisolone 40 mg once daily for 5 days then stop. Continue hydrochlorothiazide, lisinopril, budesonide, salbutamol nebules, Natazia and chlorphenamine.",
+      "reference": {
+        "med_status": {
+          "hydrochlorothiazide": "continued",
+          "lisinopril": "continued",
+          "budesonide": "continued",
+          "albuterol": "continued",
+          "natazia": "continued",
+          "chlorpheniramine": "continued"
+        },
+        "allergy_conflict": false,
+        "duplicate_therapy": false,
+        "interaction": false,
+        "justification": 2
+      }
+    },
+    {
+      "patient": "9dd09d0d",
+      "admission": "Anterior STEMI treated with PCI",
+      "discharge_text": "Bisoprolol/hydrochlorothiazide STOPPED: duplicate beta-blocker, continue metoprolol succinate 100 mg. Simvastatin STOPPED, continue atorvastatin 20 mg. Clopidogrel STOPPED; dual antiplatelet therapy is aspirin 81 mg plus prasugrel 10 mg for 12 months. Continue lisinopril and GTN spray.",
+      "reference": {
+        "med_status": {
+          "clopidogrel": "stopped",
+          "simvastatin": "stopped",
+          "metoprolol": "continued",
+          "nitroglycerin": "continued",
+          "aspirin": "continued",
+          "bisoprolol": "stopped",
+          "atorvastatin": "continued",
+          "lisinopril": "continued",
+          "prasugrel": "continued"
+        },
+        "allergy_conflict": false,
+        "duplicate_therapy": false,
+        "interaction": false,
+        "justification": 3
+      }
+    },
+    {
+      "patient": "c9fb242a",
+      "admission": "Fall with distal radius fracture",
+      "discharge_text": "New: oxycodone 5 mg every 4 hours as needed for wrist pain. Continue diphenhydramine 25 mg at night for sleep. Continue simvastatin, hydrochlorothiazide, amlodipine, alendronic acid and hydrocortisone cream.",
+      "reference": {
+        "med_status": {
+          "simvastatin": "continued",
+          "hydrochlorothiazide": "continued",
+          "amlodipine": "continued",
+          "alendronic": "continued",
+          "diphenhydramine": "continued",
+          "hydrocortisone": "continued"
+        },
+        "allergy_conflict": false,
+        "duplicate_therapy": false,
+        "interaction": true,
+        "justification": 1,
+        "ambiguous": [
+          "interaction"
+        ]
+      }
+    },
+    {
+      "patient": "3699ce0c",
+      "admission": "Lower respiratory tract infection",
+      "discharge_text": "New: clarithromycin 500 mg twice daily for 7 days for chest infection. Continue all other medications.",
+      "reference": {
+        "med_status": {
+          "hydrochlorothiazide": "continued",
+          "lisinopril": "continued",
+          "alendronic": "continued",
+          "clopidogrel": "continued",
+          "simvastatin": "continued",
+          "metoprolol": "continued",
+          "nitroglycerin": "continued",
+          "clonazepam": "continued"
+        },
+        "allergy_conflict": false,
+        "duplicate_therapy": false,
+        "interaction": true,
+        "justification": 1
+      }
+    },
+    {
+      "patient": "8dfcf91e",
+      "admission": "Sepsis secondary to pneumonia",
+      "discharge_text": "Completed 5 days of IV antibiotics. New: oral amoxicillin 500 mg three times daily for 3 days to complete the course. Continue Ventolin, Flovent, hydrochlorothiazide and ferrous sulfate.",
+      "reference": {
+        "med_status": {
+          "albuterol": "continued",
+          "hydrochlorothiazide": "continued",
+          "fluticasone": "continued",
+          "ferrous": "continued",
+          "diphenhydramine": "not_mentioned"
+        },
+        "allergy_conflict": false,
+        "duplicate_therapy": false,
+        "interaction": false,
+        "justification": 2
+      }
+    },
+    {
+      "patient": "e650d645",
+      "admission": "Infective exacerbation of COPD",
+      "discharge_text": "Treated with IV Tazocin, now switched to oral Augmentin 625 mg three times daily for 5 days. Doxycycline stopped. Continue salbutamol, Seretide, amlodipine and diphenhydramine.",
+      "reference": {
+        "med_status": {
+          "albuterol": "continued",
+          "amlodipine": "continued",
+          "fluticasone": "continued",
+          "doxycycline": "stopped",
+          "diphenhydramine": "continued"
+        },
+        "allergy_conflict": true,
+        "duplicate_therapy": false,
+        "interaction": false,
+        "justification": 1
+      }
+    },
+    {
+      "patient": "00e94c62",
+      "admission": "Symptomatic hyponatraemia",
+      "discharge_text": "Hydrochlorothiazide STOPPED: hyponatraemia (sodium 124 on admission). Continue simvastatin 10 mg and simvastatin 20 mg, lisinopril, clopidogrel, metoprolol and GTN spray.",
+      "reference": {
+        "med_status": {
+          "simvastatin 10": "continued",
+          "hydrochlorothiazide": "stopped",
+          "lisinopril": "continued",
+          "clopidogrel": "continued",
+          "simvastatin 20": "continued",
+          "metoprolol": "continued",
+          "nitroglycerin": "continued"
+        },
+        "allergy_conflict": false,
+        "duplicate_therapy": true,
+        "interaction": false,
+        "justification": 2
+      }
+    },
+    {
+      "patient": "18625cef",
+      "admission": "Constipation and fall",
+      "discharge_text": "Tramadol STOPPED. Continue Norco (hydrocodone/acetaminophen) 1 tablet every 6 hours as needed. New: Tylenol 1 g four times daily regularly for pain. Continue simvastatin, clopidogrel, metoprolol and GTN spray.",
+      "reference": {
+        "med_status": {
+          "tramadol": "stopped",
+          "simvastatin 10": "continued",
+          "hydrocodone": "continued",
+          "clopidogrel": "continued",
+          "simvastatin 20": "continued",
+          "metoprolol": "continued",
+          "nitroglycerin": "continued"
+        },
+        "allergy_conflict": false,
+        "duplicate_therapy": true,
+        "interaction": false,
+        "justification": 0
+      }
+    },
+    {
+      "patient": "397d83f9",
+      "admission": "Breakthrough seizure",
+      "discharge_text": "New: levetiracetam 500 mg twice daily, seen by neurology. Diazepam continued as needed for seizure clusters only. Hydrocodone/paracetamol reduced to as needed, no more than 3 tablets per day, to limit sedation. Continue EpiPen and chlorphenamine.",
+      "reference": {
+        "med_status": {
+          "hydrocodone": "dose_changed",
+          "diazepam": "continued",
+          "epinephrine": "continued",
+          "chlorpheniramine": "continued"
+        },
+        "allergy_conflict": false,
+        "duplicate_therapy": false,
+        "interaction": false,
+        "justification": 3
+      }
+    },
+    {
+      "patient": "6ab723fc",
+      "admission": "Dyspepsia, normal endoscopy",
+      "discharge_text": "New: omeprazole 20 mg once daily for 8 weeks. Continue simvastatin, lisinopril, amlodipine, clopidogrel, metoprolol and GTN spray.",
+      "reference": {
+        "med_status": {
+          "simvastatin 10": "continued",
+          "lisinopril": "continued",
+          "amlodipine": "continued",
+          "clopidogrel": "continued",
+          "simvastatin 20": "continued",
+          "metoprolol": "continued",
+          "nitroglycerin": "continued"
+        },
+        "allergy_conflict": false,
+        "duplicate_therapy": true,
+        "interaction": true,
+        "justification": 2
+      }
+    },
+    {
+      "patient": "8e756607",
+      "admission": "Recurrent hypoglycaemia",
+      "discharge_text": "Humulin 70/30 REDUCED from 30 units twice daily to 20 units twice daily after three hypoglycaemic episodes; diabetes nurse to review in 1 week. Continue hydrochlorothiazide, clopidogrel, simvastatin, metoprolol and GTN spray.",
+      "reference": {
+        "med_status": {
+          "insulin": "dose_changed",
+          "hydrochlorothiazide": "continued",
+          "clopidogrel": "continued",
+          "simvastatin": "continued",
+          "metoprolol": "continued",
+          "nitroglycerin": "continued",
+          "vitamin b12": "not_mentioned"
+        },
+        "allergy_conflict": false,
+        "duplicate_therapy": false,
+        "interaction": false,
+        "justification": 3
+      }
+    },
+    {
+      "patient": "bb6aff77",
+      "admission": "Acute kidney injury",
+      "discharge_text": "Naproxen STOPPED: AKI. Lisinopril and hydrochlorothiazide WITHHELD until kidney function recovers; GP to recheck bloods in 1 week and restart if creatinine back to baseline. Continue OxyContin, hydrocodone/paracetamol as needed, simvastatin and amlodipine.",
+      "reference": {
+        "med_status": {
+          "simvastatin": "continued",
+          "hydrochlorothiazide": "withheld",
+          "oxycodone": "continued",
+          "lisinopril": "withheld",
+          "amlodipine": "continued",
+          "hydrocodone": "continued",
+          "naproxen": "stopped"
+        },
+        "allergy_conflict": false,
+        "duplicate_therapy": false,
+        "interaction": false,
+        "justification": 3
+      }
+    },
+    {
+      "patient": "d3a79ddd",
+      "admission": "Facial cellulitis",
+      "discharge_text": "New: erythromycin 500 mg four times daily for 7 days. Continue terfenadine for hay fever, and continue hydrochlorothiazide, lisinopril and EpiPen.",
+      "reference": {
+        "med_status": {
+          "hydrochlorothiazide": "continued",
+          "lisinopril": "continued",
+          "epinephrine": "continued",
+          "terfenadine": "continued"
+        },
+        "allergy_conflict": false,
+        "duplicate_therapy": false,
+        "interaction": true,
+        "justification": 1
+      }
+    },
+    {
+      "patient": "0d650f96",
+      "admission": "Inferior STEMI treated with PCI",
+      "discharge_text": "New: ticagrelor 90 mg twice daily with aspirin 81 mg for 12 months. Pravastatin STOPPED, replaced by atorvastatin 80 mg (high-intensity statin). Lisinopril INCREASED from 5 mg to 10 mg daily for blood pressure and remodelling. Naproxen STOPPED: avoid NSAIDs after myocardial infarction. Continue metoprolol 50 mg.",
+      "reference": {
+        "med_status": {
+          "codeine": "not_mentioned",
+          "aspirin": "continued",
+          "metoprolol": "continued",
+          "pravastatin": "stopped",
+          "lisinopril": "dose_changed",
+          "naproxen": "stopped"
+        },
+        "allergy_conflict": false,
+        "duplicate_therapy": false,
+        "interaction": false,
+        "justification": 3
+      }
+    },
+    {
+      "patient": "4036a737",
+      "admission": "Upper GI bleed from duodenal ulcer",
+      "discharge_text": "Clopidogrel WITHHELD for 7 days after endoscopic treatment, then restart as advised by gastroenterology. New: pantoprazole 40 mg twice daily for 8 weeks. Continue lisinopril, amlodipine, simvastatin, metoprolol and GTN spray.",
+      "reference": {
+        "med_status": {
+          "lisinopril": "continued",
+          "amlodipine": "continued",
+          "clopidogrel": "withheld",
+          "simvastatin": "continued",
+          "metoprolol": "continued",
+          "nitroglycerin": "continued"
+        },
+        "allergy_conflict": false,
+        "duplicate_therapy": false,
+        "interaction": false,
+        "justification": 3
+      }
+    }
+  ]
+}

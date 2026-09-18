@@ -1,0 +1,1456 @@
+{
+ "resourceType": "Bundle",
+ "id": "snapshot-9dd09d0d-f807-6d3c-c3fe-e8205b5a8fe2",
+ "type": "collection",
+ "timestamp": "2026-09-19T00:00:00Z",
+ "entry": [
+  {
+   "fullUrl": "urn:uuid:9dd09d0d-f807-6d3c-c3fe-e8205b5a8fe2",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "9dd09d0d-f807-6d3c-c3fe-e8205b5a8fe2",
+    "identifier": [
+     {
+      "system": "https://github.com/synthetichealth/synthea",
+      "value": "9dd09d0d-f807-6d3c-c3fe-e8205b5a8fe2"
+     }
+    ],
+    "name": [
+     {
+      "use": "official",
+      "family": "Frami345",
+      "given": [
+       "Art115",
+       "Alfonzo975"
+      ],
+      "prefix": [
+       "Mr."
+      ]
+     }
+    ],
+    "gender": "male",
+    "birthDate": "1951-07-29",
+    "address": [
+     {
+      "city": "North Reading",
+      "state": "MA",
+      "postalCode": "00000",
+      "country": "US"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9dd09d0d-f807-6d3c-db4d-380c4ee0b276",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "9dd09d0d-f807-6d3c-db4d-380c4ee0b276",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "224299000",
+       "display": "Received higher education (finding)"
+      }
+     ],
+     "text": "Received higher education (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:9dd09d0d-f807-6d3c-c3fe-e8205b5a8fe2"
+    },
+    "onsetDateTime": "1969-09-21T04:22:11+09:30",
+    "recordedDate": "1969-09-21T04:22:11+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9dd09d0d-f807-6d3c-924d-5d6b695945c1",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "9dd09d0d-f807-6d3c-924d-5d6b695945c1",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "40055000",
+       "display": "Chronic sinusitis (disorder)"
+      }
+     ],
+     "text": "Chronic sinusitis (disorder)"
+    },
+    "subject": {
+     "reference": "urn:uuid:9dd09d0d-f807-6d3c-c3fe-e8205b5a8fe2"
+    },
+    "onsetDateTime": "1970-03-19T21:44:48+09:30",
+    "recordedDate": "1970-03-19T21:44:48+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9dd09d0d-f807-6d3c-51fc-de03a9d9106d",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "9dd09d0d-f807-6d3c-51fc-de03a9d9106d",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "162864005",
+       "display": "Body mass index 30+ - obesity (finding)"
+      }
+     ],
+     "text": "Body mass index 30+ - obesity (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:9dd09d0d-f807-6d3c-c3fe-e8205b5a8fe2"
+    },
+    "onsetDateTime": "1993-08-08T03:44:48+09:30",
+    "recordedDate": "1993-08-08T03:44:48+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9dd09d0d-f807-6d3c-0273-229e10ef80ba",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "9dd09d0d-f807-6d3c-0273-229e10ef80ba",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "266948004",
+       "display": "Has a criminal record (finding)"
+      }
+     ],
+     "text": "Has a criminal record (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:9dd09d0d-f807-6d3c-c3fe-e8205b5a8fe2"
+    },
+    "onsetDateTime": "1995-08-13T04:40:13+09:30",
+    "recordedDate": "1995-08-13T04:40:13+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9dd09d0d-f807-6d3c-fdbf-3cc55ab6c178",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "9dd09d0d-f807-6d3c-fdbf-3cc55ab6c178",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "37320007",
+       "display": "Loss of teeth (disorder)"
+      }
+     ],
+     "text": "Loss of teeth (disorder)"
+    },
+    "subject": {
+     "reference": "urn:uuid:9dd09d0d-f807-6d3c-c3fe-e8205b5a8fe2"
+    },
+    "onsetDateTime": "1999-09-12T03:44:48+09:30",
+    "recordedDate": "1999-09-12T03:44:48+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9dd09d0d-f807-6d3c-570c-33df488c201e",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "9dd09d0d-f807-6d3c-570c-33df488c201e",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "401303003",
+       "display": "Acute ST segment elevation myocardial infarction (disorder)"
+      }
+     ],
+     "text": "Acute ST segment elevation myocardial infarction (disorder)"
+    },
+    "subject": {
+     "reference": "urn:uuid:9dd09d0d-f807-6d3c-c3fe-e8205b5a8fe2"
+    },
+    "onsetDateTime": "2014-05-29T04:15:53+09:30",
+    "recordedDate": "2014-05-29T04:15:53+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9dd09d0d-f807-6d3c-f044-fb937e1979b4",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "9dd09d0d-f807-6d3c-f044-fb937e1979b4",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "399211009",
+       "display": "History of myocardial infarction (situation)"
+      }
+     ],
+     "text": "History of myocardial infarction (situation)"
+    },
+    "subject": {
+     "reference": "urn:uuid:9dd09d0d-f807-6d3c-c3fe-e8205b5a8fe2"
+    },
+    "onsetDateTime": "2014-05-29T05:49:41+09:30",
+    "recordedDate": "2014-05-29T05:49:41+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9dd09d0d-f807-6d3c-77a4-9e3cd1ef890a",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "9dd09d0d-f807-6d3c-77a4-9e3cd1ef890a",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "422650009",
+       "display": "Social isolation (finding)"
+      }
+     ],
+     "text": "Social isolation (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:9dd09d0d-f807-6d3c-c3fe-e8205b5a8fe2"
+    },
+    "onsetDateTime": "2019-11-10T05:39:08+10:30",
+    "recordedDate": "2019-11-10T05:39:08+10:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9dd09d0d-f807-6d3c-f1df-3d137364f4c9",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "9dd09d0d-f807-6d3c-f1df-3d137364f4c9",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "414545008",
+       "display": "Ischemic heart disease (disorder)"
+      }
+     ],
+     "text": "Ischemic heart disease (disorder)"
+    },
+    "subject": {
+     "reference": "urn:uuid:9dd09d0d-f807-6d3c-c3fe-e8205b5a8fe2"
+    },
+    "onsetDateTime": "2020-11-15T04:44:48+10:30",
+    "recordedDate": "2020-11-15T04:44:48+10:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9dd09d0d-f807-6d3c-3a55-3d214da9bef2",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "9dd09d0d-f807-6d3c-3a55-3d214da9bef2",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "274531002",
+       "display": "Abnormal findings diagnostic imaging heart+coronary circulat (finding)"
+      }
+     ],
+     "text": "Abnormal findings diagnostic imaging heart+coronary circulat (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:9dd09d0d-f807-6d3c-c3fe-e8205b5a8fe2"
+    },
+    "onsetDateTime": "2020-11-28T15:52:28+10:30",
+    "recordedDate": "2020-11-28T15:52:28+10:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9dd09d0d-f807-6d3c-bfef-da563e4646d5",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "9dd09d0d-f807-6d3c-bfef-da563e4646d5",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "160903007",
+       "display": "Full-time employment (finding)"
+      }
+     ],
+     "text": "Full-time employment (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:9dd09d0d-f807-6d3c-c3fe-e8205b5a8fe2"
+    },
+    "onsetDateTime": "2025-12-14T05:30:10+10:30",
+    "recordedDate": "2025-12-14T05:30:10+10:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9dd09d0d-f807-6d3c-62ca-4263147bb8b5",
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "9dd09d0d-f807-6d3c-62ca-4263147bb8b5",
+    "status": "active",
+    "intent": "order",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+        "code": "community",
+        "display": "Community"
+       }
+      ],
+      "text": "Community"
+     }
+    ],
+    "medication": {
+     "concept": {
+      "coding": [
+       {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "309362",
+        "display": "Clopidogrel 75 MG Oral Tablet"
+       }
+      ],
+      "text": "Clopidogrel 75 MG Oral Tablet"
+     }
+    },
+    "subject": {
+     "reference": "urn:uuid:9dd09d0d-f807-6d3c-c3fe-e8205b5a8fe2"
+    },
+    "authoredOn": "2020-11-22T04:44:48+10:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9dd09d0d-f807-6d3c-33d4-2dd14075b0cd",
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "9dd09d0d-f807-6d3c-33d4-2dd14075b0cd",
+    "status": "active",
+    "intent": "order",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+        "code": "community",
+        "display": "Community"
+       }
+      ],
+      "text": "Community"
+     }
+    ],
+    "medication": {
+     "concept": {
+      "coding": [
+       {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "312961",
+        "display": "Simvastatin 20 MG Oral Tablet"
+       }
+      ],
+      "text": "Simvastatin 20 MG Oral Tablet"
+     }
+    },
+    "subject": {
+     "reference": "urn:uuid:9dd09d0d-f807-6d3c-c3fe-e8205b5a8fe2"
+    },
+    "authoredOn": "2020-11-22T04:44:48+10:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9dd09d0d-f807-6d3c-10a2-5ce830bbe719",
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "9dd09d0d-f807-6d3c-10a2-5ce830bbe719",
+    "status": "active",
+    "intent": "order",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+        "code": "community",
+        "display": "Community"
+       }
+      ],
+      "text": "Community"
+     }
+    ],
+    "medication": {
+     "concept": {
+      "coding": [
+       {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "866412",
+        "display": "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet"
+       }
+      ],
+      "text": "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet"
+     }
+    },
+    "subject": {
+     "reference": "urn:uuid:9dd09d0d-f807-6d3c-c3fe-e8205b5a8fe2"
+    },
+    "authoredOn": "2020-11-22T04:44:48+10:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9dd09d0d-f807-6d3c-43af-7907e293081c",
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "9dd09d0d-f807-6d3c-43af-7907e293081c",
+    "status": "active",
+    "intent": "order",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+        "code": "community",
+        "display": "Community"
+       }
+      ],
+      "text": "Community"
+     }
+    ],
+    "medication": {
+     "concept": {
+      "coding": [
+       {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "705129",
+        "display": "Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray"
+       }
+      ],
+      "text": "Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray"
+     }
+    },
+    "subject": {
+     "reference": "urn:uuid:9dd09d0d-f807-6d3c-c3fe-e8205b5a8fe2"
+    },
+    "authoredOn": "2020-11-22T04:44:48+10:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9dd09d0d-f807-6d3c-f5d3-1b7a4c52d9f0",
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "9dd09d0d-f807-6d3c-f5d3-1b7a4c52d9f0",
+    "status": "active",
+    "intent": "order",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+        "code": "community",
+        "display": "Community"
+       }
+      ],
+      "text": "Community"
+     }
+    ],
+    "medication": {
+     "concept": {
+      "coding": [
+       {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "243670",
+        "display": "aspirin 81 MG Oral Tablet"
+       }
+      ],
+      "text": "aspirin 81 MG Oral Tablet"
+     }
+    },
+    "subject": {
+     "reference": "urn:uuid:9dd09d0d-f807-6d3c-c3fe-e8205b5a8fe2"
+    },
+    "authoredOn": "2014-05-29T05:49:41+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9dd09d0d-f807-6d3c-a046-9b4a7ce13314",
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "9dd09d0d-f807-6d3c-a046-9b4a7ce13314",
+    "status": "active",
+    "intent": "order",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+        "code": "community",
+        "display": "Community"
+       }
+      ],
+      "text": "Community"
+     }
+    ],
+    "medication": {
+     "concept": {
+      "coding": [
+       {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "854916",
+        "display": "bisoprolol fumarate 2.5 MG / hydrochlorothiazide 6.25 MG Oral Tablet"
+       }
+      ],
+      "text": "bisoprolol fumarate 2.5 MG / hydrochlorothiazide 6.25 MG Oral Tablet"
+     }
+    },
+    "subject": {
+     "reference": "urn:uuid:9dd09d0d-f807-6d3c-c3fe-e8205b5a8fe2"
+    },
+    "authoredOn": "2014-05-29T05:49:41+09:30",
+    "dosageInstruction": [
+     {
+      "sequence": 1,
+      "text": "Take as needed.",
+      "asNeeded": true
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9dd09d0d-f807-6d3c-57a2-c3cdffcc634a",
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "9dd09d0d-f807-6d3c-57a2-c3cdffcc634a",
+    "status": "active",
+    "intent": "order",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+        "code": "community",
+        "display": "Community"
+       }
+      ],
+      "text": "Community"
+     }
+    ],
+    "medication": {
+     "concept": {
+      "coding": [
+       {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "617310",
+        "display": "atorvastatin 20 MG Oral Tablet"
+       }
+      ],
+      "text": "atorvastatin 20 MG Oral Tablet"
+     }
+    },
+    "subject": {
+     "reference": "urn:uuid:9dd09d0d-f807-6d3c-c3fe-e8205b5a8fe2"
+    },
+    "authoredOn": "2014-05-29T05:49:41+09:30",
+    "dosageInstruction": [
+     {
+      "sequence": 1,
+      "text": "Take as needed.",
+      "asNeeded": true
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9dd09d0d-f807-6d3c-c226-2a1397246261",
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "9dd09d0d-f807-6d3c-c226-2a1397246261",
+    "status": "active",
+    "intent": "order",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+        "code": "community",
+        "display": "Community"
+       }
+      ],
+      "text": "Community"
+     }
+    ],
+    "medication": {
+     "concept": {
+      "coding": [
+       {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "314076",
+        "display": "lisinopril 10 MG Oral Tablet"
+       }
+      ],
+      "text": "lisinopril 10 MG Oral Tablet"
+     }
+    },
+    "subject": {
+     "reference": "urn:uuid:9dd09d0d-f807-6d3c-c3fe-e8205b5a8fe2"
+    },
+    "authoredOn": "2014-05-29T05:49:41+09:30",
+    "dosageInstruction": [
+     {
+      "sequence": 1,
+      "text": "Take as needed.",
+      "asNeeded": true
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9dd09d0d-f807-6d3c-8336-b425785c33af",
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "9dd09d0d-f807-6d3c-8336-b425785c33af",
+    "status": "active",
+    "intent": "order",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+        "code": "community",
+        "display": "Community"
+       }
+      ],
+      "text": "Community"
+     }
+    ],
+    "medication": {
+     "concept": {
+      "coding": [
+       {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "855812",
+        "display": "prasugrel 10 MG Oral Tablet"
+       }
+      ],
+      "text": "prasugrel 10 MG Oral Tablet"
+     }
+    },
+    "subject": {
+     "reference": "urn:uuid:9dd09d0d-f807-6d3c-c3fe-e8205b5a8fe2"
+    },
+    "authoredOn": "2014-05-29T05:49:41+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9dd09d0d-f807-6d3c-1a88-21b6aeb28e22",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "9dd09d0d-f807-6d3c-1a88-21b6aeb28e22",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs",
+        "display": "Vital signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "39156-5",
+       "display": "Body mass index (BMI) [Ratio]"
+      }
+     ],
+     "text": "Body mass index (BMI) [Ratio]"
+    },
+    "subject": {
+     "reference": "urn:uuid:9dd09d0d-f807-6d3c-c3fe-e8205b5a8fe2"
+    },
+    "effectiveDateTime": "2025-12-14T04:44:48+10:30",
+    "valueQuantity": {
+     "value": 30.18,
+     "unit": "kg/m2",
+     "system": "http://unitsofmeasure.org",
+     "code": "kg/m2"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9dd09d0d-f807-6d3c-e97d-979430b22442",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "9dd09d0d-f807-6d3c-e97d-979430b22442",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs",
+        "display": "Vital signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "85354-9",
+       "display": "Blood pressure panel with all children optional"
+      }
+     ],
+     "text": "Blood pressure panel with all children optional"
+    },
+    "subject": {
+     "reference": "urn:uuid:9dd09d0d-f807-6d3c-c3fe-e8205b5a8fe2"
+    },
+    "effectiveDateTime": "2025-12-14T04:44:48+10:30",
+    "component": [
+     {
+      "code": {
+       "coding": [
+        {
+         "system": "http://loinc.org",
+         "code": "8462-4",
+         "display": "Diastolic Blood Pressure"
+        }
+       ],
+       "text": "Diastolic Blood Pressure"
+      },
+      "valueQuantity": {
+       "value": 53,
+       "unit": "mm[Hg]",
+       "system": "http://unitsofmeasure.org",
+       "code": "mm[Hg]"
+      }
+     },
+     {
+      "code": {
+       "coding": [
+        {
+         "system": "http://loinc.org",
+         "code": "8480-6",
+         "display": "Systolic Blood Pressure"
+        }
+       ],
+       "text": "Systolic Blood Pressure"
+      },
+      "valueQuantity": {
+       "value": 97,
+       "unit": "mm[Hg]",
+       "system": "http://unitsofmeasure.org",
+       "code": "mm[Hg]"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9dd09d0d-f807-6d3c-4b09-67e4cad1818d",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "9dd09d0d-f807-6d3c-4b09-67e4cad1818d",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs",
+        "display": "Vital signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Heart rate"
+      }
+     ],
+     "text": "Heart rate"
+    },
+    "subject": {
+     "reference": "urn:uuid:9dd09d0d-f807-6d3c-c3fe-e8205b5a8fe2"
+    },
+    "effectiveDateTime": "2025-12-14T04:44:48+10:30",
+    "valueQuantity": {
+     "value": 94,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9dd09d0d-f807-6d3c-9c77-357f8cf6a5a7",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "9dd09d0d-f807-6d3c-9c77-357f8cf6a5a7",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs",
+        "display": "Vital signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "9279-1",
+       "display": "Respiratory rate"
+      }
+     ],
+     "text": "Respiratory rate"
+    },
+    "subject": {
+     "reference": "urn:uuid:9dd09d0d-f807-6d3c-c3fe-e8205b5a8fe2"
+    },
+    "effectiveDateTime": "2025-12-14T04:44:48+10:30",
+    "valueQuantity": {
+     "value": 14,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9dd09d0d-f807-6d3c-4fa0-724bddbae7c2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "9dd09d0d-f807-6d3c-4fa0-724bddbae7c2",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "2093-3",
+       "display": "Cholesterol [Mass/volume] in Serum or Plasma"
+      }
+     ],
+     "text": "Cholesterol [Mass/volume] in Serum or Plasma"
+    },
+    "subject": {
+     "reference": "urn:uuid:9dd09d0d-f807-6d3c-c3fe-e8205b5a8fe2"
+    },
+    "effectiveDateTime": "2025-12-14T04:44:48+10:30",
+    "valueQuantity": {
+     "value": 148.18,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9dd09d0d-f807-6d3c-b97c-873676c8648c",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "9dd09d0d-f807-6d3c-b97c-873676c8648c",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "718-7",
+       "display": "Hemoglobin [Mass/volume] in Blood"
+      }
+     ],
+     "text": "Hemoglobin [Mass/volume] in Blood"
+    },
+    "subject": {
+     "reference": "urn:uuid:9dd09d0d-f807-6d3c-c3fe-e8205b5a8fe2"
+    },
+    "effectiveDateTime": "2023-12-03T04:44:48+10:30",
+    "valueQuantity": {
+     "value": 14.079,
+     "unit": "g/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "g/dL"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9dd09d0d-f807-6d3c-eaa3-199e3fe8aefa",
+   "resource": {
+    "resourceType": "Encounter",
+    "id": "9dd09d0d-f807-6d3c-eaa3-199e3fe8aefa",
+    "status": "completed",
+    "class": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB"
+       }
+      ]
+     }
+    ],
+    "type": [
+     {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "185349003",
+        "display": "Encounter for check up (procedure)"
+       }
+      ],
+      "text": "Encounter for check up (procedure)"
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:9dd09d0d-f807-6d3c-c3fe-e8205b5a8fe2"
+    },
+    "actualPeriod": {
+     "start": "2026-08-23T03:44:48+09:30",
+     "end": "2026-08-23T04:27:12+09:30"
+    },
+    "reason": [
+     {
+      "value": [
+       {
+        "concept": {
+         "coding": [
+          {
+           "system": "http://snomed.info/sct",
+           "code": "275978004",
+           "display": "Screening for malignant neoplasm of colon (procedure)"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9dd09d0d-f807-6d3c-ae8c-9dc9ac0d35ac",
+   "resource": {
+    "resourceType": "Encounter",
+    "id": "9dd09d0d-f807-6d3c-ae8c-9dc9ac0d35ac",
+    "status": "completed",
+    "class": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "IMP"
+       }
+      ]
+     }
+    ],
+    "type": [
+     {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "32485007",
+        "display": "Hospital admission (procedure)"
+       }
+      ],
+      "text": "Hospital admission (procedure)"
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:9dd09d0d-f807-6d3c-c3fe-e8205b5a8fe2"
+    },
+    "actualPeriod": {
+     "start": "2026-08-02T03:44:48+09:30",
+     "end": "2026-08-16T03:59:48+09:30"
+    },
+    "reason": [
+     {
+      "value": [
+       {
+        "concept": {
+         "coding": [
+          {
+           "system": "http://snomed.info/sct",
+           "code": "25675004",
+           "display": "Patient transfer to skilled nursing facility (procedure)"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9dd09d0d-f807-6d3c-211e-6e84e1dc1cfe",
+   "resource": {
+    "resourceType": "Encounter",
+    "id": "9dd09d0d-f807-6d3c-211e-6e84e1dc1cfe",
+    "status": "completed",
+    "class": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB"
+       }
+      ]
+     }
+    ],
+    "type": [
+     {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "162673000",
+        "display": "General examination of patient (procedure)"
+       }
+      ],
+      "text": "General examination of patient (procedure)"
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:9dd09d0d-f807-6d3c-c3fe-e8205b5a8fe2"
+    },
+    "actualPeriod": {
+     "start": "2025-12-14T04:44:48+10:30",
+     "end": "2025-12-14T05:30:10+10:30"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9dd09d0d-f807-6d3c-b9d3-aeb3b24f806c",
+   "resource": {
+    "resourceType": "Encounter",
+    "id": "9dd09d0d-f807-6d3c-b9d3-aeb3b24f806c",
+    "status": "completed",
+    "class": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB"
+       }
+      ]
+     }
+    ],
+    "type": [
+     {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "390906007",
+        "display": "Follow-up encounter (procedure)"
+       }
+      ],
+      "text": "Follow-up encounter (procedure)"
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:9dd09d0d-f807-6d3c-c3fe-e8205b5a8fe2"
+    },
+    "actualPeriod": {
+     "start": "2025-11-14T12:12:00+10:30",
+     "end": "2025-11-14T12:35:54+10:30"
+    },
+    "reason": [
+     {
+      "value": [
+       {
+        "concept": {
+         "coding": [
+          {
+           "system": "http://snomed.info/sct",
+           "code": "37320007",
+           "display": "Loss of teeth (disorder)"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9dd09d0d-f807-6d3c-597a-9cb22b77267a",
+   "resource": {
+    "resourceType": "Encounter",
+    "id": "9dd09d0d-f807-6d3c-597a-9cb22b77267a",
+    "status": "completed",
+    "class": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB"
+       }
+      ]
+     }
+    ],
+    "type": [
+     {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "185347001",
+        "display": "Encounter for problem (procedure)"
+       }
+      ],
+      "text": "Encounter for problem (procedure)"
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:9dd09d0d-f807-6d3c-c3fe-e8205b5a8fe2"
+    },
+    "actualPeriod": {
+     "start": "2025-10-31T11:15:53+10:30",
+     "end": "2025-10-31T12:12:00+10:30"
+    },
+    "reason": [
+     {
+      "value": [
+       {
+        "concept": {
+         "coding": [
+          {
+           "system": "http://snomed.info/sct",
+           "code": "37320007",
+           "display": "Loss of teeth (disorder)"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}

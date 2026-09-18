@@ -1,0 +1,959 @@
+{
+ "resourceType": "Bundle",
+ "id": "snapshot-e0eb4736-1752-c3db-3646-f70f0463b5bb",
+ "type": "collection",
+ "timestamp": "2026-09-19T00:00:00Z",
+ "entry": [
+  {
+   "fullUrl": "urn:uuid:e0eb4736-1752-c3db-3646-f70f0463b5bb",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "e0eb4736-1752-c3db-3646-f70f0463b5bb",
+    "identifier": [
+     {
+      "system": "https://github.com/synthetichealth/synthea",
+      "value": "e0eb4736-1752-c3db-3646-f70f0463b5bb"
+     }
+    ],
+    "name": [
+     {
+      "use": "official",
+      "family": "Rodriguez71",
+      "given": [
+       "Keira502"
+      ],
+      "prefix": [
+       "Mrs."
+      ]
+     }
+    ],
+    "gender": "female",
+    "birthDate": "1992-07-18",
+    "address": [
+     {
+      "city": "Needham",
+      "state": "MA",
+      "postalCode": "02494",
+      "country": "US"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:e0eb4736-1752-c3db-bd22-c89a15bdb867",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "e0eb4736-1752-c3db-bd22-c89a15bdb867",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "160968000",
+       "display": "Risk activity involvement (finding)"
+      }
+     ],
+     "text": "Risk activity involvement (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:e0eb4736-1752-c3db-3646-f70f0463b5bb"
+    },
+    "onsetDateTime": "2009-09-05T21:02:19+09:30",
+    "recordedDate": "2009-09-05T21:02:19+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:e0eb4736-1752-c3db-3c19-b744444b27a5",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "e0eb4736-1752-c3db-3c19-b744444b27a5",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "224299000",
+       "display": "Received higher education (finding)"
+      }
+     ],
+     "text": "Received higher education (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:e0eb4736-1752-c3db-3646-f70f0463b5bb"
+    },
+    "onsetDateTime": "2010-09-11T20:38:29+09:30",
+    "recordedDate": "2010-09-11T20:38:29+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:e0eb4736-1752-c3db-1667-8a64d90c281f",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "e0eb4736-1752-c3db-1667-8a64d90c281f",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "423315002",
+       "display": "Limited social contact (finding)"
+      }
+     ],
+     "text": "Limited social contact (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:e0eb4736-1752-c3db-3646-f70f0463b5bb"
+    },
+    "onsetDateTime": "2010-09-11T20:38:29+09:30",
+    "recordedDate": "2010-09-11T20:38:29+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:e0eb4736-1752-c3db-9286-7096a910ee61",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "e0eb4736-1752-c3db-9286-7096a910ee61",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "161744009",
+       "display": "Past pregnancy history of miscarriage (situation)"
+      }
+     ],
+     "text": "Past pregnancy history of miscarriage (situation)"
+    },
+    "subject": {
+     "reference": "urn:uuid:e0eb4736-1752-c3db-3646-f70f0463b5bb"
+    },
+    "onsetDateTime": "2016-03-16T20:46:03+10:30",
+    "recordedDate": "2016-03-16T20:46:03+10:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:e0eb4736-1752-c3db-ce2d-81020766a442",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "e0eb4736-1752-c3db-ce2d-81020766a442",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "73595000",
+       "display": "Stress (finding)"
+      }
+     ],
+     "text": "Stress (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:e0eb4736-1752-c3db-3646-f70f0463b5bb"
+    },
+    "onsetDateTime": "2017-09-30T20:30:58+09:30",
+    "recordedDate": "2017-09-30T20:30:58+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:e0eb4736-1752-c3db-212c-4e4d37d7a667",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "e0eb4736-1752-c3db-212c-4e4d37d7a667",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "741062008",
+       "display": "Not in labor force (finding)"
+      }
+     ],
+     "text": "Not in labor force (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:e0eb4736-1752-c3db-3646-f70f0463b5bb"
+    },
+    "onsetDateTime": "2023-10-07T21:41:18+10:30",
+    "recordedDate": "2023-10-07T21:41:18+10:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:e0eb4736-1752-c3db-001e-04b19d1ad3f8",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "e0eb4736-1752-c3db-001e-04b19d1ad3f8",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "72892002",
+       "display": "Normal pregnancy (finding)"
+      }
+     ],
+     "text": "Normal pregnancy (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:e0eb4736-1752-c3db-3646-f70f0463b5bb"
+    },
+    "onsetDateTime": "2026-04-25T19:46:03+09:30",
+    "recordedDate": "2026-04-25T19:46:03+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:e0eb4736-1752-c3db-61d2-309f4aa5c2a8",
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "e0eb4736-1752-c3db-61d2-309f4aa5c2a8",
+    "status": "active",
+    "intent": "order",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+        "code": "community",
+        "display": "Community"
+       }
+      ],
+      "text": "Community"
+     }
+    ],
+    "medication": {
+     "concept": {
+      "coding": [
+       {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "310325",
+        "display": "ferrous sulfate 325 MG Oral Tablet"
+       }
+      ],
+      "text": "ferrous sulfate 325 MG Oral Tablet"
+     }
+    },
+    "subject": {
+     "reference": "urn:uuid:e0eb4736-1752-c3db-3646-f70f0463b5bb"
+    },
+    "authoredOn": "2022-04-30T20:49:17+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:e0eb4736-1752-c3db-8ee4-582b6eef75f5",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "e0eb4736-1752-c3db-8ee4-582b6eef75f5",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "718-7",
+       "display": "Hemoglobin [Mass/volume] in Blood"
+      }
+     ],
+     "text": "Hemoglobin [Mass/volume] in Blood"
+    },
+    "subject": {
+     "reference": "urn:uuid:e0eb4736-1752-c3db-3646-f70f0463b5bb"
+    },
+    "effectiveDateTime": "2022-04-30T19:46:03+09:30",
+    "valueQuantity": {
+     "value": 11.841,
+     "unit": "g/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "g/dL"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:e0eb4736-1752-c3db-19a9-dac9b1d3dc59",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "e0eb4736-1752-c3db-19a9-dac9b1d3dc59",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs",
+        "display": "Vital signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "39156-5",
+       "display": "Body mass index (BMI) [Ratio]"
+      }
+     ],
+     "text": "Body mass index (BMI) [Ratio]"
+    },
+    "subject": {
+     "reference": "urn:uuid:e0eb4736-1752-c3db-3646-f70f0463b5bb"
+    },
+    "effectiveDateTime": "2023-10-07T20:46:03+10:30",
+    "valueQuantity": {
+     "value": 27.38,
+     "unit": "kg/m2",
+     "system": "http://unitsofmeasure.org",
+     "code": "kg/m2"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:e0eb4736-1752-c3db-a8d5-61fb9684ef2b",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "e0eb4736-1752-c3db-a8d5-61fb9684ef2b",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs",
+        "display": "Vital signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "85354-9",
+       "display": "Blood pressure panel with all children optional"
+      }
+     ],
+     "text": "Blood pressure panel with all children optional"
+    },
+    "subject": {
+     "reference": "urn:uuid:e0eb4736-1752-c3db-3646-f70f0463b5bb"
+    },
+    "effectiveDateTime": "2023-10-07T20:46:03+10:30",
+    "component": [
+     {
+      "code": {
+       "coding": [
+        {
+         "system": "http://loinc.org",
+         "code": "8462-4",
+         "display": "Diastolic Blood Pressure"
+        }
+       ],
+       "text": "Diastolic Blood Pressure"
+      },
+      "valueQuantity": {
+       "value": 86,
+       "unit": "mm[Hg]",
+       "system": "http://unitsofmeasure.org",
+       "code": "mm[Hg]"
+      }
+     },
+     {
+      "code": {
+       "coding": [
+        {
+         "system": "http://loinc.org",
+         "code": "8480-6",
+         "display": "Systolic Blood Pressure"
+        }
+       ],
+       "text": "Systolic Blood Pressure"
+      },
+      "valueQuantity": {
+       "value": 125,
+       "unit": "mm[Hg]",
+       "system": "http://unitsofmeasure.org",
+       "code": "mm[Hg]"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:e0eb4736-1752-c3db-dc69-a23123d0d11e",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "e0eb4736-1752-c3db-dc69-a23123d0d11e",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs",
+        "display": "Vital signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Heart rate"
+      }
+     ],
+     "text": "Heart rate"
+    },
+    "subject": {
+     "reference": "urn:uuid:e0eb4736-1752-c3db-3646-f70f0463b5bb"
+    },
+    "effectiveDateTime": "2023-10-07T20:46:03+10:30",
+    "valueQuantity": {
+     "value": 87,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:e0eb4736-1752-c3db-ee1e-505112474f16",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "e0eb4736-1752-c3db-ee1e-505112474f16",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs",
+        "display": "Vital signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "9279-1",
+       "display": "Respiratory rate"
+      }
+     ],
+     "text": "Respiratory rate"
+    },
+    "subject": {
+     "reference": "urn:uuid:e0eb4736-1752-c3db-3646-f70f0463b5bb"
+    },
+    "effectiveDateTime": "2023-10-07T20:46:03+10:30",
+    "valueQuantity": {
+     "value": 12,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:e0eb4736-1752-c3db-de2d-b3520a80f29a",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "e0eb4736-1752-c3db-de2d-b3520a80f29a",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "2093-3",
+       "display": "Cholesterol [Mass/volume] in Serum or Plasma"
+      }
+     ],
+     "text": "Cholesterol [Mass/volume] in Serum or Plasma"
+    },
+    "subject": {
+     "reference": "urn:uuid:e0eb4736-1752-c3db-3646-f70f0463b5bb"
+    },
+    "effectiveDateTime": "2023-10-07T20:46:03+10:30",
+    "valueQuantity": {
+     "value": 228.57,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:e0eb4736-1752-c3db-915a-de0e7cb7a6fd",
+   "resource": {
+    "resourceType": "Encounter",
+    "id": "e0eb4736-1752-c3db-915a-de0e7cb7a6fd",
+    "status": "completed",
+    "class": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB"
+       }
+      ]
+     }
+    ],
+    "type": [
+     {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "424619006",
+        "display": "Prenatal visit (regime/therapy)"
+       }
+      ],
+      "text": "Prenatal visit (regime/therapy)"
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:e0eb4736-1752-c3db-3646-f70f0463b5bb"
+    },
+    "actualPeriod": {
+     "start": "2026-09-12T19:46:03+09:30",
+     "end": "2026-09-12T20:01:03+09:30"
+    },
+    "reason": [
+     {
+      "value": [
+       {
+        "concept": {
+         "coding": [
+          {
+           "system": "http://snomed.info/sct",
+           "code": "72892002",
+           "display": "Normal pregnancy (finding)"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:e0eb4736-1752-c3db-9e5e-9c1dc6f9f395",
+   "resource": {
+    "resourceType": "Encounter",
+    "id": "e0eb4736-1752-c3db-9e5e-9c1dc6f9f395",
+    "status": "completed",
+    "class": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB"
+       }
+      ]
+     }
+    ],
+    "type": [
+     {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "424619006",
+        "display": "Prenatal visit (regime/therapy)"
+       }
+      ],
+      "text": "Prenatal visit (regime/therapy)"
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:e0eb4736-1752-c3db-3646-f70f0463b5bb"
+    },
+    "actualPeriod": {
+     "start": "2026-08-15T19:46:03+09:30",
+     "end": "2026-08-15T20:01:03+09:30"
+    },
+    "reason": [
+     {
+      "value": [
+       {
+        "concept": {
+         "coding": [
+          {
+           "system": "http://snomed.info/sct",
+           "code": "72892002",
+           "display": "Normal pregnancy (finding)"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:e0eb4736-1752-c3db-54c8-0d32e2d0acaa",
+   "resource": {
+    "resourceType": "Encounter",
+    "id": "e0eb4736-1752-c3db-54c8-0d32e2d0acaa",
+    "status": "completed",
+    "class": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB"
+       }
+      ]
+     }
+    ],
+    "type": [
+     {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "424619006",
+        "display": "Prenatal visit (regime/therapy)"
+       }
+      ],
+      "text": "Prenatal visit (regime/therapy)"
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:e0eb4736-1752-c3db-3646-f70f0463b5bb"
+    },
+    "actualPeriod": {
+     "start": "2026-07-18T19:46:03+09:30",
+     "end": "2026-07-18T20:01:03+09:30"
+    },
+    "reason": [
+     {
+      "value": [
+       {
+        "concept": {
+         "coding": [
+          {
+           "system": "http://snomed.info/sct",
+           "code": "72892002",
+           "display": "Normal pregnancy (finding)"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:e0eb4736-1752-c3db-a5f3-e210d58e594a",
+   "resource": {
+    "resourceType": "Encounter",
+    "id": "e0eb4736-1752-c3db-a5f3-e210d58e594a",
+    "status": "completed",
+    "class": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB"
+       }
+      ]
+     }
+    ],
+    "type": [
+     {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "424619006",
+        "display": "Prenatal visit (regime/therapy)"
+       }
+      ],
+      "text": "Prenatal visit (regime/therapy)"
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:e0eb4736-1752-c3db-3646-f70f0463b5bb"
+    },
+    "actualPeriod": {
+     "start": "2026-06-20T19:46:03+09:30",
+     "end": "2026-06-20T20:01:03+09:30"
+    },
+    "reason": [
+     {
+      "value": [
+       {
+        "concept": {
+         "coding": [
+          {
+           "system": "http://snomed.info/sct",
+           "code": "72892002",
+           "display": "Normal pregnancy (finding)"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:e0eb4736-1752-c3db-02a3-59cdbfe96fc4",
+   "resource": {
+    "resourceType": "Encounter",
+    "id": "e0eb4736-1752-c3db-02a3-59cdbfe96fc4",
+    "status": "completed",
+    "class": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB"
+       }
+      ]
+     }
+    ],
+    "type": [
+     {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "424619006",
+        "display": "Prenatal visit (regime/therapy)"
+       }
+      ],
+      "text": "Prenatal visit (regime/therapy)"
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:e0eb4736-1752-c3db-3646-f70f0463b5bb"
+    },
+    "actualPeriod": {
+     "start": "2026-05-23T19:46:03+09:30",
+     "end": "2026-05-23T20:01:03+09:30"
+    },
+    "reason": [
+     {
+      "value": [
+       {
+        "concept": {
+         "coding": [
+          {
+           "system": "http://snomed.info/sct",
+           "code": "72892002",
+           "display": "Normal pregnancy (finding)"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}

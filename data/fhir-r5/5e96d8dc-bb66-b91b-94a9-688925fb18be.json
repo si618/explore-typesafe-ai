@@ -1,0 +1,844 @@
+{
+ "resourceType": "Bundle",
+ "id": "snapshot-5e96d8dc-bb66-b91b-94a9-688925fb18be",
+ "type": "collection",
+ "timestamp": "2026-09-19T00:00:00Z",
+ "entry": [
+  {
+   "fullUrl": "urn:uuid:5e96d8dc-bb66-b91b-94a9-688925fb18be",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "5e96d8dc-bb66-b91b-94a9-688925fb18be",
+    "identifier": [
+     {
+      "system": "https://github.com/synthetichealth/synthea",
+      "value": "5e96d8dc-bb66-b91b-94a9-688925fb18be"
+     }
+    ],
+    "name": [
+     {
+      "use": "official",
+      "family": "Quigley282",
+      "given": [
+       "Ahmed109"
+      ],
+      "prefix": [
+       "Mr."
+      ]
+     }
+    ],
+    "gender": "male",
+    "birthDate": "1981-07-01",
+    "address": [
+     {
+      "city": "Rutland",
+      "state": "MA",
+      "postalCode": "01543",
+      "country": "US"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:5e96d8dc-bb66-b91b-a30d-e00d27c5398e",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "5e96d8dc-bb66-b91b-a30d-e00d27c5398e",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "224299000",
+       "display": "Received higher education (finding)"
+      }
+     ],
+     "text": "Received higher education (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:5e96d8dc-bb66-b91b-94a9-688925fb18be"
+    },
+    "onsetDateTime": "1999-08-25T12:55:54+09:30",
+    "recordedDate": "1999-08-25T12:55:54+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:5e96d8dc-bb66-b91b-329c-46d5b007dfb7",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "5e96d8dc-bb66-b91b-329c-46d5b007dfb7",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "714628002",
+       "display": "Prediabetes (finding)"
+      }
+     ],
+     "text": "Prediabetes (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:5e96d8dc-bb66-b91b-94a9-688925fb18be"
+    },
+    "onsetDateTime": "2003-09-03T12:02:50+09:30",
+    "recordedDate": "2003-09-03T12:02:50+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:5e96d8dc-bb66-b91b-5a0d-0da4a6a9a61d",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "5e96d8dc-bb66-b91b-5a0d-0da4a6a9a61d",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "271737000",
+       "display": "Anemia (disorder)"
+      }
+     ],
+     "text": "Anemia (disorder)"
+    },
+    "subject": {
+     "reference": "urn:uuid:5e96d8dc-bb66-b91b-94a9-688925fb18be"
+    },
+    "onsetDateTime": "2003-09-03T12:02:50+09:30",
+    "recordedDate": "2003-09-03T12:02:50+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:5e96d8dc-bb66-b91b-477e-14acebff6f63",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "5e96d8dc-bb66-b91b-477e-14acebff6f63",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "162864005",
+       "display": "Body mass index 30+ - obesity (finding)"
+      }
+     ],
+     "text": "Body mass index 30+ - obesity (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:5e96d8dc-bb66-b91b-94a9-688925fb18be"
+    },
+    "onsetDateTime": "2018-09-19T12:02:50+09:30",
+    "recordedDate": "2018-09-19T12:02:50+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:5e96d8dc-bb66-b91b-81c8-9f4c8490afd4",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "5e96d8dc-bb66-b91b-81c8-9f4c8490afd4",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "160903007",
+       "display": "Full-time employment (finding)"
+      }
+     ],
+     "text": "Full-time employment (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:5e96d8dc-bb66-b91b-94a9-688925fb18be"
+    },
+    "onsetDateTime": "2025-07-16T12:36:48+09:30",
+    "recordedDate": "2025-07-16T12:36:48+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:5e96d8dc-bb66-b91b-b494-ad00ee9857f8",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "5e96d8dc-bb66-b91b-b494-ad00ee9857f8",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "73595000",
+       "display": "Stress (finding)"
+      }
+     ],
+     "text": "Stress (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:5e96d8dc-bb66-b91b-94a9-688925fb18be"
+    },
+    "onsetDateTime": "2025-07-16T12:36:48+09:30",
+    "recordedDate": "2025-07-16T12:36:48+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:5e96d8dc-bb66-b91b-e200-07129802dfc9",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "5e96d8dc-bb66-b91b-e200-07129802dfc9",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "4548-4",
+       "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+      }
+     ],
+     "text": "Hemoglobin A1c/Hemoglobin.total in Blood"
+    },
+    "subject": {
+     "reference": "urn:uuid:5e96d8dc-bb66-b91b-94a9-688925fb18be"
+    },
+    "effectiveDateTime": "2026-04-01T13:02:50+10:30",
+    "valueQuantity": {
+     "value": 6.29,
+     "unit": "%",
+     "system": "http://unitsofmeasure.org",
+     "code": "%"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:5e96d8dc-bb66-b91b-3e9a-83b36b1e8f07",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "5e96d8dc-bb66-b91b-3e9a-83b36b1e8f07",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs",
+        "display": "Vital signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "39156-5",
+       "display": "Body mass index (BMI) [Ratio]"
+      }
+     ],
+     "text": "Body mass index (BMI) [Ratio]"
+    },
+    "subject": {
+     "reference": "urn:uuid:5e96d8dc-bb66-b91b-94a9-688925fb18be"
+    },
+    "effectiveDateTime": "2026-03-25T13:02:50+10:30",
+    "valueQuantity": {
+     "value": 30.16,
+     "unit": "kg/m2",
+     "system": "http://unitsofmeasure.org",
+     "code": "kg/m2"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:5e96d8dc-bb66-b91b-612d-344928bee0d1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "5e96d8dc-bb66-b91b-612d-344928bee0d1",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs",
+        "display": "Vital signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "85354-9",
+       "display": "Blood pressure panel with all children optional"
+      }
+     ],
+     "text": "Blood pressure panel with all children optional"
+    },
+    "subject": {
+     "reference": "urn:uuid:5e96d8dc-bb66-b91b-94a9-688925fb18be"
+    },
+    "effectiveDateTime": "2026-03-25T13:02:50+10:30",
+    "component": [
+     {
+      "code": {
+       "coding": [
+        {
+         "system": "http://loinc.org",
+         "code": "8462-4",
+         "display": "Diastolic Blood Pressure"
+        }
+       ],
+       "text": "Diastolic Blood Pressure"
+      },
+      "valueQuantity": {
+       "value": 87,
+       "unit": "mm[Hg]",
+       "system": "http://unitsofmeasure.org",
+       "code": "mm[Hg]"
+      }
+     },
+     {
+      "code": {
+       "coding": [
+        {
+         "system": "http://loinc.org",
+         "code": "8480-6",
+         "display": "Systolic Blood Pressure"
+        }
+       ],
+       "text": "Systolic Blood Pressure"
+      },
+      "valueQuantity": {
+       "value": 131,
+       "unit": "mm[Hg]",
+       "system": "http://unitsofmeasure.org",
+       "code": "mm[Hg]"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:5e96d8dc-bb66-b91b-b4e9-6c84453ebd67",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "5e96d8dc-bb66-b91b-b4e9-6c84453ebd67",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs",
+        "display": "Vital signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Heart rate"
+      }
+     ],
+     "text": "Heart rate"
+    },
+    "subject": {
+     "reference": "urn:uuid:5e96d8dc-bb66-b91b-94a9-688925fb18be"
+    },
+    "effectiveDateTime": "2026-03-25T13:02:50+10:30",
+    "valueQuantity": {
+     "value": 83,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:5e96d8dc-bb66-b91b-9821-b2ec0bf9b748",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "5e96d8dc-bb66-b91b-9821-b2ec0bf9b748",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs",
+        "display": "Vital signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "9279-1",
+       "display": "Respiratory rate"
+      }
+     ],
+     "text": "Respiratory rate"
+    },
+    "subject": {
+     "reference": "urn:uuid:5e96d8dc-bb66-b91b-94a9-688925fb18be"
+    },
+    "effectiveDateTime": "2026-03-25T13:02:50+10:30",
+    "valueQuantity": {
+     "value": 14,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:5e96d8dc-bb66-b91b-4f5b-8da1919c3e9c",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "5e96d8dc-bb66-b91b-4f5b-8da1919c3e9c",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "6298-4",
+       "display": "Potassium [Moles/volume] in Blood"
+      }
+     ],
+     "text": "Potassium [Moles/volume] in Blood"
+    },
+    "subject": {
+     "reference": "urn:uuid:5e96d8dc-bb66-b91b-94a9-688925fb18be"
+    },
+    "effectiveDateTime": "2026-03-25T13:02:50+10:30",
+    "valueQuantity": {
+     "value": 4,
+     "unit": "mmol/L",
+     "system": "http://unitsofmeasure.org",
+     "code": "mmol/L"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:5e96d8dc-bb66-b91b-7f9c-379a1232c248",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "5e96d8dc-bb66-b91b-7f9c-379a1232c248",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "2093-3",
+       "display": "Cholesterol [Mass/volume] in Serum or Plasma"
+      }
+     ],
+     "text": "Cholesterol [Mass/volume] in Serum or Plasma"
+    },
+    "subject": {
+     "reference": "urn:uuid:5e96d8dc-bb66-b91b-94a9-688925fb18be"
+    },
+    "effectiveDateTime": "2023-07-12T12:02:50+09:30",
+    "valueQuantity": {
+     "value": 159.31,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:5e96d8dc-bb66-b91b-15f1-cbc409ad636b",
+   "resource": {
+    "resourceType": "Encounter",
+    "id": "5e96d8dc-bb66-b91b-15f1-cbc409ad636b",
+    "status": "completed",
+    "class": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB"
+       }
+      ]
+     }
+    ],
+    "type": [
+     {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "185349003",
+        "display": "Encounter for check up (procedure)"
+       }
+      ],
+      "text": "Encounter for check up (procedure)"
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:5e96d8dc-bb66-b91b-94a9-688925fb18be"
+    },
+    "actualPeriod": {
+     "start": "2026-04-01T13:02:50+10:30",
+     "end": "2026-04-01T13:17:50+10:30"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:5e96d8dc-bb66-b91b-b53e-5513587d5e4a",
+   "resource": {
+    "resourceType": "Encounter",
+    "id": "5e96d8dc-bb66-b91b-b53e-5513587d5e4a",
+    "status": "completed",
+    "class": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB"
+       }
+      ]
+     }
+    ],
+    "type": [
+     {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "702927004",
+        "display": "Urgent care clinic (environment)"
+       }
+      ],
+      "text": "Urgent care clinic (environment)"
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:5e96d8dc-bb66-b91b-94a9-688925fb18be"
+    },
+    "actualPeriod": {
+     "start": "2026-03-25T13:02:50+10:30",
+     "end": "2026-03-25T13:35:08+10:30"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:5e96d8dc-bb66-b91b-227b-69105bccdf92",
+   "resource": {
+    "resourceType": "Encounter",
+    "id": "5e96d8dc-bb66-b91b-227b-69105bccdf92",
+    "status": "completed",
+    "class": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB"
+       }
+      ]
+     }
+    ],
+    "type": [
+     {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "185345009",
+        "display": "Encounter for symptom (procedure)"
+       }
+      ],
+      "text": "Encounter for symptom (procedure)"
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:5e96d8dc-bb66-b91b-94a9-688925fb18be"
+    },
+    "actualPeriod": {
+     "start": "2026-03-16T08:02:50+10:30",
+     "end": "2026-03-16T08:22:33+10:30"
+    },
+    "reason": [
+     {
+      "value": [
+       {
+        "concept": {
+         "coding": [
+          {
+           "system": "http://snomed.info/sct",
+           "code": "10509002",
+           "display": "Acute bronchitis (disorder)"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:5e96d8dc-bb66-b91b-f749-8febeda120a4",
+   "resource": {
+    "resourceType": "Encounter",
+    "id": "5e96d8dc-bb66-b91b-f749-8febeda120a4",
+    "status": "completed",
+    "class": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB"
+       }
+      ]
+     }
+    ],
+    "type": [
+     {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "162673000",
+        "display": "General examination of patient (procedure)"
+       }
+      ],
+      "text": "General examination of patient (procedure)"
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:5e96d8dc-bb66-b91b-94a9-688925fb18be"
+    },
+    "actualPeriod": {
+     "start": "2025-07-16T12:02:50+09:30",
+     "end": "2025-07-16T12:36:48+09:30"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:5e96d8dc-bb66-b91b-e5ab-dba0f566d8b1",
+   "resource": {
+    "resourceType": "Encounter",
+    "id": "5e96d8dc-bb66-b91b-e5ab-dba0f566d8b1",
+    "status": "completed",
+    "class": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB"
+       }
+      ]
+     }
+    ],
+    "type": [
+     {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "162673000",
+        "display": "General examination of patient (procedure)"
+       }
+      ],
+      "text": "General examination of patient (procedure)"
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:5e96d8dc-bb66-b91b-94a9-688925fb18be"
+    },
+    "actualPeriod": {
+     "start": "2023-07-12T12:02:50+09:30",
+     "end": "2023-07-12T12:39:41+09:30"
+    }
+   }
+  }
+ ]
+}

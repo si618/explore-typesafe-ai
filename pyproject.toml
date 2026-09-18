@@ -1,0 +1,21 @@
+[project]
+name = "explore-typesafe"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Simon McKenna", email = "sshnug.si+github@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "fhir-resources>=8",
+    "typesafe-sdk>=0.7.0",
+    "zensical>=0.0.62",
+]
+
+[project.scripts]
+explore-typesafe = "explore_typesafe:main"
+
+[build-system]
+requires = ["uv_build>=0.12.15,<0.13.0"]
+build-backend = "uv_build"

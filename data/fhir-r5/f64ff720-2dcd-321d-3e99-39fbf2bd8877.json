@@ -1,0 +1,2545 @@
+{
+ "resourceType": "Bundle",
+ "id": "snapshot-f64ff720-2dcd-321d-3e99-39fbf2bd8877",
+ "type": "collection",
+ "timestamp": "2026-09-19T00:00:00Z",
+ "entry": [
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "f64ff720-2dcd-321d-3e99-39fbf2bd8877",
+    "identifier": [
+     {
+      "system": "https://github.com/synthetichealth/synthea",
+      "value": "f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+     }
+    ],
+    "name": [
+     {
+      "use": "official",
+      "family": "Mann644",
+      "given": [
+       "Shella455"
+      ],
+      "prefix": [
+       "Mrs."
+      ]
+     }
+    ],
+    "gender": "female",
+    "birthDate": "1940-01-13",
+    "address": [
+     {
+      "city": "Boston",
+      "state": "MA",
+      "postalCode": "02203",
+      "country": "US"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-b155-0159e8f040be",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "f64ff720-2dcd-321d-b155-0159e8f040be",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "128188000",
+       "display": "Cerebral palsy (disorder)"
+      }
+     ],
+     "text": "Cerebral palsy (disorder)"
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "onsetDateTime": "1940-02-24T05:52:21+09:30",
+    "recordedDate": "1940-02-24T05:52:21+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-4652-810aa2329fad",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "f64ff720-2dcd-321d-4652-810aa2329fad",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "22253000",
+       "display": "Pain (finding)"
+      }
+     ],
+     "text": "Pain (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "onsetDateTime": "1940-02-24T05:52:21+09:30",
+    "recordedDate": "1940-02-24T05:52:21+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-e835-45994a850e38",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "f64ff720-2dcd-321d-e835-45994a850e38",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "398152000",
+       "display": "Poor muscle tone (finding)"
+      }
+     ],
+     "text": "Poor muscle tone (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "onsetDateTime": "1940-02-24T05:52:21+09:30",
+    "recordedDate": "1940-02-24T05:52:21+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-2db5-beeeb16c7505",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "f64ff720-2dcd-321d-2db5-beeeb16c7505",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "221360009",
+       "display": "Spasticity (finding)"
+      }
+     ],
+     "text": "Spasticity (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "onsetDateTime": "1940-02-24T05:52:21+09:30",
+    "recordedDate": "1940-02-24T05:52:21+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-9519-142b9d3641ee",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "f64ff720-2dcd-321d-9519-142b9d3641ee",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "64859006",
+       "display": "Osteoporosis (disorder)"
+      }
+     ],
+     "text": "Osteoporosis (disorder)"
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "onsetDateTime": "1940-02-24T05:52:21+09:30",
+    "recordedDate": "1940-02-24T05:52:21+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-98fc-30edc98f4dd4",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "f64ff720-2dcd-321d-98fc-30edc98f4dd4",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "110359009",
+       "display": "Intellectual disability (disorder)"
+      }
+     ],
+     "text": "Intellectual disability (disorder)"
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "onsetDateTime": "1940-02-24T05:52:21+09:30",
+    "recordedDate": "1940-02-24T05:52:21+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-bd17-e5088f6c379d",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "f64ff720-2dcd-321d-bd17-e5088f6c379d",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "235595009",
+       "display": "Gastroesophageal reflux disease (disorder)"
+      }
+     ],
+     "text": "Gastroesophageal reflux disease (disorder)"
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "onsetDateTime": "1940-02-24T05:52:21+09:30",
+    "recordedDate": "1940-02-24T05:52:21+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-532d-b386b8dd8807",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "f64ff720-2dcd-321d-532d-b386b8dd8807",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "473461003",
+       "display": "Educated to high school level (finding)"
+      }
+     ],
+     "text": "Educated to high school level (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "onsetDateTime": "1958-03-08T06:41:03+09:30",
+    "recordedDate": "1958-03-08T06:41:03+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-be62-91b85d1157cf",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "f64ff720-2dcd-321d-be62-91b85d1157cf",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "266934004",
+       "display": "Transport problem (finding)"
+      }
+     ],
+     "text": "Transport problem (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "onsetDateTime": "1958-03-08T06:41:03+09:30",
+    "recordedDate": "1958-03-08T06:41:03+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-1d8b-efa12459b6a6",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "f64ff720-2dcd-321d-1d8b-efa12459b6a6",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "713458007",
+       "display": "Lack of access to transportation (finding)"
+      }
+     ],
+     "text": "Lack of access to transportation (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "onsetDateTime": "1959-03-14T06:28:15+09:30",
+    "recordedDate": "1959-03-14T06:28:15+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-6178-870a621b469c",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "f64ff720-2dcd-321d-6178-870a621b469c",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "161744009",
+       "display": "Past pregnancy history of miscarriage (situation)"
+      }
+     ],
+     "text": "Past pregnancy history of miscarriage (situation)"
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "onsetDateTime": "1963-06-07T11:52:21+09:30",
+    "recordedDate": "1963-06-07T11:52:21+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-6c17-aaac49ef55d8",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "f64ff720-2dcd-321d-6c17-aaac49ef55d8",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "714628002",
+       "display": "Prediabetes (finding)"
+      }
+     ],
+     "text": "Prediabetes (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "onsetDateTime": "1968-03-23T05:52:21+09:30",
+    "recordedDate": "1968-03-23T05:52:21+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-854f-3cd383f035a4",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "f64ff720-2dcd-321d-854f-3cd383f035a4",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "59621000",
+       "display": "Essential hypertension (disorder)"
+      }
+     ],
+     "text": "Essential hypertension (disorder)"
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "onsetDateTime": "1971-03-27T05:52:21+09:30",
+    "recordedDate": "1971-03-27T05:52:21+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-7090-56dd7219f1b9",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "f64ff720-2dcd-321d-7090-56dd7219f1b9",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "201834006",
+       "display": "Localized, primary osteoarthritis of the hand (disorder)"
+      }
+     ],
+     "text": "Localized, primary osteoarthritis of the hand (disorder)"
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "onsetDateTime": "1990-06-09T05:52:21+09:30",
+    "recordedDate": "1990-06-09T05:52:21+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-e6fd-06384fbeb696",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "f64ff720-2dcd-321d-e6fd-06384fbeb696",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "37320007",
+       "display": "Loss of teeth (disorder)"
+      }
+     ],
+     "text": "Loss of teeth (disorder)"
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "onsetDateTime": "2007-11-10T06:52:21+10:30",
+    "recordedDate": "2007-11-10T06:52:21+10:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-2b5d-fa6813731123",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "f64ff720-2dcd-321d-2b5d-fa6813731123",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "109989006",
+       "display": "Multiple myeloma (disorder)"
+      }
+     ],
+     "text": "Multiple myeloma (disorder)"
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "onsetDateTime": "2008-12-26T06:52:21+10:30",
+    "recordedDate": "2008-12-26T06:52:21+10:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-0c53-835b620c2fc3",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "f64ff720-2dcd-321d-0c53-835b620c2fc3",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "153351000119102",
+       "display": "History of peripheral stem cell transplant (situation)"
+      }
+     ],
+     "text": "History of peripheral stem cell transplant (situation)"
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "onsetDateTime": "2009-04-15T09:49:56+09:30",
+    "recordedDate": "2009-04-15T09:49:56+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-c0ea-d3516eafb53c",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "f64ff720-2dcd-321d-c0ea-d3516eafb53c",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "127013003",
+       "display": "Disorder of kidney due to diabetes mellitus (disorder)"
+      }
+     ],
+     "text": "Disorder of kidney due to diabetes mellitus (disorder)"
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "onsetDateTime": "2009-10-31T06:52:21+10:30",
+    "recordedDate": "2009-10-31T06:52:21+10:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-d749-88d55812cc25",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "f64ff720-2dcd-321d-d749-88d55812cc25",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "55822004",
+       "display": "Hyperlipidemia (disorder)"
+      }
+     ],
+     "text": "Hyperlipidemia (disorder)"
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "onsetDateTime": "2009-10-31T06:52:21+10:30",
+    "recordedDate": "2009-10-31T06:52:21+10:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-faf9-5696f5adeb57",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "f64ff720-2dcd-321d-faf9-5696f5adeb57",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "90781000119102",
+       "display": "Microalbuminuria due to type 2 diabetes mellitus (disorder)"
+      }
+     ],
+     "text": "Microalbuminuria due to type 2 diabetes mellitus (disorder)"
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "onsetDateTime": "2011-11-12T06:52:21+10:30",
+    "recordedDate": "2011-11-12T06:52:21+10:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-9c7d-9eb234897c02",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "f64ff720-2dcd-321d-9c7d-9eb234897c02",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "157141000119108",
+       "display": "Proteinuria due to type 2 diabetes mellitus (disorder)"
+      }
+     ],
+     "text": "Proteinuria due to type 2 diabetes mellitus (disorder)"
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "onsetDateTime": "2012-03-24T06:52:21+10:30",
+    "recordedDate": "2012-03-24T06:52:21+10:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-b189-31f453ef2de4",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "f64ff720-2dcd-321d-b189-31f453ef2de4",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "161665007",
+       "display": "History of renal transplant (situation)"
+      }
+     ],
+     "text": "History of renal transplant (situation)"
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "onsetDateTime": "2018-03-03T09:39:00+10:30",
+    "recordedDate": "2018-03-03T09:39:00+10:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-b9ad-e59d7b31fa8f",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "f64ff720-2dcd-321d-b9ad-e59d7b31fa8f",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "414545008",
+       "display": "Ischemic heart disease (disorder)"
+      }
+     ],
+     "text": "Ischemic heart disease (disorder)"
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "onsetDateTime": "2018-10-27T06:52:21+10:30",
+    "recordedDate": "2018-10-27T06:52:21+10:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-816e-28a534ffe501",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "f64ff720-2dcd-321d-816e-28a534ffe501",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "274531002",
+       "display": "Abnormal findings diagnostic imaging heart+coronary circulat (finding)"
+      }
+     ],
+     "text": "Abnormal findings diagnostic imaging heart+coronary circulat (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "onsetDateTime": "2018-12-21T05:51:51+10:30",
+    "recordedDate": "2018-12-21T05:51:51+10:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-5c33-bc72f322d684",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "f64ff720-2dcd-321d-5c33-bc72f322d684",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "399261000",
+       "display": "History of coronary artery bypass grafting (situation)"
+      }
+     ],
+     "text": "History of coronary artery bypass grafting (situation)"
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "onsetDateTime": "2019-01-06T18:40:40+10:30",
+    "recordedDate": "2019-01-06T18:40:40+10:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-aba8-0f13dd310691",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "f64ff720-2dcd-321d-aba8-0f13dd310691",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "423315002",
+       "display": "Limited social contact (finding)"
+      }
+     ],
+     "text": "Limited social contact (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "onsetDateTime": "2024-01-27T07:42:27+10:30",
+    "recordedDate": "2024-01-27T07:42:27+10:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-a24d-2ce5ebef2a23",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "f64ff720-2dcd-321d-a24d-2ce5ebef2a23",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "73595000",
+       "display": "Stress (finding)"
+      }
+     ],
+     "text": "Stress (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "onsetDateTime": "2025-05-17T06:40:02+09:30",
+    "recordedDate": "2025-05-17T06:40:02+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-46d5-7b052106dc12",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "f64ff720-2dcd-321d-46d5-7b052106dc12",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "706893006",
+       "display": "Victim of intimate partner abuse (finding)"
+      }
+     ],
+     "text": "Victim of intimate partner abuse (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "onsetDateTime": "2025-05-17T06:40:02+09:30",
+    "recordedDate": "2025-05-17T06:40:02+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-f817-57e466869eea",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "f64ff720-2dcd-321d-f817-57e466869eea",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "741062008",
+       "display": "Not in labor force (finding)"
+      }
+     ],
+     "text": "Not in labor force (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "onsetDateTime": "2026-02-28T07:47:45+10:30",
+    "recordedDate": "2026-02-28T07:47:45+10:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-6bee-f076bbb6e15f",
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "f64ff720-2dcd-321d-6bee-f076bbb6e15f",
+    "status": "active",
+    "intent": "order",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+        "code": "community",
+        "display": "Community"
+       }
+      ],
+      "text": "Community"
+     }
+    ],
+    "medication": {
+     "concept": {
+      "coding": [
+       {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "106892",
+        "display": "insulin isophane, human 70 UNT/ML / insulin, regular, human 30 UNT/ML Injectable Suspension [Humulin]"
+       }
+      ],
+      "text": "insulin isophane, human 70 UNT/ML / insulin, regular, human 30 UNT/ML Injectable Suspension [Humulin]"
+     }
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "authoredOn": "2026-02-28T06:52:21+10:30",
+    "reason": [
+     {
+      "concept": {
+       "text": "Prediabetes (finding)"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-11dc-58c2b082d7b1",
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "f64ff720-2dcd-321d-11dc-58c2b082d7b1",
+    "status": "active",
+    "intent": "order",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+        "code": "community",
+        "display": "Community"
+       }
+      ],
+      "text": "Community"
+     }
+    ],
+    "medication": {
+     "concept": {
+      "coding": [
+       {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "1664463",
+        "display": "24 HR tacrolimus 1 MG Extended Release Oral Tablet [Envarsus]"
+       }
+      ],
+      "text": "24 HR tacrolimus 1 MG Extended Release Oral Tablet [Envarsus]"
+     }
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "authoredOn": "2026-02-28T06:52:21+10:30",
+    "dosageInstruction": [
+     {
+      "sequence": 1,
+      "text": "Take as needed.",
+      "asNeeded": true
+     }
+    ],
+    "reason": [
+     {
+      "concept": {
+       "text": "History of renal transplant (situation)"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-1388-98604876825f",
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "f64ff720-2dcd-321d-1388-98604876825f",
+    "status": "active",
+    "intent": "order",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+        "code": "community",
+        "display": "Community"
+       }
+      ],
+      "text": "Community"
+     }
+    ],
+    "medication": {
+     "concept": {
+      "coding": [
+       {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "314076",
+        "display": "lisinopril 10 MG Oral Tablet"
+       }
+      ],
+      "text": "lisinopril 10 MG Oral Tablet"
+     }
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "authoredOn": "2026-02-28T06:52:21+10:30",
+    "dosageInstruction": [
+     {
+      "sequence": 1,
+      "timing": {
+       "repeat": {
+        "frequency": 1,
+        "period": 1.0,
+        "periodUnit": "d"
+       }
+      },
+      "doseAndRate": [
+       {
+        "type": {
+         "coding": [
+          {
+           "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+           "code": "ordered",
+           "display": "Ordered"
+          }
+         ]
+        },
+        "doseQuantity": {
+         "value": 1.0
+        }
+       }
+      ],
+      "asNeeded": false
+     }
+    ],
+    "reason": [
+     {
+      "concept": {
+       "text": "Essential hypertension (disorder)"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-ad62-2894dfe8a1b6",
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "f64ff720-2dcd-321d-ad62-2894dfe8a1b6",
+    "status": "active",
+    "intent": "order",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+        "code": "community",
+        "display": "Community"
+       }
+      ],
+      "text": "Community"
+     }
+    ],
+    "medication": {
+     "concept": {
+      "coding": [
+       {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "308136",
+        "display": "amLODIPine 2.5 MG Oral Tablet"
+       }
+      ],
+      "text": "amLODIPine 2.5 MG Oral Tablet"
+     }
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "authoredOn": "2026-02-28T06:52:21+10:30",
+    "dosageInstruction": [
+     {
+      "sequence": 1,
+      "timing": {
+       "repeat": {
+        "frequency": 1,
+        "period": 1.0,
+        "periodUnit": "d"
+       }
+      },
+      "doseAndRate": [
+       {
+        "type": {
+         "coding": [
+          {
+           "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+           "code": "ordered",
+           "display": "Ordered"
+          }
+         ]
+        },
+        "doseQuantity": {
+         "value": 1.0
+        }
+       }
+      ],
+      "asNeeded": false
+     }
+    ],
+    "reason": [
+     {
+      "concept": {
+       "text": "Essential hypertension (disorder)"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-81b8-8365e2d70358",
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "f64ff720-2dcd-321d-81b8-8365e2d70358",
+    "status": "active",
+    "intent": "order",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+        "code": "community",
+        "display": "Community"
+       }
+      ],
+      "text": "Community"
+     }
+    ],
+    "medication": {
+     "concept": {
+      "coding": [
+       {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "314231",
+        "display": "Simvastatin 10 MG Oral Tablet"
+       }
+      ],
+      "text": "Simvastatin 10 MG Oral Tablet"
+     }
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "authoredOn": "2026-02-15T06:52:21+10:30",
+    "dosageInstruction": [
+     {
+      "sequence": 1,
+      "timing": {
+       "repeat": {
+        "frequency": 1,
+        "period": 1.0,
+        "periodUnit": "d"
+       }
+      },
+      "doseAndRate": [
+       {
+        "type": {
+         "coding": [
+          {
+           "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+           "code": "ordered",
+           "display": "Ordered"
+          }
+         ]
+        },
+        "doseQuantity": {
+         "value": 1.0
+        }
+       }
+      ],
+      "asNeeded": false
+     }
+    ],
+    "reason": [
+     {
+      "concept": {
+       "text": "Hyperlipidemia (disorder)"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-997e-20366b250a33",
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "f64ff720-2dcd-321d-997e-20366b250a33",
+    "status": "active",
+    "intent": "order",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+        "code": "community",
+        "display": "Community"
+       }
+      ],
+      "text": "Community"
+     }
+    ],
+    "medication": {
+     "concept": {
+      "coding": [
+       {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "309362",
+        "display": "Clopidogrel 75 MG Oral Tablet"
+       }
+      ],
+      "text": "Clopidogrel 75 MG Oral Tablet"
+     }
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "authoredOn": "2018-11-03T06:52:21+10:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-207a-971e291acd9e",
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "f64ff720-2dcd-321d-207a-971e291acd9e",
+    "status": "active",
+    "intent": "order",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+        "code": "community",
+        "display": "Community"
+       }
+      ],
+      "text": "Community"
+     }
+    ],
+    "medication": {
+     "concept": {
+      "coding": [
+       {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "312961",
+        "display": "Simvastatin 20 MG Oral Tablet"
+       }
+      ],
+      "text": "Simvastatin 20 MG Oral Tablet"
+     }
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "authoredOn": "2018-11-03T06:52:21+10:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-58e4-5aceac088209",
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "f64ff720-2dcd-321d-58e4-5aceac088209",
+    "status": "active",
+    "intent": "order",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+        "code": "community",
+        "display": "Community"
+       }
+      ],
+      "text": "Community"
+     }
+    ],
+    "medication": {
+     "concept": {
+      "coding": [
+       {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "866412",
+        "display": "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet"
+       }
+      ],
+      "text": "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet"
+     }
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "authoredOn": "2018-11-03T06:52:21+10:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-02e0-4050f47a0963",
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "f64ff720-2dcd-321d-02e0-4050f47a0963",
+    "status": "active",
+    "intent": "order",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+        "code": "community",
+        "display": "Community"
+       }
+      ],
+      "text": "Community"
+     }
+    ],
+    "medication": {
+     "concept": {
+      "coding": [
+       {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "705129",
+        "display": "Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray"
+       }
+      ],
+      "text": "Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray"
+     }
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "authoredOn": "2018-11-03T06:52:21+10:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-4287-2d28c235b41e",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "f64ff720-2dcd-321d-4287-2d28c235b41e",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "4548-4",
+       "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+      }
+     ],
+     "text": "Hemoglobin A1c/Hemoglobin.total in Blood"
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "effectiveDateTime": "2026-02-28T06:52:21+10:30",
+    "valueQuantity": {
+     "value": 3.34,
+     "unit": "%",
+     "system": "http://unitsofmeasure.org",
+     "code": "%"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-e5c9-a8a9960f0c28",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "f64ff720-2dcd-321d-e5c9-a8a9960f0c28",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs",
+        "display": "Vital signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "39156-5",
+       "display": "Body mass index (BMI) [Ratio]"
+      }
+     ],
+     "text": "Body mass index (BMI) [Ratio]"
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "effectiveDateTime": "2026-02-28T06:52:21+10:30",
+    "valueQuantity": {
+     "value": 27.35,
+     "unit": "kg/m2",
+     "system": "http://unitsofmeasure.org",
+     "code": "kg/m2"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-e726-f7d140942a5f",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "f64ff720-2dcd-321d-e726-f7d140942a5f",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs",
+        "display": "Vital signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "85354-9",
+       "display": "Blood pressure panel with all children optional"
+      }
+     ],
+     "text": "Blood pressure panel with all children optional"
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "effectiveDateTime": "2026-02-28T06:52:21+10:30",
+    "component": [
+     {
+      "code": {
+       "coding": [
+        {
+         "system": "http://loinc.org",
+         "code": "8462-4",
+         "display": "Diastolic Blood Pressure"
+        }
+       ],
+       "text": "Diastolic Blood Pressure"
+      },
+      "valueQuantity": {
+       "value": 53,
+       "unit": "mm[Hg]",
+       "system": "http://unitsofmeasure.org",
+       "code": "mm[Hg]"
+      }
+     },
+     {
+      "code": {
+       "coding": [
+        {
+         "system": "http://loinc.org",
+         "code": "8480-6",
+         "display": "Systolic Blood Pressure"
+        }
+       ],
+       "text": "Systolic Blood Pressure"
+      },
+      "valueQuantity": {
+       "value": 104,
+       "unit": "mm[Hg]",
+       "system": "http://unitsofmeasure.org",
+       "code": "mm[Hg]"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-fa4f-9d75a315435a",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "f64ff720-2dcd-321d-fa4f-9d75a315435a",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs",
+        "display": "Vital signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Heart rate"
+      }
+     ],
+     "text": "Heart rate"
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "effectiveDateTime": "2026-02-28T06:52:21+10:30",
+    "valueQuantity": {
+     "value": 68,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-6ebd-94043fdd949a",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "f64ff720-2dcd-321d-6ebd-94043fdd949a",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs",
+        "display": "Vital signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "9279-1",
+       "display": "Respiratory rate"
+      }
+     ],
+     "text": "Respiratory rate"
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "effectiveDateTime": "2026-02-28T06:52:21+10:30",
+    "valueQuantity": {
+     "value": 14,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-2012-53c9c7e87353",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "f64ff720-2dcd-321d-2012-53c9c7e87353",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "6298-4",
+       "display": "Potassium [Moles/volume] in Blood"
+      }
+     ],
+     "text": "Potassium [Moles/volume] in Blood"
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "effectiveDateTime": "2026-02-28T06:52:21+10:30",
+    "valueQuantity": {
+     "value": 4.86,
+     "unit": "mmol/L",
+     "system": "http://unitsofmeasure.org",
+     "code": "mmol/L"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-00b1-6cb2209dd904",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "f64ff720-2dcd-321d-00b1-6cb2209dd904",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "33914-3",
+       "display": "Glomerular filtration rate [Volume Rate/Area] in Serum or Plasma by Creatinine-based formula (MDRD)/1.73 sq M"
+      }
+     ],
+     "text": "Glomerular filtration rate [Volume Rate/Area] in Serum or Plasma by Creatinine-based formula (MDRD)/1.73 sq M"
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "effectiveDateTime": "2026-02-15T06:52:21+10:30",
+    "valueQuantity": {
+     "value": 66.03,
+     "unit": "mL/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "mL/min"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-4bc4-aed6a4c0bbd5",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "f64ff720-2dcd-321d-4bc4-aed6a4c0bbd5",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "2093-3",
+       "display": "Cholesterol [Mass/volume] in Serum or Plasma"
+      }
+     ],
+     "text": "Cholesterol [Mass/volume] in Serum or Plasma"
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "effectiveDateTime": "2026-02-28T06:52:21+10:30",
+    "valueQuantity": {
+     "value": 140.23,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-8bc6-cee174084a82",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "f64ff720-2dcd-321d-8bc6-cee174084a82",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "718-7",
+       "display": "Hemoglobin [Mass/volume] in Blood"
+      }
+     ],
+     "text": "Hemoglobin [Mass/volume] in Blood"
+    },
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "effectiveDateTime": "2024-01-27T06:52:21+10:30",
+    "valueQuantity": {
+     "value": 16.877,
+     "unit": "g/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "g/dL"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-3ada-b7a96ac8ccbc",
+   "resource": {
+    "resourceType": "Encounter",
+    "id": "f64ff720-2dcd-321d-3ada-b7a96ac8ccbc",
+    "status": "completed",
+    "class": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB"
+       }
+      ]
+     }
+    ],
+    "type": [
+     {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "162673000",
+        "display": "General examination of patient (procedure)"
+       }
+      ],
+      "text": "General examination of patient (procedure)"
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "actualPeriod": {
+     "start": "2026-02-28T06:52:21+10:30",
+     "end": "2026-02-28T07:47:45+10:30"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-6642-fe2be8c5f3f0",
+   "resource": {
+    "resourceType": "Encounter",
+    "id": "f64ff720-2dcd-321d-6642-fe2be8c5f3f0",
+    "status": "completed",
+    "class": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB"
+       }
+      ]
+     }
+    ],
+    "type": [
+     {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "390906007",
+        "display": "Follow-up encounter (procedure)"
+       }
+      ],
+      "text": "Follow-up encounter (procedure)"
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "actualPeriod": {
+     "start": "2026-02-15T06:52:21+10:30",
+     "end": "2026-02-15T07:07:21+10:30"
+    },
+    "reason": [
+     {
+      "value": [
+       {
+        "concept": {
+         "coding": [
+          {
+           "system": "http://snomed.info/sct",
+           "code": "55822004",
+           "display": "Hyperlipidemia (disorder)"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-68ae-2f6681b83372",
+   "resource": {
+    "resourceType": "Encounter",
+    "id": "f64ff720-2dcd-321d-68ae-2f6681b83372",
+    "status": "completed",
+    "class": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "EMER"
+       }
+      ]
+     }
+    ],
+    "type": [
+     {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "50849002",
+        "display": "Emergency room admission (procedure)"
+       }
+      ],
+      "text": "Emergency room admission (procedure)"
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "actualPeriod": {
+     "start": "2025-07-21T10:09:56+09:30",
+     "end": "2025-07-21T11:09:56+09:30"
+    },
+    "reason": [
+     {
+      "value": [
+       {
+        "concept": {
+         "coding": [
+          {
+           "system": "http://snomed.info/sct",
+           "code": "312608009",
+           "display": "Laceration - injury (disorder)"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-9af8-fe6e1b818041",
+   "resource": {
+    "resourceType": "Encounter",
+    "id": "f64ff720-2dcd-321d-9af8-fe6e1b818041",
+    "status": "completed",
+    "class": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB"
+       }
+      ]
+     }
+    ],
+    "type": [
+     {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "185349003",
+        "display": "Encounter for check up (procedure)"
+       }
+      ],
+      "text": "Encounter for check up (procedure)"
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "actualPeriod": {
+     "start": "2025-05-31T05:52:21+09:30",
+     "end": "2025-05-31T09:27:27+09:30"
+    },
+    "reason": [
+     {
+      "value": [
+       {
+        "concept": {
+         "coding": [
+          {
+           "system": "http://snomed.info/sct",
+           "code": "66383009",
+           "display": "Gingivitis (disorder)"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f64ff720-2dcd-321d-c663-eb15e2dc985b",
+   "resource": {
+    "resourceType": "Encounter",
+    "id": "f64ff720-2dcd-321d-c663-eb15e2dc985b",
+    "status": "completed",
+    "class": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB"
+       }
+      ]
+     }
+    ],
+    "type": [
+     {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "185349003",
+        "display": "Encounter for check up (procedure)"
+       }
+      ],
+      "text": "Encounter for check up (procedure)"
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:f64ff720-2dcd-321d-3e99-39fbf2bd8877"
+    },
+    "actualPeriod": {
+     "start": "2025-05-17T05:52:21+09:30",
+     "end": "2025-05-17T06:40:02+09:30"
+    }
+   }
+  }
+ ]
+}
