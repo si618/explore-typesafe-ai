@@ -1,0 +1,2341 @@
+{
+ "scenario": "s1_ward",
+ "run_at": "2026-09-18T23:37:28+00:00",
+ "cases": [
+  {
+   "patient": "ad0c082f",
+   "state": {
+    "patient": {
+     "age": 57,
+     "sex": "male",
+     "active_conditions": [
+      "Acute ST segment elevation myocardial infarction",
+      "Anemia",
+      "Chronic kidney disease stage 1",
+      "Chronic kidney disease stage 2",
+      "Chronic kidney disease stage 3",
+      "Chronic sinusitis",
+      "Diabetes mellitus type 2",
+      "Disorder of kidney due to diabetes mellitus",
+      "Essential hypertension",
+      "Gingivitis",
+      "Hyperglycemia",
+      "Hypertriglyceridemia",
+      "Loss of teeth",
+      "Metabolic syndrome X",
+      "Microalbuminuria due to type 2 diabetes mellitus",
+      "Proteinuria due to type 2 diabetes mellitus"
+     ]
+    },
+    "admission_reason": "Inferior STEMI, day 3 post primary PCI",
+    "nursing_note": "Chest pain free since PCI. Mobilised to bathroom independently, walked the corridor with physio. Radial site clean, no haematoma. BMs 7-9 on usual insulin. Eating and drinking well. Wife visited. Plan cardiac rehab referral, likely home tomorrow."
+   },
+   "questions": {
+    "new_confusion": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe a new change in the patient's mental state or level of consciousness compared with their usual baseline, such as new confusion, disorientation, agitation, hallucinations, drowsiness or reduced responsiveness?",
+     "criteria": {
+      "true": "A change from the patient's usual mental state is described, even if they have dementia or a learning disability at baseline.",
+      "false": "Mental state is normal, or unchanged from a known baseline such as long-standing dementia that is as usual."
+     }
+    },
+    "infection": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe signs of a current infection, an infection being treated, or a suspicion of infection?",
+     "criteria": {
+      "true": "For example fever, rigors, purulent sputum, urinary symptoms, spreading redness, or an infection under treatment.",
+      "false": "No infection signs are described, or infection is explicitly ruled out."
+     }
+    },
+    "concern": {
+     "type": "score",
+     "instructions": "How worried should the ward team be about this patient right now, based on `nursing_note`?",
+     "criteria": [
+      "Stable or improving, no new problems; routine care",
+      "A minor issue to keep monitoring, with no clinical review needed today",
+      "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     ]
+    },
+    "pattern": {
+     "type": "choice",
+     "instructions": "What is the main type of clinical deterioration described in `nursing_note`?",
+     "criteria": {
+      "sepsis_infection": "Infection causing systemic illness: fever or rigors with fast heart rate, low blood pressure, new confusion or low urine output",
+      "respiratory": "Worsening breathing, rising oxygen requirement or low oxygen saturation",
+      "cardiac": "Chest pain, arrhythmia, or collapse from a heart cause",
+      "neurological": "Stroke, head injury, seizure, delirium, or reduced consciousness from a brain cause",
+      "bleeding": "Blood loss, such as black stools, vomiting blood, or bleeding with falling blood pressure",
+      "metabolic_renal": "Blood sugar, electrolyte, calcium, fluid balance or kidney problems",
+      "drug_or_substance": "Medication toxicity, over-sedation, or alcohol or drug withdrawal",
+      "other": "A concerning change that fits none of the other options",
+      "no_acute_change": "No deterioration: stable, improving, or at baseline"
+     }
+    }
+   },
+   "answers": {
+    "new_confusion": {
+     "type": "noul",
+     "noul": 0.03
+    },
+    "infection": {
+     "type": "noul",
+     "noul": 0.03
+    },
+    "concern": {
+     "type": "score",
+     "score": 0.01,
+     "confidence": 0.99,
+     "legend": {
+      "0": "Stable or improving, no new problems; routine care",
+      "1": "A minor issue to keep monitoring, with no clinical review needed today",
+      "2": "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "3": "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     },
+     "probabilities": {
+      "0": 0.99,
+      "1": 0.01,
+      "2": 0.0,
+      "3": 0.0
+     }
+    },
+    "pattern": {
+     "type": "choice",
+     "choice": "no_acute_change",
+     "confidence": 1.0,
+     "probabilities": {
+      "other": 0.0,
+      "no_acute_change": 1.0,
+      "respiratory": 0.0,
+      "sepsis_infection": 0.0,
+      "cardiac": 0.0,
+      "metabolic_renal": 0.0,
+      "drug_or_substance": 0.0,
+      "neurological": 0.0,
+      "bleeding": 0.0
+     }
+    }
+   },
+   "model": "jev-1.13.0",
+   "usage": {
+    "input_tokens": 1166,
+    "output_tokens": 156
+   },
+   "latency_ms": 796.6,
+   "request_id": "req_01a0b6e1b86f7adca34cf6dca5dd0745"
+  },
+  {
+   "patient": "8f31c869",
+   "state": {
+    "patient": {
+     "age": 88,
+     "sex": "male",
+     "active_conditions": [
+      "Anemia",
+      "Aortic valve stenosis",
+      "Atrial fibrillation",
+      "Chronic sinusitis",
+      "Diabetes mellitus type 2",
+      "Disorder of kidney due to diabetes mellitus",
+      "Hyperglycemia",
+      "Hyperlipidemia",
+      "Hypertriglyceridemia",
+      "Ischemic heart disease",
+      "Loss of teeth",
+      "Metabolic syndrome X",
+      "Microalbuminuria due to type 2 diabetes mellitus",
+      "Proteinuria due to type 2 diabetes mellitus"
+     ]
+    },
+    "admission_reason": "Unwitnessed fall at home, on warfarin for AF",
+    "nursing_note": "Complained of a headache after lunch, which is unusual for him. Now much harder to rouse for evening meds, only opens eyes when I call his name loudly, and speech is slurred. Left pupil looked sluggish compared to right. INR on admission 3.4. Has not had a CT head yet."
+   },
+   "questions": {
+    "new_confusion": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe a new change in the patient's mental state or level of consciousness compared with their usual baseline, such as new confusion, disorientation, agitation, hallucinations, drowsiness or reduced responsiveness?",
+     "criteria": {
+      "true": "A change from the patient's usual mental state is described, even if they have dementia or a learning disability at baseline.",
+      "false": "Mental state is normal, or unchanged from a known baseline such as long-standing dementia that is as usual."
+     }
+    },
+    "infection": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe signs of a current infection, an infection being treated, or a suspicion of infection?",
+     "criteria": {
+      "true": "For example fever, rigors, purulent sputum, urinary symptoms, spreading redness, or an infection under treatment.",
+      "false": "No infection signs are described, or infection is explicitly ruled out."
+     }
+    },
+    "concern": {
+     "type": "score",
+     "instructions": "How worried should the ward team be about this patient right now, based on `nursing_note`?",
+     "criteria": [
+      "Stable or improving, no new problems; routine care",
+      "A minor issue to keep monitoring, with no clinical review needed today",
+      "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     ]
+    },
+    "pattern": {
+     "type": "choice",
+     "instructions": "What is the main type of clinical deterioration described in `nursing_note`?",
+     "criteria": {
+      "sepsis_infection": "Infection causing systemic illness: fever or rigors with fast heart rate, low blood pressure, new confusion or low urine output",
+      "respiratory": "Worsening breathing, rising oxygen requirement or low oxygen saturation",
+      "cardiac": "Chest pain, arrhythmia, or collapse from a heart cause",
+      "neurological": "Stroke, head injury, seizure, delirium, or reduced consciousness from a brain cause",
+      "bleeding": "Blood loss, such as black stools, vomiting blood, or bleeding with falling blood pressure",
+      "metabolic_renal": "Blood sugar, electrolyte, calcium, fluid balance or kidney problems",
+      "drug_or_substance": "Medication toxicity, over-sedation, or alcohol or drug withdrawal",
+      "other": "A concerning change that fits none of the other options",
+      "no_acute_change": "No deterioration: stable, improving, or at baseline"
+     }
+    }
+   },
+   "answers": {
+    "new_confusion": {
+     "type": "noul",
+     "noul": 0.98
+    },
+    "infection": {
+     "type": "noul",
+     "noul": 0.02
+    },
+    "concern": {
+     "type": "score",
+     "score": 2.99,
+     "confidence": 0.99,
+     "legend": {
+      "0": "Stable or improving, no new problems; routine care",
+      "1": "A minor issue to keep monitoring, with no clinical review needed today",
+      "2": "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "3": "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     },
+     "probabilities": {
+      "0": 0.0,
+      "1": 0.0,
+      "2": 0.01,
+      "3": 0.99
+     }
+    },
+    "pattern": {
+     "type": "choice",
+     "choice": "neurological",
+     "confidence": 1.0,
+     "probabilities": {
+      "cardiac": 0.0,
+      "sepsis_infection": 0.0,
+      "respiratory": 0.0,
+      "neurological": 1.0,
+      "other": 0.0,
+      "metabolic_renal": 0.0,
+      "drug_or_substance": 0.0,
+      "bleeding": 0.0,
+      "no_acute_change": 0.0
+     }
+    }
+   },
+   "model": "jev-1.13.0",
+   "usage": {
+    "input_tokens": 1146,
+    "output_tokens": 156
+   },
+   "latency_ms": 340.4,
+   "request_id": "req_01a0b6e1b9ca72558aeb291e10023c57"
+  },
+  {
+   "patient": "8853bb83",
+   "state": {
+    "patient": {
+     "age": 78,
+     "sex": "female",
+     "active_conditions": [
+      "Anemia",
+      "Aortic valve regurgitation",
+      "Chronic sinusitis",
+      "Disorder of kidney due to diabetes mellitus",
+      "Essential hypertension",
+      "Ischemic heart disease",
+      "Loss of teeth",
+      "Metabolic syndrome X",
+      "Microalbuminuria due to type 2 diabetes mellitus",
+      "Osteoporosis",
+      "Polyp of colon",
+      "Proteinuria due to type 2 diabetes mellitus",
+      "Pulmonary emphysema"
+     ]
+    },
+    "admission_reason": "Infective exacerbation of COPD, day 4 of antibiotics",
+    "nursing_note": "Target saturations 88-92% per respiratory team, sats 90% on 2L nasal specs. Talking in full sentences, sputum now white rather than green. Daughter says breathing is back to her usual. Mobilising to commode with frame. Continue current plan and oral antibiotics."
+   },
+   "questions": {
+    "new_confusion": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe a new change in the patient's mental state or level of consciousness compared with their usual baseline, such as new confusion, disorientation, agitation, hallucinations, drowsiness or reduced responsiveness?",
+     "criteria": {
+      "true": "A change from the patient's usual mental state is described, even if they have dementia or a learning disability at baseline.",
+      "false": "Mental state is normal, or unchanged from a known baseline such as long-standing dementia that is as usual."
+     }
+    },
+    "infection": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe signs of a current infection, an infection being treated, or a suspicion of infection?",
+     "criteria": {
+      "true": "For example fever, rigors, purulent sputum, urinary symptoms, spreading redness, or an infection under treatment.",
+      "false": "No infection signs are described, or infection is explicitly ruled out."
+     }
+    },
+    "concern": {
+     "type": "score",
+     "instructions": "How worried should the ward team be about this patient right now, based on `nursing_note`?",
+     "criteria": [
+      "Stable or improving, no new problems; routine care",
+      "A minor issue to keep monitoring, with no clinical review needed today",
+      "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     ]
+    },
+    "pattern": {
+     "type": "choice",
+     "instructions": "What is the main type of clinical deterioration described in `nursing_note`?",
+     "criteria": {
+      "sepsis_infection": "Infection causing systemic illness: fever or rigors with fast heart rate, low blood pressure, new confusion or low urine output",
+      "respiratory": "Worsening breathing, rising oxygen requirement or low oxygen saturation",
+      "cardiac": "Chest pain, arrhythmia, or collapse from a heart cause",
+      "neurological": "Stroke, head injury, seizure, delirium, or reduced consciousness from a brain cause",
+      "bleeding": "Blood loss, such as black stools, vomiting blood, or bleeding with falling blood pressure",
+      "metabolic_renal": "Blood sugar, electrolyte, calcium, fluid balance or kidney problems",
+      "drug_or_substance": "Medication toxicity, over-sedation, or alcohol or drug withdrawal",
+      "other": "A concerning change that fits none of the other options",
+      "no_acute_change": "No deterioration: stable, improving, or at baseline"
+     }
+    }
+   },
+   "answers": {
+    "new_confusion": {
+     "type": "noul",
+     "noul": 0.03
+    },
+    "infection": {
+     "type": "noul",
+     "noul": 0.97
+    },
+    "concern": {
+     "type": "score",
+     "score": 0.01,
+     "confidence": 0.99,
+     "legend": {
+      "0": "Stable or improving, no new problems; routine care",
+      "1": "A minor issue to keep monitoring, with no clinical review needed today",
+      "2": "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "3": "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     },
+     "probabilities": {
+      "0": 0.99,
+      "1": 0.01,
+      "2": 0.0,
+      "3": 0.0
+     }
+    },
+    "pattern": {
+     "type": "choice",
+     "choice": "no_acute_change",
+     "confidence": 1.0,
+     "probabilities": {
+      "bleeding": 0.0,
+      "drug_or_substance": 0.0,
+      "other": 0.0,
+      "no_acute_change": 1.0,
+      "sepsis_infection": 0.0,
+      "metabolic_renal": 0.0,
+      "neurological": 0.0,
+      "cardiac": 0.0,
+      "respiratory": 0.0
+     }
+    }
+   },
+   "model": "jev-1.13.0",
+   "usage": {
+    "input_tokens": 1135,
+    "output_tokens": 156
+   },
+   "latency_ms": 373.0,
+   "request_id": "req_01a0b6e1bb367361b35897b33f85408c"
+  },
+  {
+   "patient": "f64ff720",
+   "state": {
+    "patient": {
+     "age": 86,
+     "sex": "female",
+     "active_conditions": [
+      "Cerebral palsy",
+      "Disorder of kidney due to diabetes mellitus",
+      "Essential hypertension",
+      "Gastroesophageal reflux disease",
+      "Hyperlipidemia",
+      "Intellectual disability",
+      "Ischemic heart disease",
+      "Localized, primary osteoarthritis of the hand",
+      "Loss of teeth",
+      "Microalbuminuria due to type 2 diabetes mellitus",
+      "Multiple myeloma",
+      "Osteoporosis",
+      "Proteinuria due to type 2 diabetes mellitus"
+     ]
+    },
+    "admission_reason": "Hypercalcaemia secondary to multiple myeloma, on IV fluids",
+    "nursing_note": "Non-verbal at baseline (cerebral palsy, learning disability). Her carer of 10 years says she is much quieter than usual this afternoon, not responding to her music which normally makes her smile, and she pushed away her drinks. Grimacing when turned. Hard to assess pain. Carer is worried."
+   },
+   "questions": {
+    "new_confusion": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe a new change in the patient's mental state or level of consciousness compared with their usual baseline, such as new confusion, disorientation, agitation, hallucinations, drowsiness or reduced responsiveness?",
+     "criteria": {
+      "true": "A change from the patient's usual mental state is described, even if they have dementia or a learning disability at baseline.",
+      "false": "Mental state is normal, or unchanged from a known baseline such as long-standing dementia that is as usual."
+     }
+    },
+    "infection": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe signs of a current infection, an infection being treated, or a suspicion of infection?",
+     "criteria": {
+      "true": "For example fever, rigors, purulent sputum, urinary symptoms, spreading redness, or an infection under treatment.",
+      "false": "No infection signs are described, or infection is explicitly ruled out."
+     }
+    },
+    "concern": {
+     "type": "score",
+     "instructions": "How worried should the ward team be about this patient right now, based on `nursing_note`?",
+     "criteria": [
+      "Stable or improving, no new problems; routine care",
+      "A minor issue to keep monitoring, with no clinical review needed today",
+      "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     ]
+    },
+    "pattern": {
+     "type": "choice",
+     "instructions": "What is the main type of clinical deterioration described in `nursing_note`?",
+     "criteria": {
+      "sepsis_infection": "Infection causing systemic illness: fever or rigors with fast heart rate, low blood pressure, new confusion or low urine output",
+      "respiratory": "Worsening breathing, rising oxygen requirement or low oxygen saturation",
+      "cardiac": "Chest pain, arrhythmia, or collapse from a heart cause",
+      "neurological": "Stroke, head injury, seizure, delirium, or reduced consciousness from a brain cause",
+      "bleeding": "Blood loss, such as black stools, vomiting blood, or bleeding with falling blood pressure",
+      "metabolic_renal": "Blood sugar, electrolyte, calcium, fluid balance or kidney problems",
+      "drug_or_substance": "Medication toxicity, over-sedation, or alcohol or drug withdrawal",
+      "other": "A concerning change that fits none of the other options",
+      "no_acute_change": "No deterioration: stable, improving, or at baseline"
+     }
+    }
+   },
+   "answers": {
+    "new_confusion": {
+     "type": "noul",
+     "noul": 0.88
+    },
+    "infection": {
+     "type": "noul",
+     "noul": 0.05
+    },
+    "concern": {
+     "type": "score",
+     "score": 2.03,
+     "confidence": 0.97,
+     "legend": {
+      "0": "Stable or improving, no new problems; routine care",
+      "1": "A minor issue to keep monitoring, with no clinical review needed today",
+      "2": "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "3": "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     },
+     "probabilities": {
+      "0": 0.0,
+      "1": 0.0,
+      "2": 0.97,
+      "3": 0.03
+     }
+    },
+    "pattern": {
+     "type": "choice",
+     "choice": "other",
+     "confidence": 0.38,
+     "probabilities": {
+      "bleeding": 0.0,
+      "drug_or_substance": 0.0,
+      "no_acute_change": 0.0,
+      "metabolic_renal": 0.29,
+      "neurological": 0.22,
+      "respiratory": 0.0,
+      "sepsis_infection": 0.03,
+      "other": 0.46,
+      "cardiac": 0.0
+     }
+    }
+   },
+   "model": "jev-1.13.0",
+   "usage": {
+    "input_tokens": 1143,
+    "output_tokens": 153
+   },
+   "latency_ms": 466.8,
+   "request_id": "req_01a0b6e1bc94799a83f4bb739bbfa8da"
+  },
+  {
+   "patient": "8f23e265",
+   "state": {
+    "patient": {
+     "age": 80,
+     "sex": "male",
+     "active_conditions": [
+      "Acute non-ST segment elevation myocardial infarction",
+      "Anemia",
+      "Diabetes mellitus type 2",
+      "Essential hypertension",
+      "Hyperglycemia",
+      "Hypertriglyceridemia",
+      "Ischemic heart disease",
+      "Metabolic syndrome X",
+      "Obstructive sleep apnea syndrome",
+      "Polyp of colon",
+      "Recurrent rectal polyp",
+      "Sleep disorder"
+     ]
+    },
+    "admission_reason": "NSTEMI, awaiting angiography",
+    "nursing_note": "Called at 03:00 with central chest tightness radiating to his jaw, clammy and grey. GTN spray x2 with only partial relief, still rating pain 6/10. ECG done and attached to notes, awaiting doctor review."
+   },
+   "questions": {
+    "new_confusion": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe a new change in the patient's mental state or level of consciousness compared with their usual baseline, such as new confusion, disorientation, agitation, hallucinations, drowsiness or reduced responsiveness?",
+     "criteria": {
+      "true": "A change from the patient's usual mental state is described, even if they have dementia or a learning disability at baseline.",
+      "false": "Mental state is normal, or unchanged from a known baseline such as long-standing dementia that is as usual."
+     }
+    },
+    "infection": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe signs of a current infection, an infection being treated, or a suspicion of infection?",
+     "criteria": {
+      "true": "For example fever, rigors, purulent sputum, urinary symptoms, spreading redness, or an infection under treatment.",
+      "false": "No infection signs are described, or infection is explicitly ruled out."
+     }
+    },
+    "concern": {
+     "type": "score",
+     "instructions": "How worried should the ward team be about this patient right now, based on `nursing_note`?",
+     "criteria": [
+      "Stable or improving, no new problems; routine care",
+      "A minor issue to keep monitoring, with no clinical review needed today",
+      "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     ]
+    },
+    "pattern": {
+     "type": "choice",
+     "instructions": "What is the main type of clinical deterioration described in `nursing_note`?",
+     "criteria": {
+      "sepsis_infection": "Infection causing systemic illness: fever or rigors with fast heart rate, low blood pressure, new confusion or low urine output",
+      "respiratory": "Worsening breathing, rising oxygen requirement or low oxygen saturation",
+      "cardiac": "Chest pain, arrhythmia, or collapse from a heart cause",
+      "neurological": "Stroke, head injury, seizure, delirium, or reduced consciousness from a brain cause",
+      "bleeding": "Blood loss, such as black stools, vomiting blood, or bleeding with falling blood pressure",
+      "metabolic_renal": "Blood sugar, electrolyte, calcium, fluid balance or kidney problems",
+      "drug_or_substance": "Medication toxicity, over-sedation, or alcohol or drug withdrawal",
+      "other": "A concerning change that fits none of the other options",
+      "no_acute_change": "No deterioration: stable, improving, or at baseline"
+     }
+    }
+   },
+   "answers": {
+    "new_confusion": {
+     "type": "noul",
+     "noul": 0.04
+    },
+    "infection": {
+     "type": "noul",
+     "noul": 0.02
+    },
+    "concern": {
+     "type": "score",
+     "score": 2.72,
+     "confidence": 0.72,
+     "legend": {
+      "0": "Stable or improving, no new problems; routine care",
+      "1": "A minor issue to keep monitoring, with no clinical review needed today",
+      "2": "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "3": "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     },
+     "probabilities": {
+      "0": 0.0,
+      "1": 0.0,
+      "2": 0.28,
+      "3": 0.72
+     }
+    },
+    "pattern": {
+     "type": "choice",
+     "choice": "cardiac",
+     "confidence": 1.0,
+     "probabilities": {
+      "respiratory": 0.0,
+      "bleeding": 0.0,
+      "sepsis_infection": 0.0,
+      "other": 0.0,
+      "metabolic_renal": 0.0,
+      "drug_or_substance": 0.0,
+      "cardiac": 1.0,
+      "no_acute_change": 0.0,
+      "neurological": 0.0
+     }
+    }
+   },
+   "model": "jev-1.13.0",
+   "usage": {
+    "input_tokens": 1103,
+    "output_tokens": 154
+   },
+   "latency_ms": 309.4,
+   "request_id": "req_01a0b6e1be6f72e79a089183459e6144"
+  },
+  {
+   "patient": "9beecf02",
+   "state": {
+    "patient": {
+     "age": 82,
+     "sex": "male",
+     "active_conditions": [
+      "Acute ST segment elevation myocardial infarction",
+      "Alzheimer's disease",
+      "Anemia",
+      "Chronic sinusitis",
+      "Diabetes mellitus type 2",
+      "Essential hypertension",
+      "Hypertriglyceridemia",
+      "Ischemic heart disease",
+      "Loss of teeth",
+      "Metabolic syndrome X",
+      "Neuropathy due to type 2 diabetes mellitus",
+      "Seizure disorder"
+     ]
+    },
+    "admission_reason": "Elective admission for respite and medication review",
+    "nursing_note": "Known Alzheimer's dementia. Care home report he is always pleasantly confused and orientated to person only, and that is how he is tonight. Settled, ate all his dinner, watching TV. No change from his baseline."
+   },
+   "questions": {
+    "new_confusion": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe a new change in the patient's mental state or level of consciousness compared with their usual baseline, such as new confusion, disorientation, agitation, hallucinations, drowsiness or reduced responsiveness?",
+     "criteria": {
+      "true": "A change from the patient's usual mental state is described, even if they have dementia or a learning disability at baseline.",
+      "false": "Mental state is normal, or unchanged from a known baseline such as long-standing dementia that is as usual."
+     }
+    },
+    "infection": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe signs of a current infection, an infection being treated, or a suspicion of infection?",
+     "criteria": {
+      "true": "For example fever, rigors, purulent sputum, urinary symptoms, spreading redness, or an infection under treatment.",
+      "false": "No infection signs are described, or infection is explicitly ruled out."
+     }
+    },
+    "concern": {
+     "type": "score",
+     "instructions": "How worried should the ward team be about this patient right now, based on `nursing_note`?",
+     "criteria": [
+      "Stable or improving, no new problems; routine care",
+      "A minor issue to keep monitoring, with no clinical review needed today",
+      "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     ]
+    },
+    "pattern": {
+     "type": "choice",
+     "instructions": "What is the main type of clinical deterioration described in `nursing_note`?",
+     "criteria": {
+      "sepsis_infection": "Infection causing systemic illness: fever or rigors with fast heart rate, low blood pressure, new confusion or low urine output",
+      "respiratory": "Worsening breathing, rising oxygen requirement or low oxygen saturation",
+      "cardiac": "Chest pain, arrhythmia, or collapse from a heart cause",
+      "neurological": "Stroke, head injury, seizure, delirium, or reduced consciousness from a brain cause",
+      "bleeding": "Blood loss, such as black stools, vomiting blood, or bleeding with falling blood pressure",
+      "metabolic_renal": "Blood sugar, electrolyte, calcium, fluid balance or kidney problems",
+      "drug_or_substance": "Medication toxicity, over-sedation, or alcohol or drug withdrawal",
+      "other": "A concerning change that fits none of the other options",
+      "no_acute_change": "No deterioration: stable, improving, or at baseline"
+     }
+    }
+   },
+   "answers": {
+    "new_confusion": {
+     "type": "noul",
+     "noul": 0.03
+    },
+    "infection": {
+     "type": "noul",
+     "noul": 0.03
+    },
+    "concern": {
+     "type": "score",
+     "score": 0.03,
+     "confidence": 0.97,
+     "legend": {
+      "0": "Stable or improving, no new problems; routine care",
+      "1": "A minor issue to keep monitoring, with no clinical review needed today",
+      "2": "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "3": "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     },
+     "probabilities": {
+      "0": 0.98,
+      "1": 0.01,
+      "2": 0.01,
+      "3": 0.0
+     }
+    },
+    "pattern": {
+     "type": "choice",
+     "choice": "no_acute_change",
+     "confidence": 1.0,
+     "probabilities": {
+      "metabolic_renal": 0.0,
+      "cardiac": 0.0,
+      "other": 0.0,
+      "drug_or_substance": 0.0,
+      "bleeding": 0.0,
+      "sepsis_infection": 0.0,
+      "neurological": 0.0,
+      "no_acute_change": 1.0,
+      "respiratory": 0.0
+     }
+    }
+   },
+   "model": "jev-1.13.0",
+   "usage": {
+    "input_tokens": 1097,
+    "output_tokens": 156
+   },
+   "latency_ms": 330.6,
+   "request_id": "req_01a0b6e1bf9e7ae7bb150392891f5901"
+  },
+  {
+   "patient": "ca427bc4",
+   "state": {
+    "patient": {
+     "age": 79,
+     "sex": "female",
+     "active_conditions": [
+      "Anemia",
+      "Chronic intractable migraine without aura",
+      "Chronic sinusitis",
+      "Diabetes mellitus type 2",
+      "Essential hypertension",
+      "Hyperlipidemia",
+      "Hypertriglyceridemia",
+      "Ischemic heart disease",
+      "Metabolic syndrome X",
+      "Neuropathy due to type 2 diabetes mellitus",
+      "Osteoarthritis of knee",
+      "Traumatic or nontraumatic brain injury"
+     ]
+    },
+    "admission_reason": "Right total knee replacement, post-op day 1",
+    "nursing_note": "Pain controlled on regular paracetamol and PRN oxycodone. Mobilised with physio using a frame. Wound dressing dry and intact. Passed urine. Tolerating diet. No concerns."
+   },
+   "questions": {
+    "new_confusion": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe a new change in the patient's mental state or level of consciousness compared with their usual baseline, such as new confusion, disorientation, agitation, hallucinations, drowsiness or reduced responsiveness?",
+     "criteria": {
+      "true": "A change from the patient's usual mental state is described, even if they have dementia or a learning disability at baseline.",
+      "false": "Mental state is normal, or unchanged from a known baseline such as long-standing dementia that is as usual."
+     }
+    },
+    "infection": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe signs of a current infection, an infection being treated, or a suspicion of infection?",
+     "criteria": {
+      "true": "For example fever, rigors, purulent sputum, urinary symptoms, spreading redness, or an infection under treatment.",
+      "false": "No infection signs are described, or infection is explicitly ruled out."
+     }
+    },
+    "concern": {
+     "type": "score",
+     "instructions": "How worried should the ward team be about this patient right now, based on `nursing_note`?",
+     "criteria": [
+      "Stable or improving, no new problems; routine care",
+      "A minor issue to keep monitoring, with no clinical review needed today",
+      "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     ]
+    },
+    "pattern": {
+     "type": "choice",
+     "instructions": "What is the main type of clinical deterioration described in `nursing_note`?",
+     "criteria": {
+      "sepsis_infection": "Infection causing systemic illness: fever or rigors with fast heart rate, low blood pressure, new confusion or low urine output",
+      "respiratory": "Worsening breathing, rising oxygen requirement or low oxygen saturation",
+      "cardiac": "Chest pain, arrhythmia, or collapse from a heart cause",
+      "neurological": "Stroke, head injury, seizure, delirium, or reduced consciousness from a brain cause",
+      "bleeding": "Blood loss, such as black stools, vomiting blood, or bleeding with falling blood pressure",
+      "metabolic_renal": "Blood sugar, electrolyte, calcium, fluid balance or kidney problems",
+      "drug_or_substance": "Medication toxicity, over-sedation, or alcohol or drug withdrawal",
+      "other": "A concerning change that fits none of the other options",
+      "no_acute_change": "No deterioration: stable, improving, or at baseline"
+     }
+    }
+   },
+   "answers": {
+    "new_confusion": {
+     "type": "noul",
+     "noul": 0.03
+    },
+    "infection": {
+     "type": "noul",
+     "noul": 0.04
+    },
+    "concern": {
+     "type": "score",
+     "score": 0.01,
+     "confidence": 0.99,
+     "legend": {
+      "0": "Stable or improving, no new problems; routine care",
+      "1": "A minor issue to keep monitoring, with no clinical review needed today",
+      "2": "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "3": "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     },
+     "probabilities": {
+      "0": 1.0,
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0
+     }
+    },
+    "pattern": {
+     "type": "choice",
+     "choice": "no_acute_change",
+     "confidence": 1.0,
+     "probabilities": {
+      "respiratory": 0.0,
+      "cardiac": 0.0,
+      "sepsis_infection": 0.0,
+      "bleeding": 0.0,
+      "no_acute_change": 1.0,
+      "drug_or_substance": 0.0,
+      "metabolic_renal": 0.0,
+      "neurological": 0.0,
+      "other": 0.0
+     }
+    }
+   },
+   "model": "jev-1.13.0",
+   "usage": {
+    "input_tokens": 1103,
+    "output_tokens": 156
+   },
+   "latency_ms": 337.8,
+   "request_id": "req_01a0b6e1c0ec79818e959e4928ebf049"
+  },
+  {
+   "patient": "1c3d69ba",
+   "state": {
+    "patient": {
+     "age": 82,
+     "sex": "female",
+     "active_conditions": [
+      "Anemia",
+      "Chronic sinusitis",
+      "Disorder of kidney due to diabetes mellitus",
+      "Essential hypertension",
+      "Hyperlipidemia",
+      "Ischemic heart disease",
+      "Loss of teeth",
+      "Metabolic syndrome X",
+      "Microalbuminuria due to type 2 diabetes mellitus",
+      "Proteinuria due to type 2 diabetes mellitus",
+      "Sepsis"
+     ]
+    },
+    "admission_reason": "Pyelonephritis, day 2",
+    "nursing_note": "Spiked 38.6 with rigors at 14:00. This afternoon she thinks she is at home and keeps trying to climb out of bed; this morning she was chatting and knew she was in hospital. Urine output 15 ml/hr for the last 3 hours. Blood cultures taken."
+   },
+   "questions": {
+    "new_confusion": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe a new change in the patient's mental state or level of consciousness compared with their usual baseline, such as new confusion, disorientation, agitation, hallucinations, drowsiness or reduced responsiveness?",
+     "criteria": {
+      "true": "A change from the patient's usual mental state is described, even if they have dementia or a learning disability at baseline.",
+      "false": "Mental state is normal, or unchanged from a known baseline such as long-standing dementia that is as usual."
+     }
+    },
+    "infection": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe signs of a current infection, an infection being treated, or a suspicion of infection?",
+     "criteria": {
+      "true": "For example fever, rigors, purulent sputum, urinary symptoms, spreading redness, or an infection under treatment.",
+      "false": "No infection signs are described, or infection is explicitly ruled out."
+     }
+    },
+    "concern": {
+     "type": "score",
+     "instructions": "How worried should the ward team be about this patient right now, based on `nursing_note`?",
+     "criteria": [
+      "Stable or improving, no new problems; routine care",
+      "A minor issue to keep monitoring, with no clinical review needed today",
+      "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     ]
+    },
+    "pattern": {
+     "type": "choice",
+     "instructions": "What is the main type of clinical deterioration described in `nursing_note`?",
+     "criteria": {
+      "sepsis_infection": "Infection causing systemic illness: fever or rigors with fast heart rate, low blood pressure, new confusion or low urine output",
+      "respiratory": "Worsening breathing, rising oxygen requirement or low oxygen saturation",
+      "cardiac": "Chest pain, arrhythmia, or collapse from a heart cause",
+      "neurological": "Stroke, head injury, seizure, delirium, or reduced consciousness from a brain cause",
+      "bleeding": "Blood loss, such as black stools, vomiting blood, or bleeding with falling blood pressure",
+      "metabolic_renal": "Blood sugar, electrolyte, calcium, fluid balance or kidney problems",
+      "drug_or_substance": "Medication toxicity, over-sedation, or alcohol or drug withdrawal",
+      "other": "A concerning change that fits none of the other options",
+      "no_acute_change": "No deterioration: stable, improving, or at baseline"
+     }
+    }
+   },
+   "answers": {
+    "new_confusion": {
+     "type": "noul",
+     "noul": 0.94
+    },
+    "infection": {
+     "type": "noul",
+     "noul": 0.98
+    },
+    "concern": {
+     "type": "score",
+     "score": 2.91,
+     "confidence": 0.91,
+     "legend": {
+      "0": "Stable or improving, no new problems; routine care",
+      "1": "A minor issue to keep monitoring, with no clinical review needed today",
+      "2": "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "3": "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     },
+     "probabilities": {
+      "0": 0.0,
+      "1": 0.0,
+      "2": 0.09,
+      "3": 0.91
+     }
+    },
+    "pattern": {
+     "type": "choice",
+     "choice": "sepsis_infection",
+     "confidence": 0.98,
+     "probabilities": {
+      "no_acute_change": 0.0,
+      "metabolic_renal": 0.0,
+      "other": 0.0,
+      "drug_or_substance": 0.0,
+      "sepsis_infection": 0.99,
+      "cardiac": 0.0,
+      "respiratory": 0.0,
+      "neurological": 0.01,
+      "bleeding": 0.0
+     }
+    }
+   },
+   "model": "jev-1.13.0",
+   "usage": {
+    "input_tokens": 1108,
+    "output_tokens": 157
+   },
+   "latency_ms": 316.4,
+   "request_id": "req_01a0b6e1c23879ec8eb8998279a3abae"
+  },
+  {
+   "patient": "77a3db04",
+   "state": {
+    "patient": {
+     "age": 88,
+     "sex": "male",
+     "active_conditions": [
+      "Acute non-ST segment elevation myocardial infarction",
+      "Alzheimer's disease",
+      "Anemia",
+      "Diabetes mellitus type 2",
+      "Hyperglycemia",
+      "Hypertriglyceridemia",
+      "Ischemic heart disease",
+      "Loss of teeth",
+      "Macular edema and retinopathy due to type 2 diabetes mellitus",
+      "Metabolic syndrome X",
+      "Osteoporosis"
+     ]
+    },
+    "admission_reason": "Fractured neck of femur, post-op day 2 hemiarthroplasty",
+    "nursing_note": "Has Alzheimer's, but his son says he is normally chatty and knows he lives at the nursing home. Today he is muddled, picking at the sheets, pulled out his cannula and thinks it is 1970. Did not sleep last night. Bowels not opened for 4 days."
+   },
+   "questions": {
+    "new_confusion": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe a new change in the patient's mental state or level of consciousness compared with their usual baseline, such as new confusion, disorientation, agitation, hallucinations, drowsiness or reduced responsiveness?",
+     "criteria": {
+      "true": "A change from the patient's usual mental state is described, even if they have dementia or a learning disability at baseline.",
+      "false": "Mental state is normal, or unchanged from a known baseline such as long-standing dementia that is as usual."
+     }
+    },
+    "infection": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe signs of a current infection, an infection being treated, or a suspicion of infection?",
+     "criteria": {
+      "true": "For example fever, rigors, purulent sputum, urinary symptoms, spreading redness, or an infection under treatment.",
+      "false": "No infection signs are described, or infection is explicitly ruled out."
+     }
+    },
+    "concern": {
+     "type": "score",
+     "instructions": "How worried should the ward team be about this patient right now, based on `nursing_note`?",
+     "criteria": [
+      "Stable or improving, no new problems; routine care",
+      "A minor issue to keep monitoring, with no clinical review needed today",
+      "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     ]
+    },
+    "pattern": {
+     "type": "choice",
+     "instructions": "What is the main type of clinical deterioration described in `nursing_note`?",
+     "criteria": {
+      "sepsis_infection": "Infection causing systemic illness: fever or rigors with fast heart rate, low blood pressure, new confusion or low urine output",
+      "respiratory": "Worsening breathing, rising oxygen requirement or low oxygen saturation",
+      "cardiac": "Chest pain, arrhythmia, or collapse from a heart cause",
+      "neurological": "Stroke, head injury, seizure, delirium, or reduced consciousness from a brain cause",
+      "bleeding": "Blood loss, such as black stools, vomiting blood, or bleeding with falling blood pressure",
+      "metabolic_renal": "Blood sugar, electrolyte, calcium, fluid balance or kidney problems",
+      "drug_or_substance": "Medication toxicity, over-sedation, or alcohol or drug withdrawal",
+      "other": "A concerning change that fits none of the other options",
+      "no_acute_change": "No deterioration: stable, improving, or at baseline"
+     }
+    }
+   },
+   "answers": {
+    "new_confusion": {
+     "type": "noul",
+     "noul": 0.97
+    },
+    "infection": {
+     "type": "noul",
+     "noul": 0.05
+    },
+    "concern": {
+     "type": "score",
+     "score": 2.24,
+     "confidence": 0.76,
+     "legend": {
+      "0": "Stable or improving, no new problems; routine care",
+      "1": "A minor issue to keep monitoring, with no clinical review needed today",
+      "2": "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "3": "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     },
+     "probabilities": {
+      "0": 0.0,
+      "1": 0.0,
+      "2": 0.76,
+      "3": 0.24
+     }
+    },
+    "pattern": {
+     "type": "choice",
+     "choice": "neurological",
+     "confidence": 1.0,
+     "probabilities": {
+      "metabolic_renal": 0.0,
+      "cardiac": 0.0,
+      "other": 0.0,
+      "drug_or_substance": 0.0,
+      "bleeding": 0.0,
+      "sepsis_infection": 0.0,
+      "neurological": 1.0,
+      "no_acute_change": 0.0,
+      "respiratory": 0.0
+     }
+    }
+   },
+   "model": "jev-1.13.0",
+   "usage": {
+    "input_tokens": 1122,
+    "output_tokens": 156
+   },
+   "latency_ms": 351.5,
+   "request_id": "req_01a0b6e1c377775196cf7c27031aef39"
+  },
+  {
+   "patient": "86a5dd2a",
+   "state": {
+    "patient": {
+     "age": 86,
+     "sex": "male",
+     "active_conditions": [
+      "Anemia",
+      "Chronic kidney disease stage 1",
+      "Chronic kidney disease stage 2",
+      "Chronic kidney disease stage 3",
+      "Disorder of kidney due to diabetes mellitus",
+      "Essential hypertension",
+      "Ischemic heart disease",
+      "Loss of teeth",
+      "Metabolic syndrome X",
+      "Microalbuminuria due to type 2 diabetes mellitus",
+      "Proteinuria due to type 2 diabetes mellitus"
+     ]
+    },
+    "admission_reason": "Acute kidney injury on CKD stage 3",
+    "nursing_note": "Drowsy, only rousable to voice. Pupils pinpoint. Had PRN oxycodone three times overnight on top of his regular tramadol. Creatinine has risen since admission. Breathing slow and shallow."
+   },
+   "questions": {
+    "new_confusion": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe a new change in the patient's mental state or level of consciousness compared with their usual baseline, such as new confusion, disorientation, agitation, hallucinations, drowsiness or reduced responsiveness?",
+     "criteria": {
+      "true": "A change from the patient's usual mental state is described, even if they have dementia or a learning disability at baseline.",
+      "false": "Mental state is normal, or unchanged from a known baseline such as long-standing dementia that is as usual."
+     }
+    },
+    "infection": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe signs of a current infection, an infection being treated, or a suspicion of infection?",
+     "criteria": {
+      "true": "For example fever, rigors, purulent sputum, urinary symptoms, spreading redness, or an infection under treatment.",
+      "false": "No infection signs are described, or infection is explicitly ruled out."
+     }
+    },
+    "concern": {
+     "type": "score",
+     "instructions": "How worried should the ward team be about this patient right now, based on `nursing_note`?",
+     "criteria": [
+      "Stable or improving, no new problems; routine care",
+      "A minor issue to keep monitoring, with no clinical review needed today",
+      "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     ]
+    },
+    "pattern": {
+     "type": "choice",
+     "instructions": "What is the main type of clinical deterioration described in `nursing_note`?",
+     "criteria": {
+      "sepsis_infection": "Infection causing systemic illness: fever or rigors with fast heart rate, low blood pressure, new confusion or low urine output",
+      "respiratory": "Worsening breathing, rising oxygen requirement or low oxygen saturation",
+      "cardiac": "Chest pain, arrhythmia, or collapse from a heart cause",
+      "neurological": "Stroke, head injury, seizure, delirium, or reduced consciousness from a brain cause",
+      "bleeding": "Blood loss, such as black stools, vomiting blood, or bleeding with falling blood pressure",
+      "metabolic_renal": "Blood sugar, electrolyte, calcium, fluid balance or kidney problems",
+      "drug_or_substance": "Medication toxicity, over-sedation, or alcohol or drug withdrawal",
+      "other": "A concerning change that fits none of the other options",
+      "no_acute_change": "No deterioration: stable, improving, or at baseline"
+     }
+    }
+   },
+   "answers": {
+    "new_confusion": {
+     "type": "noul",
+     "noul": 0.9
+    },
+    "infection": {
+     "type": "noul",
+     "noul": 0.03
+    },
+    "concern": {
+     "type": "score",
+     "score": 3.0,
+     "confidence": 1.0,
+     "legend": {
+      "0": "Stable or improving, no new problems; routine care",
+      "1": "A minor issue to keep monitoring, with no clinical review needed today",
+      "2": "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "3": "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     },
+     "probabilities": {
+      "0": 0.0,
+      "1": 0.0,
+      "2": 0.0,
+      "3": 1.0
+     }
+    },
+    "pattern": {
+     "type": "choice",
+     "choice": "drug_or_substance",
+     "confidence": 1.0,
+     "probabilities": {
+      "bleeding": 0.0,
+      "respiratory": 0.0,
+      "neurological": 0.0,
+      "cardiac": 0.0,
+      "metabolic_renal": 0.0,
+      "no_acute_change": 0.0,
+      "drug_or_substance": 1.0,
+      "sepsis_infection": 0.0,
+      "other": 0.0
+     }
+    }
+   },
+   "model": "jev-1.13.0",
+   "usage": {
+    "input_tokens": 1100,
+    "output_tokens": 157
+   },
+   "latency_ms": 321.7,
+   "request_id": "req_01a0b6e1c4d8763db3a3138e2a14c8fb"
+  },
+  {
+   "patient": "b0eefa7b",
+   "state": {
+    "patient": {
+     "age": 88,
+     "sex": "female",
+     "active_conditions": [
+      "Chronic kidney disease stage 1",
+      "Chronic kidney disease stage 2",
+      "Chronic kidney disease stage 3",
+      "Disorder of kidney due to diabetes mellitus",
+      "Essential hypertension",
+      "Hyperlipidemia",
+      "Ischemic heart disease",
+      "Loss of teeth",
+      "Microalbuminuria due to type 2 diabetes mellitus",
+      "Proteinuria due to type 2 diabetes mellitus",
+      "Recurrent urinary tract infection"
+     ]
+    },
+    "admission_reason": "Fall at home, no injury, awaiting OT assessment",
+    "nursing_note": "Observations within normal limits. Daughter visited and is worried: 'Mum's just not right, she's not herself, she didn't even ask about the cat.' Off her food today. Mentioned some discomfort low in her tummy when passing urine. History of recurrent UTIs."
+   },
+   "questions": {
+    "new_confusion": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe a new change in the patient's mental state or level of consciousness compared with their usual baseline, such as new confusion, disorientation, agitation, hallucinations, drowsiness or reduced responsiveness?",
+     "criteria": {
+      "true": "A change from the patient's usual mental state is described, even if they have dementia or a learning disability at baseline.",
+      "false": "Mental state is normal, or unchanged from a known baseline such as long-standing dementia that is as usual."
+     }
+    },
+    "infection": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe signs of a current infection, an infection being treated, or a suspicion of infection?",
+     "criteria": {
+      "true": "For example fever, rigors, purulent sputum, urinary symptoms, spreading redness, or an infection under treatment.",
+      "false": "No infection signs are described, or infection is explicitly ruled out."
+     }
+    },
+    "concern": {
+     "type": "score",
+     "instructions": "How worried should the ward team be about this patient right now, based on `nursing_note`?",
+     "criteria": [
+      "Stable or improving, no new problems; routine care",
+      "A minor issue to keep monitoring, with no clinical review needed today",
+      "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     ]
+    },
+    "pattern": {
+     "type": "choice",
+     "instructions": "What is the main type of clinical deterioration described in `nursing_note`?",
+     "criteria": {
+      "sepsis_infection": "Infection causing systemic illness: fever or rigors with fast heart rate, low blood pressure, new confusion or low urine output",
+      "respiratory": "Worsening breathing, rising oxygen requirement or low oxygen saturation",
+      "cardiac": "Chest pain, arrhythmia, or collapse from a heart cause",
+      "neurological": "Stroke, head injury, seizure, delirium, or reduced consciousness from a brain cause",
+      "bleeding": "Blood loss, such as black stools, vomiting blood, or bleeding with falling blood pressure",
+      "metabolic_renal": "Blood sugar, electrolyte, calcium, fluid balance or kidney problems",
+      "drug_or_substance": "Medication toxicity, over-sedation, or alcohol or drug withdrawal",
+      "other": "A concerning change that fits none of the other options",
+      "no_acute_change": "No deterioration: stable, improving, or at baseline"
+     }
+    }
+   },
+   "answers": {
+    "new_confusion": {
+     "type": "noul",
+     "noul": 0.79
+    },
+    "infection": {
+     "type": "noul",
+     "noul": 0.89
+    },
+    "concern": {
+     "type": "score",
+     "score": 2.0,
+     "confidence": 1.0,
+     "legend": {
+      "0": "Stable or improving, no new problems; routine care",
+      "1": "A minor issue to keep monitoring, with no clinical review needed today",
+      "2": "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "3": "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     },
+     "probabilities": {
+      "0": 0.0,
+      "1": 0.0,
+      "2": 1.0,
+      "3": 0.0
+     }
+    },
+    "pattern": {
+     "type": "choice",
+     "choice": "neurological",
+     "confidence": 0.58,
+     "probabilities": {
+      "no_acute_change": 0.0,
+      "sepsis_infection": 0.33,
+      "bleeding": 0.0,
+      "metabolic_renal": 0.0,
+      "other": 0.04,
+      "drug_or_substance": 0.0,
+      "cardiac": 0.0,
+      "respiratory": 0.0,
+      "neurological": 0.63
+     }
+    }
+   },
+   "model": "jev-1.13.0",
+   "usage": {
+    "input_tokens": 1116,
+    "output_tokens": 156
+   },
+   "latency_ms": 312.2,
+   "request_id": "req_01a0b6e1c61674eaa07287e3c5e56206"
+  },
+  {
+   "patient": "c951b524",
+   "state": {
+    "patient": {
+     "age": 62,
+     "sex": "female",
+     "active_conditions": [
+      "Asthma",
+      "Chronic kidney disease stage 1",
+      "Chronic kidney disease stage 2",
+      "Chronic kidney disease stage 3",
+      "Disorder of kidney due to diabetes mellitus",
+      "Essential hypertension",
+      "Loss of teeth",
+      "Metabolic syndrome X",
+      "Microalbuminuria due to type 2 diabetes mellitus",
+      "Proteinuria due to type 2 diabetes mellitus",
+      "Seizure disorder"
+     ]
+    },
+    "admission_reason": "Acute asthma, day 2",
+    "nursing_note": "Wheeze much improved after nebulisers. Peak flow 65% of predicted, up from 40% on admission. Talking in full sentences. Slight tremor from salbutamol. Keen to go home."
+   },
+   "questions": {
+    "new_confusion": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe a new change in the patient's mental state or level of consciousness compared with their usual baseline, such as new confusion, disorientation, agitation, hallucinations, drowsiness or reduced responsiveness?",
+     "criteria": {
+      "true": "A change from the patient's usual mental state is described, even if they have dementia or a learning disability at baseline.",
+      "false": "Mental state is normal, or unchanged from a known baseline such as long-standing dementia that is as usual."
+     }
+    },
+    "infection": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe signs of a current infection, an infection being treated, or a suspicion of infection?",
+     "criteria": {
+      "true": "For example fever, rigors, purulent sputum, urinary symptoms, spreading redness, or an infection under treatment.",
+      "false": "No infection signs are described, or infection is explicitly ruled out."
+     }
+    },
+    "concern": {
+     "type": "score",
+     "instructions": "How worried should the ward team be about this patient right now, based on `nursing_note`?",
+     "criteria": [
+      "Stable or improving, no new problems; routine care",
+      "A minor issue to keep monitoring, with no clinical review needed today",
+      "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     ]
+    },
+    "pattern": {
+     "type": "choice",
+     "instructions": "What is the main type of clinical deterioration described in `nursing_note`?",
+     "criteria": {
+      "sepsis_infection": "Infection causing systemic illness: fever or rigors with fast heart rate, low blood pressure, new confusion or low urine output",
+      "respiratory": "Worsening breathing, rising oxygen requirement or low oxygen saturation",
+      "cardiac": "Chest pain, arrhythmia, or collapse from a heart cause",
+      "neurological": "Stroke, head injury, seizure, delirium, or reduced consciousness from a brain cause",
+      "bleeding": "Blood loss, such as black stools, vomiting blood, or bleeding with falling blood pressure",
+      "metabolic_renal": "Blood sugar, electrolyte, calcium, fluid balance or kidney problems",
+      "drug_or_substance": "Medication toxicity, over-sedation, or alcohol or drug withdrawal",
+      "other": "A concerning change that fits none of the other options",
+      "no_acute_change": "No deterioration: stable, improving, or at baseline"
+     }
+    }
+   },
+   "answers": {
+    "new_confusion": {
+     "type": "noul",
+     "noul": 0.03
+    },
+    "infection": {
+     "type": "noul",
+     "noul": 0.03
+    },
+    "concern": {
+     "type": "score",
+     "score": 0.35,
+     "confidence": 0.65,
+     "legend": {
+      "0": "Stable or improving, no new problems; routine care",
+      "1": "A minor issue to keep monitoring, with no clinical review needed today",
+      "2": "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "3": "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     },
+     "probabilities": {
+      "0": 0.65,
+      "1": 0.34,
+      "2": 0.01,
+      "3": 0.0
+     }
+    },
+    "pattern": {
+     "type": "choice",
+     "choice": "no_acute_change",
+     "confidence": 1.0,
+     "probabilities": {
+      "respiratory": 0.0,
+      "metabolic_renal": 0.0,
+      "sepsis_infection": 0.0,
+      "no_acute_change": 1.0,
+      "bleeding": 0.0,
+      "other": 0.0,
+      "cardiac": 0.0,
+      "neurological": 0.0,
+      "drug_or_substance": 0.0
+     }
+    }
+   },
+   "model": "jev-1.13.0",
+   "usage": {
+    "input_tokens": 1098,
+    "output_tokens": 156
+   },
+   "latency_ms": 281.3,
+   "request_id": "req_01a0b6e1c74f7d549181b6064ee90a93"
+  },
+  {
+   "patient": "2030b2b1",
+   "state": {
+    "patient": {
+     "age": 68,
+     "sex": "male",
+     "active_conditions": [
+      "Anemia",
+      "Asthma",
+      "Atrial fibrillation",
+      "Chronic sinusitis",
+      "Diabetes mellitus type 2",
+      "Hyperglycemia",
+      "Hyperlipidemia",
+      "Hypertriglyceridemia",
+      "Metabolic syndrome X",
+      "Osteoarthritis of knee"
+     ]
+    },
+    "admission_reason": "Chest infection; on warfarin for AF",
+    "nursing_note": "Two episodes of black, tarry stool overnight. Feels dizzy on standing and looks pale. INR this morning 4.2. Has been taking his own ibuprofen from home for knee pain."
+   },
+   "questions": {
+    "new_confusion": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe a new change in the patient's mental state or level of consciousness compared with their usual baseline, such as new confusion, disorientation, agitation, hallucinations, drowsiness or reduced responsiveness?",
+     "criteria": {
+      "true": "A change from the patient's usual mental state is described, even if they have dementia or a learning disability at baseline.",
+      "false": "Mental state is normal, or unchanged from a known baseline such as long-standing dementia that is as usual."
+     }
+    },
+    "infection": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe signs of a current infection, an infection being treated, or a suspicion of infection?",
+     "criteria": {
+      "true": "For example fever, rigors, purulent sputum, urinary symptoms, spreading redness, or an infection under treatment.",
+      "false": "No infection signs are described, or infection is explicitly ruled out."
+     }
+    },
+    "concern": {
+     "type": "score",
+     "instructions": "How worried should the ward team be about this patient right now, based on `nursing_note`?",
+     "criteria": [
+      "Stable or improving, no new problems; routine care",
+      "A minor issue to keep monitoring, with no clinical review needed today",
+      "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     ]
+    },
+    "pattern": {
+     "type": "choice",
+     "instructions": "What is the main type of clinical deterioration described in `nursing_note`?",
+     "criteria": {
+      "sepsis_infection": "Infection causing systemic illness: fever or rigors with fast heart rate, low blood pressure, new confusion or low urine output",
+      "respiratory": "Worsening breathing, rising oxygen requirement or low oxygen saturation",
+      "cardiac": "Chest pain, arrhythmia, or collapse from a heart cause",
+      "neurological": "Stroke, head injury, seizure, delirium, or reduced consciousness from a brain cause",
+      "bleeding": "Blood loss, such as black stools, vomiting blood, or bleeding with falling blood pressure",
+      "metabolic_renal": "Blood sugar, electrolyte, calcium, fluid balance or kidney problems",
+      "drug_or_substance": "Medication toxicity, over-sedation, or alcohol or drug withdrawal",
+      "other": "A concerning change that fits none of the other options",
+      "no_acute_change": "No deterioration: stable, improving, or at baseline"
+     }
+    }
+   },
+   "answers": {
+    "new_confusion": {
+     "type": "noul",
+     "noul": 0.06
+    },
+    "infection": {
+     "type": "noul",
+     "noul": 0.05
+    },
+    "concern": {
+     "type": "score",
+     "score": 2.85,
+     "confidence": 0.85,
+     "legend": {
+      "0": "Stable or improving, no new problems; routine care",
+      "1": "A minor issue to keep monitoring, with no clinical review needed today",
+      "2": "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "3": "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     },
+     "probabilities": {
+      "0": 0.0,
+      "1": 0.0,
+      "2": 0.15,
+      "3": 0.85
+     }
+    },
+    "pattern": {
+     "type": "choice",
+     "choice": "bleeding",
+     "confidence": 1.0,
+     "probabilities": {
+      "respiratory": 0.0,
+      "other": 0.0,
+      "no_acute_change": 0.0,
+      "cardiac": 0.0,
+      "metabolic_renal": 0.0,
+      "sepsis_infection": 0.0,
+      "neurological": 0.0,
+      "bleeding": 1.0,
+      "drug_or_substance": 0.0
+     }
+    }
+   },
+   "model": "jev-1.13.0",
+   "usage": {
+    "input_tokens": 1068,
+    "output_tokens": 154
+   },
+   "latency_ms": 366.5,
+   "request_id": "req_01a0b6e1c868728f8cae15b7aad12e3d"
+  },
+  {
+   "patient": "67d3388a",
+   "state": {
+    "patient": {
+     "age": 89,
+     "sex": "female",
+     "active_conditions": [
+      "Anemia",
+      "Chronic sinusitis",
+      "Essential hypertension",
+      "Gingivitis",
+      "Ischemic heart disease",
+      "Loss of teeth",
+      "Metabolic syndrome X",
+      "Osteoporosis",
+      "Polyp of colon"
+     ]
+    },
+    "admission_reason": "Syncope under investigation, on telemetry",
+    "nursing_note": "Another dizzy episode on the commode at 19:30 with a brief loss of consciousness, about 10 seconds. Heart rate dropped to 38 on the monitor at the time. Now back in the 60s, chatty and says she feels fine."
+   },
+   "questions": {
+    "new_confusion": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe a new change in the patient's mental state or level of consciousness compared with their usual baseline, such as new confusion, disorientation, agitation, hallucinations, drowsiness or reduced responsiveness?",
+     "criteria": {
+      "true": "A change from the patient's usual mental state is described, even if they have dementia or a learning disability at baseline.",
+      "false": "Mental state is normal, or unchanged from a known baseline such as long-standing dementia that is as usual."
+     }
+    },
+    "infection": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe signs of a current infection, an infection being treated, or a suspicion of infection?",
+     "criteria": {
+      "true": "For example fever, rigors, purulent sputum, urinary symptoms, spreading redness, or an infection under treatment.",
+      "false": "No infection signs are described, or infection is explicitly ruled out."
+     }
+    },
+    "concern": {
+     "type": "score",
+     "instructions": "How worried should the ward team be about this patient right now, based on `nursing_note`?",
+     "criteria": [
+      "Stable or improving, no new problems; routine care",
+      "A minor issue to keep monitoring, with no clinical review needed today",
+      "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     ]
+    },
+    "pattern": {
+     "type": "choice",
+     "instructions": "What is the main type of clinical deterioration described in `nursing_note`?",
+     "criteria": {
+      "sepsis_infection": "Infection causing systemic illness: fever or rigors with fast heart rate, low blood pressure, new confusion or low urine output",
+      "respiratory": "Worsening breathing, rising oxygen requirement or low oxygen saturation",
+      "cardiac": "Chest pain, arrhythmia, or collapse from a heart cause",
+      "neurological": "Stroke, head injury, seizure, delirium, or reduced consciousness from a brain cause",
+      "bleeding": "Blood loss, such as black stools, vomiting blood, or bleeding with falling blood pressure",
+      "metabolic_renal": "Blood sugar, electrolyte, calcium, fluid balance or kidney problems",
+      "drug_or_substance": "Medication toxicity, over-sedation, or alcohol or drug withdrawal",
+      "other": "A concerning change that fits none of the other options",
+      "no_acute_change": "No deterioration: stable, improving, or at baseline"
+     }
+    }
+   },
+   "answers": {
+    "new_confusion": {
+     "type": "noul",
+     "noul": 0.33
+    },
+    "infection": {
+     "type": "noul",
+     "noul": 0.02
+    },
+    "concern": {
+     "type": "score",
+     "score": 2.0,
+     "confidence": 0.99,
+     "legend": {
+      "0": "Stable or improving, no new problems; routine care",
+      "1": "A minor issue to keep monitoring, with no clinical review needed today",
+      "2": "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "3": "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     },
+     "probabilities": {
+      "0": 0.0,
+      "1": 0.0,
+      "2": 0.99,
+      "3": 0.01
+     }
+    },
+    "pattern": {
+     "type": "choice",
+     "choice": "cardiac",
+     "confidence": 1.0,
+     "probabilities": {
+      "cardiac": 1.0,
+      "sepsis_infection": 0.0,
+      "respiratory": 0.0,
+      "neurological": 0.0,
+      "other": 0.0,
+      "metabolic_renal": 0.0,
+      "drug_or_substance": 0.0,
+      "bleeding": 0.0,
+      "no_acute_change": 0.0
+     }
+    }
+   },
+   "model": "jev-1.13.0",
+   "usage": {
+    "input_tokens": 1061,
+    "output_tokens": 154
+   },
+   "latency_ms": 348.2,
+   "request_id": "req_01a0b6e1c9d97a7faea601a162293486"
+  },
+  {
+   "patient": "7da43fe0",
+   "state": {
+    "patient": {
+     "age": 86,
+     "sex": "male",
+     "active_conditions": [
+      "Acute non-ST segment elevation myocardial infarction",
+      "Anemia",
+      "Aortic valve regurgitation",
+      "Dependent drug abuse",
+      "Hyperlipidemia",
+      "Ischemic heart disease",
+      "Mitral valve regurgitation",
+      "Obstructive sleep apnea syndrome",
+      "Sleep disorder"
+     ]
+    },
+    "admission_reason": "NSTEMI, day 2",
+    "nursing_note": "Agitated, sweaty and tremulous. Keeps asking for 'his pills'. Says there are spiders on the wall. Family say he takes extra hydrocodone at home and drinks most days; last drink unknown."
+   },
+   "questions": {
+    "new_confusion": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe a new change in the patient's mental state or level of consciousness compared with their usual baseline, such as new confusion, disorientation, agitation, hallucinations, drowsiness or reduced responsiveness?",
+     "criteria": {
+      "true": "A change from the patient's usual mental state is described, even if they have dementia or a learning disability at baseline.",
+      "false": "Mental state is normal, or unchanged from a known baseline such as long-standing dementia that is as usual."
+     }
+    },
+    "infection": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe signs of a current infection, an infection being treated, or a suspicion of infection?",
+     "criteria": {
+      "true": "For example fever, rigors, purulent sputum, urinary symptoms, spreading redness, or an infection under treatment.",
+      "false": "No infection signs are described, or infection is explicitly ruled out."
+     }
+    },
+    "concern": {
+     "type": "score",
+     "instructions": "How worried should the ward team be about this patient right now, based on `nursing_note`?",
+     "criteria": [
+      "Stable or improving, no new problems; routine care",
+      "A minor issue to keep monitoring, with no clinical review needed today",
+      "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     ]
+    },
+    "pattern": {
+     "type": "choice",
+     "instructions": "What is the main type of clinical deterioration described in `nursing_note`?",
+     "criteria": {
+      "sepsis_infection": "Infection causing systemic illness: fever or rigors with fast heart rate, low blood pressure, new confusion or low urine output",
+      "respiratory": "Worsening breathing, rising oxygen requirement or low oxygen saturation",
+      "cardiac": "Chest pain, arrhythmia, or collapse from a heart cause",
+      "neurological": "Stroke, head injury, seizure, delirium, or reduced consciousness from a brain cause",
+      "bleeding": "Blood loss, such as black stools, vomiting blood, or bleeding with falling blood pressure",
+      "metabolic_renal": "Blood sugar, electrolyte, calcium, fluid balance or kidney problems",
+      "drug_or_substance": "Medication toxicity, over-sedation, or alcohol or drug withdrawal",
+      "other": "A concerning change that fits none of the other options",
+      "no_acute_change": "No deterioration: stable, improving, or at baseline"
+     }
+    }
+   },
+   "answers": {
+    "new_confusion": {
+     "type": "noul",
+     "noul": 0.91
+    },
+    "infection": {
+     "type": "noul",
+     "noul": 0.03
+    },
+    "concern": {
+     "type": "score",
+     "score": 2.44,
+     "confidence": 0.55,
+     "legend": {
+      "0": "Stable or improving, no new problems; routine care",
+      "1": "A minor issue to keep monitoring, with no clinical review needed today",
+      "2": "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "3": "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     },
+     "probabilities": {
+      "0": 0.0,
+      "1": 0.0,
+      "2": 0.55,
+      "3": 0.45
+     }
+    },
+    "pattern": {
+     "type": "choice",
+     "choice": "drug_or_substance",
+     "confidence": 1.0,
+     "probabilities": {
+      "respiratory": 0.0,
+      "other": 0.0,
+      "no_acute_change": 0.0,
+      "cardiac": 0.0,
+      "metabolic_renal": 0.0,
+      "sepsis_infection": 0.0,
+      "neurological": 0.0,
+      "bleeding": 0.0,
+      "drug_or_substance": 1.0
+     }
+    }
+   },
+   "model": "jev-1.13.0",
+   "usage": {
+    "input_tokens": 1065,
+    "output_tokens": 157
+   },
+   "latency_ms": 318.4,
+   "request_id": "req_01a0b6e1cb3471038b4022121b967de2"
+  },
+  {
+   "patient": "92654176",
+   "state": {
+    "patient": {
+     "age": 87,
+     "sex": "male",
+     "active_conditions": [
+      "Chronic kidney disease stage 1",
+      "Chronic kidney disease stage 2",
+      "Chronic kidney disease stage 3",
+      "Disorder of kidney due to diabetes mellitus",
+      "Essential hypertension",
+      "Ischemic heart disease",
+      "Loss of teeth",
+      "Microalbuminuria due to type 2 diabetes mellitus",
+      "Proteinuria due to type 2 diabetes mellitus"
+     ]
+    },
+    "admission_reason": "Dehydration and AKI after gastroenteritis",
+    "nursing_note": "Diarrhoea has settled. Drinking well, fluid balance positive 800 ml today. Creatinine improving on this morning's bloods. Walking to the bathroom independently."
+   },
+   "questions": {
+    "new_confusion": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe a new change in the patient's mental state or level of consciousness compared with their usual baseline, such as new confusion, disorientation, agitation, hallucinations, drowsiness or reduced responsiveness?",
+     "criteria": {
+      "true": "A change from the patient's usual mental state is described, even if they have dementia or a learning disability at baseline.",
+      "false": "Mental state is normal, or unchanged from a known baseline such as long-standing dementia that is as usual."
+     }
+    },
+    "infection": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe signs of a current infection, an infection being treated, or a suspicion of infection?",
+     "criteria": {
+      "true": "For example fever, rigors, purulent sputum, urinary symptoms, spreading redness, or an infection under treatment.",
+      "false": "No infection signs are described, or infection is explicitly ruled out."
+     }
+    },
+    "concern": {
+     "type": "score",
+     "instructions": "How worried should the ward team be about this patient right now, based on `nursing_note`?",
+     "criteria": [
+      "Stable or improving, no new problems; routine care",
+      "A minor issue to keep monitoring, with no clinical review needed today",
+      "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     ]
+    },
+    "pattern": {
+     "type": "choice",
+     "instructions": "What is the main type of clinical deterioration described in `nursing_note`?",
+     "criteria": {
+      "sepsis_infection": "Infection causing systemic illness: fever or rigors with fast heart rate, low blood pressure, new confusion or low urine output",
+      "respiratory": "Worsening breathing, rising oxygen requirement or low oxygen saturation",
+      "cardiac": "Chest pain, arrhythmia, or collapse from a heart cause",
+      "neurological": "Stroke, head injury, seizure, delirium, or reduced consciousness from a brain cause",
+      "bleeding": "Blood loss, such as black stools, vomiting blood, or bleeding with falling blood pressure",
+      "metabolic_renal": "Blood sugar, electrolyte, calcium, fluid balance or kidney problems",
+      "drug_or_substance": "Medication toxicity, over-sedation, or alcohol or drug withdrawal",
+      "other": "A concerning change that fits none of the other options",
+      "no_acute_change": "No deterioration: stable, improving, or at baseline"
+     }
+    }
+   },
+   "answers": {
+    "new_confusion": {
+     "type": "noul",
+     "noul": 0.03
+    },
+    "infection": {
+     "type": "noul",
+     "noul": 0.12
+    },
+    "concern": {
+     "type": "score",
+     "score": 0.01,
+     "confidence": 0.99,
+     "legend": {
+      "0": "Stable or improving, no new problems; routine care",
+      "1": "A minor issue to keep monitoring, with no clinical review needed today",
+      "2": "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "3": "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     },
+     "probabilities": {
+      "0": 0.99,
+      "1": 0.01,
+      "2": 0.0,
+      "3": 0.0
+     }
+    },
+    "pattern": {
+     "type": "choice",
+     "choice": "no_acute_change",
+     "confidence": 0.93,
+     "probabilities": {
+      "bleeding": 0.0,
+      "cardiac": 0.0,
+      "other": 0.0,
+      "neurological": 0.0,
+      "sepsis_infection": 0.0,
+      "respiratory": 0.0,
+      "no_acute_change": 0.94,
+      "metabolic_renal": 0.06,
+      "drug_or_substance": 0.0
+     }
+    }
+   },
+   "model": "jev-1.13.0",
+   "usage": {
+    "input_tokens": 1079,
+    "output_tokens": 156
+   },
+   "latency_ms": 577.0,
+   "request_id": "req_01a0b6e1cd397e97a2b4fce81aed5e1d"
+  },
+  {
+   "patient": "50e65e92",
+   "state": {
+    "patient": {
+     "age": 81,
+     "sex": "female",
+     "active_conditions": [
+      "Alzheimer's disease",
+      "Chronic intractable migraine without aura",
+      "Dependent drug abuse",
+      "Impacted molars",
+      "Loss of teeth",
+      "Malignant neoplasm of breast",
+      "Osteoarthritis of knee",
+      "Pulmonary emphysema"
+     ]
+    },
+    "admission_reason": "Community-acquired pneumonia",
+    "nursing_note": "Now on 4L oxygen, was on 2L this morning. Breathing faster and using her neck muscles to breathe. More drowsy since lunch, not really engaging. Coughing up green sputum."
+   },
+   "questions": {
+    "new_confusion": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe a new change in the patient's mental state or level of consciousness compared with their usual baseline, such as new confusion, disorientation, agitation, hallucinations, drowsiness or reduced responsiveness?",
+     "criteria": {
+      "true": "A change from the patient's usual mental state is described, even if they have dementia or a learning disability at baseline.",
+      "false": "Mental state is normal, or unchanged from a known baseline such as long-standing dementia that is as usual."
+     }
+    },
+    "infection": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe signs of a current infection, an infection being treated, or a suspicion of infection?",
+     "criteria": {
+      "true": "For example fever, rigors, purulent sputum, urinary symptoms, spreading redness, or an infection under treatment.",
+      "false": "No infection signs are described, or infection is explicitly ruled out."
+     }
+    },
+    "concern": {
+     "type": "score",
+     "instructions": "How worried should the ward team be about this patient right now, based on `nursing_note`?",
+     "criteria": [
+      "Stable or improving, no new problems; routine care",
+      "A minor issue to keep monitoring, with no clinical review needed today",
+      "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     ]
+    },
+    "pattern": {
+     "type": "choice",
+     "instructions": "What is the main type of clinical deterioration described in `nursing_note`?",
+     "criteria": {
+      "sepsis_infection": "Infection causing systemic illness: fever or rigors with fast heart rate, low blood pressure, new confusion or low urine output",
+      "respiratory": "Worsening breathing, rising oxygen requirement or low oxygen saturation",
+      "cardiac": "Chest pain, arrhythmia, or collapse from a heart cause",
+      "neurological": "Stroke, head injury, seizure, delirium, or reduced consciousness from a brain cause",
+      "bleeding": "Blood loss, such as black stools, vomiting blood, or bleeding with falling blood pressure",
+      "metabolic_renal": "Blood sugar, electrolyte, calcium, fluid balance or kidney problems",
+      "drug_or_substance": "Medication toxicity, over-sedation, or alcohol or drug withdrawal",
+      "other": "A concerning change that fits none of the other options",
+      "no_acute_change": "No deterioration: stable, improving, or at baseline"
+     }
+    }
+   },
+   "answers": {
+    "new_confusion": {
+     "type": "noul",
+     "noul": 0.91
+    },
+    "infection": {
+     "type": "noul",
+     "noul": 0.97
+    },
+    "concern": {
+     "type": "score",
+     "score": 2.96,
+     "confidence": 0.96,
+     "legend": {
+      "0": "Stable or improving, no new problems; routine care",
+      "1": "A minor issue to keep monitoring, with no clinical review needed today",
+      "2": "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "3": "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     },
+     "probabilities": {
+      "0": 0.0,
+      "1": 0.0,
+      "2": 0.04,
+      "3": 0.96
+     }
+    },
+    "pattern": {
+     "type": "choice",
+     "choice": "respiratory",
+     "confidence": 1.0,
+     "probabilities": {
+      "bleeding": 0.0,
+      "cardiac": 0.0,
+      "metabolic_renal": 0.0,
+      "neurological": 0.0,
+      "drug_or_substance": 0.0,
+      "respiratory": 1.0,
+      "sepsis_infection": 0.0,
+      "other": 0.0,
+      "no_acute_change": 0.0
+     }
+    }
+   },
+   "model": "jev-1.13.0",
+   "usage": {
+    "input_tokens": 1055,
+    "output_tokens": 155
+   },
+   "latency_ms": 313.3,
+   "request_id": "req_01a0b6e1ceb47635903924b3f169bc56"
+  },
+  {
+   "patient": "dd6bbdbe",
+   "state": {
+    "patient": {
+     "age": 59,
+     "sex": "male",
+     "active_conditions": [
+      "Anemia",
+      "Diabetes mellitus type 2",
+      "Essential hypertension",
+      "Hypertriglyceridemia",
+      "Metabolic syndrome X",
+      "Neuropathy due to type 2 diabetes mellitus",
+      "Sleep apnea",
+      "Sleep disorder"
+     ]
+    },
+    "admission_reason": "Diabetic foot cellulitis, on IV antibiotics",
+    "nursing_note": "Redness has receded well inside the marked line. Afebrile for 24 hours, pain improved. BMs 14-18 today; not eating hospital food and snacking from the shop. Diabetes nurse aware."
+   },
+   "questions": {
+    "new_confusion": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe a new change in the patient's mental state or level of consciousness compared with their usual baseline, such as new confusion, disorientation, agitation, hallucinations, drowsiness or reduced responsiveness?",
+     "criteria": {
+      "true": "A change from the patient's usual mental state is described, even if they have dementia or a learning disability at baseline.",
+      "false": "Mental state is normal, or unchanged from a known baseline such as long-standing dementia that is as usual."
+     }
+    },
+    "infection": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe signs of a current infection, an infection being treated, or a suspicion of infection?",
+     "criteria": {
+      "true": "For example fever, rigors, purulent sputum, urinary symptoms, spreading redness, or an infection under treatment.",
+      "false": "No infection signs are described, or infection is explicitly ruled out."
+     }
+    },
+    "concern": {
+     "type": "score",
+     "instructions": "How worried should the ward team be about this patient right now, based on `nursing_note`?",
+     "criteria": [
+      "Stable or improving, no new problems; routine care",
+      "A minor issue to keep monitoring, with no clinical review needed today",
+      "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     ]
+    },
+    "pattern": {
+     "type": "choice",
+     "instructions": "What is the main type of clinical deterioration described in `nursing_note`?",
+     "criteria": {
+      "sepsis_infection": "Infection causing systemic illness: fever or rigors with fast heart rate, low blood pressure, new confusion or low urine output",
+      "respiratory": "Worsening breathing, rising oxygen requirement or low oxygen saturation",
+      "cardiac": "Chest pain, arrhythmia, or collapse from a heart cause",
+      "neurological": "Stroke, head injury, seizure, delirium, or reduced consciousness from a brain cause",
+      "bleeding": "Blood loss, such as black stools, vomiting blood, or bleeding with falling blood pressure",
+      "metabolic_renal": "Blood sugar, electrolyte, calcium, fluid balance or kidney problems",
+      "drug_or_substance": "Medication toxicity, over-sedation, or alcohol or drug withdrawal",
+      "other": "A concerning change that fits none of the other options",
+      "no_acute_change": "No deterioration: stable, improving, or at baseline"
+     }
+    }
+   },
+   "answers": {
+    "new_confusion": {
+     "type": "noul",
+     "noul": 0.03
+    },
+    "infection": {
+     "type": "noul",
+     "noul": 0.97
+    },
+    "concern": {
+     "type": "score",
+     "score": 0.79,
+     "confidence": 0.67,
+     "legend": {
+      "0": "Stable or improving, no new problems; routine care",
+      "1": "A minor issue to keep monitoring, with no clinical review needed today",
+      "2": "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "3": "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     },
+     "probabilities": {
+      "0": 0.27,
+      "1": 0.67,
+      "2": 0.06,
+      "3": 0.0
+     }
+    },
+    "pattern": {
+     "type": "choice",
+     "choice": "no_acute_change",
+     "confidence": 0.8,
+     "probabilities": {
+      "respiratory": 0.0,
+      "cardiac": 0.0,
+      "other": 0.0,
+      "drug_or_substance": 0.0,
+      "sepsis_infection": 0.0,
+      "no_acute_change": 0.83,
+      "metabolic_renal": 0.17,
+      "neurological": 0.0,
+      "bleeding": 0.0
+     }
+    }
+   },
+   "model": "jev-1.13.0",
+   "usage": {
+    "input_tokens": 1059,
+    "output_tokens": 156
+   },
+   "latency_ms": 302.7,
+   "request_id": "req_01a0b6e1cfeb7df4a0b0acc2f5873d8a"
+  },
+  {
+   "patient": "ff269b67",
+   "state": {
+    "patient": {
+     "age": 75,
+     "sex": "male",
+     "active_conditions": [
+      "Anemia",
+      "Chronic sinusitis",
+      "Diabetes mellitus type 2",
+      "Hyperlipidemia",
+      "Hypertriglyceridemia",
+      "Ischemic heart disease",
+      "Metabolic syndrome X",
+      "Sepsis"
+     ]
+    },
+    "admission_reason": "Community-acquired pneumonia, day 4",
+    "nursing_note": "No chest pain. No shortness of breath. No confusion. No fevers overnight. Denies rigors. Does not look septic. Eating and drinking. Plan home tomorrow if bloods OK."
+   },
+   "questions": {
+    "new_confusion": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe a new change in the patient's mental state or level of consciousness compared with their usual baseline, such as new confusion, disorientation, agitation, hallucinations, drowsiness or reduced responsiveness?",
+     "criteria": {
+      "true": "A change from the patient's usual mental state is described, even if they have dementia or a learning disability at baseline.",
+      "false": "Mental state is normal, or unchanged from a known baseline such as long-standing dementia that is as usual."
+     }
+    },
+    "infection": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe signs of a current infection, an infection being treated, or a suspicion of infection?",
+     "criteria": {
+      "true": "For example fever, rigors, purulent sputum, urinary symptoms, spreading redness, or an infection under treatment.",
+      "false": "No infection signs are described, or infection is explicitly ruled out."
+     }
+    },
+    "concern": {
+     "type": "score",
+     "instructions": "How worried should the ward team be about this patient right now, based on `nursing_note`?",
+     "criteria": [
+      "Stable or improving, no new problems; routine care",
+      "A minor issue to keep monitoring, with no clinical review needed today",
+      "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     ]
+    },
+    "pattern": {
+     "type": "choice",
+     "instructions": "What is the main type of clinical deterioration described in `nursing_note`?",
+     "criteria": {
+      "sepsis_infection": "Infection causing systemic illness: fever or rigors with fast heart rate, low blood pressure, new confusion or low urine output",
+      "respiratory": "Worsening breathing, rising oxygen requirement or low oxygen saturation",
+      "cardiac": "Chest pain, arrhythmia, or collapse from a heart cause",
+      "neurological": "Stroke, head injury, seizure, delirium, or reduced consciousness from a brain cause",
+      "bleeding": "Blood loss, such as black stools, vomiting blood, or bleeding with falling blood pressure",
+      "metabolic_renal": "Blood sugar, electrolyte, calcium, fluid balance or kidney problems",
+      "drug_or_substance": "Medication toxicity, over-sedation, or alcohol or drug withdrawal",
+      "other": "A concerning change that fits none of the other options",
+      "no_acute_change": "No deterioration: stable, improving, or at baseline"
+     }
+    }
+   },
+   "answers": {
+    "new_confusion": {
+     "type": "noul",
+     "noul": 0.04
+    },
+    "infection": {
+     "type": "noul",
+     "noul": 0.58
+    },
+    "concern": {
+     "type": "score",
+     "score": 0.07,
+     "confidence": 0.93,
+     "legend": {
+      "0": "Stable or improving, no new problems; routine care",
+      "1": "A minor issue to keep monitoring, with no clinical review needed today",
+      "2": "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "3": "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     },
+     "probabilities": {
+      "0": 0.95,
+      "1": 0.03,
+      "2": 0.02,
+      "3": 0.0
+     }
+    },
+    "pattern": {
+     "type": "choice",
+     "choice": "no_acute_change",
+     "confidence": 1.0,
+     "probabilities": {
+      "bleeding": 0.0,
+      "other": 0.0,
+      "metabolic_renal": 0.0,
+      "drug_or_substance": 0.0,
+      "sepsis_infection": 0.0,
+      "cardiac": 0.0,
+      "respiratory": 0.0,
+      "neurological": 0.0,
+      "no_acute_change": 1.0
+     }
+    }
+   },
+   "model": "jev-1.13.0",
+   "usage": {
+    "input_tokens": 1048,
+    "output_tokens": 156
+   },
+   "latency_ms": 377.2,
+   "request_id": "req_01a0b6e1d120788a83db198b5b8d3e6b"
+  },
+  {
+   "patient": "487e5045",
+   "state": {
+    "patient": {
+     "age": 70,
+     "sex": "female",
+     "active_conditions": [
+      "Alzheimer's disease",
+      "Anemia",
+      "Chronic intractable migraine without aura",
+      "Dependent drug abuse",
+      "Hyperlipidemia",
+      "Impacted molars",
+      "Polyp of colon"
+     ]
+    },
+    "admission_reason": "Fall with head strike, head injury observations",
+    "nursing_note": "Hourly head injury obs: GCS dropped from 15 to 14 at 22:00 (E4 V4 M6), now muddled about where she is. Vomited twice. Says this headache is worse than her usual migraines."
+   },
+   "questions": {
+    "new_confusion": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe a new change in the patient's mental state or level of consciousness compared with their usual baseline, such as new confusion, disorientation, agitation, hallucinations, drowsiness or reduced responsiveness?",
+     "criteria": {
+      "true": "A change from the patient's usual mental state is described, even if they have dementia or a learning disability at baseline.",
+      "false": "Mental state is normal, or unchanged from a known baseline such as long-standing dementia that is as usual."
+     }
+    },
+    "infection": {
+     "type": "noul",
+     "instructions": "Does `nursing_note` describe signs of a current infection, an infection being treated, or a suspicion of infection?",
+     "criteria": {
+      "true": "For example fever, rigors, purulent sputum, urinary symptoms, spreading redness, or an infection under treatment.",
+      "false": "No infection signs are described, or infection is explicitly ruled out."
+     }
+    },
+    "concern": {
+     "type": "score",
+     "instructions": "How worried should the ward team be about this patient right now, based on `nursing_note`?",
+     "criteria": [
+      "Stable or improving, no new problems; routine care",
+      "A minor issue to keep monitoring, with no clinical review needed today",
+      "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     ]
+    },
+    "pattern": {
+     "type": "choice",
+     "instructions": "What is the main type of clinical deterioration described in `nursing_note`?",
+     "criteria": {
+      "sepsis_infection": "Infection causing systemic illness: fever or rigors with fast heart rate, low blood pressure, new confusion or low urine output",
+      "respiratory": "Worsening breathing, rising oxygen requirement or low oxygen saturation",
+      "cardiac": "Chest pain, arrhythmia, or collapse from a heart cause",
+      "neurological": "Stroke, head injury, seizure, delirium, or reduced consciousness from a brain cause",
+      "bleeding": "Blood loss, such as black stools, vomiting blood, or bleeding with falling blood pressure",
+      "metabolic_renal": "Blood sugar, electrolyte, calcium, fluid balance or kidney problems",
+      "drug_or_substance": "Medication toxicity, over-sedation, or alcohol or drug withdrawal",
+      "other": "A concerning change that fits none of the other options",
+      "no_acute_change": "No deterioration: stable, improving, or at baseline"
+     }
+    }
+   },
+   "answers": {
+    "new_confusion": {
+     "type": "noul",
+     "noul": 0.92
+    },
+    "infection": {
+     "type": "noul",
+     "noul": 0.02
+    },
+    "concern": {
+     "type": "score",
+     "score": 2.46,
+     "confidence": 0.53,
+     "legend": {
+      "0": "Stable or improving, no new problems; routine care",
+      "1": "A minor issue to keep monitoring, with no clinical review needed today",
+      "2": "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "3": "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+     },
+     "probabilities": {
+      "0": 0.0,
+      "1": 0.0,
+      "2": 0.54,
+      "3": 0.46
+     }
+    },
+    "pattern": {
+     "type": "choice",
+     "choice": "neurological",
+     "confidence": 1.0,
+     "probabilities": {
+      "no_acute_change": 0.0,
+      "sepsis_infection": 0.0,
+      "other": 0.0,
+      "neurological": 1.0,
+      "cardiac": 0.0,
+      "metabolic_renal": 0.0,
+      "respiratory": 0.0,
+      "bleeding": 0.0,
+      "drug_or_substance": 0.0
+     }
+    }
+   },
+   "model": "jev-1.13.0",
+   "usage": {
+    "input_tokens": 1052,
+    "output_tokens": 156
+   },
+   "latency_ms": 305.0,
+   "request_id": "req_01a0b6e1d2947e1f913463f655870f80"
+  }
+ ]
+}

@@ -1,18 +1,26 @@
 [project]
-site_url = "https://www.example.com/"
-site_name = "Documentation"
-# site_description = "Your project description"
+site_url = "https://si618.github.io/explore-typesafe-ai/"
+site_name = "Explore TypeSafe AI"
+site_description = "Evaluating TypeSafe's System One model Jev on synthetic FHIR clinical scenarios, with Claude as System Two."
 # site_author = "Your name"
 
 # copyright = "Copyright &copy; 2026 Your name"
 
-# repo_url = "https://github.com/user/repo"
-# repo_name = "user/repo"
+repo_url = "https://github.com/si618/explore-typesafe-ai"
+repo_name = "si618/explore-typesafe-ai"
 # edit_uri = "edit/main/docs/"
 
 nav = [
-  { "Get started" = "index.md" },
-  { "Markdown in 5min" = "markdown.md" },
+  { "Overview" = "index.md" },
+  { "Prompt & approach" = "prompt.md" },
+  { "Synthetic cohort" = "data.md" },
+  { "Scenarios" = [
+    { "1. Ward deterioration" = "s1-ward.md" },
+    { "2. Discharge med reconciliation" = "s2-discharge.md" },
+    { "3. Post-discharge inbox" = "s3-inbox.md" },
+  ] },
+  { "System Two review" = "system-two.md" },
+  { "Models, timing & tokens" = "performance.md" },
 ]
 
 # extra_css = ["stylesheets/extra.css"]
@@ -69,12 +77,16 @@ toggle.name = "Switch to light mode"
 [[project.theme.palette]]
 media = "(prefers-color-scheme: light)"
 scheme = "default"
+primary = "teal"
+accent = "teal"
 toggle.icon = "lucide/sun"
 toggle.name = "Switch to dark mode"
 
 [[project.theme.palette]]
 media = "(prefers-color-scheme: dark)"
 scheme = "slate"
+primary = "teal"
+accent = "teal"
 toggle.icon = "lucide/moon"
 toggle.name = "Switch to system preference"
 

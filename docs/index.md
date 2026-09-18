@@ -1,173 +1,37 @@
----
-icon: lucide/rocket
----
+# Jev in the hospital: a System One evaluation
 
-# Get started
+This repo tests [TypeSafe](https://docs.typesafe.ai)'s **System One** model, **Jev**, on three hospital decisions. It uses 100 synthetic FHIR patients, and Claude models act as author and escalation reviewer. Jev doesn't generate text: it returns **typed answers with calibrated probabilities** (Choice, Score and Noul) that code can branch on. The design question throughout is *which part of a clinical decision is a fast semantic judgment, and which part belongs in code or in a slower reasoning model?*
 
-For full documentation visit [zensical.org](https://zensical.org/docs/).
-
-## Commands
-
-* [`zensical new`][new] - Create a new project
-* [`zensical serve`][serve] - Start local web server
-* [`zensical build`][build] - Build your site
-
-  [new]: https://zensical.org/docs/usage/new/
-  [serve]: https://zensical.org/docs/usage/preview/
-  [build]: https://zensical.org/docs/usage/build/
-
-## Examples
-
-### Admonitions
-
-> Go to [documentation](https://zensical.org/docs/authoring/admonitions/)
-
-!!! note
-
-    This is a **note** admonition. Use it to provide helpful information.
-
-!!! warning
-
-    This is a **warning** admonition. Be careful!
-
-### Details
-
-> Go to [documentation](https://zensical.org/docs/authoring/admonitions/#collapsible-blocks)
-
-??? info "Click to expand for more info"
-
-    This content is hidden until you click to expand it.
-    Great for FAQs or long explanations.
-
-## Code Blocks
-
-> Go to [documentation](https://zensical.org/docs/authoring/code-blocks/)
-
-``` python hl_lines="2" title="Code blocks"
-def greet(name):
-    print(f"Hello, {name}!") # (1)!
-
-greet("Python")
+```mermaid
+flowchart LR
+  FHIR[(100 Synthea patients<br/>FHIR R5)] --> ST[Code builds<br/>focused state]
+  NOTE[Clinical free text] --> ST
+  ST --> JEV{Jev · System One<br/>typed judgments}
+  JEV --> CODE[Rules in code<br/>NEWS2 · reconciliation · routing]
+  JEV -- uncertain --> S2[Claude · System Two<br/>blinded review]
+  S2 --> CODE
+  CODE --> ACT[Escalate · hold · route]
 ```
 
-1.  > Go to [documentation](https://zensical.org/docs/authoring/code-blocks/#code-annotations)
+## Headline results
 
-    Code annotations allow to attach notes to lines of code.
+| Scenario | Primitives → task categories | Result |
+| --- | --- | --- |
+| [Ward deterioration](s1-ward.md) | Noul → detection · Score → scoring/ranking · Choice → classification | NEWS2 alone under-triaged **10/20** patients; NEWS2 + Jev under-triaged **1/20**. New-confusion Noul 20/20, including dementia at baseline vs new delirium. |
+| [Discharge med reconciliation](s2-discharge.md) | Choice fan-out → structured extraction · Noul → verification · Score → scoring | **98%** of 143 medication statuses extracted correctly; allergy check 100% (including brand names). Duplicate/interaction checks are weak (multi-hop) and mostly escalate. |
+| [Post-discharge inbox](s3-inbox.md) | Choice → routing · Score → urgency · Noul → detection | **7/20** messages auto-dispatched, all correctly; every misroute was caught by the confidence gate. Prompt injection did not steer routing. |
+| [System Two review](system-two.md) | Confidence → escalation | 65 of 403 judgments (16%) escalated to a blinded Claude Sonnet 5 reviewer. |
 
-Code can also be highlighted inline: `#!python print("Hello, Python!")`.
+**Cost and speed:** 403 typed judgments in 60 requests, **p50 329 ms** per request (4–15 questions each), **$0.0038** in total. See [models, timing & tokens](performance.md).
 
-## Content tabs
+## What this shows about System One
 
-> Go to [documentation](https://zensical.org/docs/authoring/content-tabs/)
+- **Jev is strong at reading meaning.** It separated baseline from new confusion, caught negations, and read blanket statements, brand names and casual descriptions of emergencies.
+- **Code stays in charge.** NEWS2, reconciliation and routing policy are deterministic and auditable. Jev supplies the inputs code can't compute. Changing a threshold or weight doesn't need a new prompt or a rerun.
+- **Uncertainty is a usable signal, but not a complete one.** The gates caught every inbox misroute and most wrong discharge flags. Errors that got through were mostly Score answers one level off, often at confidence 0.4–0.6. So per-question thresholds need tuning on labelled local data before use.
+- **The limits match the docs.** Questions that need several hops over a medication list (class duplication, interactions) are unreliable, and they should be decomposed further or escalated.
 
-=== "Python"
+!!! warning "Not clinical validation"
+    The patients, notes and messages are synthetic, and a Claude model wrote the reference labels, not clinicians. There are 20 cases per scenario, so every percentage here has wide uncertainty. This is a capability demonstration, not evidence of clinical safety.
 
-    ``` python
-    print("Hello from Python!")
-    ```
-
-=== "Rust"
-
-    ``` rs
-    println!("Hello from Rust!");
-    ```
-
-## Diagrams
-
-> Go to [documentation](https://zensical.org/docs/authoring/diagrams/)
-
-``` mermaid
-graph LR
-  A[Start] --> B{Error?};
-  B -->|Yes| C[Hmm...];
-  C --> D[Debug];
-  D --> B;
-  B ---->|No| E[Yay!];
-```
-
-## Footnotes
-
-> Go to [documentation](https://zensical.org/docs/authoring/footnotes/)
-
-Here's a sentence with a footnote.[^1]
-
-Hover it, to see a tooltip.
-
-[^1]: This is the footnote.
-
-
-## Formatting
-
-> Go to [documentation](https://zensical.org/docs/authoring/formatting/)
-
-- ==This was marked (highlight)==
-- ^^This was inserted (underline)^^
-- ~~This was deleted (strikethrough)~~
-- H~2~O
-- A^T^A
-- ++ctrl+alt+del++
-
-## Icons, Emojis
-
-> Go to [documentation](https://zensical.org/docs/authoring/icons-emojis/)
-
-* :sparkles: `:sparkles:`
-* :rocket: `:rocket:`
-* :tada: `:tada:`
-* :memo: `:memo:`
-* :eyes: `:eyes:`
-
-## Maths
-
-> Go to [documentation](https://zensical.org/docs/authoring/math/)
-
-$$
-\cos x=\sum_{k=0}^{\infty}\frac{(-1)^k}{(2k)!}x^{2k}
-$$
-
-!!! warning "Needs configuration"
-    Note that MathJax is included via a `script` tag on this page and is not
-    configured in the generated default configuration to avoid including it
-    in a pages that do not need it. See the documentation for details on how
-    to configure it on all your pages if they are more Maths-heavy than these
-    simple starter pages.
-
-<script id="MathJax-script" src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [["\\(", "\\)"]],
-      displayMath: [["\\[", "\\]"]],
-      processEscapes: true,
-      processEnvironments: true
-    },
-    options: {
-      ignoreHtmlClass: ".*|",
-      processHtmlClass: "arithmatex"
-    }
-  };
-
-  document$.subscribe(() => {
-    MathJax.startup.output.clearCache()
-    MathJax.typesetClear()
-    MathJax.texReset()
-    MathJax.typesetPromise()
-  })
-</script>
-
-## Task Lists
-
-> Go to [documentation](https://zensical.org/docs/authoring/lists/#using-task-lists)
-
-* [x] Install Zensical
-* [x] Configure `zensical.toml`
-* [x] Write amazing documentation
-* [ ] Deploy anywhere
-
-## Tooltips
-
-> Go to [documentation](https://zensical.org/docs/authoring/tooltips/)
-
-[Hover me][example]
-
-  [example]: https://example.com "I'm a tooltip!"
+Next: the [prompt and why these scenarios](prompt.md).
