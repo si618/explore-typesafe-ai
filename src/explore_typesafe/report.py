@@ -19,7 +19,8 @@ from .s3_inbox import QUESTIONS as S3_QUESTIONS
 from .report_study import page_generated, page_haiku, page_s4, page_s5
 
 DOCS = ROOT / "docs"
-REPO = "https://github.com/si618/explore-typesafe-ai/blob/main"
+GITHUB = "https://github.com/si618/explore-typesafe-ai"
+REPO = f"{GITHUB}/blob/main"
 CLAUDE = json.loads((ROOT / "report" / "claude_usage.json").read_text())
 
 
@@ -326,7 +327,7 @@ def page_independent_labels() -> str:
     d_table = "\n".join("    " + line for line in table(["Judgment", "Reference", "Independent", "Jev"], d_rows).splitlines())
     return f"""# Independent reference labels
 
-Issue #1 identified a circularity risk: Claude authored the hand cases and
+[Issue #1]({GITHUB}/issues/1) identified a circularity risk: Claude authored the hand cases and
 labels, and a Claude reviewer judged Jev's uncertain answers. This page checks the
 reference against a blind sample of **15 cases per scenario** ({agreement['n']} typed
 judgments), labelled by a different model family. The sample favours cases marked
@@ -334,9 +335,10 @@ ambiguous and cases where Jev and the reference disagree, so it is harder than t
 full set.
 
 !!! danger "Correction"
-    The first version of this page reported κ = 1.00 on every question type. Those
-    labels were not independent: a script had copied the reference labels into
-    `labels.json`. They were replaced by the isolated run described below.
+    The first version of this page ([PR #2]({GITHUB}/pull/2)) reported κ = 1.00 on every
+    question type. Those labels were not independent: a script had copied the reference
+    labels into `labels.json`. They were replaced by the isolated run described below
+    ([PR #4]({GITHUB}/pull/4)).
 
 ## Agreement
 
@@ -366,7 +368,8 @@ matters most.
 
 The disagreements have **not been adjudicated**, and the pre-registered labels are
 unchanged. A Claude adjudicator would bring back the circularity this check is for,
-so that step is left for a clinician or pharmacist.
+so that step is left for a clinician or pharmacist, tracked in
+[issue #5]({GITHUB}/issues/5).
 
 ## How the labels were produced
 
@@ -378,7 +381,7 @@ so that step is left for a clinician or pharmacist.
   messages: no tool calls, file reads or web access.
 
 The packet, labels, prompt, sandbox script, event logs and scorer live in
-[`data/independent_labels/`](https://github.com/si618/explore-typesafe-ai/tree/main/data/independent_labels).
+[`data/independent_labels/`]({GITHUB}/tree/main/data/independent_labels).
 This is a model-family check, not clinical validation.
 """
 
@@ -493,7 +496,7 @@ java -jar synthea-with-dependencies.jar -s 618 -cs 618 -p 100 -a 25-90 \\
 | Path | Content | FHIR |
 | --- | --- | --- |
 | [`data/synthea-r4/`]({REPO}/data/synthea-r4) | Complete Synthea bundles for the original 100, gzipped, including claims | R4 4.0.1 + US Core, as exported |
-| [Release `cohort-1000`](https://github.com/si618/explore-typesafe-ai/releases/tag/cohort-1000) | Complete Synthea bundles for the other 900 (too large to commit) | R4 4.0.1 + US Core, as exported |
+| [Release `cohort-1000`]({GITHUB}/releases/tag/cohort-1000) | Complete Synthea bundles for the other 900 (too large to commit) | R4 4.0.1 + US Core, as exported |
 | [`data/fhir-r5/`]({REPO}/data/fhir-r5) | Clinical snapshot per patient, including the 10 most recent clinical notes: {', '.join(f'{k} {v:,}' for k, v in types.most_common())} | **R5 5.0.0**, validated |
 | [`data/fhir-r5-scenarios/`]({REPO}/data/fhir-r5-scenarios) | Hand-written scenario inputs: vital signs (`Observation`), nursing notes and discharge text (`DocumentReference`), patient messages (`Communication`) | **R5 5.0.0**, validated |
 | [`data/scenarios/`]({REPO}/data/scenarios) | Case definitions and **reference labels**, each set committed before its first model run | – |
@@ -557,7 +560,7 @@ Scenarios 1–3 have 20 hand-written cases each (labels written by Claude), plus
 - **It's cheap enough to ask everything.** At a fraction of a cent per request, fanning out every plausible question (per medication, per note, per drug pair) is practical. The architecture question becomes what to do with the answers.
 
 !!! warning "Not clinical validation"
-    The patients, notes and messages are synthetic. The hand-case labels were written by a Claude model, not clinicians, and a [different model family](independent-labels.md) disagrees with some of them; nobody has adjudicated those yet. The generated labels are only as good as the snippets and tables they're built from. This is a capability demonstration, not evidence of clinical safety.
+    The patients, notes and messages are synthetic. The hand-case labels were written by a Claude model, not clinicians, and a [different model family](independent-labels.md) disagrees with some of them; nobody has adjudicated those yet ([issue #5]({GITHUB}/issues/5)). The generated labels are only as good as the snippets and tables they're built from. This is a capability demonstration, not evidence of clinical safety.
 
 Next: the [prompt and why these scenarios](prompt.md). New to the terms? See the [vocabulary](vocabulary.md).
 """
