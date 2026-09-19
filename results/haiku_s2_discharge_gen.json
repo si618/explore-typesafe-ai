@@ -1,0 +1,4510 @@
+{
+ "scenario": "s2_discharge_gen",
+ "model": "claude-haiku-4-5",
+ "cases": [
+  {
+   "patient": "79f127fd",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.85
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.85
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.85
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.0
+    },
+    "interaction": {
+     "p_yes": 0.15
+    },
+    "justification": {
+     "level": 1,
+     "confidence": 0.9
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2492,
+   "duration_ms": 2929,
+   "usage": {
+    "input_tokens": 2523,
+    "output_tokens": 243
+   },
+   "cost_usd": 0.003738,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "a63d231a",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.85
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.85
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.85
+    },
+    "med_4": {
+     "choice": "stopped",
+     "confidence": 0.75
+    },
+    "med_5": {
+     "choice": "stopped",
+     "confidence": 0.9
+    },
+    "med_6": {
+     "choice": "stopped",
+     "confidence": 0.9
+    },
+    "med_7": {
+     "choice": "continued",
+     "confidence": 0.85
+    },
+    "med_8": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_9": {
+     "choice": "stopped",
+     "confidence": 0.95
+    },
+    "med_10": {
+     "choice": "continued",
+     "confidence": 0.85
+    },
+    "allergy_conflict": {
+     "p_yes": 0.05
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.25
+    },
+    "interaction": {
+     "p_yes": 0.7
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.8
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 3687,
+   "duration_ms": 4082,
+   "usage": {
+    "input_tokens": 3795,
+    "output_tokens": 411
+   },
+   "cost_usd": 0.00585,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "d2233a50",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 1.0
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_3": {
+     "choice": "stopped",
+     "confidence": 1.0
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.0
+    },
+    "interaction": {
+     "p_yes": 0.1
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2363,
+   "duration_ms": 2901,
+   "usage": {
+    "input_tokens": 2130,
+    "output_tokens": 215
+   },
+   "cost_usd": 0.003205,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "ad062942",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_5": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_6": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_7": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_8": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.92
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.85
+    },
+    "interaction": {
+     "p_yes": 0.72
+    },
+    "justification": {
+     "level": 0,
+     "confidence": 0.9
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 3173,
+   "duration_ms": 3609,
+   "usage": {
+    "input_tokens": 3382,
+    "output_tokens": 355
+   },
+   "cost_usd": 0.005157,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "b34fe768",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_5": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_6": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "med_7": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "med_8": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_9": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "allergy_conflict": {
+     "p_yes": 0.98
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.78
+    },
+    "interaction": {
+     "p_yes": 0.45
+    },
+    "justification": {
+     "level": 1,
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 3520,
+   "duration_ms": 3957,
+   "usage": {
+    "input_tokens": 3660,
+    "output_tokens": 385
+   },
+   "cost_usd": 0.005585,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "88c967d8",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "stopped",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "not_mentioned",
+     "confidence": 0.9
+    },
+    "med_2": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.9
+    },
+    "med_5": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.85
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.05
+    },
+    "interaction": {
+     "p_yes": 0.7
+    },
+    "justification": {
+     "level": 1,
+     "confidence": 0.8
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2701,
+   "duration_ms": 3110,
+   "usage": {
+    "input_tokens": 2624,
+    "output_tokens": 273
+   },
+   "cost_usd": 0.003989,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "99009ab0",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.98
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.05
+    },
+    "interaction": {
+     "p_yes": 0.15
+    },
+    "justification": {
+     "level": 1,
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2530,
+   "duration_ms": 2946,
+   "usage": {
+    "input_tokens": 2642,
+    "output_tokens": 243
+   },
+   "cost_usd": 0.0038569999999999998,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "ad76f4f3",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_2": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "med_3": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.05
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.08
+    },
+    "interaction": {
+     "p_yes": 0.12
+    },
+    "justification": {
+     "level": 1,
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2436,
+   "duration_ms": 2895,
+   "usage": {
+    "input_tokens": 2166,
+    "output_tokens": 221
+   },
+   "cost_usd": 0.003271,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "6bfa2e71",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "dose_changed",
+     "confidence": 0.98
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.98
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.15
+    },
+    "interaction": {
+     "p_yes": 0.72
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1975,
+   "duration_ms": 2463,
+   "usage": {
+    "input_tokens": 2228,
+    "output_tokens": 217
+   },
+   "cost_usd": 0.003313,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "e1dc0b42",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "dose_changed",
+     "confidence": 0.95
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.98
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.98
+    },
+    "interaction": {
+     "p_yes": 0.75
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2332,
+   "duration_ms": 2837,
+   "usage": {
+    "input_tokens": 2163,
+    "output_tokens": 217
+   },
+   "cost_usd": 0.003248,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "7874647f",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "stopped",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.85
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_3": {
+     "choice": "dose_changed",
+     "confidence": 0.95
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.85
+    },
+    "med_5": {
+     "choice": "continued",
+     "confidence": 0.85
+    },
+    "med_6": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_7": {
+     "choice": "continued",
+     "confidence": 0.85
+    },
+    "med_8": {
+     "choice": "withheld",
+     "confidence": 0.95
+    },
+    "med_9": {
+     "choice": "stopped",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.95
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.85
+    },
+    "interaction": {
+     "p_yes": 0.35
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.8
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2570,
+   "duration_ms": 3050,
+   "usage": {
+    "input_tokens": 3468,
+    "output_tokens": 387
+   },
+   "cost_usd": 0.005403,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "04857b9f",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_3": {
+     "choice": "withheld",
+     "confidence": 0.99
+    },
+    "med_4": {
+     "choice": "not_mentioned",
+     "confidence": 0.99
+    },
+    "med_5": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_6": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_7": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.0
+    },
+    "interaction": {
+     "p_yes": 0.15
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2504,
+   "duration_ms": 2908,
+   "usage": {
+    "input_tokens": 3192,
+    "output_tokens": 331
+   },
+   "cost_usd": 0.004847000000000001,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "5fd0070a",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_5": {
+     "choice": "dose_changed",
+     "confidence": 0.98
+    },
+    "med_6": {
+     "choice": "stopped",
+     "confidence": 0.98
+    },
+    "med_7": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.92
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.85
+    },
+    "interaction": {
+     "p_yes": 0.72
+    },
+    "justification": {
+     "level": 1,
+     "confidence": 0.8
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 3495,
+   "duration_ms": 3976,
+   "usage": {
+    "input_tokens": 3111,
+    "output_tokens": 329
+   },
+   "cost_usd": 0.004756,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "2c4e829a",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "med_2": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "med_3": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "med_4": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "med_5": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "med_6": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_7": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "med_8": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_9": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "allergy_conflict": {
+     "p_yes": 0.75
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.85
+    },
+    "interaction": {
+     "p_yes": 0.7
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.75
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2383,
+   "duration_ms": 2864,
+   "usage": {
+    "input_tokens": 3456,
+    "output_tokens": 393
+   },
+   "cost_usd": 0.0054210000000000005,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "152d1f94",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_4": {
+     "choice": "withheld",
+     "confidence": 0.99
+    },
+    "med_5": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_6": {
+     "choice": "not_mentioned",
+     "confidence": 0.99
+    },
+    "allergy_conflict": {
+     "p_yes": 0.95
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.9
+    },
+    "interaction": {
+     "p_yes": 0.85
+    },
+    "justification": {
+     "level": 1,
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2982,
+   "duration_ms": 3451,
+   "usage": {
+    "input_tokens": 2851,
+    "output_tokens": 303
+   },
+   "cost_usd": 0.004366,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "dbe3571e",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "med_2": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.95
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.05
+    },
+    "interaction": {
+     "p_yes": 0.75
+    },
+    "justification": {
+     "level": 1,
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2376,
+   "duration_ms": 2872,
+   "usage": {
+    "input_tokens": 2185,
+    "output_tokens": 217
+   },
+   "cost_usd": 0.00327,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "2a6fc9f2",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_2": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_4": {
+     "choice": "dose_changed",
+     "confidence": 0.95
+    },
+    "med_5": {
+     "choice": "stopped",
+     "confidence": 0.95
+    },
+    "med_6": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_7": {
+     "choice": "stopped",
+     "confidence": 0.95
+    },
+    "med_8": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_9": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_10": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.92
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.85
+    },
+    "interaction": {
+     "p_yes": 0.75
+    },
+    "justification": {
+     "level": 1,
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 3744,
+   "duration_ms": 4537,
+   "usage": {
+    "input_tokens": 3741,
+    "output_tokens": 415
+   },
+   "cost_usd": 0.005816,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "cadaa0af",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_3": {
+     "choice": "not_mentioned",
+     "confidence": 0.9
+    },
+    "med_4": {
+     "choice": "not_mentioned",
+     "confidence": 0.9
+    },
+    "med_5": {
+     "choice": "withheld",
+     "confidence": 0.98
+    },
+    "allergy_conflict": {
+     "p_yes": 0.92
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.15
+    },
+    "interaction": {
+     "p_yes": 0.65
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.8
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2741,
+   "duration_ms": 3197,
+   "usage": {
+    "input_tokens": 2567,
+    "output_tokens": 277
+   },
+   "cost_usd": 0.003952,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "9dc282ba",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_4": {
+     "choice": "not_mentioned",
+     "confidence": 0.9
+    },
+    "med_5": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_6": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_7": {
+     "choice": "not_mentioned",
+     "confidence": 0.9
+    },
+    "allergy_conflict": {
+     "p_yes": 0.15
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.85
+    },
+    "interaction": {
+     "p_yes": 0.25
+    },
+    "justification": {
+     "level": 1,
+     "confidence": 0.8
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 3130,
+   "duration_ms": 3609,
+   "usage": {
+    "input_tokens": 3094,
+    "output_tokens": 331
+   },
+   "cost_usd": 0.004749,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "9e451bf9",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.95
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.05
+    },
+    "interaction": {
+     "p_yes": 0.45
+    },
+    "justification": {
+     "level": 1,
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1723,
+   "duration_ms": 2195,
+   "usage": {
+    "input_tokens": 2227,
+    "output_tokens": 217
+   },
+   "cost_usd": 0.003312,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "cb892168",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "withheld",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.85
+    },
+    "med_2": {
+     "choice": "stopped",
+     "confidence": 0.98
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.92
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.15
+    },
+    "interaction": {
+     "p_yes": 0.72
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.8
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2377,
+   "duration_ms": 2803,
+   "usage": {
+    "input_tokens": 2163,
+    "output_tokens": 217
+   },
+   "cost_usd": 0.003248,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "f8417b33",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "not_mentioned",
+     "confidence": 0.98
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.98
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.98
+    },
+    "med_5": {
+     "choice": "not_mentioned",
+     "confidence": 0.98
+    },
+    "med_6": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.95
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.15
+    },
+    "interaction": {
+     "p_yes": 0.75
+    },
+    "justification": {
+     "level": 1,
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2203,
+   "duration_ms": 2690,
+   "usage": {
+    "input_tokens": 2764,
+    "output_tokens": 303
+   },
+   "cost_usd": 0.004279,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "086297c8",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_2": {
+     "choice": "stopped",
+     "confidence": 0.9
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.0
+    },
+    "interaction": {
+     "p_yes": 0.15
+    },
+    "justification": {
+     "level": 1,
+     "confidence": 0.8
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1899,
+   "duration_ms": 2569,
+   "usage": {
+    "input_tokens": 2460,
+    "output_tokens": 243
+   },
+   "cost_usd": 0.003675,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "49f219ae",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_4": {
+     "choice": "stopped",
+     "confidence": 0.9
+    },
+    "med_5": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_6": {
+     "choice": "withheld",
+     "confidence": 0.98
+    },
+    "med_7": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_8": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.05
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.02
+    },
+    "interaction": {
+     "p_yes": 0.15
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 3259,
+   "duration_ms": 3743,
+   "usage": {
+    "input_tokens": 3383,
+    "output_tokens": 357
+   },
+   "cost_usd": 0.005168000000000001,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "fc77b459",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_3": {
+     "choice": "dose_changed",
+     "confidence": 0.99
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.0
+    },
+    "interaction": {
+     "p_yes": 0.75
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2594,
+   "duration_ms": 3056,
+   "usage": {
+    "input_tokens": 2393,
+    "output_tokens": 245
+   },
+   "cost_usd": 0.003618,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "977fc6b5",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_3": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.15
+    },
+    "interaction": {
+     "p_yes": 0.72
+    },
+    "justification": {
+     "level": 1,
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2590,
+   "duration_ms": 2831,
+   "usage": {
+    "input_tokens": 2312,
+    "output_tokens": 245
+   },
+   "cost_usd": 0.0035369999999999998,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "b8987eb2",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.0
+    },
+    "interaction": {
+     "p_yes": 0.15
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1712,
+   "duration_ms": 2191,
+   "usage": {
+    "input_tokens": 2129,
+    "output_tokens": 215
+   },
+   "cost_usd": 0.003204,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "af4481dc",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_2": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_5": {
+     "choice": "dose_changed",
+     "confidence": 0.99
+    },
+    "med_6": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "med_7": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "med_8": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_9": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "med_10": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "med_11": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.75
+    },
+    "interaction": {
+     "p_yes": 0.85
+    },
+    "justification": {
+     "level": 1,
+     "confidence": 0.7
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 4016,
+   "duration_ms": 4514,
+   "usage": {
+    "input_tokens": 4030,
+    "output_tokens": 453
+   },
+   "cost_usd": 0.006295,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "b495df2a",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_5": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_6": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_7": {
+     "choice": "dose_changed",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.85
+    },
+    "interaction": {
+     "p_yes": 0.3
+    },
+    "justification": {
+     "level": 1,
+     "confidence": 0.8
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2335,
+   "duration_ms": 2791,
+   "usage": {
+    "input_tokens": 3099,
+    "output_tokens": 331
+   },
+   "cost_usd": 0.004754,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "d643b49c",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_2": {
+     "choice": "not_mentioned",
+     "confidence": 0.99
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_4": {
+     "choice": "not_mentioned",
+     "confidence": 0.99
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.0
+    },
+    "interaction": {
+     "p_yes": 0.15
+    },
+    "justification": {
+     "level": 1,
+     "confidence": 0.8
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2593,
+   "duration_ms": 3065,
+   "usage": {
+    "input_tokens": 2401,
+    "output_tokens": 247
+   },
+   "cost_usd": 0.003636,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "d4c1ac54",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_3": {
+     "choice": "stopped",
+     "confidence": 0.95
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_5": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "med_6": {
+     "choice": "withheld",
+     "confidence": 0.95
+    },
+    "med_7": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_8": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.85
+    },
+    "interaction": {
+     "p_yes": 0.1
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 3348,
+   "duration_ms": 3822,
+   "usage": {
+    "input_tokens": 3330,
+    "output_tokens": 359
+   },
+   "cost_usd": 0.005125,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "85d49635",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "stopped",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_2": {
+     "choice": "withheld",
+     "confidence": 0.99
+    },
+    "med_3": {
+     "choice": "dose_changed",
+     "confidence": 0.99
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.85
+    },
+    "med_5": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_6": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_7": {
+     "choice": "withheld",
+     "confidence": 0.99
+    },
+    "med_8": {
+     "choice": "dose_changed",
+     "confidence": 0.99
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.75
+    },
+    "interaction": {
+     "p_yes": 0.25
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2389,
+   "duration_ms": 2868,
+   "usage": {
+    "input_tokens": 3272,
+    "output_tokens": 363
+   },
+   "cost_usd": 0.005087,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "4899ed95",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "stopped",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.85
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_5": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_6": {
+     "choice": "dose_changed",
+     "confidence": 0.95
+    },
+    "med_7": {
+     "choice": "not_mentioned",
+     "confidence": 0.9
+    },
+    "med_8": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_9": {
+     "choice": "withheld",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.75
+    },
+    "interaction": {
+     "p_yes": 0.25
+    },
+    "justification": {
+     "level": 1,
+     "confidence": 0.8
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 3602,
+   "duration_ms": 4181,
+   "usage": {
+    "input_tokens": 3395,
+    "output_tokens": 389
+   },
+   "cost_usd": 0.00534,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "7d09a39f",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_2": {
+     "choice": "not_mentioned",
+     "confidence": 0.99
+    },
+    "med_3": {
+     "choice": "dose_changed",
+     "confidence": 0.99
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_5": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.15
+    },
+    "interaction": {
+     "p_yes": 0.25
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.75
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2788,
+   "duration_ms": 3111,
+   "usage": {
+    "input_tokens": 2658,
+    "output_tokens": 275
+   },
+   "cost_usd": 0.004033,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "36992017",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "stopped",
+     "confidence": 0.98
+    },
+    "med_2": {
+     "choice": "not_mentioned",
+     "confidence": 0.99
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_5": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.05
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.15
+    },
+    "interaction": {
+     "p_yes": 0.25
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.75
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1962,
+   "duration_ms": 2443,
+   "usage": {
+    "input_tokens": 2659,
+    "output_tokens": 273
+   },
+   "cost_usd": 0.004024,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "1fcef962",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_3": {
+     "choice": "dose_changed",
+     "confidence": 0.95
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_5": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_6": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_7": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.85
+    },
+    "interaction": {
+     "p_yes": 0.4
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.75
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 3161,
+   "duration_ms": 3647,
+   "usage": {
+    "input_tokens": 3033,
+    "output_tokens": 329
+   },
+   "cost_usd": 0.004678,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "36218842",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "med_2": {
+     "choice": "not_mentioned",
+     "confidence": 0.99
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_4": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "med_5": {
+     "choice": "withheld",
+     "confidence": 0.99
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.15
+    },
+    "interaction": {
+     "p_yes": 0.7
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2821,
+   "duration_ms": 3445,
+   "usage": {
+    "input_tokens": 2648,
+    "output_tokens": 275
+   },
+   "cost_usd": 0.0040230000000000005,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "21b57aa5",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "stopped",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.9
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.9
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.0
+    },
+    "interaction": {
+     "p_yes": 0.15
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.75
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2584,
+   "duration_ms": 3047,
+   "usage": {
+    "input_tokens": 2300,
+    "output_tokens": 243
+   },
+   "cost_usd": 0.003515,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "b1b44768",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_4": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "med_5": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_6": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_7": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_8": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_9": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.95
+    },
+    "interaction": {
+     "p_yes": 0.25
+    },
+    "justification": {
+     "level": 1,
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 3508,
+   "duration_ms": 4025,
+   "usage": {
+    "input_tokens": 3486,
+    "output_tokens": 383
+   },
+   "cost_usd": 0.0054009999999999996,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "97250121",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.98
+    },
+    "med_3": {
+     "choice": "withheld",
+     "confidence": 0.99
+    },
+    "allergy_conflict": {
+     "p_yes": 0.05
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.75
+    },
+    "interaction": {
+     "p_yes": 0.2
+    },
+    "justification": {
+     "level": 1,
+     "confidence": 0.8
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2371,
+   "duration_ms": 2860,
+   "usage": {
+    "input_tokens": 2157,
+    "output_tokens": 221
+   },
+   "cost_usd": 0.003262,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "03f6c139",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.0
+    },
+    "interaction": {
+     "p_yes": 0.65
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.8
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1749,
+   "duration_ms": 2222,
+   "usage": {
+    "input_tokens": 2221,
+    "output_tokens": 215
+   },
+   "cost_usd": 0.003296,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "7d0557e0",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "med_1": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.15
+    },
+    "interaction": {
+     "p_yes": 0.25
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2409,
+   "duration_ms": 2869,
+   "usage": {
+    "input_tokens": 2168,
+    "output_tokens": 217
+   },
+   "cost_usd": 0.003253,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "d3e6d8f6",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.85
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.85
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.0
+    },
+    "interaction": {
+     "p_yes": 0.15
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.8
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2383,
+   "duration_ms": 2928,
+   "usage": {
+    "input_tokens": 2102,
+    "output_tokens": 215
+   },
+   "cost_usd": 0.003177,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "76411cab",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "stopped",
+     "confidence": 0.98
+    },
+    "med_2": {
+     "choice": "stopped",
+     "confidence": 0.98
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.0
+    },
+    "interaction": {
+     "p_yes": 0.65
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.7
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2519,
+   "duration_ms": 2718,
+   "usage": {
+    "input_tokens": 2366,
+    "output_tokens": 243
+   },
+   "cost_usd": 0.003581,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "3ea32393",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "stopped",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "med_2": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "med_3": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "med_4": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "med_5": {
+     "choice": "stopped",
+     "confidence": 0.95
+    },
+    "med_6": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_7": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.15
+    },
+    "interaction": {
+     "p_yes": 0.25
+    },
+    "justification": {
+     "level": 1,
+     "confidence": 0.8
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 3144,
+   "duration_ms": 3622,
+   "usage": {
+    "input_tokens": 3050,
+    "output_tokens": 335
+   },
+   "cost_usd": 0.004725,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "a5d4795e",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "dose_changed",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.9
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.9
+    },
+    "med_3": {
+     "choice": "withheld",
+     "confidence": 0.98
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.9
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.0
+    },
+    "interaction": {
+     "p_yes": 0.75
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2590,
+   "duration_ms": 3049,
+   "usage": {
+    "input_tokens": 2391,
+    "output_tokens": 247
+   },
+   "cost_usd": 0.003626,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "8e394032",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_2": {
+     "choice": "stopped",
+     "confidence": 0.85
+    },
+    "med_3": {
+     "choice": "stopped",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.75
+    },
+    "interaction": {
+     "p_yes": 0.15
+    },
+    "justification": {
+     "level": 1,
+     "confidence": 0.8
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2355,
+   "duration_ms": 2817,
+   "usage": {
+    "input_tokens": 2132,
+    "output_tokens": 215
+   },
+   "cost_usd": 0.003207,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "366af3d1",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_4": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "med_5": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_6": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_7": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_8": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.85
+    },
+    "interaction": {
+     "p_yes": 0.15
+    },
+    "justification": {
+     "level": 1,
+     "confidence": 0.75
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 3324,
+   "duration_ms": 3805,
+   "usage": {
+    "input_tokens": 3325,
+    "output_tokens": 355
+   },
+   "cost_usd": 0.0051,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "d7cff9ac",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.85
+    },
+    "interaction": {
+     "p_yes": 0.75
+    },
+    "justification": {
+     "level": 1,
+     "confidence": 0.8
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1948,
+   "duration_ms": 2435,
+   "usage": {
+    "input_tokens": 2385,
+    "output_tokens": 243
+   },
+   "cost_usd": 0.0036,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "92e83f49",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.15
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.05
+    },
+    "interaction": {
+     "p_yes": 0.7
+    },
+    "justification": {
+     "level": 1,
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2277,
+   "duration_ms": 2739,
+   "usage": {
+    "input_tokens": 2234,
+    "output_tokens": 215
+   },
+   "cost_usd": 0.003309,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "368156af",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "stopped",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_2": {
+     "choice": "stopped",
+     "confidence": 0.95
+    },
+    "med_3": {
+     "choice": "withheld",
+     "confidence": 0.95
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_5": {
+     "choice": "dose_changed",
+     "confidence": 0.95
+    },
+    "med_6": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_7": {
+     "choice": "not_mentioned",
+     "confidence": 0.9
+    },
+    "med_8": {
+     "choice": "stopped",
+     "confidence": 0.95
+    },
+    "med_9": {
+     "choice": "not_mentioned",
+     "confidence": 0.9
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.0
+    },
+    "interaction": {
+     "p_yes": 0.25
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.8
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2631,
+   "duration_ms": 3087,
+   "usage": {
+    "input_tokens": 3535,
+    "output_tokens": 391
+   },
+   "cost_usd": 0.00549,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "08ecd137",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_2": {
+     "choice": "stopped",
+     "confidence": 1.0
+    },
+    "med_3": {
+     "choice": "dose_changed",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.0
+    },
+    "interaction": {
+     "p_yes": 0.15
+    },
+    "justification": {
+     "level": 1,
+     "confidence": 0.8
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1896,
+   "duration_ms": 2341,
+   "usage": {
+    "input_tokens": 2198,
+    "output_tokens": 217
+   },
+   "cost_usd": 0.003283,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "7eabe8d1",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_2": {
+     "choice": "dose_changed",
+     "confidence": 0.99
+    },
+    "med_3": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.0
+    },
+    "interaction": {
+     "p_yes": 0.15
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1673,
+   "duration_ms": 2137,
+   "usage": {
+    "input_tokens": 2142,
+    "output_tokens": 217
+   },
+   "cost_usd": 0.003227,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "c77fe86f",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.0
+    },
+    "interaction": {
+     "p_yes": 0.15
+    },
+    "justification": {
+     "level": 1,
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1878,
+   "duration_ms": 2340,
+   "usage": {
+    "input_tokens": 2126,
+    "output_tokens": 215
+   },
+   "cost_usd": 0.003201,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "24d5caff",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_5": {
+     "choice": "dose_changed",
+     "confidence": 0.95
+    },
+    "med_6": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_7": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_8": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.85
+    },
+    "interaction": {
+     "p_yes": 0.25
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.75
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 3326,
+   "duration_ms": 3794,
+   "usage": {
+    "input_tokens": 3266,
+    "output_tokens": 357
+   },
+   "cost_usd": 0.005051,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "215a1d73",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "med_1": {
+     "choice": "not_mentioned",
+     "confidence": 0.99
+    },
+    "med_2": {
+     "choice": "withheld",
+     "confidence": 0.99
+    },
+    "med_3": {
+     "choice": "dose_changed",
+     "confidence": 0.95
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.0
+    },
+    "interaction": {
+     "p_yes": 0.15
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1977,
+   "duration_ms": 2441,
+   "usage": {
+    "input_tokens": 2351,
+    "output_tokens": 249
+   },
+   "cost_usd": 0.003596,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "46ecce0a",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "med_1": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_5": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_6": {
+     "choice": "dose_changed",
+     "confidence": 0.99
+    },
+    "med_7": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_8": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_9": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_10": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.15
+    },
+    "interaction": {
+     "p_yes": 0.25
+    },
+    "justification": {
+     "level": 1,
+     "confidence": 0.75
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 3928,
+   "duration_ms": 4678,
+   "usage": {
+    "input_tokens": 3806,
+    "output_tokens": 415
+   },
+   "cost_usd": 0.005881,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "3cf065be",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_2": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_5": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_6": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.75
+    },
+    "interaction": {
+     "p_yes": 0.6
+    },
+    "justification": {
+     "level": 1,
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1962,
+   "duration_ms": 2429,
+   "usage": {
+    "input_tokens": 2993,
+    "output_tokens": 299
+   },
+   "cost_usd": 0.004488,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "74666880",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "withheld",
+     "confidence": 0.99
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.85
+    },
+    "med_5": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_6": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.95
+    },
+    "interaction": {
+     "p_yes": 0.3
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2221,
+   "duration_ms": 2818,
+   "usage": {
+    "input_tokens": 2850,
+    "output_tokens": 301
+   },
+   "cost_usd": 0.004355,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "16b2404b",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_2": {
+     "choice": "stopped",
+     "confidence": 0.98
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_5": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_6": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.85
+    },
+    "interaction": {
+     "p_yes": 0.72
+    },
+    "justification": {
+     "level": 1,
+     "confidence": 0.8
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2274,
+   "duration_ms": 2806,
+   "usage": {
+    "input_tokens": 2868,
+    "output_tokens": 299
+   },
+   "cost_usd": 0.004363,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "e7969043",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.85
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_3": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.85
+    },
+    "med_5": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_6": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "med_7": {
+     "choice": "not_mentioned",
+     "confidence": 0.9
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.0
+    },
+    "interaction": {
+     "p_yes": 0.15
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.8
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 3165,
+   "duration_ms": 3656,
+   "usage": {
+    "input_tokens": 3003,
+    "output_tokens": 331
+   },
+   "cost_usd": 0.004658000000000001,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "d9a018ff",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.05
+    },
+    "interaction": {
+     "p_yes": 0.15
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1855,
+   "duration_ms": 2339,
+   "usage": {
+    "input_tokens": 2313,
+    "output_tokens": 243
+   },
+   "cost_usd": 0.003528,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "1c9818e0",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_2": {
+     "choice": "stopped",
+     "confidence": 0.9
+    },
+    "med_3": {
+     "choice": "stopped",
+     "confidence": 0.85
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_5": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_6": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_7": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_8": {
+     "choice": "stopped",
+     "confidence": 0.95
+    },
+    "med_9": {
+     "choice": "stopped",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.05
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.15
+    },
+    "interaction": {
+     "p_yes": 0.6
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.8
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2741,
+   "duration_ms": 3324,
+   "usage": {
+    "input_tokens": 3475,
+    "output_tokens": 383
+   },
+   "cost_usd": 0.00539,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "d129790f",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "dose_changed",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "stopped",
+     "confidence": 0.98
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.8
+    },
+    "med_3": {
+     "choice": "not_mentioned",
+     "confidence": 0.9
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_5": {
+     "choice": "continued",
+     "confidence": 0.8
+    },
+    "med_6": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_7": {
+     "choice": "not_mentioned",
+     "confidence": 0.9
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.0
+    },
+    "interaction": {
+     "p_yes": 0.15
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.75
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 3179,
+   "duration_ms": 3794,
+   "usage": {
+    "input_tokens": 3086,
+    "output_tokens": 333
+   },
+   "cost_usd": 0.004751,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "4ad440ea",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_4": {
+     "choice": "stopped",
+     "confidence": 0.85
+    },
+    "med_5": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.05
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.75
+    },
+    "interaction": {
+     "p_yes": 0.7
+    },
+    "justification": {
+     "level": 1,
+     "confidence": 0.9
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1958,
+   "duration_ms": 2422,
+   "usage": {
+    "input_tokens": 2508,
+    "output_tokens": 271
+   },
+   "cost_usd": 0.0038629999999999997,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "fb907263",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "withheld",
+     "confidence": 0.95
+    },
+    "med_2": {
+     "choice": "dose_changed",
+     "confidence": 0.95
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_5": {
+     "choice": "stopped",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.75
+    },
+    "interaction": {
+     "p_yes": 0.25
+    },
+    "justification": {
+     "level": 1,
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2764,
+   "duration_ms": 3244,
+   "usage": {
+    "input_tokens": 2549,
+    "output_tokens": 275
+   },
+   "cost_usd": 0.003924,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "77bf78d1",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_2": {
+     "choice": "withheld",
+     "confidence": 0.99
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.0
+    },
+    "interaction": {
+     "p_yes": 0.25
+    },
+    "justification": {
+     "level": 1,
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1658,
+   "duration_ms": 2166,
+   "usage": {
+    "input_tokens": 2176,
+    "output_tokens": 217
+   },
+   "cost_usd": 0.003261,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "3994b5fb",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.92
+    },
+    "interaction": {
+     "p_yes": 0.75
+    },
+    "justification": {
+     "level": 0,
+     "confidence": 0.9
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1694,
+   "duration_ms": 2166,
+   "usage": {
+    "input_tokens": 2388,
+    "output_tokens": 243
+   },
+   "cost_usd": 0.003603,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "5354bd02",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "stopped",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_2": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "med_3": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_5": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "med_6": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.05
+    },
+    "interaction": {
+     "p_yes": 0.3
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.8
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2153,
+   "duration_ms": 2600,
+   "usage": {
+    "input_tokens": 2770,
+    "output_tokens": 305
+   },
+   "cost_usd": 0.004295,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "bd667c2e",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_2": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.75
+    },
+    "interaction": {
+     "p_yes": 0.4
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2793,
+   "duration_ms": 3273,
+   "usage": {
+    "input_tokens": 2190,
+    "output_tokens": 215
+   },
+   "cost_usd": 0.003265,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "8f55d217",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_3": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_5": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.05
+    },
+    "interaction": {
+     "p_yes": 0.75
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2769,
+   "duration_ms": 3162,
+   "usage": {
+    "input_tokens": 2586,
+    "output_tokens": 275
+   },
+   "cost_usd": 0.003961,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "cff5c987",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_3": {
+     "choice": "withheld",
+     "confidence": 0.99
+    },
+    "med_4": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "med_5": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "med_6": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "med_7": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "med_8": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "med_9": {
+     "choice": "not_mentioned",
+     "confidence": 0.95
+    },
+    "med_10": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.0
+    },
+    "interaction": {
+     "p_yes": 0.15
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.8
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 3756,
+   "duration_ms": 4210,
+   "usage": {
+    "input_tokens": 3662,
+    "output_tokens": 423
+   },
+   "cost_usd": 0.005776999999999999,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "a4c29643",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "stopped",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "stopped",
+     "confidence": 0.98
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.98
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.98
+    },
+    "med_4": {
+     "choice": "not_mentioned",
+     "confidence": 0.85
+    },
+    "med_5": {
+     "choice": "continued",
+     "confidence": 0.98
+    },
+    "med_6": {
+     "choice": "continued",
+     "confidence": 0.98
+    },
+    "med_7": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "med_8": {
+     "choice": "continued",
+     "confidence": 0.98
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.0
+    },
+    "interaction": {
+     "p_yes": 0.15
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.75
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2390,
+   "duration_ms": 2864,
+   "usage": {
+    "input_tokens": 3357,
+    "output_tokens": 357
+   },
+   "cost_usd": 0.005142000000000001,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "f302a65c",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "med_1": {
+     "choice": "withheld",
+     "confidence": 0.99
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.0
+    },
+    "interaction": {
+     "p_yes": 0.65
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1871,
+   "duration_ms": 2350,
+   "usage": {
+    "input_tokens": 2419,
+    "output_tokens": 245
+   },
+   "cost_usd": 0.003644,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "4c783998",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "stopped",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "not_mentioned",
+     "confidence": 0.9
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_5": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_6": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_7": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_8": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_9": {
+     "choice": "stopped",
+     "confidence": 0.95
+    },
+    "med_10": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.85
+    },
+    "interaction": {
+     "p_yes": 0.75
+    },
+    "justification": {
+     "level": 1,
+     "confidence": 0.75
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 3661,
+   "duration_ms": 4134,
+   "usage": {
+    "input_tokens": 3780,
+    "output_tokens": 413
+   },
+   "cost_usd": 0.0058449999999999995,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "f93b7489",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "withheld",
+     "confidence": 1.0
+    },
+    "med_1": {
+     "choice": "dose_changed",
+     "confidence": 1.0
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 1.0
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.0
+    },
+    "interaction": {
+     "p_yes": 0.05
+    },
+    "justification": {
+     "level": 1,
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2348,
+   "duration_ms": 2819,
+   "usage": {
+    "input_tokens": 2138,
+    "output_tokens": 219
+   },
+   "cost_usd": 0.003233,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "c3470559",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 1.0
+    },
+    "med_3": {
+     "choice": "withheld",
+     "confidence": 1.0
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 1.0
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.0
+    },
+    "interaction": {
+     "p_yes": 0.7
+    },
+    "justification": {
+     "level": 1,
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2545,
+   "duration_ms": 2806,
+   "usage": {
+    "input_tokens": 2441,
+    "output_tokens": 245
+   },
+   "cost_usd": 0.003666,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "dee41e03",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "continued",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "dose_changed",
+     "confidence": 0.98
+    },
+    "med_2": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.9
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.75
+    },
+    "interaction": {
+     "p_yes": 0.6
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2320,
+   "duration_ms": 2583,
+   "usage": {
+    "input_tokens": 2129,
+    "output_tokens": 217
+   },
+   "cost_usd": 0.003214,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "d2c775c0",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "med_1": {
+     "choice": "dose_changed",
+     "confidence": 0.99
+    },
+    "med_2": {
+     "choice": "continued",
+     "confidence": 0.99
+    },
+    "med_3": {
+     "choice": "continued",
+     "confidence": 0.85
+    },
+    "med_4": {
+     "choice": "continued",
+     "confidence": 0.85
+    },
+    "med_5": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.92
+    },
+    "interaction": {
+     "p_yes": 0.78
+    },
+    "justification": {
+     "level": 2,
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2793,
+   "duration_ms": 3269,
+   "usage": {
+    "input_tokens": 2564,
+    "output_tokens": 273
+   },
+   "cost_usd": 0.003929,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "841382d0",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "med_0": {
+     "choice": "dose_changed",
+     "confidence": 0.95
+    },
+    "med_1": {
+     "choice": "stopped",
+     "confidence": 0.9
+    },
+    "med_2": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "med_3": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "med_4": {
+     "choice": "stopped",
+     "confidence": 0.99
+    },
+    "med_5": {
+     "choice": "continued",
+     "confidence": 0.85
+    },
+    "med_6": {
+     "choice": "continued",
+     "confidence": 0.85
+    },
+    "allergy_conflict": {
+     "p_yes": 0.0
+    },
+    "duplicate_therapy": {
+     "p_yes": 0.85
+    },
+    "interaction": {
+     "p_yes": 0.7
+    },
+    "justification": {
+     "level": 1,
+     "confidence": 0.8
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2285,
+   "duration_ms": 2558,
+   "usage": {
+    "input_tokens": 2853,
+    "output_tokens": 301
+   },
+   "cost_usd": 0.004358,
+   "model": "claude-haiku-4-5"
+  }
+ ]
+}

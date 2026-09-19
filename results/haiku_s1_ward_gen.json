@@ -1,0 +1,2486 @@
+{
+ "scenario": "s1_ward_gen",
+ "model": "claude-haiku-4-5",
+ "cases": [
+  {
+   "patient": "5a4666c8",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.95
+    },
+    "infection": {
+     "p_yes": 0.7
+    },
+    "concern": {
+     "level": 2,
+     "confidence": 0.85
+    },
+    "pattern": {
+     "choice": "sepsis_infection",
+     "confidence": 0.72
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1227,
+   "duration_ms": 1769,
+   "usage": {
+    "input_tokens": 1385,
+    "output_tokens": 108
+   },
+   "cost_usd": 0.001925,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "8943c7f4",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.85
+    },
+    "concern": {
+     "level": 2,
+     "confidence": 0.75
+    },
+    "pattern": {
+     "choice": "sepsis_infection",
+     "confidence": 0.8
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1592,
+   "duration_ms": 2014,
+   "usage": {
+    "input_tokens": 1384,
+    "output_tokens": 108
+   },
+   "cost_usd": 0.001924,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "3489a180",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.75
+    },
+    "concern": {
+     "level": 1,
+     "confidence": 0.72
+    },
+    "pattern": {
+     "choice": "no_acute_change",
+     "confidence": 0.68
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1623,
+   "duration_ms": 2048,
+   "usage": {
+    "input_tokens": 1360,
+    "output_tokens": 109
+   },
+   "cost_usd": 0.001905,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "a37919c7",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.1
+    },
+    "concern": {
+     "level": 1,
+     "confidence": 0.75
+    },
+    "pattern": {
+     "choice": "metabolic_renal",
+     "confidence": 0.8
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2577,
+   "duration_ms": 3053,
+   "usage": {
+    "input_tokens": 1392,
+    "output_tokens": 109
+   },
+   "cost_usd": 0.001937,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "48805e22",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.85
+    },
+    "concern": {
+     "level": 2,
+     "confidence": 0.75
+    },
+    "pattern": {
+     "choice": "sepsis_infection",
+     "confidence": 0.8
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1570,
+   "duration_ms": 1994,
+   "usage": {
+    "input_tokens": 1371,
+    "output_tokens": 108
+   },
+   "cost_usd": 0.001911,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "0223f1e2",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.92
+    },
+    "concern": {
+     "level": 1,
+     "confidence": 0.75
+    },
+    "pattern": {
+     "choice": "no_acute_change",
+     "confidence": 0.7
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1629,
+   "duration_ms": 2079,
+   "usage": {
+    "input_tokens": 1390,
+    "output_tokens": 109
+   },
+   "cost_usd": 0.001935,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "5669b8f0",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.92
+    },
+    "infection": {
+     "p_yes": 0.15
+    },
+    "concern": {
+     "level": 3,
+     "confidence": 0.89
+    },
+    "pattern": {
+     "choice": "neurological",
+     "confidence": 0.78
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1264,
+   "duration_ms": 1666,
+   "usage": {
+    "input_tokens": 1421,
+    "output_tokens": 106
+   },
+   "cost_usd": 0.001951,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "c548e9df",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.15
+    },
+    "concern": {
+     "level": 3,
+     "confidence": 0.92
+    },
+    "pattern": {
+     "choice": "respiratory",
+     "confidence": 0.88
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1626,
+   "duration_ms": 2167,
+   "usage": {
+    "input_tokens": 1359,
+    "output_tokens": 105
+   },
+   "cost_usd": 0.001884,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "b8987eb2",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.85
+    },
+    "infection": {
+     "p_yes": 0.45
+    },
+    "concern": {
+     "level": 2,
+     "confidence": 0.78
+    },
+    "pattern": {
+     "choice": "neurological",
+     "confidence": 0.82
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1659,
+   "duration_ms": 2571,
+   "usage": {
+    "input_tokens": 1359,
+    "output_tokens": 106
+   },
+   "cost_usd": 0.001889,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "a32a0f06",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.15
+    },
+    "concern": {
+     "level": 0,
+     "confidence": 0.85
+    },
+    "pattern": {
+     "choice": "no_acute_change",
+     "confidence": 0.9
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1540,
+   "duration_ms": 2048,
+   "usage": {
+    "input_tokens": 1369,
+    "output_tokens": 109
+   },
+   "cost_usd": 0.001914,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "b9f516ae",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.85
+    },
+    "infection": {
+     "p_yes": 0.75
+    },
+    "concern": {
+     "level": 3,
+     "confidence": 0.82
+    },
+    "pattern": {
+     "choice": "neurological",
+     "confidence": 0.78
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1607,
+   "duration_ms": 1958,
+   "usage": {
+    "input_tokens": 1431,
+    "output_tokens": 106
+   },
+   "cost_usd": 0.001961,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "2b1aa1cb",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.95
+    },
+    "concern": {
+     "level": 1,
+     "confidence": 0.85
+    },
+    "pattern": {
+     "choice": "no_acute_change",
+     "confidence": 0.8
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1613,
+   "duration_ms": 2094,
+   "usage": {
+    "input_tokens": 1353,
+    "output_tokens": 109
+   },
+   "cost_usd": 0.001898,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "7b9ffa3a",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.95
+    },
+    "infection": {
+     "p_yes": 0.25
+    },
+    "concern": {
+     "level": 3,
+     "confidence": 0.9
+    },
+    "pattern": {
+     "choice": "cardiac",
+     "confidence": 0.75
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1426,
+   "duration_ms": 1865,
+   "usage": {
+    "input_tokens": 1444,
+    "output_tokens": 105
+   },
+   "cost_usd": 0.0019690000000000003,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "c0d126a2",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.75
+    },
+    "infection": {
+     "p_yes": 0.15
+    },
+    "concern": {
+     "level": 3,
+     "confidence": 0.8
+    },
+    "pattern": {
+     "choice": "cardiac",
+     "confidence": 0.7
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1575,
+   "duration_ms": 2034,
+   "usage": {
+    "input_tokens": 1464,
+    "output_tokens": 105
+   },
+   "cost_usd": 0.0019890000000000003,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "6088cb20",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.95
+    },
+    "infection": {
+     "p_yes": 0.85
+    },
+    "concern": {
+     "level": 3,
+     "confidence": 0.92
+    },
+    "pattern": {
+     "choice": "sepsis_infection",
+     "confidence": 0.78
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1559,
+   "duration_ms": 1912,
+   "usage": {
+    "input_tokens": 1357,
+    "output_tokens": 108
+   },
+   "cost_usd": 0.0018969999999999998,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "468b7d88",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.1
+    },
+    "concern": {
+     "level": 3,
+     "confidence": 0.92
+    },
+    "pattern": {
+     "choice": "bleeding",
+     "confidence": 0.95
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1553,
+   "duration_ms": 2017,
+   "usage": {
+    "input_tokens": 1363,
+    "output_tokens": 105
+   },
+   "cost_usd": 0.0018880000000000001,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "dabbffd6",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.1
+    },
+    "concern": {
+     "level": 0,
+     "confidence": 0.9
+    },
+    "pattern": {
+     "choice": "no_acute_change",
+     "confidence": 0.95
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1538,
+   "duration_ms": 1993,
+   "usage": {
+    "input_tokens": 1346,
+    "output_tokens": 109
+   },
+   "cost_usd": 0.0018909999999999999,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "8499d867",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.85
+    },
+    "infection": {
+     "p_yes": 0.65
+    },
+    "concern": {
+     "level": 2,
+     "confidence": 0.78
+    },
+    "pattern": {
+     "choice": "drug_or_substance",
+     "confidence": 0.72
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1310,
+   "duration_ms": 1784,
+   "usage": {
+    "input_tokens": 1385,
+    "output_tokens": 109
+   },
+   "cost_usd": 0.0019299999999999999,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "78decd95",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.15
+    },
+    "concern": {
+     "level": 1,
+     "confidence": 0.85
+    },
+    "pattern": {
+     "choice": "no_acute_change",
+     "confidence": 0.8
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1577,
+   "duration_ms": 2040,
+   "usage": {
+    "input_tokens": 1380,
+    "output_tokens": 109
+   },
+   "cost_usd": 0.001925,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "788246ce",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.15
+    },
+    "concern": {
+     "level": 0,
+     "confidence": 0.85
+    },
+    "pattern": {
+     "choice": "no_acute_change",
+     "confidence": 0.9
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1595,
+   "duration_ms": 2042,
+   "usage": {
+    "input_tokens": 1401,
+    "output_tokens": 109
+   },
+   "cost_usd": 0.0019459999999999998,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "ab229778",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.95
+    },
+    "infection": {
+     "p_yes": 0.85
+    },
+    "concern": {
+     "level": 3,
+     "confidence": 0.9
+    },
+    "pattern": {
+     "choice": "sepsis_infection",
+     "confidence": 0.75
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1266,
+   "duration_ms": 1475,
+   "usage": {
+    "input_tokens": 1389,
+    "output_tokens": 108
+   },
+   "cost_usd": 0.0019290000000000002,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "da7959c4",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.72
+    },
+    "infection": {
+     "p_yes": 0.85
+    },
+    "concern": {
+     "level": 2,
+     "confidence": 0.78
+    },
+    "pattern": {
+     "choice": "other",
+     "confidence": 0.68
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1618,
+   "duration_ms": 2080,
+   "usage": {
+    "input_tokens": 1356,
+    "output_tokens": 105
+   },
+   "cost_usd": 0.001881,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "92a0643d",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.15
+    },
+    "infection": {
+     "p_yes": 0.65
+    },
+    "concern": {
+     "level": 3,
+     "confidence": 0.95
+    },
+    "pattern": {
+     "choice": "cardiac",
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1355,
+   "duration_ms": 1748,
+   "usage": {
+    "input_tokens": 1491,
+    "output_tokens": 105
+   },
+   "cost_usd": 0.002016,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "bdb4683a",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.95
+    },
+    "infection": {
+     "p_yes": 0.75
+    },
+    "concern": {
+     "level": 3,
+     "confidence": 0.92
+    },
+    "pattern": {
+     "choice": "drug_or_substance",
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1587,
+   "duration_ms": 1814,
+   "usage": {
+    "input_tokens": 1348,
+    "output_tokens": 109
+   },
+   "cost_usd": 0.0018930000000000002,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "bcb2cc46",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.78
+    },
+    "infection": {
+     "p_yes": 0.42
+    },
+    "concern": {
+     "level": 2,
+     "confidence": 0.75
+    },
+    "pattern": {
+     "choice": "neurological",
+     "confidence": 0.72
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1379,
+   "duration_ms": 1828,
+   "usage": {
+    "input_tokens": 1390,
+    "output_tokens": 106
+   },
+   "cost_usd": 0.0019199999999999998,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "0ea7cd2f",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.08
+    },
+    "concern": {
+     "level": 0,
+     "confidence": 0.92
+    },
+    "pattern": {
+     "choice": "no_acute_change",
+     "confidence": 0.88
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1605,
+   "duration_ms": 2083,
+   "usage": {
+    "input_tokens": 1382,
+    "output_tokens": 109
+   },
+   "cost_usd": 0.001927,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "c23ede60",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.95
+    },
+    "infection": {
+     "p_yes": 0.25
+    },
+    "concern": {
+     "level": 2,
+     "confidence": 0.75
+    },
+    "pattern": {
+     "choice": "neurological",
+     "confidence": 0.8
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1539,
+   "duration_ms": 1803,
+   "usage": {
+    "input_tokens": 1380,
+    "output_tokens": 106
+   },
+   "cost_usd": 0.0019099999999999998,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "04e3b6cd",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.75
+    },
+    "concern": {
+     "level": 1,
+     "confidence": 0.78
+    },
+    "pattern": {
+     "choice": "metabolic_renal",
+     "confidence": 0.65
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1356,
+   "duration_ms": 1800,
+   "usage": {
+    "input_tokens": 1359,
+    "output_tokens": 109
+   },
+   "cost_usd": 0.0019039999999999999,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "48a49a15",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.75
+    },
+    "infection": {
+     "p_yes": 0.1
+    },
+    "concern": {
+     "level": 2,
+     "confidence": 0.85
+    },
+    "pattern": {
+     "choice": "neurological",
+     "confidence": 0.7
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1534,
+   "duration_ms": 1738,
+   "usage": {
+    "input_tokens": 1384,
+    "output_tokens": 106
+   },
+   "cost_usd": 0.001914,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "8b0ca282",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.25
+    },
+    "concern": {
+     "level": 2,
+     "confidence": 0.85
+    },
+    "pattern": {
+     "choice": "cardiac",
+     "confidence": 0.8
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1483,
+   "duration_ms": 2002,
+   "usage": {
+    "input_tokens": 1361,
+    "output_tokens": 105
+   },
+   "cost_usd": 0.001886,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "783a4331",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.85
+    },
+    "concern": {
+     "level": 3,
+     "confidence": 0.92
+    },
+    "pattern": {
+     "choice": "respiratory",
+     "confidence": 0.78
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1623,
+   "duration_ms": 2093,
+   "usage": {
+    "input_tokens": 1403,
+    "output_tokens": 105
+   },
+   "cost_usd": 0.001928,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "1ef88d1d",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.92
+    },
+    "infection": {
+     "p_yes": 0.15
+    },
+    "concern": {
+     "level": 3,
+     "confidence": 0.88
+    },
+    "pattern": {
+     "choice": "neurological",
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1304,
+   "duration_ms": 1922,
+   "usage": {
+    "input_tokens": 1431,
+    "output_tokens": 106
+   },
+   "cost_usd": 0.001961,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "195b1ae4",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.1
+    },
+    "concern": {
+     "level": 0,
+     "confidence": 0.95
+    },
+    "pattern": {
+     "choice": "no_acute_change",
+     "confidence": 0.95
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1299,
+   "duration_ms": 1768,
+   "usage": {
+    "input_tokens": 1395,
+    "output_tokens": 109
+   },
+   "cost_usd": 0.0019399999999999999,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "cadaa0af",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.92
+    },
+    "concern": {
+     "level": 3,
+     "confidence": 0.88
+    },
+    "pattern": {
+     "choice": "sepsis_infection",
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1799,
+   "duration_ms": 2314,
+   "usage": {
+    "input_tokens": 1368,
+    "output_tokens": 108
+   },
+   "cost_usd": 0.001908,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "45bbcc74",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.15
+    },
+    "infection": {
+     "p_yes": 0.92
+    },
+    "concern": {
+     "level": 1,
+     "confidence": 0.78
+    },
+    "pattern": {
+     "choice": "no_acute_change",
+     "confidence": 0.72
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1184,
+   "duration_ms": 1407,
+   "usage": {
+    "input_tokens": 1425,
+    "output_tokens": 109
+   },
+   "cost_usd": 0.00197,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "e0f0e98e",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.85
+    },
+    "infection": {
+     "p_yes": 0.05
+    },
+    "concern": {
+     "level": 2,
+     "confidence": 0.75
+    },
+    "pattern": {
+     "choice": "drug_or_substance",
+     "confidence": 0.7
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1354,
+   "duration_ms": 1819,
+   "usage": {
+    "input_tokens": 1379,
+    "output_tokens": 109
+   },
+   "cost_usd": 0.001924,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "554cebd5",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.92
+    },
+    "infection": {
+     "p_yes": 0.15
+    },
+    "concern": {
+     "level": 2,
+     "confidence": 0.85
+    },
+    "pattern": {
+     "choice": "neurological",
+     "confidence": 0.78
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1543,
+   "duration_ms": 2007,
+   "usage": {
+    "input_tokens": 1423,
+    "output_tokens": 106
+   },
+   "cost_usd": 0.0019529999999999999,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "3f8d716a",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.08
+    },
+    "concern": {
+     "level": 2,
+     "confidence": 0.78
+    },
+    "pattern": {
+     "choice": "cardiac",
+     "confidence": 0.72
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1307,
+   "duration_ms": 1751,
+   "usage": {
+    "input_tokens": 1369,
+    "output_tokens": 105
+   },
+   "cost_usd": 0.001894,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "bd667c2e",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.35
+    },
+    "concern": {
+     "level": 3,
+     "confidence": 0.9
+    },
+    "pattern": {
+     "choice": "cardiac",
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1526,
+   "duration_ms": 1998,
+   "usage": {
+    "input_tokens": 1383,
+    "output_tokens": 105
+   },
+   "cost_usd": 0.001908,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "70d6b7bf",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.15
+    },
+    "infection": {
+     "p_yes": 0.05
+    },
+    "concern": {
+     "level": 3,
+     "confidence": 0.92
+    },
+    "pattern": {
+     "choice": "cardiac",
+     "confidence": 0.93
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1485,
+   "duration_ms": 1941,
+   "usage": {
+    "input_tokens": 1382,
+    "output_tokens": 105
+   },
+   "cost_usd": 0.001907,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "e41e384b",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.75
+    },
+    "concern": {
+     "level": 1,
+     "confidence": 0.85
+    },
+    "pattern": {
+     "choice": "no_acute_change",
+     "confidence": 0.8
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1601,
+   "duration_ms": 2071,
+   "usage": {
+    "input_tokens": 1366,
+    "output_tokens": 109
+   },
+   "cost_usd": 0.001911,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "413a1701",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.1
+    },
+    "concern": {
+     "level": 0,
+     "confidence": 0.95
+    },
+    "pattern": {
+     "choice": "no_acute_change",
+     "confidence": 0.95
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1591,
+   "duration_ms": 2058,
+   "usage": {
+    "input_tokens": 1351,
+    "output_tokens": 109
+   },
+   "cost_usd": 0.0018960000000000001,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "d7cff9ac",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.1
+    },
+    "concern": {
+     "level": 1,
+     "confidence": 0.85
+    },
+    "pattern": {
+     "choice": "no_acute_change",
+     "confidence": 0.8
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1578,
+   "duration_ms": 2035,
+   "usage": {
+    "input_tokens": 1403,
+    "output_tokens": 109
+   },
+   "cost_usd": 0.001948,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "a6bd56d6",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.92
+    },
+    "concern": {
+     "level": 1,
+     "confidence": 0.75
+    },
+    "pattern": {
+     "choice": "no_acute_change",
+     "confidence": 0.7
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1566,
+   "duration_ms": 2032,
+   "usage": {
+    "input_tokens": 1363,
+    "output_tokens": 109
+   },
+   "cost_usd": 0.001908,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "862ba432",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.75
+    },
+    "concern": {
+     "level": 2,
+     "confidence": 0.72
+    },
+    "pattern": {
+     "choice": "cardiac",
+     "confidence": 0.68
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1579,
+   "duration_ms": 2149,
+   "usage": {
+    "input_tokens": 1370,
+    "output_tokens": 105
+   },
+   "cost_usd": 0.001895,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "8361befb",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.08
+    },
+    "concern": {
+     "level": 2,
+     "confidence": 0.78
+    },
+    "pattern": {
+     "choice": "cardiac",
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1464,
+   "duration_ms": 1964,
+   "usage": {
+    "input_tokens": 1382,
+    "output_tokens": 105
+   },
+   "cost_usd": 0.001907,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "b34fe768",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.75
+    },
+    "concern": {
+     "level": 3,
+     "confidence": 0.92
+    },
+    "pattern": {
+     "choice": "respiratory",
+     "confidence": 0.72
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2012,
+   "duration_ms": 2570,
+   "usage": {
+    "input_tokens": 1436,
+    "output_tokens": 105
+   },
+   "cost_usd": 0.001961,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "92aff385",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.85
+    },
+    "infection": {
+     "p_yes": 0.72
+    },
+    "concern": {
+     "level": 2,
+     "confidence": 0.78
+    },
+    "pattern": {
+     "choice": "neurological",
+     "confidence": 0.73
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1447,
+   "duration_ms": 1918,
+   "usage": {
+    "input_tokens": 1374,
+    "output_tokens": 106
+   },
+   "cost_usd": 0.0019039999999999999,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "a882bca2",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.15
+    },
+    "concern": {
+     "level": 0,
+     "confidence": 0.85
+    },
+    "pattern": {
+     "choice": "no_acute_change",
+     "confidence": 0.9
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1398,
+   "duration_ms": 1880,
+   "usage": {
+    "input_tokens": 1369,
+    "output_tokens": 109
+   },
+   "cost_usd": 0.001914,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "aef97ea3",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.92
+    },
+    "concern": {
+     "level": 1,
+     "confidence": 0.85
+    },
+    "pattern": {
+     "choice": "no_acute_change",
+     "confidence": 0.8
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1622,
+   "duration_ms": 2239,
+   "usage": {
+    "input_tokens": 1361,
+    "output_tokens": 109
+   },
+   "cost_usd": 0.0019060000000000001,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "7451f8c3",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.1
+    },
+    "concern": {
+     "level": 0,
+     "confidence": 0.85
+    },
+    "pattern": {
+     "choice": "cardiac",
+     "confidence": 0.7
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1566,
+   "duration_ms": 2027,
+   "usage": {
+    "input_tokens": 1340,
+    "output_tokens": 105
+   },
+   "cost_usd": 0.0018650000000000001,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "6f2032ab",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.95
+    },
+    "infection": {
+     "p_yes": 0.15
+    },
+    "concern": {
+     "level": 2,
+     "confidence": 0.85
+    },
+    "pattern": {
+     "choice": "neurological",
+     "confidence": 0.8
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1284,
+   "duration_ms": 1537,
+   "usage": {
+    "input_tokens": 1398,
+    "output_tokens": 106
+   },
+   "cost_usd": 0.001928,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "2d6fd4fc",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.72
+    },
+    "concern": {
+     "level": 2,
+     "confidence": 0.75
+    },
+    "pattern": {
+     "choice": "cardiac",
+     "confidence": 0.68
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1404,
+   "duration_ms": 1863,
+   "usage": {
+    "input_tokens": 1366,
+    "output_tokens": 105
+   },
+   "cost_usd": 0.001891,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "817a9df6",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.72
+    },
+    "infection": {
+     "p_yes": 0.15
+    },
+    "concern": {
+     "level": 2,
+     "confidence": 0.78
+    },
+    "pattern": {
+     "choice": "neurological",
+     "confidence": 0.68
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1607,
+   "duration_ms": 2066,
+   "usage": {
+    "input_tokens": 1371,
+    "output_tokens": 106
+   },
+   "cost_usd": 0.001901,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "94cde698",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.92
+    },
+    "infection": {
+     "p_yes": 0.28
+    },
+    "concern": {
+     "level": 3,
+     "confidence": 0.95
+    },
+    "pattern": {
+     "choice": "respiratory",
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1560,
+   "duration_ms": 2026,
+   "usage": {
+    "input_tokens": 1362,
+    "output_tokens": 105
+   },
+   "cost_usd": 0.001887,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "85d49635",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.85
+    },
+    "infection": {
+     "p_yes": 0.15
+    },
+    "concern": {
+     "level": 3,
+     "confidence": 0.9
+    },
+    "pattern": {
+     "choice": "neurological",
+     "confidence": 0.8
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1562,
+   "duration_ms": 2029,
+   "usage": {
+    "input_tokens": 1387,
+    "output_tokens": 106
+   },
+   "cost_usd": 0.0019169999999999999,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "f0d41263",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.95
+    },
+    "infection": {
+     "p_yes": 0.75
+    },
+    "concern": {
+     "level": 2,
+     "confidence": 0.85
+    },
+    "pattern": {
+     "choice": "sepsis_infection",
+     "confidence": 0.72
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1613,
+   "duration_ms": 1852,
+   "usage": {
+    "input_tokens": 1349,
+    "output_tokens": 108
+   },
+   "cost_usd": 0.001889,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "7d7d8df2",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.15
+    },
+    "concern": {
+     "level": 0,
+     "confidence": 0.92
+    },
+    "pattern": {
+     "choice": "no_acute_change",
+     "confidence": 0.93
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1301,
+   "duration_ms": 1742,
+   "usage": {
+    "input_tokens": 1354,
+    "output_tokens": 109
+   },
+   "cost_usd": 0.001899,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "8717dfbf",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.92
+    },
+    "infection": {
+     "p_yes": 0.78
+    },
+    "concern": {
+     "level": 3,
+     "confidence": 0.85
+    },
+    "pattern": {
+     "choice": "sepsis_infection",
+     "confidence": 0.72
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1581,
+   "duration_ms": 2052,
+   "usage": {
+    "input_tokens": 1517,
+    "output_tokens": 108
+   },
+   "cost_usd": 0.002057,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "f8417b33",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.85
+    },
+    "infection": {
+     "p_yes": 0.75
+    },
+    "concern": {
+     "level": 3,
+     "confidence": 0.8
+    },
+    "pattern": {
+     "choice": "neurological",
+     "confidence": 0.7
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1594,
+   "duration_ms": 2124,
+   "usage": {
+    "input_tokens": 1386,
+    "output_tokens": 106
+   },
+   "cost_usd": 0.0019160000000000002,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "15dcc6dc",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.78
+    },
+    "infection": {
+     "p_yes": 0.72
+    },
+    "concern": {
+     "level": 2,
+     "confidence": 0.85
+    },
+    "pattern": {
+     "choice": "other",
+     "confidence": 0.68
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1426,
+   "duration_ms": 1897,
+   "usage": {
+    "input_tokens": 1367,
+    "output_tokens": 105
+   },
+   "cost_usd": 0.001892,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "1ef6f488",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.1
+    },
+    "infection": {
+     "p_yes": 0.95
+    },
+    "concern": {
+     "level": 1,
+     "confidence": 0.85
+    },
+    "pattern": {
+     "choice": "no_acute_change",
+     "confidence": 0.75
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1559,
+   "duration_ms": 2018,
+   "usage": {
+    "input_tokens": 1376,
+    "output_tokens": 109
+   },
+   "cost_usd": 0.001921,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "c3f08a5b",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.92
+    },
+    "infection": {
+     "p_yes": 0.15
+    },
+    "concern": {
+     "level": 2,
+     "confidence": 0.78
+    },
+    "pattern": {
+     "choice": "neurological",
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1310,
+   "duration_ms": 1811,
+   "usage": {
+    "input_tokens": 1399,
+    "output_tokens": 106
+   },
+   "cost_usd": 0.0019290000000000002,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "8011f216",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.85
+    },
+    "concern": {
+     "level": 3,
+     "confidence": 0.95
+    },
+    "pattern": {
+     "choice": "cardiac",
+     "confidence": 0.9
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1484,
+   "duration_ms": 1941,
+   "usage": {
+    "input_tokens": 1393,
+    "output_tokens": 105
+   },
+   "cost_usd": 0.001918,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "49aa53d0",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.08
+    },
+    "concern": {
+     "level": 0,
+     "confidence": 0.95
+    },
+    "pattern": {
+     "choice": "no_acute_change",
+     "confidence": 0.98
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1750,
+   "duration_ms": 2233,
+   "usage": {
+    "input_tokens": 1353,
+    "output_tokens": 109
+   },
+   "cost_usd": 0.001898,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "8b7ce586",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.1
+    },
+    "concern": {
+     "level": 0,
+     "confidence": 0.9
+    },
+    "pattern": {
+     "choice": "no_acute_change",
+     "confidence": 0.95
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1428,
+   "duration_ms": 1890,
+   "usage": {
+    "input_tokens": 1405,
+    "output_tokens": 109
+   },
+   "cost_usd": 0.00195,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "31217538",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.95
+    },
+    "infection": {
+     "p_yes": 0.98
+    },
+    "concern": {
+     "level": 3,
+     "confidence": 0.92
+    },
+    "pattern": {
+     "choice": "sepsis_infection",
+     "confidence": 0.89
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1418,
+   "duration_ms": 2045,
+   "usage": {
+    "input_tokens": 1378,
+    "output_tokens": 108
+   },
+   "cost_usd": 0.001918,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "d9606297",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.15
+    },
+    "concern": {
+     "level": 1,
+     "confidence": 0.85
+    },
+    "pattern": {
+     "choice": "no_acute_change",
+     "confidence": 0.9
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1587,
+   "duration_ms": 2065,
+   "usage": {
+    "input_tokens": 1363,
+    "output_tokens": 109
+   },
+   "cost_usd": 0.001908,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "1837c2b8",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.85
+    },
+    "concern": {
+     "level": 2,
+     "confidence": 0.72
+    },
+    "pattern": {
+     "choice": "sepsis_infection",
+     "confidence": 0.78
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1731,
+   "duration_ms": 2213,
+   "usage": {
+    "input_tokens": 1494,
+    "output_tokens": 108
+   },
+   "cost_usd": 0.0020340000000000002,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "09b36ca6",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.95
+    },
+    "concern": {
+     "level": 3,
+     "confidence": 0.85
+    },
+    "pattern": {
+     "choice": "sepsis_infection",
+     "confidence": 0.8
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1535,
+   "duration_ms": 2006,
+   "usage": {
+    "input_tokens": 1373,
+    "output_tokens": 108
+   },
+   "cost_usd": 0.0019130000000000002,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "415c3e38",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.15
+    },
+    "infection": {
+     "p_yes": 0.25
+    },
+    "concern": {
+     "level": 3,
+     "confidence": 0.92
+    },
+    "pattern": {
+     "choice": "respiratory",
+     "confidence": 0.88
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1591,
+   "duration_ms": 2349,
+   "usage": {
+    "input_tokens": 1370,
+    "output_tokens": 105
+   },
+   "cost_usd": 0.001895,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "1a495d27",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.92
+    },
+    "infection": {
+     "p_yes": 0.25
+    },
+    "concern": {
+     "level": 3,
+     "confidence": 0.9
+    },
+    "pattern": {
+     "choice": "respiratory",
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1572,
+   "duration_ms": 2077,
+   "usage": {
+    "input_tokens": 1431,
+    "output_tokens": 105
+   },
+   "cost_usd": 0.0019560000000000003,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "8ed26e64",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.85
+    },
+    "infection": {
+     "p_yes": 0.78
+    },
+    "concern": {
+     "level": 2,
+     "confidence": 0.72
+    },
+    "pattern": {
+     "choice": "sepsis_infection",
+     "confidence": 0.7
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1559,
+   "duration_ms": 2005,
+   "usage": {
+    "input_tokens": 1398,
+    "output_tokens": 108
+   },
+   "cost_usd": 0.001938,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "7a81171f",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.95
+    },
+    "infection": {
+     "p_yes": 0.92
+    },
+    "concern": {
+     "level": 3,
+     "confidence": 0.88
+    },
+    "pattern": {
+     "choice": "sepsis_infection",
+     "confidence": 0.85
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1538,
+   "duration_ms": 1808,
+   "usage": {
+    "input_tokens": 1395,
+    "output_tokens": 108
+   },
+   "cost_usd": 0.001935,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "f5dbb125",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.85
+    },
+    "infection": {
+     "p_yes": 0.72
+    },
+    "concern": {
+     "level": 2,
+     "confidence": 0.78
+    },
+    "pattern": {
+     "choice": "sepsis_infection",
+     "confidence": 0.65
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1579,
+   "duration_ms": 2042,
+   "usage": {
+    "input_tokens": 1352,
+    "output_tokens": 108
+   },
+   "cost_usd": 0.001892,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "1521f244",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.15
+    },
+    "concern": {
+     "level": 1,
+     "confidence": 0.85
+    },
+    "pattern": {
+     "choice": "no_acute_change",
+     "confidence": 0.8
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1639,
+   "duration_ms": 2088,
+   "usage": {
+    "input_tokens": 1422,
+    "output_tokens": 109
+   },
+   "cost_usd": 0.001967,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "328acbee",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.1
+    },
+    "concern": {
+     "level": 2,
+     "confidence": 0.8
+    },
+    "pattern": {
+     "choice": "cardiac",
+     "confidence": 0.9
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1493,
+   "duration_ms": 1960,
+   "usage": {
+    "input_tokens": 1403,
+    "output_tokens": 105
+   },
+   "cost_usd": 0.001928,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "bc65525b",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.1
+    },
+    "concern": {
+     "level": 2,
+     "confidence": 0.85
+    },
+    "pattern": {
+     "choice": "cardiac",
+     "confidence": 0.9
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1583,
+   "duration_ms": 2068,
+   "usage": {
+    "input_tokens": 1352,
+    "output_tokens": 105
+   },
+   "cost_usd": 0.001877,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "939c850b",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.95
+    },
+    "infection": {
+     "p_yes": 0.25
+    },
+    "concern": {
+     "level": 3,
+     "confidence": 0.92
+    },
+    "pattern": {
+     "choice": "neurological",
+     "confidence": 0.88
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1616,
+   "duration_ms": 2078,
+   "usage": {
+    "input_tokens": 1386,
+    "output_tokens": 106
+   },
+   "cost_usd": 0.0019160000000000002,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "f0b9627c",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "new_confusion": {
+     "p_yes": 0.05
+    },
+    "infection": {
+     "p_yes": 0.95
+    },
+    "concern": {
+     "level": 3,
+     "confidence": 0.9
+    },
+    "pattern": {
+     "choice": "bleeding",
+     "confidence": 0.75
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1550,
+   "duration_ms": 2053,
+   "usage": {
+    "input_tokens": 1449,
+    "output_tokens": 105
+   },
+   "cost_usd": 0.001974,
+   "model": "claude-haiku-4-5"
+  }
+ ]
+}

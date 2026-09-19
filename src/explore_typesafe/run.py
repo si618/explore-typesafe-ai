@@ -32,6 +32,8 @@ RUNS = {
     "s3_inbox_gen": ("s3_inbox_gen", "s3_inbox", "", 1),
     "s2_discharge_v2": ("s2_discharge", "s2_discharge", "_v2", 1),
     "s2_discharge_gen_v2": ("s2_discharge_gen", "s2_discharge", "_v2", 1),
+    "s2_discharge_v21": ("s2_discharge", "s2_discharge", "_v21", 1),
+    "s2_discharge_gen_v21": ("s2_discharge_gen", "s2_discharge", "_v21", 1),
     "s4_search": ("s4_search", "s4_search", "", 8),
     "s5_features": ("s5_features", "s5_features", "", 8),
 }

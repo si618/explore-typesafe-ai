@@ -200,3 +200,22 @@ def decide_v2(case: dict, answers: dict) -> dict:
     statuses = [answers[f"med_{i}"]["choice"] for i in range(len(meds))]
     return {"statuses": statuses, "flags": flags, "candidates": cands,
             "action": _action(statuses, flags, answers["justification"]["score"])}
+
+
+# --- v2.1: one revision after v2 ---------------------------------------------------------
+# v2's "new_c" Noul compounded two checks (is it prescribed? was it absent before
+# admission?). Code already guarantees the second, and asking it again made Jev
+# answer "no" for plainly new drugs. v2.1 asks only what code cannot know.
+
+def questions_v21(case: dict) -> dict:
+    qs = questions_v2(case)
+    for k, c in enumerate(_candidates(case)):
+        qs[f"new_c{k}"] = noul(
+            f"Does `discharge_medication_text` tell the patient to take '{c}' after discharge?",
+            true=f"'{c}' is started, continued or prescribed for use after discharge.",
+            false=f"'{c}' is stopped, was only given in hospital, or is mentioned without being prescribed.")
+    return qs
+
+
+state_v21 = state_v2
+decide_v21 = decide_v2

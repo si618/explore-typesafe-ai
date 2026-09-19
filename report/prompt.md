@@ -2,23 +2,13 @@
 
 ## The prompt
 
-This report was produced by Claude Code (Claude Opus 5) from the following prompt. The only edit is a typo fix ("such as gh cli actions").
+This report was produced by Claude Code (Claude Opus 5) from the following prompt.
 
 > Create a github repository to demonstrate the /typesafe-ai skill and Jev model used in conjunction with claude codes own models. Name the repo explore-typesafe-ai, read https://docs.typesafe.ai/ then construct and store realistic synthetic clinical data for 100 patients using latest FHIR models for structure. Use publicly available data if possible, otherwise use a tool like Synthea to build them.
 >
 > Then create 3 clinically relevant scenarios that could occur in a hospital setting to evaluate each of the available primitives against suitable decision task categories. Then run the scenarios against the model, store the result.
 >
 > Create a report for rendering in a static Zeniscal website, using github actions to publish via the repos github page at https://si618.github.io/explore-typesafe-ai. Your audience are technically astute, keep content concise; the main goal is demonstrate the capabilities of System One / Jev models in a clinical scenario. The report should include this prompt and your reasoning for choosing the different scenarios, but leave out infrastructure tasks such as gh cli actions.
-
-Follow-up instructions given during the session:
-
-- include token usage and models in report
-- include timing metrics for jev model runs
-- zensical should support dark and light modes defaulting to system
-- add vocabulary section to briefly explain primitives, task categories, news2, etc.
-- dark and light modes are a bit bland and harsh, soften them
-- update themes to use tokyo dark and tokyo light
-- try catppuccin instead
 
 ## How the prompt was read
 
