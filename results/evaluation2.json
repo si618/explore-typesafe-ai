@@ -551,6 +551,65 @@
    "cost_usd": 0.055964328
   }
  },
+ "s4_notes": {
+  "note_level": {
+   "precision": 0.666156202143951,
+   "recall": 1.0,
+   "f1": 0.7996323529411765
+  },
+  "patient_from_notes": {
+   "accuracy": 0.9733333333333334,
+   "precision": 0.9245283018867925,
+   "recall": 1.0,
+   "f1": 0.9607843137254902
+  },
+  "notes_judged": 2922,
+  "cases": 300,
+  "perf": {
+   "model": [
+    "jev-1.13.0"
+   ],
+   "requests": 2922,
+   "questions": 2922,
+   "concurrency": 8,
+   "wall_seconds": 118.6,
+   "p50_ms": 315,
+   "p95_ms": 387,
+   "input_tokens": 1943406,
+   "output_tokens": 64284,
+   "cost_usd": 0.081623052
+  }
+ },
+ "s4_sensitivity": {
+  "all_in_one": {
+   "strict": {
+    "precision": 0.7600700525394045,
+    "recall": 0.9977011494252873,
+    "f1": 0.8628230616302187
+   },
+   "strong_evidence": {
+    "precision": 0.9842381786339754,
+    "recall": 0.8289085545722714,
+    "f1": 0.899919935948759
+   }
+  },
+  "per_note": {
+   "strict": {
+    "precision": 0.666156202143951,
+    "recall": 1.0,
+    "f1": 0.7996323529411765
+   },
+   "strong_evidence": {
+    "precision": 0.9862174578866769,
+    "recall": 0.9498525073746312,
+    "f1": 0.9676934635612322
+   },
+   "strict_false_positives": 218,
+   "false_positives_with_strong_evidence": 209,
+   "label_gap_notes": 243,
+   "label_gap_jev_yes": 209
+  }
+ },
  "s5": {
   "n": 1000,
   "positives": 179,
@@ -717,6 +776,20 @@
    "input_tokens": 1332484,
    "output_tokens": 91428,
    "cost_usd": 0.055964328
+  },
+  "s4_search_notes": {
+   "model": [
+    "jev-1.13.0"
+   ],
+   "requests": 2922,
+   "questions": 2922,
+   "concurrency": 8,
+   "wall_seconds": 118.6,
+   "p50_ms": 315,
+   "p95_ms": 387,
+   "input_tokens": 1943406,
+   "output_tokens": 64284,
+   "cost_usd": 0.081623052
   },
   "s5_features": {
    "model": [

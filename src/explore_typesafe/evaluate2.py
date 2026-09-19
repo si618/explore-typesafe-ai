@@ -236,6 +236,79 @@ def s4(answers_source: str = "jev") -> dict:
     return out
 
 
+def s4_notes() -> dict:
+    """Variant: each note judged in its own request, so no other note can leak into the judgment."""
+    res = json.loads((RESULTS_DIR / "s4_search_notes.json").read_text())
+    # Note ids ("<patient>#<i>") repeat across queries, so pair by position (the runner preserves order).
+    cases = load_scenario("s4_search_notes")["cases"]
+    note_pairs, by_patient = [], {}
+    for r, c in zip(res["cases"], cases, strict=True):
+        assert r["patient"] == c["patient"] and r["state"]["query"] == c["query"]
+        p, t = r["answers"]["relevant"]["noul"], c["reference"]["relevant"]
+        note_pairs.append((p >= YES, t))
+        key = (c["base_patient"], c["query"])
+        prev = by_patient.get(key, (0.0, False))
+        by_patient[key] = (max(prev[0], p), prev[1] or t)
+    agg = [(p >= YES, t) for p, t in by_patient.values()]
+    return {"note_level": _prf(note_pairs),
+            "patient_from_notes": {"accuracy": sum(p == t for p, t in agg) / len(agg), **_prf(agg)},
+            "notes_judged": len(note_pairs), "cases": len(agg), "perf": perf("s4_search_notes")}
+
+
+# Post-hoc sensitivity analysis, written after inspecting the per-note false positives:
+# the regex ground truth only reads "(disorder)" phrases, so a note that shows the
+# condition through its treatment (metformin, an ACE inhibitor, chemotherapy) or an
+# explicit statement ("documented history of opioid addiction") counts as not relevant.
+# Queries without a pattern here keep the strict label.
+S4_STRONG_EVIDENCE = {
+    "Does the patient have high blood pressure?": r"lisinopril|hydrochlorothiazide|losartan|enalapril|benazepril|valsartan",
+    "Does the patient have diabetes?": r"metformin|insulin|humulin|glipizide|liraglutide|canagliflozin",
+    "Does the patient have dementia?": r"donepezil|memantine|galantamine|rivastigmine",
+    "Has the patient had problems with drugs or alcohol?": r"addiction|naloxone|alcohol use disorder|substance use",
+    "Does the patient have a chronic lung condition such as asthma or COPD?": r"albuterol|fluticasone|salmeterol|budesonide|tiotropium|inhaler",
+    "Has the patient had cancer?": r"chemotherapy|radiation therapy|oncolog|tamoxifen|anastrozole|neoplasm",
+    "Has the patient ever had a heart attack?": r"percutaneous coronary|stent|coronary artery bypass",
+}
+
+
+def s4_evidence_sensitivity() -> dict:
+    """Note-level precision/recall for both S4 variants, strict vs strong-evidence labels."""
+    import re
+
+    from .s4_search import _notes
+
+    def strong(query: str, text: str) -> bool:
+        pat = S4_STRONG_EVIDENCE.get(query)
+        return bool(pat and re.search(pat, text, re.I))
+
+    out = {}
+    res = json.loads((RESULTS_DIR / "s4_search.json").read_text())["cases"]
+    strict, lenient = [], []
+    for r, c in zip(res, load_scenario("s4_search")["cases"], strict=True):
+        notes = _notes(c)
+        for i, t in enumerate(c["reference"]["relevant"]):
+            p = (r["answers"].get(f"note_{i}") or {"noul": 0.0})["noul"] >= YES
+            strict.append((p, t))
+            lenient.append((p, t or strong(c["query"], notes[i]["text"])))
+    out["all_in_one"] = {"strict": _prf(strict), "strong_evidence": _prf(lenient)}
+    res = json.loads((RESULTS_DIR / "s4_search_notes.json").read_text())["cases"]
+    strict, lenient, gap, gap_yes = [], [], 0, 0
+    for r, c in zip(res, load_scenario("s4_search_notes")["cases"], strict=True):
+        text = _notes({"patient": c["base_patient"]})[c["note_index"]]["text"]
+        p, t = r["answers"]["relevant"]["noul"] >= YES, c["reference"]["relevant"]
+        s = strong(c["query"], text)
+        strict.append((p, t))
+        lenient.append((p, t or s))
+        if s and not t:
+            gap, gap_yes = gap + 1, gap_yes + p
+    fp = [pt for pt in strict if pt[0] and not pt[1]]
+    out["per_note"] = {"strict": _prf(strict), "strong_evidence": _prf(lenient),
+                       "strict_false_positives": len(fp),
+                       "false_positives_with_strong_evidence": sum(p and not t and lt for (p, t), (_, lt) in zip(strict, lenient)),
+                       "label_gap_notes": gap, "label_gap_jev_yes": gap_yes}
+    return out
+
+
 # ---- S5 features -------------------------------------------------------------------------
 
 def s5() -> dict:
@@ -318,10 +391,10 @@ def main() -> None:
         "questions": {r: question_table(r) for r in ("s1_ward_gen", "s2_discharge_gen", "s3_inbox_gen")},
         "tuning": {r: tune_nouls(r) for r in ("s1_ward_gen", "s2_discharge_gen", "s3_inbox_gen")},
         "s1_policy": s1_policy(), "s2_policy": s2_policy(), "s3_gate": s3_gate(),
-        "s4": s4("jev"), "s5": s5(),
+        "s4": s4("jev"), "s4_notes": s4_notes(), "s4_sensitivity": s4_evidence_sensitivity(), "s5": s5(),
         "perf": {r: perf(r) for r in ("s1_ward_gen", "s2_discharge_gen", "s3_inbox_gen", "s2_discharge_v2",
                                       "s2_discharge_gen_v2", "s2_discharge_v21", "s2_discharge_gen_v21",
-                                      "s4_search", "s5_features")},
+                                      "s4_search", "s4_search_notes", "s5_features")},
         "haiku": haiku_compare(),
     }
     (RESULTS_DIR / "evaluation2.json").write_text(json.dumps(out, indent=1, default=float) + "\n")
