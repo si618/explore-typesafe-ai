@@ -15,6 +15,9 @@ Follow-up instructions given during the session:
 - include token usage and models in report
 - include timing metrics for jev model runs
 - zensical should support dark and light modes defaulting to system
+- add vocabulary section to briefly explain primitives, task categories, news2, etc.
+- dark and light modes are a bit bland and harsh, soften them
+- update themes to use tokyo dark and tokyo light
 
 ## How the prompt was read
 
