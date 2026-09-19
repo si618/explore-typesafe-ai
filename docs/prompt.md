@@ -2,23 +2,13 @@
 
 ## The prompt
 
-This report was produced by Claude Code (Claude Opus 5) from the following prompt. The only edit is a typo fix ("such as gh cli actions").
+This report was produced by Claude Code (Claude Opus 5) from the following prompt.
 
 > Create a github repository to demonstrate the /typesafe-ai skill and Jev model used in conjunction with claude codes own models. Name the repo explore-typesafe-ai, read https://docs.typesafe.ai/ then construct and store realistic synthetic clinical data for 100 patients using latest FHIR models for structure. Use publicly available data if possible, otherwise use a tool like Synthea to build them.
 >
 > Then create 3 clinically relevant scenarios that could occur in a hospital setting to evaluate each of the available primitives against suitable decision task categories. Then run the scenarios against the model, store the result.
 >
 > Create a report for rendering in a static Zeniscal website, using github actions to publish via the repos github page at https://si618.github.io/explore-typesafe-ai. Your audience are technically astute, keep content concise; the main goal is demonstrate the capabilities of System One / Jev models in a clinical scenario. The report should include this prompt and your reasoning for choosing the different scenarios, but leave out infrastructure tasks such as gh cli actions.
-
-Follow-up instructions given during the session:
-
-- include token usage and models in report
-- include timing metrics for jev model runs
-- zensical should support dark and light modes defaulting to system
-- add vocabulary section to briefly explain primitives, task categories, news2, etc.
-- dark and light modes are a bit bland and harsh, soften them
-- update themes to use tokyo dark and tokyo light
-- try catppuccin instead
 
 ## How the prompt was read
 
@@ -47,3 +37,15 @@ The docs describe Jev as a fast, calibrated judge of meaning. It is not a calcul
 | [3. Post-discharge message inbox](s3-inbox.md) | A 24/7 inbox must be triaged before a human reads it. Some messages are emergencies phrased casually, some are routine requests written in capitals, and one contains a prompt-injection attempt. | Routing, Classification, Scoring, Detection | Choice, Score, Noul ×3 |
 
 The scenarios deliberately include hard cases: dementia with **unchanged** baseline confusion versus dementia with **new** delirium; negated findings ("No chest pain. No confusion…"); brand-name hops (Augmentin is a penicillin, Norco contains paracetamol); black stool on iron (expected) versus black stool on clopidogrel (a GI bleed); and an embedded `SYSTEM NOTE:` instruction.
+
+## Extending the study
+
+The first pass answered "what does Jev do on these decisions?" but left three gaps, and the study was extended to close them:
+
+| Gap | Extension |
+| --- | --- |
+| 20 cases per scenario can show behaviour but not measure it, and Claude wrote the labels | [80 generated cases per scenario](generated.md) over a **1,000-patient** cohort, with labels known by construction, split into dev (threshold tuning) and test (reporting) |
+| Two task categories from the docs weren't covered: search/retrieval and ML feature extraction | [4. Note search](s4-search.md) (lay questions over clinical notes) and [5. ML features](s5-features.md) (predicting acute care). Both use labels that no model wrote: regex matches on Synthea's diagnoses, and Synthea's simulated encounters. |
+| "Why not just ask an LLM?" | The same states and questions answered by [Claude Haiku 4.5](llm-baseline.md), compared on accuracy, latency and cost |
+
+The weakest checks in scenario 2 were also re-run in a decomposed form (v2, v2.1), to test the docs' advice to split multi-hop questions into narrow ones.

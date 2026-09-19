@@ -37,3 +37,15 @@ The docs describe Jev as a fast, calibrated judge of meaning. It is not a calcul
 | [3. Post-discharge message inbox](s3-inbox.md) | A 24/7 inbox must be triaged before a human reads it. Some messages are emergencies phrased casually, some are routine requests written in capitals, and one contains a prompt-injection attempt. | Routing, Classification, Scoring, Detection | Choice, Score, Noul ×3 |
 
 The scenarios deliberately include hard cases: dementia with **unchanged** baseline confusion versus dementia with **new** delirium; negated findings ("No chest pain. No confusion…"); brand-name hops (Augmentin is a penicillin, Norco contains paracetamol); black stool on iron (expected) versus black stool on clopidogrel (a GI bleed); and an embedded `SYSTEM NOTE:` instruction.
+
+## Extending the study
+
+The first pass answered "what does Jev do on these decisions?" but left three gaps, and the study was extended to close them:
+
+| Gap | Extension |
+| --- | --- |
+| 20 cases per scenario can show behaviour but not measure it, and Claude wrote the labels | [80 generated cases per scenario](generated.md) over a **1,000-patient** cohort, with labels known by construction, split into dev (threshold tuning) and test (reporting) |
+| Two task categories from the docs weren't covered: search/retrieval and ML feature extraction | [4. Note search](s4-search.md) (lay questions over clinical notes) and [5. ML features](s5-features.md) (predicting acute care). Both use labels that no model wrote: regex matches on Synthea's diagnoses, and Synthea's simulated encounters. |
+| "Why not just ask an LLM?" | The same states and questions answered by [Claude Haiku 4.5](llm-baseline.md), compared on accuracy, latency and cost |
+
+The weakest checks in scenario 2 were also re-run in a decomposed form (v2, v2.1), to test the docs' advice to split multi-hop questions into narrow ones.

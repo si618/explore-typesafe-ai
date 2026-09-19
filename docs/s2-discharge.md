@@ -136,4 +136,4 @@ flowchart LR
     | Inferior STEMI treated with PCI | 0.05 | 0.46 | 0.64 | 2.4 | hold | pharmacist_review | – |
     | Upper GI bleed from duodenal ulcer | 0.05 | 0.39 | 0.53 | 2.5 | hold | release | – |
 
-**Better decomposition (not run here).** Ask a Choice per medication for its therapeutic class, then detect duplicates in code. Ask one Noul per *(new drug, existing drug)* pair for interactions. Both follow the docs' advice to reduce hops and keep aggregation in code.
+**Decomposition, tested.** The [generated-cases page](generated.md#discharge-decomposing-the-weak-checks) runs v2 (a class Choice per medication, with duplicates counted in code, and pairwise interaction and allergy Nouls) and v2.1. On the generated test cases v2.1 cuts false holds from 4 to 1 with none missed. On these 20 hand cases it only goes from 8 to 6, because the pairwise interaction Nouls still over-call.

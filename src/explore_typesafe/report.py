@@ -16,6 +16,7 @@ from .fhir import R5_DIR, ROOT
 from .s1_ward import BANDS
 from .s2_discharge import ACTIONS
 from .s3_inbox import QUESTIONS as S3_QUESTIONS
+from .report_study import page_generated, page_haiku, page_s4, page_s5
 
 DOCS = ROOT / "docs"
 REPO = "https://github.com/si618/explore-typesafe-ai/blob/main"
@@ -185,7 +186,7 @@ flowchart LR
 
 {chr(10).join('    ' + l for l in table(['Admission', 'allergy', 'duplicate', 'interaction', 'justification', 'Action (0.5 threshold)', 'Reference action', 'Reference issues'], rows).splitlines())}
 
-**Better decomposition (not run here).** Ask a Choice per medication for its therapeutic class, then detect duplicates in code. Ask one Noul per *(new drug, existing drug)* pair for interactions. Both follow the docs' advice to reduce hops and keep aggregation in code.
+**Decomposition, tested.** The [generated-cases page](generated.md#discharge-decomposing-the-weak-checks) runs v2 (a class Choice per medication, with duplicates counted in code, and pairwise interaction and allergy Nouls) and v2.1. On the generated test cases v2.1 cuts false holds from 4 to 1 with none missed. On these 20 hand cases it only goes from 8 to 6, because the pairwise interaction Nouls still over-call.
 """
 
 
@@ -297,23 +298,56 @@ Not every reviewer "error" is a real error. For one discharge the reviewer flagg
 """
 
 
-def page_performance(evals: dict) -> str:
-    rows, tin, tout, cost, lat, reqs, qs = [], 0, 0, 0.0, [], 0, 0
+JEV_RUNS2 = ("s1_ward_gen", "s2_discharge_gen", "s3_inbox_gen", "s2_discharge_v2", "s2_discharge_gen_v2",
+             "s2_discharge_v21", "s2_discharge_gen_v21", "s4_search", "s4_search_notes", "s5_features")
+RUN_LABEL = {
+    "s1_ward_gen": "1. Ward, generated", "s2_discharge_gen": "2. Discharge, generated", "s3_inbox_gen": "3. Inbox, generated",
+    "s2_discharge_v2": "2. Discharge v2, hand", "s2_discharge_gen_v2": "2. Discharge v2, generated",
+    "s2_discharge_v21": "2. Discharge v2.1, hand", "s2_discharge_gen_v21": "2. Discharge v2.1, generated",
+    "s4_search": "4. Search, 10 notes/request", "s4_search_notes": "4. Search, 1 note/request", "s5_features": "5. Features",
+}
+
+
+def jev_totals(evals: dict, evals2: dict) -> dict:
+    hand = [evals[k]["perf"] for k in ("s1_ward", "s2_discharge", "s3_inbox")]
+    more = [evals2["perf"][k] for k in JEV_RUNS2]
+    lat = [c["latency_ms"] for k in ("s1_ward", "s2_discharge", "s3_inbox", *JEV_RUNS2)
+           for c in json.loads((RESULTS_DIR / f"{k}.json").read_text())["cases"]]
+    lat.sort()
+    return {
+        "requests": sum(p["requests"] for p in hand + more),
+        "questions": sum(p["questions"] for p in hand + more),
+        "input_tokens": sum(p["input_tokens"] for p in hand + more),
+        "output_tokens": sum(p["output_tokens"] for p in hand + more),
+        "cost_usd": sum(p["cost_usd"] for p in hand + more),
+        "p50_ms": round(lat[len(lat) // 2]), "p95_ms": round(lat[int(0.95 * (len(lat) - 1))]),
+    }
+
+
+def page_performance(evals: dict, evals2: dict) -> str:
+    rows = []
     for name in ("s1_ward", "s2_discharge", "s3_inbox"):
         p = evals[name]["perf"]
-        rows.append([name.replace("_", " "), ", ".join(p["model"]), p["requests"], p["questions"], p["questions_per_request"],
-                     p["latency_mean_ms"], p["latency_p50_ms"], p["latency_p95_ms"], p["latency_max_ms"],
-                     f"{p['input_tokens']:,}", f"{p['output_tokens']:,}", f"${p['cost_usd']:.4f}"])
-        tin += p["input_tokens"]; tout += p["output_tokens"]; cost += p["cost_usd"]; reqs += p["requests"]; qs += p["questions"]
-        lat += [c["latency_ms"] for c in json.loads((RESULTS_DIR / f"{name}.json").read_text())["cases"]]
-    lat.sort()
-    rows.append(["**all**", "", reqs, qs, "", round(statistics.mean(lat)), round(lat[len(lat) // 2]),
-                 round(lat[int(0.95 * (len(lat) - 1))]), round(max(lat)), f"{tin:,}", f"{tout:,}", f"${cost:.4f}"])
+        rows.append([f"{name[1]}. {name.split('_')[1].capitalize()}, hand", p["requests"], p["questions"], "1",
+                     p["latency_p50_ms"], p["latency_p95_ms"], "–", f"{p['input_tokens']:,}", f"{p['output_tokens']:,}", f"${p['cost_usd']:.4f}"])
+    for name in JEV_RUNS2:
+        p = evals2["perf"][name]
+        rows.append([RUN_LABEL[name], f"{p['requests']:,}", f"{p['questions']:,}", p["concurrency"], p["p50_ms"], p["p95_ms"],
+                     p["wall_seconds"], f"{p['input_tokens']:,}", f"{p['output_tokens']:,}", f"${p['cost_usd']:.4f}"])
+    t = jev_totals(evals, evals2)
+    rows.append(["**all Jev runs**", f"{t['requests']:,}", f"{t['questions']:,}", "", t["p50_ms"], t["p95_ms"], "",
+                 f"{t['input_tokens']:,}", f"{t['output_tokens']:,}", f"**${t['cost_usd']:.2f}**"])
     by_q = collections.defaultdict(list)
-    for name in ("s1_ward", "s2_discharge", "s3_inbox"):
+    for name in ("s1_ward", "s2_discharge", "s3_inbox", *JEV_RUNS2):
         for c in json.loads((RESULTS_DIR / f"{name}.json").read_text())["cases"]:
-            by_q[len(c["questions"])].append(c["latency_ms"])
-    q_rows = [[k, len(v), round(statistics.median(v))] for k, v in sorted(by_q.items())]
+            n = len(c["questions"])
+            bucket = "1" if n == 1 else "2–5" if n <= 5 else "6–10" if n <= 10 else "11–20" if n <= 20 else "21–40" if n <= 40 else "41+"
+            by_q[bucket].append(c["latency_ms"])
+    order = ["1", "2–5", "6–10", "11–20", "21–40", "41+"]
+    q_rows = [[k, f"{len(by_q[k]):,}", round(statistics.median(by_q[k])), round(sorted(by_q[k])[int(0.95 * (len(by_q[k]) - 1))])]
+              for k in order if by_q.get(k)]
+    haiku_cost = sum(v["haiku_perf"]["cost_usd"] for v in evals2["haiku"].values() if v.get("haiku_perf"))
+    haiku_req = sum(v["haiku_perf"]["requests"] for v in evals2["haiku"].values() if v.get("haiku_perf"))
     claude_rows = [[m["role"], f"`{m['model']}`", m["tokens"], m["notes"]] for m in CLAUDE["models"]]
     return f"""# Models, timing & tokens
 
@@ -321,20 +355,24 @@ def page_performance(evals: dict) -> str:
 
 | Role | Model | Tokens | Notes |
 | --- | --- | --- | --- |
-| System One judgments (all 60 scenario requests) | `jev-1.13.0` (pinned; `jev-latest` resolved to the same build on the run date) | {tin:,} in / {tout:,} out | TypeSafe API, Python SDK `typesafe-sdk` 0.7.0 |
+| System One judgments (every Jev run in this report) | `jev-1.13.0` (pinned; `jev-latest` resolved to the same build on the run date) | {t['input_tokens']:,} in / {t['output_tokens']:,} out | TypeSafe API, Python SDK `typesafe-sdk` 0.7.0 |
+| LLM baseline: the same states and questions ([comparison](llm-baseline.md)) | `claude-haiku-4-5` | not comparable (see note) | {haiku_req:,} headless Claude Code calls, ${haiku_cost:.2f} list-price estimate |
 {chr(10).join(table(['a', 'b', 'c', 'd'], claude_rows).splitlines()[2:])}
 
 ## Jev timing and usage
 
-Latency is client-side wall-clock time for one `POST /v1/systemone`, measured with `time.perf_counter()` around the SDK call. Requests were sent sequentially from a single client over the public internet, so the figures include network round-trip. Cost uses the published price of $0.042 per million **input** tokens; output tokens are free.
+Latency is client-side wall-clock time for one `POST /v1/systemone`, measured with `time.perf_counter()` around the SDK call over the public internet, so it includes network round-trip. The hand-case runs were sequential; the larger runs used up to 8 concurrent requests, and *wall s* is the elapsed time for the whole run. Cost uses the published price of $0.042 per million **input** tokens; output tokens are free.
 
-{table(['Scenario', 'Model', 'Requests', 'Questions', 'Q/request', 'mean ms', 'p50 ms', 'p95 ms', 'max ms', 'Input tok', 'Output tok', 'Cost'], rows)}
+{table(['Run', 'Requests', 'Questions', 'Concurrency', 'p50 ms', 'p95 ms', 'Wall s', 'Input tok', 'Output tok', 'Cost'], rows)}
 
-Latency is flat in the number of questions: questions over one state are evaluated in parallel.
+**Latency is flat in the number of questions**, because questions over one state are evaluated in parallel:
 
-{table(['Questions in request', 'Requests', 'Median latency (ms)'], q_rows)}
+{table(['Questions in request', 'Requests', 'Median ms', 'p95 ms'], q_rows)}
 
-For scale, the whole evaluation of {qs} typed judgments cost **${cost:.4f}** in Jev tokens.
+Every Jev judgment in this report ({t['questions']:,} of them, in {t['requests']:,} requests) cost **${t['cost_usd']:.2f}** in total.
+
+!!! note "Haiku token counts"
+    The Haiku runner recorded only the uncached input tokens the CLI reports (as few as 3 for a request carrying ten notes). The prompt itself went through the prompt cache, so those counts understate Haiku's real input, and the [comparison](llm-baseline.md) uses cost and latency instead.
 """
 
 
@@ -348,11 +386,12 @@ def page_data() -> str:
     cond = collections.Counter(c for p in cohort for c in p["active_conditions"])
     return f"""# Synthetic cohort
 
-**100 synthetic patients** were generated with [Synthea](https://github.com/synthetichealth/synthea) (`master-branch-latest`, released 2026-08-18). No real patient data was used.
+**{len(cohort):,} synthetic patients** were generated with [Synthea](https://github.com/synthetichealth/synthea) (`master-branch-latest`, released 2026-08-18): the original 100 (seed 618), used by the hand-written scenario cases, plus 900 more (seed 619) for the generated cases, note search and feature scenarios. No real patient data was used.
 
 ```bash
 java -jar synthea-with-dependencies.jar -s 618 -cs 618 -p 100 -a 25-90 \\
   --exporter.years_of_history 5 --generate.only_alive_patients true Massachusetts
+# +900: seed 619, -p 900, otherwise the same flags
 ```
 
 | | |
@@ -368,33 +407,36 @@ java -jar synthea-with-dependencies.jar -s 618 -cs 618 -p 100 -a 25-90 \\
 
 | Path | Content | FHIR |
 | --- | --- | --- |
-| [`data/synthea-r4/`]({REPO}/data/synthea-r4) | Complete Synthea bundles, gzipped (18 MB, ~200 MB raw, including claims) | R4 4.0.1 + US Core, as exported |
-| [`data/fhir-r5/`]({REPO}/data/fhir-r5) | Clinical snapshot per patient: {', '.join(f'{k} {v:,}' for k, v in types.most_common())} | **R5 5.0.0**, validated |
-| [`data/fhir-r5-scenarios/`]({REPO}/data/fhir-r5-scenarios) | Scenario inputs: vital signs (`Observation`), nursing notes and discharge text (`DocumentReference`), patient messages (`Communication`) | **R5 5.0.0**, validated |
-| [`data/scenarios/`]({REPO}/data/scenarios) | Case definitions and **reference labels**, committed before the first Jev run | – |
+| [`data/synthea-r4/`]({REPO}/data/synthea-r4) | Complete Synthea bundles for the original 100, gzipped, including claims | R4 4.0.1 + US Core, as exported |
+| [Release `cohort-1000`](https://github.com/si618/explore-typesafe-ai/releases/tag/cohort-1000) | Complete Synthea bundles for the other 900 (too large to commit) | R4 4.0.1 + US Core, as exported |
+| [`data/fhir-r5/`]({REPO}/data/fhir-r5) | Clinical snapshot per patient, including the 10 most recent clinical notes: {', '.join(f'{k} {v:,}' for k, v in types.most_common())} | **R5 5.0.0**, validated |
+| [`data/fhir-r5-scenarios/`]({REPO}/data/fhir-r5-scenarios) | Hand-written scenario inputs: vital signs (`Observation`), nursing notes and discharge text (`DocumentReference`), patient messages (`Communication`) | **R5 5.0.0**, validated |
+| [`data/scenarios/`]({REPO}/data/scenarios) | Case definitions and **reference labels**, each set committed before its first model run | – |
 
-The R4 → R5 mapping (`src/explore_typesafe/fhir.py`) handles the breaking changes these resources hit: `MedicationRequest.medication[x]` → `medication` (CodeableReference), `reasonReference` → `reason`, `Dosage.asNeededBoolean` → `asNeeded`, `AllergyIntolerance.type` code → CodeableConcept, `reaction.manifestation` → CodeableReference, `Encounter.class` → list, `period` → `actualPeriod`, and status `finished` → `completed`. Every bundle is validated against the R5 models in `fhir.resources` 8.3.
+The R4 → R5 mapping (`src/explore_typesafe/fhir.py`) handles the breaking changes these resources hit: `MedicationRequest.medication[x]` → `medication` (CodeableReference), `reasonReference` → `reason`, `Dosage.asNeededBoolean` → `asNeeded`, `AllergyIntolerance.type` code → CodeableConcept, `reaction.manifestation` → CodeableReference, `Encounter.class` → list, `period` → `actualPeriod`, `DocumentReference.context.period` → `period`, and status `finished` → `completed`. Every bundle is validated against the R5 models in `fhir.resources` 8.3.
 
 Jev never sees raw FHIR. Code builds a small, named JSON `state` for each question set, with only the fields that decision needs. The [jaggedness notes](https://docs.typesafe.ai/model-jaggedness/jev-1.13) warn that irrelevant state costs accuracy.
 """
 
 
-def page_index(evals: dict) -> str:
+def page_index(evals: dict, evals2: dict) -> str:
     e1, e2, e3, s2r = evals["s1_ward"], evals["s2_discharge"], evals["s3_inbox"], evals["system_two"]
     tot_q = sum(evals[k]["perf"]["questions"] for k in ("s1_ward", "s2_discharge", "s3_inbox"))
-    tot_c = sum(evals[k]["perf"]["cost_usd"] for k in ("s1_ward", "s2_discharge", "s3_inbox"))
     esc = sum(v["items"] for v in s2r["summary"].values()) if s2r else 0
-    lat = sorted(c["latency_ms"] for k in ("s1_ward", "s2_discharge", "s3_inbox")
-                 for c in json.loads((RESULTS_DIR / f"{k}.json").read_text())["cases"])
+    t = jev_totals(evals, evals2)
+    g, s4, sens, s5 = evals2["questions"], evals2["s4"], evals2["s4_sensitivity"], evals2["s5"]
+    s1p, s2p, s3g = evals2["s1_policy"]["test"], evals2["s2_policy"]["gen_test"], evals2["s3_gate"]
+    h = evals2["haiku"]
+    ratios = [v["haiku_perf"]["cost_usd"] / v["jev_perf"]["cost_usd"] for v in h.values() if v.get("haiku_perf") and v.get("jev_perf")]
     return f"""# Jev in the hospital: a System One evaluation
 
-This repo tests [TypeSafe](https://docs.typesafe.ai)'s **System One** model, **Jev**, on three hospital decisions. It uses 100 synthetic FHIR patients, and Claude models act as author and escalation reviewer. Jev doesn't generate text: it returns **typed answers with calibrated probabilities** (Choice, Score and Noul) that code can branch on. The design question throughout is *which part of a clinical decision is a fast semantic judgment, and which part belongs in code or in a slower reasoning model?*
+This repo tests [TypeSafe](https://docs.typesafe.ai)'s **System One** model, **Jev**, on five hospital tasks over **1,000 synthetic FHIR patients**. Claude models act as author, escalation reviewer and LLM baseline. Jev doesn't generate text: it returns **typed answers with calibrated probabilities** (Choice, Score and Noul) that code can branch on. The design question throughout is *which part of a clinical decision is a fast semantic judgment, and which part belongs in code or in a slower reasoning model?*
 
 ```mermaid
 flowchart LR
-  FHIR[(100 Synthea patients<br/>FHIR R5)] --> ST[Code builds<br/>focused state]
+  FHIR[(1,000 Synthea patients<br/>FHIR R5)] --> ST[Code builds<br/>focused state]
   NOTE[Clinical free text] --> ST
-  ST --> JEV{{Jev · System One<br/>typed judgments}}
+  ST --> JEV{{{{Jev · System One<br/>typed judgments}}}}
   JEV --> CODE[Rules in code<br/>NEWS2 · reconciliation · routing]
   JEV -- uncertain --> S2[Claude · System Two<br/>blinded review]
   S2 --> CODE
@@ -403,24 +445,30 @@ flowchart LR
 
 ## Headline results
 
+Scenarios 1–3 have 20 hand-written cases each (labels written by Claude), plus 80 [generated cases](generated.md) with labels known by construction. Generated results are from the held-out **test** split.
+
 | Scenario | Primitives → task categories | Result |
 | --- | --- | --- |
-| [Ward deterioration](s1-ward.md) | Noul → detection · Score → scoring/ranking · Choice → classification | NEWS2 alone under-triaged **{e1['policy']['news2_only_under']}/20** patients; NEWS2 + Jev under-triaged **{e1['policy']['combined_under']}/20**. New-confusion Noul 20/20, including dementia at baseline vs new delirium. |
-| [Discharge med reconciliation](s2-discharge.md) | Choice fan-out → structured extraction · Noul → verification · Score → scoring | **{pct(e2['questions'][0]['accuracy'])}** of {e2['questions'][0]['n']} medication statuses extracted correctly; allergy check {pct(e2['questions'][1]['accuracy'])} (including brand names). Duplicate/interaction checks are weak (multi-hop) and mostly escalate. |
-| [Post-discharge inbox](s3-inbox.md) | Choice → routing · Score → urgency · Noul → detection | **{e3['policy']['auto_dispatched']}/20** messages auto-dispatched, all correctly; every misroute was caught by the confidence gate. Prompt injection did not steer routing. |
-| [System Two review](system-two.md) | Confidence → escalation | {esc} of {tot_q} judgments ({pct(esc / tot_q)}) escalated to a blinded Claude Sonnet 5 reviewer. |
+| [1. Ward deterioration](s1-ward.md) | Noul → detection · Score → scoring/ranking · Choice → classification | NEWS2 alone under-triaged **{e1['policy']['news2_only_under']}/20** hand and **{s1p['news2_only_under']}/40** test patients; with Jev reading the note, **{e1['policy']['combined_under']}/20** and **{s1p['combined_under']}/40**. |
+| [2. Discharge med reconciliation](s2-discharge.md) | Choice fan-out → structured extraction · Noul → verification · Score → scoring | **{pct(e2['questions'][0]['accuracy'])}** hand / **{pct(g['s2_discharge_gen']['med_status']['test']['accuracy'])}** test medication statuses extracted correctly; allergy check {pct(g['s2_discharge_gen']['allergy_conflict']['test']['accuracy'])} on test. Whole-regimen interaction checks are weak; [decomposing them](generated.md#discharge-decomposing-the-weak-checks) helps but doesn't fix them. |
+| [3. Post-discharge inbox](s3-inbox.md) | Choice → routing · Score → urgency · Noul → detection | The confidence gate auto-dispatched **{e3['policy']['auto_dispatched']}/20** hand and **{s3g['test_default']['auto']}/40** test messages, **all correctly**; the rest went to review. None of the 5 prompt-injection messages was routed where the injection asked. |
+| [4. Note search](s4-search.md) | Noul → search/retrieval · Choice → ranking | Lay questions over clinical notes: note recall **{pct(s4['note_level']['recall'])}** vs {pct(s4['lay_keyword_note_level']['recall'])} for keyword search; about {pct(sens['per_note']['strong_evidence']['precision'])} precision once treatment evidence the regex labels miss is counted. |
+| [5. ML features](s5-features.md) | Score/Noul/Choice → feature extraction | Jev features from one note match structured data for predicting acute care (AUROC {s5['models']['jev']['auroc_mean']:.2f} vs {s5['models']['structured']['auroc_mean']:.2f}); combined {s5['models']['structured+jev']['auroc_mean']:.2f}. Synthea caps what any feature can show. |
+| [System Two review](system-two.md) | Confidence → escalation | {esc} of {tot_q} hand-case judgments ({pct(esc / tot_q)}) escalated to a blinded Claude Sonnet 5 reviewer. |
+| [LLM baseline](llm-baseline.md) | Same questions, Claude Haiku 4.5 | Accuracy is close, and neither model wins everywhere; Haiku costs **{min(ratios):.0f}–{max(ratios):.0f}×** more and is 5–8× slower. |
 
-**Cost and speed:** {tot_q} typed judgments in 60 requests, **p50 {round(statistics.median(lat))} ms** per request (4–15 questions each), **${tot_c:.4f}** in total. See [models, timing & tokens](performance.md).
+**Cost and speed:** {t['questions']:,} typed Jev judgments in {t['requests']:,} requests, **p50 {t['p50_ms']} ms** per request (1 to {max(len(c['questions']) for c in json.loads((RESULTS_DIR / 's2_discharge_gen_v2.json').read_text())['cases'])} questions each), **${t['cost_usd']:.2f}** in total. See [models, timing & tokens](performance.md).
 
 ## What this shows about System One
 
-- **Jev is strong at reading meaning.** It separated baseline from new confusion, caught negations, and read blanket statements, brand names and casual descriptions of emergencies.
+- **Jev is strong at reading meaning.** It separated baseline from new confusion, caught negations, and read blanket statements, brand names, lay vocabulary and casual descriptions of emergencies.
 - **Code stays in charge.** NEWS2, reconciliation and routing policy are deterministic and auditable. Jev supplies the inputs code can't compute. Changing a threshold or weight doesn't need a new prompt or a rerun.
-- **Uncertainty is a usable signal, but not a complete one.** The gates caught every inbox misroute and most wrong discharge flags. Errors that got through were mostly Score answers one level off, often at confidence 0.4–0.6. So per-question thresholds need tuning on labelled local data before use.
-- **The limits match the docs.** Questions that need several hops over a medication list (class duplication, interactions) are unreliable, and they should be decomposed further or escalated.
+- **Thresholds need local tuning.** Tuned on dev, `safeguarding` and `red_flag` want 0.85 and 0.75 rather than 0.5, and test accuracy rises accordingly. Uncertainty is a usable gate, but errors can still pass it, usually a Score one level off.
+- **The limits match the docs.** Questions that need several hops over a medication list (class duplication, interactions) are unreliable. Decomposing them into narrow questions helps, but each sub-question can then fail on its own.
+- **It's cheap enough to ask everything.** At a fraction of a cent per request, fanning out every plausible question (per medication, per note, per drug pair) is practical. The architecture question becomes what to do with the answers.
 
 !!! warning "Not clinical validation"
-    The patients, notes and messages are synthetic, and a Claude model wrote the reference labels, not clinicians. There are 20 cases per scenario, so every percentage here has wide uncertainty. This is a capability demonstration, not evidence of clinical safety.
+    The patients, notes and messages are synthetic. The hand-case labels were written by a Claude model, not clinicians, and the generated labels are only as good as the snippets and tables they're built from. This is a capability demonstration, not evidence of clinical safety.
 
 Next: the [prompt and why these scenarios](prompt.md). New to the terms? See the [vocabulary](vocabulary.md).
 """
@@ -428,17 +476,22 @@ Next: the [prompt and why these scenarios](prompt.md). New to the terms? See the
 
 def main() -> None:
     evals = json.loads((RESULTS_DIR / "evaluation.json").read_text())
+    evals2 = json.loads((RESULTS_DIR / "evaluation2.json").read_text())
     DOCS.mkdir(exist_ok=True)
     for old in DOCS.glob("*.md"):
         old.unlink()
     pages = {
-        "index.md": page_index(evals),
+        "index.md": page_index(evals, evals2),
         "data.md": page_data(),
+        "generated.md": page_generated(evals2),
+        "s4-search.md": page_s4(evals2),
+        "s5-features.md": page_s5(evals2),
+        "llm-baseline.md": page_haiku(evals2),
         "s1-ward.md": page_s1(evals["s1_ward"]),
         "s2-discharge.md": page_s2(evals["s2_discharge"]),
         "s3-inbox.md": page_s3(evals["s3_inbox"]),
         "system-two.md": page_system_two(evals["system_two"], evals),
-        "performance.md": page_performance(evals),
+        "performance.md": page_performance(evals, evals2),
     }
     for name, text in pages.items():
         (DOCS / name).write_text(text)
