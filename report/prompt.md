@@ -40,12 +40,13 @@ The scenarios deliberately include hard cases: dementia with **unchanged** basel
 
 ## Extending the study
 
-The first pass answered "what does Jev do on these decisions?" but left three gaps, and the study was extended to close them:
+The first pass answered "what does Jev do on these decisions?" but left four gaps, and the study was extended to close them:
 
 | Gap | Extension |
 | --- | --- |
 | 20 cases per scenario can show behaviour but not measure it, and Claude wrote the labels | [80 generated cases per scenario](generated.md) over a **1,000-patient** cohort, with labels known by construction, split into dev (threshold tuning) and test (reporting) |
 | Two task categories from the docs weren't covered: search/retrieval and ML feature extraction | [4. Note search](s4-search.md) (lay questions over clinical notes) and [5. ML features](s5-features.md) (predicting acute care). Both use labels that no model wrote: regex matches on Synthea's diagnoses, and Synthea's simulated encounters. |
 | "Why not just ask an LLM?" | The same states and questions answered by [Claude Haiku 4.5](llm-baseline.md), compared on accuracy, latency and cost |
+| Claude wrote the hand-case labels and Claude reviewed escalations, so shared blind spots could inflate agreement | [Independent labels](independent-labels.md): a blinded sample of 15 cases per scenario labelled by a different model family (not a clinician review) |
 
 The weakest checks in scenario 2 were also re-run in a decomposed form (v2, v2.1), to test the docs' advice to split multi-hop questions into narrow ones.
