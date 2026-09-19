@@ -106,3 +106,31 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+
+# --- variant: one note per request --------------------------------------------------------
+# With all 10 notes in one state, the per-note Nouls leak: a note is judged relevant
+# because *another* note shows the condition. Here each note is its own state.
+
+def build_note_cases() -> list[dict]:
+    out = []
+    for c in json.loads((SCENARIO_DIR / "s4_search.json").read_text())["cases"]:
+        for i, rel in enumerate(c["reference"]["relevant"]):
+            out.append({"patient": f"{c['patient']}#{i}", "base_patient": c["patient"], "query": c["query"],
+                        "note_index": i, "reference": {"relevant": rel}})
+    return out
+
+
+def state_note(case: dict) -> dict:
+    return {"query": case["query"], "note": _notes({"patient": case["base_patient"]})[case["note_index"]]}
+
+
+def questions_note(case: dict) -> dict:
+    return {"relevant": noul("Does `note.text` contain information showing that the answer to `query` is yes?")}
+
+
+def write_note_cases() -> None:
+    cases = build_note_cases()
+    out = {"scenario": "s4_search_notes", "title": "Semantic search, one note per request", "cases": cases}
+    (SCENARIO_DIR / "s4_search_notes.json").write_text(json.dumps(out, indent=1) + "\n")
+    print(len(cases), "note-level cases")

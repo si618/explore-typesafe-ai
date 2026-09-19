@@ -1,0 +1,2726 @@
+{
+ "scenario": "s3_inbox_gen",
+ "model": "claude-haiku-4-5",
+ "cases": [
+  {
+   "patient": "7f77ea3d",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "emergency_services",
+     "confidence": 0.99
+    },
+    "urgency": {
+     "level": 3,
+     "confidence": 0.99
+    },
+    "red_flag": {
+     "p_yes": 0.95
+    },
+    "medication_issue": {
+     "p_yes": 0.05
+    },
+    "safeguarding": {
+     "p_yes": 0.02
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1328,
+   "duration_ms": 1749,
+   "usage": {
+    "input_tokens": 1430,
+    "output_tokens": 132
+   },
+   "cost_usd": 0.00209,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "e1be17a5",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "emergency_services",
+     "confidence": 0.99
+    },
+    "urgency": {
+     "level": 3,
+     "confidence": 0.99
+    },
+    "red_flag": {
+     "p_yes": 0.95
+    },
+    "medication_issue": {
+     "p_yes": 0.02
+    },
+    "safeguarding": {
+     "p_yes": 0.05
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1419,
+   "duration_ms": 1848,
+   "usage": {
+    "input_tokens": 1203,
+    "output_tokens": 132
+   },
+   "cost_usd": 0.001863,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "95dfbb20",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "emergency_services",
+     "confidence": 0.95
+    },
+    "urgency": {
+     "level": 3,
+     "confidence": 0.95
+    },
+    "red_flag": {
+     "p_yes": 0.92
+    },
+    "medication_issue": {
+     "p_yes": 0.15
+    },
+    "safeguarding": {
+     "p_yes": 0.05
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1745,
+   "duration_ms": 2438,
+   "usage": {
+    "input_tokens": 1380,
+    "output_tokens": 132
+   },
+   "cost_usd": 0.00204,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "3e927c78",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "emergency_services",
+     "confidence": 0.98
+    },
+    "urgency": {
+     "level": 3,
+     "confidence": 0.98
+    },
+    "red_flag": {
+     "p_yes": 0.96
+    },
+    "medication_issue": {
+     "p_yes": 0.15
+    },
+    "safeguarding": {
+     "p_yes": 0.05
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1803,
+   "duration_ms": 2242,
+   "usage": {
+    "input_tokens": 1359,
+    "output_tokens": 132
+   },
+   "cost_usd": 0.002019,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "3f6d343d",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "emergency_services",
+     "confidence": 0.95
+    },
+    "urgency": {
+     "level": 3,
+     "confidence": 0.95
+    },
+    "red_flag": {
+     "p_yes": 0.92
+    },
+    "medication_issue": {
+     "p_yes": 0.98
+    },
+    "safeguarding": {
+     "p_yes": 0.05
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1776,
+   "duration_ms": 1990,
+   "usage": {
+    "input_tokens": 1229,
+    "output_tokens": 132
+   },
+   "cost_usd": 0.001889,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "97603b47",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "emergency_services",
+     "confidence": 0.99
+    },
+    "urgency": {
+     "level": 3,
+     "confidence": 0.99
+    },
+    "red_flag": {
+     "p_yes": 0.98
+    },
+    "medication_issue": {
+     "p_yes": 0.95
+    },
+    "safeguarding": {
+     "p_yes": 0.97
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1815,
+   "duration_ms": 2448,
+   "usage": {
+    "input_tokens": 1459,
+    "output_tokens": 132
+   },
+   "cost_usd": 0.0021190000000000002,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "a08b0051",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "emergency_services",
+     "confidence": 0.95
+    },
+    "urgency": {
+     "level": 3,
+     "confidence": 0.95
+    },
+    "red_flag": {
+     "p_yes": 0.92
+    },
+    "medication_issue": {
+     "p_yes": 0.05
+    },
+    "safeguarding": {
+     "p_yes": 0.08
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1448,
+   "duration_ms": 1875,
+   "usage": {
+    "input_tokens": 1281,
+    "output_tokens": 132
+   },
+   "cost_usd": 0.001941,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "881ca596",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "on_call_clinician",
+     "confidence": 0.92
+    },
+    "urgency": {
+     "level": 2,
+     "confidence": 0.9
+    },
+    "red_flag": {
+     "p_yes": 0.72
+    },
+    "medication_issue": {
+     "p_yes": 0.05
+    },
+    "safeguarding": {
+     "p_yes": 0.02
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1770,
+   "duration_ms": 2181,
+   "usage": {
+    "input_tokens": 1179,
+    "output_tokens": 135
+   },
+   "cost_usd": 0.001854,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "dee65a3c",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "on_call_clinician",
+     "confidence": 0.92
+    },
+    "urgency": {
+     "level": 2,
+     "confidence": 0.9
+    },
+    "red_flag": {
+     "p_yes": 0.72
+    },
+    "medication_issue": {
+     "p_yes": 0.15
+    },
+    "safeguarding": {
+     "p_yes": 0.05
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1777,
+   "duration_ms": 1999,
+   "usage": {
+    "input_tokens": 1344,
+    "output_tokens": 135
+   },
+   "cost_usd": 0.002019,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "001d5d3b",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "on_call_clinician",
+     "confidence": 0.85
+    },
+    "urgency": {
+     "level": 2,
+     "confidence": 0.82
+    },
+    "red_flag": {
+     "p_yes": 0.72
+    },
+    "medication_issue": {
+     "p_yes": 0.65
+    },
+    "safeguarding": {
+     "p_yes": 0.05
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1781,
+   "duration_ms": 2130,
+   "usage": {
+    "input_tokens": 1524,
+    "output_tokens": 135
+   },
+   "cost_usd": 0.002199,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "9c674cc6",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "emergency_services",
+     "confidence": 0.92
+    },
+    "urgency": {
+     "level": 3,
+     "confidence": 0.92
+    },
+    "red_flag": {
+     "p_yes": 0.88
+    },
+    "medication_issue": {
+     "p_yes": 0.72
+    },
+    "safeguarding": {
+     "p_yes": 0.15
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1742,
+   "duration_ms": 2251,
+   "usage": {
+    "input_tokens": 1381,
+    "output_tokens": 132
+   },
+   "cost_usd": 0.0020410000000000003,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "8a4d40e0",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "emergency_services",
+     "confidence": 0.92
+    },
+    "urgency": {
+     "level": 3,
+     "confidence": 0.92
+    },
+    "red_flag": {
+     "p_yes": 0.85
+    },
+    "medication_issue": {
+     "p_yes": 0.05
+    },
+    "safeguarding": {
+     "p_yes": 0.02
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1565,
+   "duration_ms": 1995,
+   "usage": {
+    "input_tokens": 1268,
+    "output_tokens": 132
+   },
+   "cost_usd": 0.001928,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "4807a027",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "emergency_services",
+     "confidence": 0.95
+    },
+    "urgency": {
+     "level": 3,
+     "confidence": 0.95
+    },
+    "red_flag": {
+     "p_yes": 0.9
+    },
+    "medication_issue": {
+     "p_yes": 0.05
+    },
+    "safeguarding": {
+     "p_yes": 0.02
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1795,
+   "duration_ms": 2248,
+   "usage": {
+    "input_tokens": 1269,
+    "output_tokens": 132
+   },
+   "cost_usd": 0.001929,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "49aa53d0",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "nurse_callback",
+     "confidence": 0.85
+    },
+    "urgency": {
+     "level": 1,
+     "confidence": 0.8
+    },
+    "red_flag": {
+     "p_yes": 0.05
+    },
+    "medication_issue": {
+     "p_yes": 0.7
+    },
+    "safeguarding": {
+     "p_yes": 0.02
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1356,
+   "duration_ms": 1599,
+   "usage": {
+    "input_tokens": 1320,
+    "output_tokens": 132
+   },
+   "cost_usd": 0.00198,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "de950bb7",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "pharmacist",
+     "confidence": 0.85
+    },
+    "urgency": {
+     "level": 1,
+     "confidence": 0.8
+    },
+    "red_flag": {
+     "p_yes": 0.05
+    },
+    "medication_issue": {
+     "p_yes": 0.9
+    },
+    "safeguarding": {
+     "p_yes": 0.02
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1502,
+   "duration_ms": 1916,
+   "usage": {
+    "input_tokens": 1293,
+    "output_tokens": 131
+   },
+   "cost_usd": 0.001948,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "fc1800eb",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "admin",
+     "confidence": 0.92
+    },
+    "urgency": {
+     "level": 0,
+     "confidence": 0.88
+    },
+    "red_flag": {
+     "p_yes": 0.02
+    },
+    "medication_issue": {
+     "p_yes": 0.05
+    },
+    "safeguarding": {
+     "p_yes": 0.01
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1766,
+   "duration_ms": 1994,
+   "usage": {
+    "input_tokens": 1578,
+    "output_tokens": 130
+   },
+   "cost_usd": 0.002228,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "d2c775c0",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "nurse_callback",
+     "confidence": 0.85
+    },
+    "urgency": {
+     "level": 1,
+     "confidence": 0.8
+    },
+    "red_flag": {
+     "p_yes": 0.1
+    },
+    "medication_issue": {
+     "p_yes": 0.25
+    },
+    "safeguarding": {
+     "p_yes": 0.05
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1799,
+   "duration_ms": 2243,
+   "usage": {
+    "input_tokens": 1307,
+    "output_tokens": 132
+   },
+   "cost_usd": 0.001967,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "817a9df6",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "nurse_callback",
+     "confidence": 0.95
+    },
+    "urgency": {
+     "level": 0,
+     "confidence": 0.9
+    },
+    "red_flag": {
+     "p_yes": 0.02
+    },
+    "medication_issue": {
+     "p_yes": 0.05
+    },
+    "safeguarding": {
+     "p_yes": 0.01
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1749,
+   "duration_ms": 2211,
+   "usage": {
+    "input_tokens": 1317,
+    "output_tokens": 132
+   },
+   "cost_usd": 0.001977,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "bc608dac",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "pharmacist",
+     "confidence": 0.95
+    },
+    "urgency": {
+     "level": 1,
+     "confidence": 0.92
+    },
+    "red_flag": {
+     "p_yes": 0.05
+    },
+    "medication_issue": {
+     "p_yes": 0.88
+    },
+    "safeguarding": {
+     "p_yes": 0.01
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1327,
+   "duration_ms": 1699,
+   "usage": {
+    "input_tokens": 1303,
+    "output_tokens": 131
+   },
+   "cost_usd": 0.001958,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "f294faf2",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "pharmacist",
+     "confidence": 0.92
+    },
+    "urgency": {
+     "level": 1,
+     "confidence": 0.88
+    },
+    "red_flag": {
+     "p_yes": 0.05
+    },
+    "medication_issue": {
+     "p_yes": 0.94
+    },
+    "safeguarding": {
+     "p_yes": 0.02
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1808,
+   "duration_ms": 2255,
+   "usage": {
+    "input_tokens": 1300,
+    "output_tokens": 131
+   },
+   "cost_usd": 0.001955,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "2b516a28",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "pharmacist",
+     "confidence": 0.95
+    },
+    "urgency": {
+     "level": 0,
+     "confidence": 0.92
+    },
+    "red_flag": {
+     "p_yes": 0.02
+    },
+    "medication_issue": {
+     "p_yes": 0.88
+    },
+    "safeguarding": {
+     "p_yes": 0.01
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1802,
+   "duration_ms": 2244,
+   "usage": {
+    "input_tokens": 1225,
+    "output_tokens": 131
+   },
+   "cost_usd": 0.0018800000000000002,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "cb13ecb1",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "pharmacist",
+     "confidence": 0.95
+    },
+    "urgency": {
+     "level": 1,
+     "confidence": 0.9
+    },
+    "red_flag": {
+     "p_yes": 0.05
+    },
+    "medication_issue": {
+     "p_yes": 0.92
+    },
+    "safeguarding": {
+     "p_yes": 0.02
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1333,
+   "duration_ms": 1790,
+   "usage": {
+    "input_tokens": 1265,
+    "output_tokens": 131
+   },
+   "cost_usd": 0.0019200000000000003,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "32b81fde",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "pharmacist",
+     "confidence": 0.85
+    },
+    "urgency": {
+     "level": 1,
+     "confidence": 0.9
+    },
+    "red_flag": {
+     "p_yes": 0.02
+    },
+    "medication_issue": {
+     "p_yes": 0.95
+    },
+    "safeguarding": {
+     "p_yes": 0.01
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1702,
+   "duration_ms": 2173,
+   "usage": {
+    "input_tokens": 1223,
+    "output_tokens": 131
+   },
+   "cost_usd": 0.001878,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "3ddc5e4a",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "admin",
+     "confidence": 0.95
+    },
+    "urgency": {
+     "level": 0,
+     "confidence": 0.95
+    },
+    "red_flag": {
+     "p_yes": 0.02
+    },
+    "medication_issue": {
+     "p_yes": 0.01
+    },
+    "safeguarding": {
+     "p_yes": 0.01
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1737,
+   "duration_ms": 2211,
+   "usage": {
+    "input_tokens": 1291,
+    "output_tokens": 130
+   },
+   "cost_usd": 0.001941,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "88c24421",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "admin",
+     "confidence": 0.95
+    },
+    "urgency": {
+     "level": 0,
+     "confidence": 0.92
+    },
+    "red_flag": {
+     "p_yes": 0.02
+    },
+    "medication_issue": {
+     "p_yes": 0.01
+    },
+    "safeguarding": {
+     "p_yes": 0.01
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2090,
+   "duration_ms": 2549,
+   "usage": {
+    "input_tokens": 1251,
+    "output_tokens": 130
+   },
+   "cost_usd": 0.001901,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "48805e22",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "admin",
+     "confidence": 0.95
+    },
+    "urgency": {
+     "level": 0,
+     "confidence": 0.92
+    },
+    "red_flag": {
+     "p_yes": 0.02
+    },
+    "medication_issue": {
+     "p_yes": 0.01
+    },
+    "safeguarding": {
+     "p_yes": 0.05
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1720,
+   "duration_ms": 2174,
+   "usage": {
+    "input_tokens": 1258,
+    "output_tokens": 130
+   },
+   "cost_usd": 0.001908,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "cf8e545a",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "admin",
+     "confidence": 0.95
+    },
+    "urgency": {
+     "level": 0,
+     "confidence": 0.98
+    },
+    "red_flag": {
+     "p_yes": 0.01
+    },
+    "medication_issue": {
+     "p_yes": 0.02
+    },
+    "safeguarding": {
+     "p_yes": 0.03
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1270,
+   "duration_ms": 1517,
+   "usage": {
+    "input_tokens": 1342,
+    "output_tokens": 130
+   },
+   "cost_usd": 0.001992,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "ce6d8897",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "admin",
+     "confidence": 0.95
+    },
+    "urgency": {
+     "level": 0,
+     "confidence": 0.95
+    },
+    "red_flag": {
+     "p_yes": 0.0
+    },
+    "medication_issue": {
+     "p_yes": 0.0
+    },
+    "safeguarding": {
+     "p_yes": 0.0
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1568,
+   "duration_ms": 2073,
+   "usage": {
+    "input_tokens": 1324,
+    "output_tokens": 130
+   },
+   "cost_usd": 0.001974,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "a63573d9",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "emergency_services",
+     "confidence": 0.95
+    },
+    "urgency": {
+     "level": 3,
+     "confidence": 0.95
+    },
+    "red_flag": {
+     "p_yes": 0.85
+    },
+    "medication_issue": {
+     "p_yes": 0.05
+    },
+    "safeguarding": {
+     "p_yes": 0.9
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1772,
+   "duration_ms": 2242,
+   "usage": {
+    "input_tokens": 1206,
+    "output_tokens": 132
+   },
+   "cost_usd": 0.001866,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "6fb48f9e",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "on_call_clinician",
+     "confidence": 0.85
+    },
+    "urgency": {
+     "level": 2,
+     "confidence": 0.8
+    },
+    "red_flag": {
+     "p_yes": 0.15
+    },
+    "medication_issue": {
+     "p_yes": 0.1
+    },
+    "safeguarding": {
+     "p_yes": 0.75
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 2566,
+   "duration_ms": 2954,
+   "usage": {
+    "input_tokens": 1235,
+    "output_tokens": 135
+   },
+   "cost_usd": 0.00191,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "f77649c2",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "pharmacist",
+     "confidence": 0.75
+    },
+    "urgency": {
+     "level": 1,
+     "confidence": 0.7
+    },
+    "red_flag": {
+     "p_yes": 0.15
+    },
+    "medication_issue": {
+     "p_yes": 0.95
+    },
+    "safeguarding": {
+     "p_yes": 0.25
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1762,
+   "duration_ms": 2235,
+   "usage": {
+    "input_tokens": 1379,
+    "output_tokens": 131
+   },
+   "cost_usd": 0.0020340000000000002,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "c3f08a5b",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "emergency_services",
+     "confidence": 0.95
+    },
+    "urgency": {
+     "level": 3,
+     "confidence": 0.95
+    },
+    "red_flag": {
+     "p_yes": 0.85
+    },
+    "medication_issue": {
+     "p_yes": 0.15
+    },
+    "safeguarding": {
+     "p_yes": 0.9
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1717,
+   "duration_ms": 2188,
+   "usage": {
+    "input_tokens": 1418,
+    "output_tokens": 132
+   },
+   "cost_usd": 0.002078,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "929a1e3a",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "on_call_clinician",
+     "confidence": 0.92
+    },
+    "urgency": {
+     "level": 2,
+     "confidence": 0.9
+    },
+    "red_flag": {
+     "p_yes": 0.25
+    },
+    "medication_issue": {
+     "p_yes": 0.15
+    },
+    "safeguarding": {
+     "p_yes": 0.05
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1319,
+   "duration_ms": 1824,
+   "usage": {
+    "input_tokens": 1325,
+    "output_tokens": 135
+   },
+   "cost_usd": 0.002,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "9af177a0",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "emergency_services",
+     "confidence": 0.99
+    },
+    "urgency": {
+     "level": 3,
+     "confidence": 0.99
+    },
+    "red_flag": {
+     "p_yes": 0.95
+    },
+    "medication_issue": {
+     "p_yes": 0.02
+    },
+    "safeguarding": {
+     "p_yes": 0.05
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1422,
+   "duration_ms": 1792,
+   "usage": {
+    "input_tokens": 1233,
+    "output_tokens": 132
+   },
+   "cost_usd": 0.001893,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "c13bcd28",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "admin",
+     "confidence": 0.95
+    },
+    "urgency": {
+     "level": 0,
+     "confidence": 0.98
+    },
+    "red_flag": {
+     "p_yes": 0.01
+    },
+    "medication_issue": {
+     "p_yes": 0.02
+    },
+    "safeguarding": {
+     "p_yes": 0.01
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1344,
+   "duration_ms": 1801,
+   "usage": {
+    "input_tokens": 1290,
+    "output_tokens": 130
+   },
+   "cost_usd": 0.0019399999999999999,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "554cebd5",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "pharmacist",
+     "confidence": 0.75
+    },
+    "urgency": {
+     "level": 1,
+     "confidence": 0.8
+    },
+    "red_flag": {
+     "p_yes": 0.15
+    },
+    "medication_issue": {
+     "p_yes": 0.95
+    },
+    "safeguarding": {
+     "p_yes": 0.35
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1791,
+   "duration_ms": 2236,
+   "usage": {
+    "input_tokens": 1502,
+    "output_tokens": 131
+   },
+   "cost_usd": 0.002157,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "7fc65772",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "admin",
+     "confidence": 0.95
+    },
+    "urgency": {
+     "level": 0,
+     "confidence": 0.92
+    },
+    "red_flag": {
+     "p_yes": 0.02
+    },
+    "medication_issue": {
+     "p_yes": 0.05
+    },
+    "safeguarding": {
+     "p_yes": 0.03
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1805,
+   "duration_ms": 2277,
+   "usage": {
+    "input_tokens": 1266,
+    "output_tokens": 130
+   },
+   "cost_usd": 0.001916,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "e3492ea3",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "emergency_services",
+     "confidence": 0.99
+    },
+    "urgency": {
+     "level": 3,
+     "confidence": 0.99
+    },
+    "red_flag": {
+     "p_yes": 0.98
+    },
+    "medication_issue": {
+     "p_yes": 0.7
+    },
+    "safeguarding": {
+     "p_yes": 0.15
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 6887,
+   "duration_ms": 7359,
+   "usage": {
+    "input_tokens": 1238,
+    "output_tokens": 132
+   },
+   "cost_usd": 0.001898,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "9f1df188",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "emergency_services",
+     "confidence": 0.99
+    },
+    "urgency": {
+     "level": 3,
+     "confidence": 0.99
+    },
+    "red_flag": {
+     "p_yes": 0.99
+    },
+    "medication_issue": {
+     "p_yes": 0.95
+    },
+    "safeguarding": {
+     "p_yes": 0.99
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1840,
+   "duration_ms": 2306,
+   "usage": {
+    "input_tokens": 1172,
+    "output_tokens": 132
+   },
+   "cost_usd": 0.001832,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "c689a6bb",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "nurse_callback",
+     "confidence": 0.85
+    },
+    "urgency": {
+     "level": 1,
+     "confidence": 0.8
+    },
+    "red_flag": {
+     "p_yes": 0.15
+    },
+    "medication_issue": {
+     "p_yes": 0.1
+    },
+    "safeguarding": {
+     "p_yes": 0.05
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1693,
+   "duration_ms": 2151,
+   "usage": {
+    "input_tokens": 1271,
+    "output_tokens": 132
+   },
+   "cost_usd": 0.001931,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "b5a2b9d6",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "pharmacist",
+     "confidence": 0.85
+    },
+    "urgency": {
+     "level": 1,
+     "confidence": 0.9
+    },
+    "red_flag": {
+     "p_yes": 0.02
+    },
+    "medication_issue": {
+     "p_yes": 0.95
+    },
+    "safeguarding": {
+     "p_yes": 0.01
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1566,
+   "duration_ms": 2020,
+   "usage": {
+    "input_tokens": 1201,
+    "output_tokens": 131
+   },
+   "cost_usd": 0.001856,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "73e167a0",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "emergency_services",
+     "confidence": 0.95
+    },
+    "urgency": {
+     "level": 3,
+     "confidence": 0.95
+    },
+    "red_flag": {
+     "p_yes": 0.85
+    },
+    "medication_issue": {
+     "p_yes": 0.15
+    },
+    "safeguarding": {
+     "p_yes": 0.05
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1378,
+   "duration_ms": 1871,
+   "usage": {
+    "input_tokens": 1243,
+    "output_tokens": 132
+   },
+   "cost_usd": 0.001903,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "b3737282",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "pharmacist",
+     "confidence": 0.85
+    },
+    "urgency": {
+     "level": 1,
+     "confidence": 0.8
+    },
+    "red_flag": {
+     "p_yes": 0.15
+    },
+    "medication_issue": {
+     "p_yes": 0.95
+    },
+    "safeguarding": {
+     "p_yes": 0.35
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1698,
+   "duration_ms": 2145,
+   "usage": {
+    "input_tokens": 1222,
+    "output_tokens": 131
+   },
+   "cost_usd": 0.0018770000000000002,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "cd9f6c70",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "on_call_clinician",
+     "confidence": 0.92
+    },
+    "urgency": {
+     "level": 2,
+     "confidence": 0.89
+    },
+    "red_flag": {
+     "p_yes": 0.15
+    },
+    "medication_issue": {
+     "p_yes": 0.05
+    },
+    "safeguarding": {
+     "p_yes": 0.02
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1796,
+   "duration_ms": 2249,
+   "usage": {
+    "input_tokens": 1231,
+    "output_tokens": 135
+   },
+   "cost_usd": 0.0019060000000000001,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "607c4e20",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "admin",
+     "confidence": 0.98
+    },
+    "urgency": {
+     "level": 0,
+     "confidence": 0.97
+    },
+    "red_flag": {
+     "p_yes": 0.01
+    },
+    "medication_issue": {
+     "p_yes": 0.02
+    },
+    "safeguarding": {
+     "p_yes": 0.01
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1731,
+   "duration_ms": 2211,
+   "usage": {
+    "input_tokens": 1193,
+    "output_tokens": 130
+   },
+   "cost_usd": 0.001843,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "00205a83",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "admin",
+     "confidence": 0.95
+    },
+    "urgency": {
+     "level": 0,
+     "confidence": 0.95
+    },
+    "red_flag": {
+     "p_yes": 0.0
+    },
+    "medication_issue": {
+     "p_yes": 0.0
+    },
+    "safeguarding": {
+     "p_yes": 0.0
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1331,
+   "duration_ms": 1939,
+   "usage": {
+    "input_tokens": 1308,
+    "output_tokens": 130
+   },
+   "cost_usd": 0.0019579999999999997,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "27f261e4",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "admin",
+     "confidence": 0.95
+    },
+    "urgency": {
+     "level": 0,
+     "confidence": 0.95
+    },
+    "red_flag": {
+     "p_yes": 0.0
+    },
+    "medication_issue": {
+     "p_yes": 0.0
+    },
+    "safeguarding": {
+     "p_yes": 0.0
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1359,
+   "duration_ms": 1650,
+   "usage": {
+    "input_tokens": 1203,
+    "output_tokens": 130
+   },
+   "cost_usd": 0.001853,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "74fd8f7a",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "admin",
+     "confidence": 0.95
+    },
+    "urgency": {
+     "level": 0,
+     "confidence": 0.9
+    },
+    "red_flag": {
+     "p_yes": 0.02
+    },
+    "medication_issue": {
+     "p_yes": 0.01
+    },
+    "safeguarding": {
+     "p_yes": 0.01
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1710,
+   "duration_ms": 1944,
+   "usage": {
+    "input_tokens": 1194,
+    "output_tokens": 130
+   },
+   "cost_usd": 0.001844,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "32cad4f5",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "on_call_clinician",
+     "confidence": 0.95
+    },
+    "urgency": {
+     "level": 2,
+     "confidence": 0.92
+    },
+    "red_flag": {
+     "p_yes": 0.15
+    },
+    "medication_issue": {
+     "p_yes": 0.05
+    },
+    "safeguarding": {
+     "p_yes": 0.02
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1918,
+   "duration_ms": 2407,
+   "usage": {
+    "input_tokens": 1206,
+    "output_tokens": 135
+   },
+   "cost_usd": 0.001881,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "08ecd137",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "emergency_services",
+     "confidence": 0.99
+    },
+    "urgency": {
+     "level": 3,
+     "confidence": 0.99
+    },
+    "red_flag": {
+     "p_yes": 0.98
+    },
+    "medication_issue": {
+     "p_yes": 0.95
+    },
+    "safeguarding": {
+     "p_yes": 0.99
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1773,
+   "duration_ms": 2210,
+   "usage": {
+    "input_tokens": 1265,
+    "output_tokens": 132
+   },
+   "cost_usd": 0.001925,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "438de5d2",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "emergency_services",
+     "confidence": 0.95
+    },
+    "urgency": {
+     "level": 3,
+     "confidence": 0.95
+    },
+    "red_flag": {
+     "p_yes": 0.92
+    },
+    "medication_issue": {
+     "p_yes": 0.88
+    },
+    "safeguarding": {
+     "p_yes": 0.02
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1344,
+   "duration_ms": 1809,
+   "usage": {
+    "input_tokens": 1383,
+    "output_tokens": 132
+   },
+   "cost_usd": 0.0020429999999999997,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "d9a018ff",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "on_call_clinician",
+     "confidence": 0.92
+    },
+    "urgency": {
+     "level": 2,
+     "confidence": 0.9
+    },
+    "red_flag": {
+     "p_yes": 0.72
+    },
+    "medication_issue": {
+     "p_yes": 0.98
+    },
+    "safeguarding": {
+     "p_yes": 0.15
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1814,
+   "duration_ms": 2303,
+   "usage": {
+    "input_tokens": 1311,
+    "output_tokens": 135
+   },
+   "cost_usd": 0.001986,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "dc9d203f",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "emergency_services",
+     "confidence": 0.99
+    },
+    "urgency": {
+     "level": 3,
+     "confidence": 0.99
+    },
+    "red_flag": {
+     "p_yes": 0.95
+    },
+    "medication_issue": {
+     "p_yes": 0.01
+    },
+    "safeguarding": {
+     "p_yes": 0.02
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1345,
+   "duration_ms": 1837,
+   "usage": {
+    "input_tokens": 1184,
+    "output_tokens": 132
+   },
+   "cost_usd": 0.001844,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "70d6b7bf",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "pharmacist",
+     "confidence": 0.85
+    },
+    "urgency": {
+     "level": 1,
+     "confidence": 0.8
+    },
+    "red_flag": {
+     "p_yes": 0.05
+    },
+    "medication_issue": {
+     "p_yes": 0.95
+    },
+    "safeguarding": {
+     "p_yes": 0.02
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1745,
+   "duration_ms": 2203,
+   "usage": {
+    "input_tokens": 1342,
+    "output_tokens": 131
+   },
+   "cost_usd": 0.001997,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "295b9587",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "admin",
+     "confidence": 0.99
+    },
+    "urgency": {
+     "level": 0,
+     "confidence": 0.99
+    },
+    "red_flag": {
+     "p_yes": 0.01
+    },
+    "medication_issue": {
+     "p_yes": 0.01
+    },
+    "safeguarding": {
+     "p_yes": 0.01
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1718,
+   "duration_ms": 2043,
+   "usage": {
+    "input_tokens": 1446,
+    "output_tokens": 130
+   },
+   "cost_usd": 0.0020959999999999998,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "c23ede60",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "nurse_callback",
+     "confidence": 0.95
+    },
+    "urgency": {
+     "level": 0,
+     "confidence": 0.92
+    },
+    "red_flag": {
+     "p_yes": 0.02
+    },
+    "medication_issue": {
+     "p_yes": 0.05
+    },
+    "safeguarding": {
+     "p_yes": 0.01
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1764,
+   "duration_ms": 2399,
+   "usage": {
+    "input_tokens": 1268,
+    "output_tokens": 132
+   },
+   "cost_usd": 0.001928,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "33f900e8",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "pharmacist",
+     "confidence": 0.85
+    },
+    "urgency": {
+     "level": 1,
+     "confidence": 0.9
+    },
+    "red_flag": {
+     "p_yes": 0.05
+    },
+    "medication_issue": {
+     "p_yes": 0.92
+    },
+    "safeguarding": {
+     "p_yes": 0.02
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1716,
+   "duration_ms": 2256,
+   "usage": {
+    "input_tokens": 1178,
+    "output_tokens": 131
+   },
+   "cost_usd": 0.001833,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "e2aca450",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "admin",
+     "confidence": 0.98
+    },
+    "urgency": {
+     "level": 0,
+     "confidence": 0.97
+    },
+    "red_flag": {
+     "p_yes": 0.01
+    },
+    "medication_issue": {
+     "p_yes": 0.02
+    },
+    "safeguarding": {
+     "p_yes": 0.01
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1776,
+   "duration_ms": 2233,
+   "usage": {
+    "input_tokens": 1311,
+    "output_tokens": 130
+   },
+   "cost_usd": 0.001961,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "c17f31bc",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "admin",
+     "confidence": 0.95
+    },
+    "urgency": {
+     "level": 0,
+     "confidence": 0.95
+    },
+    "red_flag": {
+     "p_yes": 0.02
+    },
+    "medication_issue": {
+     "p_yes": 0.01
+    },
+    "safeguarding": {
+     "p_yes": 0.01
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1772,
+   "duration_ms": 2342,
+   "usage": {
+    "input_tokens": 1327,
+    "output_tokens": 130
+   },
+   "cost_usd": 0.001977,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "3fbe8589",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "pharmacist",
+     "confidence": 0.92
+    },
+    "urgency": {
+     "level": 1,
+     "confidence": 0.88
+    },
+    "red_flag": {
+     "p_yes": 0.05
+    },
+    "medication_issue": {
+     "p_yes": 0.95
+    },
+    "safeguarding": {
+     "p_yes": 0.02
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1736,
+   "duration_ms": 2223,
+   "usage": {
+    "input_tokens": 1500,
+    "output_tokens": 131
+   },
+   "cost_usd": 0.0021550000000000002,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "1eb84c5b",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "emergency_services",
+     "confidence": 0.99
+    },
+    "urgency": {
+     "level": 3,
+     "confidence": 0.99
+    },
+    "red_flag": {
+     "p_yes": 0.95
+    },
+    "medication_issue": {
+     "p_yes": 0.02
+    },
+    "safeguarding": {
+     "p_yes": 0.05
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1994,
+   "duration_ms": 2474,
+   "usage": {
+    "input_tokens": 1414,
+    "output_tokens": 132
+   },
+   "cost_usd": 0.002074,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "b9632728",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "emergency_services",
+     "confidence": 0.95
+    },
+    "urgency": {
+     "level": 3,
+     "confidence": 0.95
+    },
+    "red_flag": {
+     "p_yes": 0.85
+    },
+    "medication_issue": {
+     "p_yes": 0.05
+    },
+    "safeguarding": {
+     "p_yes": 0.92
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1686,
+   "duration_ms": 2211,
+   "usage": {
+    "input_tokens": 1426,
+    "output_tokens": 132
+   },
+   "cost_usd": 0.002086,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "d8cf2c9b",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "on_call_clinician",
+     "confidence": 0.92
+    },
+    "urgency": {
+     "level": 2,
+     "confidence": 0.9
+    },
+    "red_flag": {
+     "p_yes": 0.28
+    },
+    "medication_issue": {
+     "p_yes": 0.72
+    },
+    "safeguarding": {
+     "p_yes": 0.15
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1804,
+   "duration_ms": 2284,
+   "usage": {
+    "input_tokens": 1347,
+    "output_tokens": 135
+   },
+   "cost_usd": 0.0020220000000000004,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "ad682635",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "on_call_clinician",
+     "confidence": 0.85
+    },
+    "urgency": {
+     "level": 2,
+     "confidence": 0.85
+    },
+    "red_flag": {
+     "p_yes": 0.15
+    },
+    "medication_issue": {
+     "p_yes": 0.05
+    },
+    "safeguarding": {
+     "p_yes": 0.75
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1772,
+   "duration_ms": 2234,
+   "usage": {
+    "input_tokens": 1360,
+    "output_tokens": 135
+   },
+   "cost_usd": 0.0020350000000000004,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "ab229778",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "pharmacist",
+     "confidence": 0.95
+    },
+    "urgency": {
+     "level": 1,
+     "confidence": 0.9
+    },
+    "red_flag": {
+     "p_yes": 0.05
+    },
+    "medication_issue": {
+     "p_yes": 0.92
+    },
+    "safeguarding": {
+     "p_yes": 0.02
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1763,
+   "duration_ms": 2019,
+   "usage": {
+    "input_tokens": 1328,
+    "output_tokens": 131
+   },
+   "cost_usd": 0.001983,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "8e394032",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "on_call_clinician",
+     "confidence": 0.85
+    },
+    "urgency": {
+     "level": 2,
+     "confidence": 0.82
+    },
+    "red_flag": {
+     "p_yes": 0.25
+    },
+    "medication_issue": {
+     "p_yes": 0.05
+    },
+    "safeguarding": {
+     "p_yes": 0.02
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1784,
+   "duration_ms": 2261,
+   "usage": {
+    "input_tokens": 1269,
+    "output_tokens": 135
+   },
+   "cost_usd": 0.001944,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "7b9ffa3a",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "emergency_services",
+     "confidence": 0.92
+    },
+    "urgency": {
+     "level": 3,
+     "confidence": 0.92
+    },
+    "red_flag": {
+     "p_yes": 0.88
+    },
+    "medication_issue": {
+     "p_yes": 0.15
+    },
+    "safeguarding": {
+     "p_yes": 0.05
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1349,
+   "duration_ms": 1884,
+   "usage": {
+    "input_tokens": 1410,
+    "output_tokens": 132
+   },
+   "cost_usd": 0.00207,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "d3eb5806",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "pharmacist",
+     "confidence": 0.95
+    },
+    "urgency": {
+     "level": 1,
+     "confidence": 0.9
+    },
+    "red_flag": {
+     "p_yes": 0.02
+    },
+    "medication_issue": {
+     "p_yes": 0.88
+    },
+    "safeguarding": {
+     "p_yes": 0.01
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1387,
+   "duration_ms": 1850,
+   "usage": {
+    "input_tokens": 1171,
+    "output_tokens": 131
+   },
+   "cost_usd": 0.001826,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "77cc36dc",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "on_call_clinician",
+     "confidence": 0.85
+    },
+    "urgency": {
+     "level": 2,
+     "confidence": 0.8
+    },
+    "red_flag": {
+     "p_yes": 0.15
+    },
+    "medication_issue": {
+     "p_yes": 0.1
+    },
+    "safeguarding": {
+     "p_yes": 0.05
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1799,
+   "duration_ms": 2301,
+   "usage": {
+    "input_tokens": 1221,
+    "output_tokens": 135
+   },
+   "cost_usd": 0.0018960000000000001,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "33e7febe",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "emergency_services",
+     "confidence": 0.95
+    },
+    "urgency": {
+     "level": 3,
+     "confidence": 0.95
+    },
+    "red_flag": {
+     "p_yes": 0.92
+    },
+    "medication_issue": {
+     "p_yes": 0.15
+    },
+    "safeguarding": {
+     "p_yes": 0.05
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1759,
+   "duration_ms": 2174,
+   "usage": {
+    "input_tokens": 1199,
+    "output_tokens": 132
+   },
+   "cost_usd": 0.001859,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "7c4cfd01",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "emergency_services",
+     "confidence": 0.95
+    },
+    "urgency": {
+     "level": 3,
+     "confidence": 0.95
+    },
+    "red_flag": {
+     "p_yes": 0.92
+    },
+    "medication_issue": {
+     "p_yes": 0.88
+    },
+    "safeguarding": {
+     "p_yes": 0.05
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1506,
+   "duration_ms": 1743,
+   "usage": {
+    "input_tokens": 1252,
+    "output_tokens": 132
+   },
+   "cost_usd": 0.001912,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "ad76f4f3",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "emergency_services",
+     "confidence": 0.98
+    },
+    "urgency": {
+     "level": 3,
+     "confidence": 0.98
+    },
+    "red_flag": {
+     "p_yes": 0.95
+    },
+    "medication_issue": {
+     "p_yes": 0.02
+    },
+    "safeguarding": {
+     "p_yes": 0.05
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1533,
+   "duration_ms": 2048,
+   "usage": {
+    "input_tokens": 1275,
+    "output_tokens": 132
+   },
+   "cost_usd": 0.001935,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "6859f8e8",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "emergency_services",
+     "confidence": 0.92
+    },
+    "urgency": {
+     "level": 3,
+     "confidence": 0.93
+    },
+    "red_flag": {
+     "p_yes": 0.88
+    },
+    "medication_issue": {
+     "p_yes": 0.15
+    },
+    "safeguarding": {
+     "p_yes": 0.05
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1764,
+   "duration_ms": 2179,
+   "usage": {
+    "input_tokens": 1399,
+    "output_tokens": 132
+   },
+   "cost_usd": 0.002059,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "7003f5e0",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "pharmacist",
+     "confidence": 0.92
+    },
+    "urgency": {
+     "level": 0,
+     "confidence": 0.88
+    },
+    "red_flag": {
+     "p_yes": 0.02
+    },
+    "medication_issue": {
+     "p_yes": 0.95
+    },
+    "safeguarding": {
+     "p_yes": 0.01
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1705,
+   "duration_ms": 2186,
+   "usage": {
+    "input_tokens": 1308,
+    "output_tokens": 131
+   },
+   "cost_usd": 0.001963,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "066a0dd6",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "admin",
+     "confidence": 0.95
+    },
+    "urgency": {
+     "level": 0,
+     "confidence": 0.95
+    },
+    "red_flag": {
+     "p_yes": 0.01
+    },
+    "medication_issue": {
+     "p_yes": 0.02
+    },
+    "safeguarding": {
+     "p_yes": 0.01
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1745,
+   "duration_ms": 2008,
+   "usage": {
+    "input_tokens": 1317,
+    "output_tokens": 130
+   },
+   "cost_usd": 0.001967,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "b620ca9c",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "pharmacist",
+     "confidence": 0.95
+    },
+    "urgency": {
+     "level": 1,
+     "confidence": 0.9
+    },
+    "red_flag": {
+     "p_yes": 0.02
+    },
+    "medication_issue": {
+     "p_yes": 0.85
+    },
+    "safeguarding": {
+     "p_yes": 0.01
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1784,
+   "duration_ms": 2223,
+   "usage": {
+    "input_tokens": 1173,
+    "output_tokens": 131
+   },
+   "cost_usd": 0.0018280000000000002,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "413a1701",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "pharmacist",
+     "confidence": 0.95
+    },
+    "urgency": {
+     "level": 0,
+     "confidence": 0.9
+    },
+    "red_flag": {
+     "p_yes": 0.05
+    },
+    "medication_issue": {
+     "p_yes": 0.9
+    },
+    "safeguarding": {
+     "p_yes": 0.02
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1719,
+   "duration_ms": 2248,
+   "usage": {
+    "input_tokens": 1281,
+    "output_tokens": 131
+   },
+   "cost_usd": 0.0019360000000000002,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "58d2d069",
+   "split": "test",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "nurse_callback",
+     "confidence": 0.85
+    },
+    "urgency": {
+     "level": 1,
+     "confidence": 0.82
+    },
+    "red_flag": {
+     "p_yes": 0.05
+    },
+    "medication_issue": {
+     "p_yes": 0.15
+    },
+    "safeguarding": {
+     "p_yes": 0.25
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1799,
+   "duration_ms": 2129,
+   "usage": {
+    "input_tokens": 1199,
+    "output_tokens": 132
+   },
+   "cost_usd": 0.001859,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "b208a7ec",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "emergency_services",
+     "confidence": 0.95
+    },
+    "urgency": {
+     "level": 3,
+     "confidence": 0.95
+    },
+    "red_flag": {
+     "p_yes": 0.92
+    },
+    "medication_issue": {
+     "p_yes": 0.05
+    },
+    "safeguarding": {
+     "p_yes": 0.02
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1693,
+   "duration_ms": 2181,
+   "usage": {
+    "input_tokens": 1237,
+    "output_tokens": 132
+   },
+   "cost_usd": 0.001897,
+   "model": "claude-haiku-4-5"
+  },
+  {
+   "patient": "da555fea",
+   "split": "dev",
+   "thinking": false,
+   "answers": {
+    "route": {
+     "choice": "pharmacist",
+     "confidence": 0.95
+    },
+    "urgency": {
+     "level": 0,
+     "confidence": 0.92
+    },
+    "red_flag": {
+     "p_yes": 0.01
+    },
+    "medication_issue": {
+     "p_yes": 0.88
+    },
+    "safeguarding": {
+     "p_yes": 0.02
+    }
+   },
+   "raw": null,
+   "is_error": false,
+   "duration_api_ms": 1338,
+   "duration_ms": 1897,
+   "usage": {
+    "input_tokens": 1217,
+    "output_tokens": 131
+   },
+   "cost_usd": 0.001872,
+   "model": "claude-haiku-4-5"
+  }
+ ]
+}

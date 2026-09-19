@@ -141,37 +141,31 @@ def s1_policy(run="s1_ward_gen") -> dict:
 
 
 def s2_policy() -> dict:
-    """v1 (single verification Nouls) vs v2 (decomposed) on hand and generated test cases."""
+    """v1 (single verification Nouls) vs v2 (decomposed) vs v2.1 (revised 'new drug' Noul)."""
     from . import s2_discharge as s2
+    variants = {"v1": ("", s2.decide), "v2": ("_v2", s2.decide_v2), "v2.1": ("_v21", s2.decide_v21)}
     out = {}
-    for label, v1run, v2run, split in (("hand", "s2_discharge", "s2_discharge_v2", None),
-                                       ("gen_test", "s2_discharge_gen", "s2_discharge_gen_v2", "test"),
-                                       ("gen_dev", "s2_discharge_gen", "s2_discharge_gen_v2", "dev")):
-        _, cases, r1 = _load(v1run)
-        _, _, r2 = _load(v2run)
-        a2 = {c["patient"]: c["answers"] for c in r2["cases"]}
-        rows = []
-        for r in r1["cases"]:
-            if split and r["split"] != split:
-                continue
-            case = cases[r["patient"]]
-            rows.append((s2.decide(case, r["answers"]), s2.decide_v2(case, a2[r["patient"]]), s2.reference(case)))
-        n = len(rows)
-        flag = {}
-        for f in s2.VERIFY:
-            for v, idx in (("v1", 0), ("v2", 1)):
-                tp = sum(x[idx]["flags"][f] and x[2]["flags"][f] for x in rows)
-                fp = sum(x[idx]["flags"][f] and not x[2]["flags"][f] for x in rows)
-                fn = sum(not x[idx]["flags"][f] and x[2]["flags"][f] for x in rows)
-                flag.setdefault(f, {})[v] = {"accuracy": sum(x[idx]["flags"][f] == x[2]["flags"][f] for x in rows) / n,
-                                             "tp": tp, "fp": fp, "fn": fn}
-        out[label] = {"n": n, "flags": flag,
-                      "action_v1": sum(x[0]["action"] == x[2]["action"] for x in rows) / n,
-                      "action_v2": sum(x[1]["action"] == x[2]["action"] for x in rows) / n,
-                      "missed_holds_v1": sum(x[2]["action"] == 2 and x[0]["action"] < 2 for x in rows),
-                      "missed_holds_v2": sum(x[2]["action"] == 2 and x[1]["action"] < 2 for x in rows),
-                      "false_holds_v1": sum(x[2]["action"] < 2 and x[0]["action"] == 2 for x in rows),
-                      "false_holds_v2": sum(x[2]["action"] < 2 and x[1]["action"] == 2 for x in rows)}
+    for label, base, split in (("hand", "s2_discharge", None), ("gen_dev", "s2_discharge_gen", "dev"),
+                               ("gen_test", "s2_discharge_gen", "test")):
+        _, cases, r1 = _load(base)
+        answers = {v: {c["patient"]: c["answers"] for c in _load(base + suffix)[2]["cases"]}
+                   for v, (suffix, _) in variants.items()}
+        pids = [r["patient"] for r in r1["cases"] if not split or r["split"] == split]
+        ref = {pid: s2.reference(cases[pid]) for pid in pids}
+        n = len(pids)
+        res = {"n": n}
+        for v, (_, decide) in variants.items():
+            dec = {pid: decide(cases[pid], answers[v][pid]) for pid in pids}
+            res[v] = {
+                "action": sum(dec[p]["action"] == ref[p]["action"] for p in pids) / n,
+                "missed_holds": sum(ref[p]["action"] == 2 and dec[p]["action"] < 2 for p in pids),
+                "false_holds": sum(ref[p]["action"] < 2 and dec[p]["action"] == 2 for p in pids),
+                "flags": {f: {"accuracy": sum(dec[p]["flags"][f] == ref[p]["flags"][f] for p in pids) / n,
+                              "fp": sum(dec[p]["flags"][f] and not ref[p]["flags"][f] for p in pids),
+                              "fn": sum(ref[p]["flags"][f] and not dec[p]["flags"][f] for p in pids)}
+                          for f in s2.VERIFY},
+            }
+        out[label] = res
     return out
 
 
@@ -326,7 +320,8 @@ def main() -> None:
         "s1_policy": s1_policy(), "s2_policy": s2_policy(), "s3_gate": s3_gate(),
         "s4": s4("jev"), "s5": s5(),
         "perf": {r: perf(r) for r in ("s1_ward_gen", "s2_discharge_gen", "s3_inbox_gen", "s2_discharge_v2",
-                                      "s2_discharge_gen_v2", "s4_search", "s5_features")},
+                                      "s2_discharge_gen_v2", "s2_discharge_v21", "s2_discharge_gen_v21",
+                                      "s4_search", "s5_features")},
         "haiku": haiku_compare(),
     }
     (RESULTS_DIR / "evaluation2.json").write_text(json.dumps(out, indent=1, default=float) + "\n")

@@ -276,162 +276,210 @@
  "s2_policy": {
   "hand": {
    "n": 20,
-   "flags": {
-    "allergy_conflict": {
-     "v1": {
+   "v1": {
+    "action": 0.55,
+    "missed_holds": 0,
+    "false_holds": 8,
+    "flags": {
+     "allergy_conflict": {
       "accuracy": 1.0,
-      "tp": 2,
       "fp": 0,
       "fn": 0
      },
-     "v2": {
-      "accuracy": 0.9,
-      "tp": 0,
-      "fp": 0,
-      "fn": 2
-     }
-    },
-    "duplicate_therapy": {
-     "v1": {
+     "duplicate_therapy": {
       "accuracy": 0.7,
-      "tp": 4,
       "fp": 6,
       "fn": 0
      },
-     "v2": {
-      "accuracy": 0.9,
-      "tp": 4,
-      "fp": 2,
+     "interaction": {
+      "accuracy": 0.75,
+      "fp": 5,
       "fn": 0
      }
-    },
-    "interaction": {
-     "v1": {
+    }
+   },
+   "v2": {
+    "action": 0.75,
+    "missed_holds": 2,
+    "false_holds": 2,
+    "flags": {
+     "allergy_conflict": {
+      "accuracy": 0.9,
+      "fp": 0,
+      "fn": 2
+     },
+     "duplicate_therapy": {
+      "accuracy": 0.9,
+      "fp": 2,
+      "fn": 0
+     },
+     "interaction": {
+      "accuracy": 1.0,
+      "fp": 0,
+      "fn": 0
+     }
+    }
+   },
+   "v2.1": {
+    "action": 0.7,
+    "missed_holds": 0,
+    "false_holds": 6,
+    "flags": {
+     "allergy_conflict": {
+      "accuracy": 1.0,
+      "fp": 0,
+      "fn": 0
+     },
+     "duplicate_therapy": {
       "accuracy": 0.75,
-      "tp": 4,
       "fp": 5,
       "fn": 0
      },
-     "v2": {
-      "accuracy": 1.0,
-      "tp": 4,
-      "fp": 0,
+     "interaction": {
+      "accuracy": 0.75,
+      "fp": 5,
       "fn": 0
      }
     }
-   },
-   "action_v1": 0.55,
-   "action_v2": 0.75,
-   "missed_holds_v1": 0,
-   "missed_holds_v2": 2,
-   "false_holds_v1": 8,
-   "false_holds_v2": 2
-  },
-  "gen_test": {
-   "n": 40,
-   "flags": {
-    "allergy_conflict": {
-     "v1": {
-      "accuracy": 1.0,
-      "tp": 10,
-      "fp": 0,
-      "fn": 0
-     },
-     "v2": {
-      "accuracy": 0.85,
-      "tp": 4,
-      "fp": 0,
-      "fn": 6
-     }
-    },
-    "duplicate_therapy": {
-     "v1": {
-      "accuracy": 0.85,
-      "tp": 17,
-      "fp": 6,
-      "fn": 0
-     },
-     "v2": {
-      "accuracy": 0.9,
-      "tp": 13,
-      "fp": 0,
-      "fn": 4
-     }
-    },
-    "interaction": {
-     "v1": {
-      "accuracy": 0.675,
-      "tp": 7,
-      "fp": 13,
-      "fn": 0
-     },
-     "v2": {
-      "accuracy": 0.875,
-      "tp": 3,
-      "fp": 1,
-      "fn": 4
-     }
-    }
-   },
-   "action_v1": 0.85,
-   "action_v2": 0.75,
-   "missed_holds_v1": 0,
-   "missed_holds_v2": 9,
-   "false_holds_v1": 4,
-   "false_holds_v2": 0
+   }
   },
   "gen_dev": {
    "n": 40,
-   "flags": {
-    "allergy_conflict": {
-     "v1": {
+   "v1": {
+    "action": 0.95,
+    "missed_holds": 0,
+    "false_holds": 2,
+    "flags": {
+     "allergy_conflict": {
       "accuracy": 1.0,
-      "tp": 5,
       "fp": 0,
       "fn": 0
      },
-     "v2": {
-      "accuracy": 0.9,
-      "tp": 2,
-      "fp": 1,
-      "fn": 3
-     }
-    },
-    "duplicate_therapy": {
-     "v1": {
+     "duplicate_therapy": {
       "accuracy": 0.875,
-      "tp": 22,
       "fp": 4,
       "fn": 1
      },
-     "v2": {
-      "accuracy": 0.875,
-      "tp": 18,
-      "fp": 0,
-      "fn": 5
-     }
-    },
-    "interaction": {
-     "v1": {
+     "interaction": {
       "accuracy": 0.7,
-      "tp": 18,
       "fp": 12,
       "fn": 0
+     }
+    }
+   },
+   "v2": {
+    "action": 0.7,
+    "missed_holds": 12,
+    "false_holds": 0,
+    "flags": {
+     "allergy_conflict": {
+      "accuracy": 0.9,
+      "fp": 1,
+      "fn": 3
      },
-     "v2": {
+     "duplicate_therapy": {
+      "accuracy": 0.875,
+      "fp": 0,
+      "fn": 5
+     },
+     "interaction": {
       "accuracy": 0.675,
-      "tp": 6,
       "fp": 1,
       "fn": 12
      }
     }
    },
-   "action_v1": 0.95,
-   "action_v2": 0.7,
-   "missed_holds_v1": 0,
-   "missed_holds_v2": 12,
-   "false_holds_v1": 2,
-   "false_holds_v2": 0
+   "v2.1": {
+    "action": 1.0,
+    "missed_holds": 0,
+    "false_holds": 0,
+    "flags": {
+     "allergy_conflict": {
+      "accuracy": 0.975,
+      "fp": 1,
+      "fn": 0
+     },
+     "duplicate_therapy": {
+      "accuracy": 1.0,
+      "fp": 0,
+      "fn": 0
+     },
+     "interaction": {
+      "accuracy": 0.775,
+      "fp": 9,
+      "fn": 0
+     }
+    }
+   }
+  },
+  "gen_test": {
+   "n": 40,
+   "v1": {
+    "action": 0.85,
+    "missed_holds": 0,
+    "false_holds": 4,
+    "flags": {
+     "allergy_conflict": {
+      "accuracy": 1.0,
+      "fp": 0,
+      "fn": 0
+     },
+     "duplicate_therapy": {
+      "accuracy": 0.85,
+      "fp": 6,
+      "fn": 0
+     },
+     "interaction": {
+      "accuracy": 0.675,
+      "fp": 13,
+      "fn": 0
+     }
+    }
+   },
+   "v2": {
+    "action": 0.75,
+    "missed_holds": 9,
+    "false_holds": 0,
+    "flags": {
+     "allergy_conflict": {
+      "accuracy": 0.85,
+      "fp": 0,
+      "fn": 6
+     },
+     "duplicate_therapy": {
+      "accuracy": 0.9,
+      "fp": 0,
+      "fn": 4
+     },
+     "interaction": {
+      "accuracy": 0.875,
+      "fp": 1,
+      "fn": 4
+     }
+    }
+   },
+   "v2.1": {
+    "action": 0.95,
+    "missed_holds": 0,
+    "false_holds": 1,
+    "flags": {
+     "allergy_conflict": {
+      "accuracy": 1.0,
+      "fp": 0,
+      "fn": 0
+     },
+     "duplicate_therapy": {
+      "accuracy": 0.95,
+      "fp": 1,
+      "fn": 1
+     },
+     "interaction": {
+      "accuracy": 0.725,
+      "fp": 11,
+      "fn": 0
+     }
+    }
+   }
   }
  },
  "s3_gate": {
@@ -627,6 +675,34 @@
    "input_tokens": 535103,
    "output_tokens": 221142,
    "cost_usd": 0.022474326000000003
+  },
+  "s2_discharge_v21": {
+   "model": [
+    "jev-1.13.0"
+   ],
+   "requests": 20,
+   "questions": 615,
+   "concurrency": 1,
+   "wall_seconds": 7.6,
+   "p50_ms": 342,
+   "p95_ms": 437,
+   "input_tokens": 140386,
+   "output_tokens": 58063,
+   "cost_usd": 0.0058962120000000005
+  },
+  "s2_discharge_gen_v21": {
+   "model": [
+    "jev-1.13.0"
+   ],
+   "requests": 80,
+   "questions": 2457,
+   "concurrency": 1,
+   "wall_seconds": 27.0,
+   "p50_ms": 334,
+   "p95_ms": 389,
+   "input_tokens": 539104,
+   "output_tokens": 221142,
+   "cost_usd": 0.022642368000000003
   },
   "s4_search": {
    "model": [
@@ -1094,6 +1170,412 @@
     "input_tokens": 81661,
     "output_tokens": 12442,
     "cost_usd": 0.0034297620000000003
+   }
+  },
+  "s2_discharge_gen": {
+   "jev": {
+    "med_status": {
+     "type": "Choice",
+     "dev": {
+      "n": 272,
+      "accuracy": 0.9852941176470589
+     },
+     "test": {
+      "n": 254,
+      "accuracy": 0.984251968503937
+     }
+    },
+    "allergy_conflict": {
+     "type": "Noul",
+     "dev": {
+      "n": 40,
+      "accuracy": 1.0,
+      "brier": 0.0214425
+     },
+     "test": {
+      "n": 40,
+      "accuracy": 1.0,
+      "brier": 0.017192500000000003
+     }
+    },
+    "duplicate_therapy": {
+     "type": "Noul",
+     "dev": {
+      "n": 40,
+      "accuracy": 0.875,
+      "brier": 0.11334
+     },
+     "test": {
+      "n": 40,
+      "accuracy": 0.85,
+      "brier": 0.1209925
+     }
+    },
+    "interaction": {
+     "type": "Noul",
+     "dev": {
+      "n": 40,
+      "accuracy": 0.7,
+      "brier": 0.205695
+     },
+     "test": {
+      "n": 40,
+      "accuracy": 0.675,
+      "brier": 0.23338
+     }
+    },
+    "justification": {
+     "type": "Score",
+     "dev": {
+      "n": 40,
+      "exact": 0.6,
+      "mae": 0.54825
+     },
+     "test": {
+      "n": 40,
+      "exact": 0.6,
+      "mae": 0.47175
+     }
+    }
+   },
+   "haiku": {
+    "med_status": {
+     "type": "Choice",
+     "dev": {
+      "n": 272,
+      "accuracy": 0.8786764705882353
+     },
+     "test": {
+      "n": 254,
+      "accuracy": 0.9173228346456693
+     }
+    },
+    "allergy_conflict": {
+     "type": "Noul",
+     "dev": {
+      "n": 40,
+      "accuracy": 1.0,
+      "brier": 0.00283
+     },
+     "test": {
+      "n": 40,
+      "accuracy": 0.975,
+      "brier": 0.02451
+     }
+    },
+    "duplicate_therapy": {
+     "type": "Noul",
+     "dev": {
+      "n": 40,
+      "accuracy": 0.8,
+      "brier": 0.173455
+     },
+     "test": {
+      "n": 40,
+      "accuracy": 0.8,
+      "brier": 0.173005
+     }
+    },
+    "interaction": {
+     "type": "Noul",
+     "dev": {
+      "n": 40,
+      "accuracy": 0.675,
+      "brier": 0.2237775
+     },
+     "test": {
+      "n": 40,
+      "accuracy": 0.75,
+      "brier": 0.172615
+     }
+    },
+    "justification": {
+     "type": "Score",
+     "dev": {
+      "n": 40,
+      "exact": 0.35,
+      "mae": 0.7
+     },
+     "test": {
+      "n": 40,
+      "exact": 0.425,
+      "mae": 0.65
+     }
+    }
+   },
+   "haiku_perf": {
+    "model": "claude-haiku-4-5",
+    "parsed": 80,
+    "requests": 80,
+    "p50_ms": 2512,
+    "p95_ms": 3690,
+    "input_tokens": 220173,
+    "output_tokens": 23190,
+    "cost_usd": 0.336123
+   },
+   "jev_perf": {
+    "model": [
+     "jev-1.13.0"
+    ],
+    "requests": 80,
+    "questions": 846,
+    "concurrency": 1,
+    "wall_seconds": 25.8,
+    "p50_ms": 320,
+    "p95_ms": 367,
+    "input_tokens": 197088,
+    "output_tokens": 36637,
+    "cost_usd": 0.008277696000000001
+   }
+  },
+  "s3_inbox_gen": {
+   "jev": {
+    "route": {
+     "type": "Choice",
+     "dev": {
+      "n": 40,
+      "accuracy": 0.85
+     },
+     "test": {
+      "n": 40,
+      "accuracy": 0.85
+     }
+    },
+    "urgency": {
+     "type": "Score",
+     "dev": {
+      "n": 40,
+      "exact": 0.8,
+      "mae": 0.245
+     },
+     "test": {
+      "n": 40,
+      "exact": 0.8,
+      "mae": 0.2225
+     }
+    },
+    "red_flag": {
+     "type": "Noul",
+     "dev": {
+      "n": 40,
+      "accuracy": 0.85,
+      "brier": 0.0789175
+     },
+     "test": {
+      "n": 40,
+      "accuracy": 0.825,
+      "brier": 0.0837925
+     }
+    },
+    "medication_issue": {
+     "type": "Noul",
+     "dev": {
+      "n": 40,
+      "accuracy": 1.0,
+      "brier": 0.026320000000000003
+     },
+     "test": {
+      "n": 40,
+      "accuracy": 0.95,
+      "brier": 0.0647225
+     }
+    },
+    "safeguarding": {
+     "type": "Noul",
+     "dev": {
+      "n": 40,
+      "accuracy": 0.775,
+      "brier": 0.12432750000000001
+     },
+     "test": {
+      "n": 40,
+      "accuracy": 0.725,
+      "brier": 0.19885
+     }
+    }
+   },
+   "haiku": {
+    "route": {
+     "type": "Choice",
+     "dev": {
+      "n": 40,
+      "accuracy": 0.95
+     },
+     "test": {
+      "n": 40,
+      "accuracy": 0.925
+     }
+    },
+    "urgency": {
+     "type": "Score",
+     "dev": {
+      "n": 40,
+      "exact": 0.85,
+      "mae": 0.15
+     },
+     "test": {
+      "n": 40,
+      "exact": 0.825,
+      "mae": 0.175
+     }
+    },
+    "red_flag": {
+     "type": "Noul",
+     "dev": {
+      "n": 40,
+      "accuracy": 0.9,
+      "brier": 0.06937499999999999
+     },
+     "test": {
+      "n": 40,
+      "accuracy": 0.85,
+      "brier": 0.1074275
+     }
+    },
+    "medication_issue": {
+     "type": "Noul",
+     "dev": {
+      "n": 40,
+      "accuracy": 0.975,
+      "brier": 0.0185525
+     },
+     "test": {
+      "n": 40,
+      "accuracy": 0.9,
+      "brier": 0.068475
+     }
+    },
+    "safeguarding": {
+     "type": "Noul",
+     "dev": {
+      "n": 40,
+      "accuracy": 1.0,
+      "brier": 0.008145
+     },
+     "test": {
+      "n": 40,
+      "accuracy": 1.0,
+      "brier": 0.0088075
+     }
+    }
+   },
+   "haiku_perf": {
+    "model": "claude-haiku-4-5",
+    "parsed": 80,
+    "requests": 80,
+    "p50_ms": 1744,
+    "p95_ms": 1922,
+    "input_tokens": 103757,
+    "output_tokens": 10545,
+    "cost_usd": 0.156482
+   },
+   "jev_perf": {
+    "model": [
+     "jev-1.13.0"
+    ],
+    "requests": 80,
+    "questions": 400,
+    "concurrency": 1,
+    "wall_seconds": 25.7,
+    "p50_ms": 318,
+    "p95_ms": 365,
+    "input_tokens": 69731,
+    "output_tokens": 10995,
+    "cost_usd": 0.002928702
+   }
+  },
+  "s4_search": {
+   "jev": {
+    "note_level": {
+     "precision": 0.7600700525394045,
+     "recall": 0.9977011494252873,
+     "f1": 0.8628230616302187
+    },
+    "lay_keyword_note_level": {
+     "precision": 0.6369047619047619,
+     "recall": 0.24597701149425288,
+     "f1": 0.3548922056384743
+    },
+    "patient_any_noul": {
+     "accuracy": 0.96,
+     "precision": 0.8909090909090909,
+     "recall": 1.0,
+     "f1": 0.9423076923076923
+    },
+    "patient_from_notes": {
+     "accuracy": 0.97,
+     "precision": 0.9158878504672897,
+     "recall": 1.0,
+     "f1": 0.9560975609756098
+    },
+    "best_note_choice_accuracy": 0.93,
+    "notes_judged": 2922,
+    "cases": 300,
+    "perf": {
+     "model": [
+      "jev-1.13.0"
+     ],
+     "requests": 300,
+     "questions": 3522,
+     "concurrency": 8,
+     "wall_seconds": 13.5,
+     "p50_ms": 324,
+     "p95_ms": 436,
+     "input_tokens": 1332484,
+     "output_tokens": 91428,
+     "cost_usd": 0.055964328
+    }
+   },
+   "haiku": {
+    "note_level": {
+     "precision": 0.7045454545454546,
+     "recall": 0.9977011494252873,
+     "f1": 0.8258801141769743
+    },
+    "lay_keyword_note_level": {
+     "precision": 0.6369047619047619,
+     "recall": 0.24597701149425288,
+     "f1": 0.3548922056384743
+    },
+    "patient_any_noul": {
+     "accuracy": 0.9433333333333334,
+     "precision": 0.8521739130434782,
+     "recall": 1.0,
+     "f1": 0.92018779342723
+    },
+    "patient_from_notes": {
+     "accuracy": 0.9433333333333334,
+     "precision": 0.8521739130434782,
+     "recall": 1.0,
+     "f1": 0.92018779342723
+    },
+    "best_note_choice_accuracy": 0.8866666666666667,
+    "notes_judged": 2922,
+    "cases": 300
+   },
+   "haiku_perf": {
+    "model": "claude-haiku-4-5",
+    "parsed": 300,
+    "requests": 300,
+    "p50_ms": 2216,
+    "p95_ms": 2635,
+    "input_tokens": 206793,
+    "output_tokens": 66473,
+    "cost_usd": 3.2938074
+   },
+   "jev_perf": {
+    "model": [
+     "jev-1.13.0"
+    ],
+    "requests": 300,
+    "questions": 3522,
+    "concurrency": 8,
+    "wall_seconds": 13.5,
+    "p50_ms": 324,
+    "p95_ms": 436,
+    "input_tokens": 1332484,
+    "output_tokens": 91428,
+    "cost_usd": 0.055964328
    }
   }
  }

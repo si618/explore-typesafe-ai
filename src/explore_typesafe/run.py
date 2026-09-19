@@ -35,6 +35,7 @@ RUNS = {
     "s2_discharge_v21": ("s2_discharge", "s2_discharge", "_v21", 1),
     "s2_discharge_gen_v21": ("s2_discharge_gen", "s2_discharge", "_v21", 1),
     "s4_search": ("s4_search", "s4_search", "", 8),
+    "s4_search_notes": ("s4_search_notes", "s4_search", "_note", 8),
     "s5_features": ("s5_features", "s5_features", "", 8),
 }
 SCENARIOS = ["s1_ward", "s2_discharge", "s3_inbox"]  # the original hand-authored runs
