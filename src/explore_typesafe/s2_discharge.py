@@ -9,6 +9,7 @@ Code turns those into a pharmacist action.
 from __future__ import annotations
 
 from .common import YES, choice, noul, patient, score
+from .formulary import CLASSES, FORMULARY, drug_allergies
 
 ACTIONS = ["release", "pharmacist_review", "hold"]
 STATUS = {
@@ -121,3 +122,81 @@ def uncertain(case: dict, answers: dict) -> list[str]:
     if low:
         reasons.append(f"low confidence on {len(low)} medication status(es)")
     return reasons
+
+
+# --- v2: decomposed verification ----------------------------------------------------
+# The single "duplicate" and "interaction" Nouls need several hops (enumerate the
+# regimen, classify each drug, compare pairs). v2 asks each hop as its own narrow
+# question in one fanned-out request and aggregates in code.
+
+CLASS_OPTIONS = {c: c.replace("_", " ") for c in CLASSES} | {
+    "other": "none of the listed classes",
+}
+
+
+def _candidates(case: dict) -> list[str]:
+    """New-drug candidates: formulary names in the text that are not in the pre-admission list (exact lookup, in code)."""
+    pre = " ".join(patient(case["patient"])["active_medications"]).lower()
+    seen = []
+    for m in FORMULARY.finditer(case["discharge_text"]):
+        name = m.group(0)
+        if name.lower() not in pre and name.lower() not in [s.lower() for s in seen]:
+            seen.append(name)
+    return seen
+
+
+def _class_q(drug: str) -> dict:
+    return choice(f"Which therapeutic class does the medication '{drug}' belong to?", CLASS_OPTIONS)
+
+
+def questions_v2(case: dict) -> dict:
+    p = patient(case["patient"])
+    meds, cands = p["active_medications"], _candidates(case)
+    qs = {f"med_{i}": choice(
+        f"According to `discharge_medication_text`, what happens at discharge to the pre-admission medication "
+        f"`pre_admission_medications[{i}]` ({m})?", STATUS) for i, m in enumerate(meds)}
+    qs |= {f"cls_m{i}": _class_q(m) for i, m in enumerate(meds)}
+    qs |= {f"cls_c{k}": _class_q(c) for k, c in enumerate(cands)}
+    qs |= {f"new_c{k}": noul(
+        f"Does `discharge_medication_text` start '{c}' as a new medication that the patient was not taking before "
+        f"admission (it is not in `pre_admission_medications`)?") for k, c in enumerate(cands)}
+    others = [("m", i, m) for i, m in enumerate(meds)] + [("c", k, c) for k, c in enumerate(cands)]
+    for k, c in enumerate(cands):
+        for kind, j, o in others:
+            if (kind, j) != ("c", k):
+                qs[f"int_c{k}_{kind}{j}"] = noul(
+                    f"Is there a well-known, clinically important interaction between '{c}' and '{o}' that prescribing "
+                    f"guidance says to avoid or to manage actively?")
+    for a_i, a in enumerate(drug_allergies(p["allergies"])):
+        for kind, j, o in others:
+            qs[f"alg_{kind}{j}_a{a_i}"] = noul(
+                f"Is '{o}' the same drug as, or in the same drug class as, '{a}', so that a patient allergic to "
+                f"'{a}' should not be given it?")
+    qs["justification"] = JUSTIFICATION
+    return qs
+
+
+def state_v2(case: dict) -> dict:
+    return state(case) | {"candidates": _candidates(case)}
+
+
+def decide_v2(case: dict, answers: dict) -> dict:
+    p = patient(case["patient"])
+    meds, cands = p["active_medications"], _candidates(case)
+    kept = {("m", i) for i in range(len(meds)) if answers[f"med_{i}"]["choice"] in ("continued", "dose_changed")}
+    new = {("c", k) for k in range(len(cands)) if answers[f"new_c{k}"]["noul"] >= YES}
+    regimen = kept | new
+    cls = {("m", i): answers[f"cls_m{i}"]["choice"] for i in range(len(meds))} | \
+          {("c", k): answers[f"cls_c{k}"]["choice"] for k in range(len(cands))}
+    classes = [cls[x] for x in regimen if cls[x] != "other"]
+    flags = {
+        "allergy_conflict": any(answers[q]["noul"] >= YES for q in answers if q.startswith("alg_")
+                                and ((q.split("_")[1][0], int(q.split("_")[1][1:])) in regimen)),
+        "duplicate_therapy": len(classes) != len(set(classes)),
+        "interaction": any(answers[q]["noul"] >= YES for q in answers if q.startswith("int_")
+                           and ("c", int(q.split("_")[1][1:])) in new
+                           and (q.split("_")[2][0], int(q.split("_")[2][1:])) in regimen),
+    }
+    statuses = [answers[f"med_{i}"]["choice"] for i in range(len(meds))]
+    return {"statuses": statuses, "flags": flags, "candidates": cands,
+            "action": _action(statuses, flags, answers["justification"]["score"])}

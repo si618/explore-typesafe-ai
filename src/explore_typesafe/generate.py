@@ -24,6 +24,7 @@ import re
 
 from .cohort import load_cohort
 from .common import SCENARIO_DIR
+from .formulary import ALLERGY_CLASSES, INTERACTIONS, classes_of
 
 SEED = 1000
 N_PER_SCENARIO = 80
@@ -191,48 +192,6 @@ def gen_s1(rng: random.Random) -> list[dict]:
 
 # ================================ S2 discharge ================================
 
-CLASSES = {
-    "statin": r"simvastatin|atorvastatin|rosuvastatin|pravastatin|lovastatin",
-    "beta_blocker": r"metoprolol|propranolol|carvedilol|bisoprolol|atenolol|labetalol|nebivolol",
-    "ace_inhibitor": r"lisinopril|enalapril|ramipril|benazepril|perindopril",
-    "arb": r"losartan|valsartan|irbesartan|candesartan",
-    "thiazide": r"hydrochlorothiazide|indapamide|chlorthalidone",
-    "p2y12": r"clopidogrel|prasugrel|ticagrelor",
-    "aspirin": r"aspirin|vazalore",
-    "nsaid": r"ibuprofen|naproxen|diclofenac|celecoxib",
-    "paracetamol": r"acetaminophen|paracetamol|tylenol|percocet|norco",
-    "opioid": r"hydrocodone|oxycodone|tramadol|fentanyl|codeine|morphine|meperidine|buprenorphine|percocet|norco|oxycontin",
-    "anticoagulant": r"warfarin|apixaban|rivaroxaban",
-    "ppi": r"omeprazole|pantoprazole|esomeprazole",
-    "h1_antihistamine": r"diphenhydramine|chlorpheniramine|chlorphenamine|loratadine|fexofenadine|cetirizine|terfenadine|astemizole|doxylamine",
-    "benzodiazepine": r"clonazepam|diazepam|lorazepam",
-    "ssri": r"sertraline|fluoxetine|citalopram",
-    "cholinesterase_inhibitor": r"donepezil|galantamine|rivastigmine",
-    "penicillin": r"penicillin|amoxicillin|augmentin|co-amoxiclav|flucloxacillin|tazocin|piperacillin",
-    "cephalosporin": r"cefalexin|cefdinir|ceftriaxone|cefuroxime",
-    "sulfonamide_antibiotic": r"sulfamethoxazole|co-trimoxazole|bactrim",
-    "macrolide": r"clarithromycin|erythromycin|azithromycin",
-    "ccb_dhp": r"amlodipine",
-    "ccb_non_dhp": r"verapamil|diltiazem",
-    "loop_diuretic": r"furosemide|bumetanide",
-    "bisphosphonate": r"alendron",
-}
-# Allergy (FHIR display, lower-case) -> classes that conflict with it.
-ALLERGY_CLASSES = {"penicillin v": {"penicillin"}, "aspirin": {"aspirin"}, "lisinopril": {"ace_inhibitor"},
-                   "sulfamethoxazole / trimethoprim": {"sulfonamide_antibiotic"}, "cefdinir": {"cephalosporin"}}
-# (new drug pattern, other drug pattern): well-known interactions to avoid or actively manage.
-INTERACTIONS = [
-    (r"clarithromycin|erythromycin", r"simvastatin|lovastatin|terfenadine|astemizole|warfarin"),
-    (r"fluconazole", r"simvastatin|warfarin"),
-    (r"omeprazole|esomeprazole", r"clopidogrel"),
-    (r"ibuprofen|naproxen|diclofenac", r"warfarin|clopidogrel|prasugrel"),
-    (r"sildenafil", r"nitroglycerin"),
-    (r"spironolactone", r"lisinopril|enalapril|ramipril|losartan|valsartan|irbesartan"),
-    (r"tramadol", r"sertraline|fluoxetine|citalopram"),
-    (r"co-trimoxazole", r"warfarin|lisinopril|enalapril|ramipril"),
-    (r"amiodarone", r"digoxin|warfarin|simvastatin"),
-    (r"metronidazole", r"warfarin"),
-]
 # New drugs: (name as written, reason)
 NEW_BENIGN = [
     ("senna 15 mg at night", "for constipation"), ("lactulose 10 ml twice daily", "for constipation"),
@@ -276,11 +235,6 @@ REASONS_CHANGE = ["following low blood pressure", "for better symptom control", 
 REASONS_HOLD = ["until kidney function recovers; GP to review in 1 week", "for 7 days after the procedure, then restart",
                 "until reviewed in clinic"]
 BLANKETS = ["Continue all other regular medications.", "All other medications unchanged.", "Rest of regimen as before."]
-
-
-def classes_of(text: str) -> set[str]:
-    t = text.lower()
-    return {c for c, pat in CLASSES.items() if re.search(pat, t)}
 
 
 def short_name(med: str, rng: random.Random) -> str:
