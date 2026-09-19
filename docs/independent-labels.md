@@ -1,6 +1,6 @@
 # Independent reference labels
 
-Issue #1 identified a circularity risk: Claude authored the hand cases and
+[Issue #1](https://github.com/si618/explore-typesafe-ai/issues/1) identified a circularity risk: Claude authored the hand cases and
 labels, and a Claude reviewer judged Jev's uncertain answers. This page checks the
 reference against a blind sample of **15 cases per scenario** (302 typed
 judgments), labelled by a different model family. The sample favours cases marked
@@ -8,9 +8,10 @@ ambiguous and cases where Jev and the reference disagree, so it is harder than t
 full set.
 
 !!! danger "Correction"
-    The first version of this page reported κ = 1.00 on every question type. Those
-    labels were not independent: a script had copied the reference labels into
-    `labels.json`. They were replaced by the isolated run described below.
+    The first version of this page ([PR #2](https://github.com/si618/explore-typesafe-ai/pull/2)) reported κ = 1.00 on every
+    question type. Those labels were not independent: a script had copied the reference
+    labels into `labels.json`. They were replaced by the isolated run described below
+    ([PR #4](https://github.com/si618/explore-typesafe-ai/pull/4)).
 
 ## Agreement
 
@@ -90,7 +91,8 @@ matters most.
 
 The disagreements have **not been adjudicated**, and the pre-registered labels are
 unchanged. A Claude adjudicator would bring back the circularity this check is for,
-so that step is left for a clinician or pharmacist.
+so that step is left for a clinician or pharmacist, tracked in
+[issue #5](https://github.com/si618/explore-typesafe-ai/issues/5).
 
 ## How the labels were produced
 

@@ -39,6 +39,6 @@ Scenarios 1–3 have 20 hand-written cases each (labels written by Claude), plus
 - **It's cheap enough to ask everything.** At a fraction of a cent per request, fanning out every plausible question (per medication, per note, per drug pair) is practical. The architecture question becomes what to do with the answers.
 
 !!! warning "Not clinical validation"
-    The patients, notes and messages are synthetic. The hand-case labels were written by a Claude model, not clinicians, and a [different model family](independent-labels.md) disagrees with some of them; nobody has adjudicated those yet. The generated labels are only as good as the snippets and tables they're built from. This is a capability demonstration, not evidence of clinical safety.
+    The patients, notes and messages are synthetic. The hand-case labels were written by a Claude model, not clinicians, and a [different model family](independent-labels.md) disagrees with some of them; nobody has adjudicated those yet ([issue #5](https://github.com/si618/explore-typesafe-ai/issues/5)). The generated labels are only as good as the snippets and tables they're built from. This is a capability demonstration, not evidence of clinical safety.
 
 Next: the [prompt and why these scenarios](prompt.md). New to the terms? See the [vocabulary](vocabulary.md).
