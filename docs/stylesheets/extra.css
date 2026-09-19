@@ -1,134 +1,134 @@
-/* Tokyo Night palettes (https://github.com/folke/tokyonight.nvim):
-   light scheme = "Day", dark scheme = "Night". */
+/* Catppuccin palettes (https://catppuccin.com/palette):
+   light scheme = "Latte", dark scheme = "Mocha". */
 
 [data-md-color-scheme="default"] {
-  --tn-bg: #e1e2e7;
-  --tn-bg-dark: #d0d5e3;
-  --tn-bg-hl: #c4c8da;
-  --tn-fg: #3760bf;
-  --tn-fg-dark: #6172b0;
-  --tn-comment: #848cb5;
-  --tn-blue: #2e7de9;
-  --tn-cyan: #007197;
-  --tn-magenta: #9854f1;
-  --tn-purple: #7847bd;
-  --tn-orange: #b15c00;
-  --tn-yellow: #8c6c3e;
-  --tn-green: #587539;
-  --tn-teal: #118c74;
-  --tn-red: #f52a65;
-  --tn-code-bg: #d5d6db;
+  --ctp-bg: #eff1f5; /* base */
+  --ctp-bg-dark: #e6e9ef; /* mantle */
+  --ctp-bg-hl: #ccd0da; /* surface0 */
+  --ctp-fg: #4c4f69; /* text */
+  --ctp-fg-dark: #5c5f77; /* subtext1 */
+  --ctp-comment: #8c8fa1; /* overlay1 */
+  --ctp-blue: #1e66f5; /* blue */
+  --ctp-cyan: #209fb5; /* sapphire */
+  --ctp-magenta: #8839ef; /* mauve */
+  --ctp-purple: #7287fd; /* lavender */
+  --ctp-orange: #fe640b; /* peach */
+  --ctp-yellow: #df8e1d; /* yellow */
+  --ctp-green: #40a02b; /* green */
+  --ctp-teal: #179299; /* teal */
+  --ctp-red: #d20f39; /* red */
+  --ctp-code-bg: #e6e9ef; /* mantle */
 }
 
 [data-md-color-scheme="slate"] {
-  --tn-bg: #1a1b26;
-  --tn-bg-dark: #16161e;
-  --tn-bg-hl: #292e42;
-  --tn-fg: #c0caf5;
-  --tn-fg-dark: #a9b1d6;
-  --tn-comment: #565f89;
-  --tn-blue: #7aa2f7;
-  --tn-cyan: #7dcfff;
-  --tn-magenta: #bb9af7;
-  --tn-purple: #9d7cd8;
-  --tn-orange: #ff9e64;
-  --tn-yellow: #e0af68;
-  --tn-green: #9ece6a;
-  --tn-teal: #1abc9c;
-  --tn-red: #f7768e;
-  --tn-code-bg: #16161e;
+  --ctp-bg: #1e1e2e; /* base */
+  --ctp-bg-dark: #181825; /* mantle */
+  --ctp-bg-hl: #313244; /* surface0 */
+  --ctp-fg: #cdd6f4; /* text */
+  --ctp-fg-dark: #bac2de; /* subtext1 */
+  --ctp-comment: #7f849c; /* overlay1 */
+  --ctp-blue: #89b4fa; /* blue */
+  --ctp-cyan: #74c7ec; /* sapphire */
+  --ctp-magenta: #cba6f7; /* mauve */
+  --ctp-purple: #b4befe; /* lavender */
+  --ctp-orange: #fab387; /* peach */
+  --ctp-yellow: #f9e2af; /* yellow */
+  --ctp-green: #a6e3a1; /* green */
+  --ctp-teal: #94e2d5; /* teal */
+  --ctp-red: #f38ba8; /* red */
+  --ctp-code-bg: #181825; /* mantle */
 }
 
 [data-md-color-scheme="default"],
 [data-md-color-scheme="slate"] {
-  --md-default-bg-color: var(--tn-bg);
-  --md-default-bg-color--light: color-mix(in srgb, var(--tn-bg) 54%, transparent);
-  --md-default-bg-color--lighter: color-mix(in srgb, var(--tn-bg) 26%, transparent);
-  --md-default-bg-color--lightest: color-mix(in srgb, var(--tn-bg) 7%, transparent);
-  --md-default-fg-color: var(--tn-fg);
-  --md-default-fg-color--light: var(--tn-fg-dark);
-  --md-default-fg-color--lighter: var(--tn-comment);
-  --md-default-fg-color--lightest: color-mix(in srgb, var(--tn-comment) 30%, transparent);
+  --md-default-bg-color: var(--ctp-bg);
+  --md-default-bg-color--light: color-mix(in srgb, var(--ctp-bg) 54%, transparent);
+  --md-default-bg-color--lighter: color-mix(in srgb, var(--ctp-bg) 26%, transparent);
+  --md-default-bg-color--lightest: color-mix(in srgb, var(--ctp-bg) 7%, transparent);
+  --md-default-fg-color: var(--ctp-fg);
+  --md-default-fg-color--light: var(--ctp-fg-dark);
+  --md-default-fg-color--lighter: var(--ctp-comment);
+  --md-default-fg-color--lightest: color-mix(in srgb, var(--ctp-comment) 30%, transparent);
 
-  --md-primary-fg-color: var(--tn-blue);
-  --md-primary-fg-color--light: var(--tn-cyan);
-  --md-primary-fg-color--dark: var(--tn-purple);
-  --md-primary-bg-color: var(--tn-bg);
-  --md-primary-bg-color--light: color-mix(in srgb, var(--tn-bg) 70%, transparent);
-  --md-accent-fg-color: var(--tn-magenta);
-  --md-accent-fg-color--transparent: color-mix(in srgb, var(--tn-magenta) 10%, transparent);
+  --md-primary-fg-color: var(--ctp-magenta);
+  --md-primary-fg-color--light: var(--ctp-cyan);
+  --md-primary-fg-color--dark: var(--ctp-purple);
+  --md-primary-bg-color: var(--ctp-bg);
+  --md-primary-bg-color--light: color-mix(in srgb, var(--ctp-bg) 70%, transparent);
+  --md-accent-fg-color: var(--ctp-purple);
+  --md-accent-fg-color--transparent: color-mix(in srgb, var(--ctp-purple) 10%, transparent);
 
-  --md-typeset-color: var(--tn-fg);
-  --md-typeset-a-color: var(--tn-blue);
-  --md-typeset-mark-color: color-mix(in srgb, var(--tn-yellow) 30%, transparent);
-  --md-typeset-table-color: color-mix(in srgb, var(--tn-comment) 25%, transparent);
-  --md-typeset-table-color--light: color-mix(in srgb, var(--tn-bg-hl) 45%, transparent);
+  --md-typeset-color: var(--ctp-fg);
+  --md-typeset-a-color: var(--ctp-blue);
+  --md-typeset-mark-color: color-mix(in srgb, var(--ctp-yellow) 30%, transparent);
+  --md-typeset-table-color: color-mix(in srgb, var(--ctp-comment) 25%, transparent);
+  --md-typeset-table-color--light: color-mix(in srgb, var(--ctp-bg-hl) 45%, transparent);
 
-  --md-code-bg-color: var(--tn-code-bg);
-  --md-code-bg-color--light: color-mix(in srgb, var(--tn-code-bg) 90%, transparent);
-  --md-code-bg-color--lighter: color-mix(in srgb, var(--tn-code-bg) 54%, transparent);
-  --md-code-fg-color: var(--tn-fg-dark);
-  --md-code-hl-color: var(--tn-blue);
-  --md-code-hl-color--light: color-mix(in srgb, var(--tn-blue) 12%, transparent);
-  --md-code-hl-number-color: var(--tn-orange);
-  --md-code-hl-special-color: var(--tn-red);
-  --md-code-hl-function-color: var(--tn-blue);
-  --md-code-hl-constant-color: var(--tn-orange);
-  --md-code-hl-keyword-color: var(--tn-magenta);
-  --md-code-hl-string-color: var(--tn-green);
-  --md-code-hl-name-color: var(--tn-cyan);
-  --md-code-hl-operator-color: var(--tn-cyan);
-  --md-code-hl-punctuation-color: var(--tn-fg-dark);
-  --md-code-hl-comment-color: var(--tn-comment);
-  --md-code-hl-generic-color: var(--tn-fg-dark);
-  --md-code-hl-variable-color: var(--tn-red);
+  --md-code-bg-color: var(--ctp-code-bg);
+  --md-code-bg-color--light: color-mix(in srgb, var(--ctp-code-bg) 90%, transparent);
+  --md-code-bg-color--lighter: color-mix(in srgb, var(--ctp-code-bg) 54%, transparent);
+  --md-code-fg-color: var(--ctp-fg-dark);
+  --md-code-hl-color: var(--ctp-blue);
+  --md-code-hl-color--light: color-mix(in srgb, var(--ctp-blue) 12%, transparent);
+  --md-code-hl-number-color: var(--ctp-orange);
+  --md-code-hl-special-color: var(--ctp-red);
+  --md-code-hl-function-color: var(--ctp-blue);
+  --md-code-hl-constant-color: var(--ctp-orange);
+  --md-code-hl-keyword-color: var(--ctp-magenta);
+  --md-code-hl-string-color: var(--ctp-green);
+  --md-code-hl-name-color: var(--ctp-cyan);
+  --md-code-hl-operator-color: var(--ctp-cyan);
+  --md-code-hl-punctuation-color: var(--ctp-fg-dark);
+  --md-code-hl-comment-color: var(--ctp-comment);
+  --md-code-hl-generic-color: var(--ctp-fg-dark);
+  --md-code-hl-variable-color: var(--ctp-red);
 
-  --md-footer-bg-color: var(--tn-bg-dark);
-  --md-footer-bg-color--dark: var(--tn-bg-dark);
-  --md-footer-fg-color: var(--tn-fg);
-  --md-footer-fg-color--light: var(--tn-fg-dark);
-  --md-footer-fg-color--lighter: var(--tn-comment);
+  --md-footer-bg-color: var(--ctp-bg-dark);
+  --md-footer-bg-color--dark: var(--ctp-bg-dark);
+  --md-footer-fg-color: var(--ctp-fg);
+  --md-footer-fg-color--light: var(--ctp-fg-dark);
+  --md-footer-fg-color--lighter: var(--ctp-comment);
 
-  --md-admonition-bg-color: var(--tn-bg-dark);
-  --md-admonition-fg-color: var(--tn-fg);
+  --md-admonition-bg-color: var(--ctp-bg-dark);
+  --md-admonition-fg-color: var(--ctp-fg);
 
   --md-mermaid-font-family: var(--md-text-font-family);
-  --md-mermaid-edge-color: var(--tn-comment);
-  --md-mermaid-node-bg-color: color-mix(in srgb, var(--tn-blue) 12%, var(--tn-bg));
-  --md-mermaid-node-fg-color: var(--tn-fg);
-  --md-mermaid-label-bg-color: var(--tn-bg);
-  --md-mermaid-label-fg-color: var(--tn-fg);
+  --md-mermaid-edge-color: var(--ctp-comment);
+  --md-mermaid-node-bg-color: color-mix(in srgb, var(--ctp-blue) 12%, var(--ctp-bg));
+  --md-mermaid-node-fg-color: var(--ctp-fg);
+  --md-mermaid-label-bg-color: var(--ctp-bg);
+  --md-mermaid-label-fg-color: var(--ctp-fg);
 }
 
 /* Softer chrome: header and sidebars sit on the darker background tone. */
 .md-header,
 .md-tabs {
-  background-color: var(--tn-bg-dark);
-  color: var(--tn-fg);
+  background-color: var(--ctp-bg-dark);
+  color: var(--ctp-fg);
 }
 .md-header__button,
 .md-header__topic,
 .md-header .md-search__icon {
-  color: var(--tn-fg);
+  color: var(--ctp-fg);
 }
 
 /* Tables and admonitions: subtle panels rather than hard borders. */
 .md-typeset table:not([class]) {
-  background-color: var(--tn-bg);
+  background-color: var(--ctp-bg);
   border-color: var(--md-typeset-table-color);
 }
 .md-typeset table:not([class]) th {
-  background-color: var(--tn-bg-dark);
-  color: var(--tn-fg);
+  background-color: var(--ctp-bg-dark);
+  color: var(--ctp-fg);
 }
 .md-typeset .admonition,
 .md-typeset details {
-  background-color: var(--tn-bg-dark);
-  border-color: var(--tn-bg-hl);
+  background-color: var(--ctp-bg-dark);
+  border-color: var(--ctp-bg-hl);
 }
 
 .md-typeset code {
-  color: var(--tn-cyan);
+  color: var(--ctp-cyan);
 }
 .md-typeset pre > code {
   color: var(--md-code-fg-color);

@@ -18,6 +18,7 @@ Follow-up instructions given during the session:
 - add vocabulary section to briefly explain primitives, task categories, news2, etc.
 - dark and light modes are a bit bland and harsh, soften them
 - update themes to use tokyo dark and tokyo light
+- try catppuccin instead
 
 ## How the prompt was read
 
