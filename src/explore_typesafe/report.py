@@ -511,6 +511,9 @@ def page_index(evals: dict, evals2: dict) -> str:
     t = jev_totals(evals, evals2)
     g, s4, sens, s5 = evals2["questions"], evals2["s4"], evals2["s4_sensitivity"], evals2["s5"]
     s1p, s2p, s3g = evals2["s1_policy"]["test"], evals2["s2_policy"]["gen_test"], evals2["s3_gate"]
+    ind = json.loads((ROOT / "data" / "independent_labels" / "agreement.json").read_text())
+    ind_diffs = json.loads((ROOT / "data" / "independent_labels" / "disagreements.json").read_text())
+    ind_k = ind["by_type"]
     h = evals2["haiku"]
     ratios = [v["haiku_perf"]["cost_usd"] / v["jev_perf"]["cost_usd"] for v in h.values() if v.get("haiku_perf") and v.get("jev_perf")]
     return f"""# Jev in the hospital: a System One evaluation
@@ -541,6 +544,7 @@ Scenarios 1–3 have 20 hand-written cases each (labels written by Claude), plus
 | [5. ML features](s5-features.md) | Score/Noul/Choice → feature extraction | Jev features from one note match structured data for predicting acute care (AUROC {s5['models']['jev']['auroc_mean']:.2f} vs {s5['models']['structured']['auroc_mean']:.2f}); combined {s5['models']['structured+jev']['auroc_mean']:.2f}. Synthea caps what any feature can show. |
 | [System Two review](system-two.md) | Confidence → escalation | {esc} of {tot_q} hand-case judgments ({pct(esc / tot_q)}) escalated to a blinded Claude Sonnet 5 reviewer. |
 | [LLM baseline](llm-baseline.md) | Same questions, Claude Haiku 4.5 | Accuracy is close, and neither model wins everywhere; Haiku costs **{min(ratios):.0f}–{max(ratios):.0f}×** more and is 5–8× slower. |
+| [Independent labels](independent-labels.md) | Reference labels checked by another model family | A blind Codex pass differs from the Claude reference on **{len(ind_diffs)}/{ind['n']}** sampled judgments (κ {ind_k['noul']['reference_vs_independent']:.2f} Noul, {ind_k['choice']['reference_vs_independent']:.2f} Choice, {ind_k['score']['reference_vs_independent']:.2f} Score), mostly in discharge reconciliation; in {sum(r['jev'] == r['independent'] for r in ind_diffs)} of them Jev gave the independent answer. |
 
 **Cost and speed:** {t['questions']:,} typed Jev judgments in {t['requests']:,} requests, **p50 {t['p50_ms']} ms** per request (1 to {max(len(c['questions']) for c in json.loads((RESULTS_DIR / 's2_discharge_gen_v2.json').read_text())['cases'])} questions each), **${t['cost_usd']:.2f}** in total. See [models, timing & tokens](performance.md).
 
@@ -553,7 +557,7 @@ Scenarios 1–3 have 20 hand-written cases each (labels written by Claude), plus
 - **It's cheap enough to ask everything.** At a fraction of a cent per request, fanning out every plausible question (per medication, per note, per drug pair) is practical. The architecture question becomes what to do with the answers.
 
 !!! warning "Not clinical validation"
-    The patients, notes and messages are synthetic. The hand-case labels were written by a Claude model, not clinicians, and the generated labels are only as good as the snippets and tables they're built from. This is a capability demonstration, not evidence of clinical safety.
+    The patients, notes and messages are synthetic. The hand-case labels were written by a Claude model, not clinicians, and a [different model family](independent-labels.md) disagrees with some of them; nobody has adjudicated those yet. The generated labels are only as good as the snippets and tables they're built from. This is a capability demonstration, not evidence of clinical safety.
 
 Next: the [prompt and why these scenarios](prompt.md). New to the terms? See the [vocabulary](vocabulary.md).
 """
