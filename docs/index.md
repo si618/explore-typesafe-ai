@@ -26,6 +26,7 @@ Scenarios 1–3 have 20 hand-written cases each (labels written by Claude), plus
 | [5. ML features](s5-features.md) | Score/Noul/Choice → feature extraction | Jev features from one note match structured data for predicting acute care (AUROC 0.64 vs 0.64); combined 0.65. Synthea caps what any feature can show. |
 | [System Two review](system-two.md) | Confidence → escalation | 65 of 403 hand-case judgments (16%) escalated to a blinded Claude Sonnet 5 reviewer. |
 | [LLM baseline](llm-baseline.md) | Same questions, Claude Haiku 4.5 | Accuracy is close, and neither model wins everywhere; Haiku costs **41–59×** more and is 5–8× slower. |
+| [Independent labels](independent-labels.md) | Reference labels checked by another model family | A blind Codex pass differs from the Claude reference on **34/302** sampled judgments (κ 0.73 Noul, 0.94 Choice, 0.80 Score), mostly in discharge reconciliation; in 24 of them Jev gave the independent answer. |
 
 **Cost and speed:** 24,557 typed Jev judgments in 4,722 requests, **p50 317 ms** per request (1 to 71 questions each), **$0.26** in total. See [models, timing & tokens](performance.md).
 
@@ -38,6 +39,6 @@ Scenarios 1–3 have 20 hand-written cases each (labels written by Claude), plus
 - **It's cheap enough to ask everything.** At a fraction of a cent per request, fanning out every plausible question (per medication, per note, per drug pair) is practical. The architecture question becomes what to do with the answers.
 
 !!! warning "Not clinical validation"
-    The patients, notes and messages are synthetic. The hand-case labels were written by a Claude model, not clinicians, and the generated labels are only as good as the snippets and tables they're built from. This is a capability demonstration, not evidence of clinical safety.
+    The patients, notes and messages are synthetic. The hand-case labels were written by a Claude model, not clinicians, and a [different model family](independent-labels.md) disagrees with some of them; nobody has adjudicated those yet. The generated labels are only as good as the snippets and tables they're built from. This is a capability demonstration, not evidence of clinical safety.
 
 Next: the [prompt and why these scenarios](prompt.md). New to the terms? See the [vocabulary](vocabulary.md).
