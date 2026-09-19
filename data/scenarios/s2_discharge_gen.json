@@ -1,0 +1,2246 @@
+{
+ "scenario": "s2_discharge_gen",
+ "title": "Discharge medication reconciliation (generated)",
+ "setting": "Pharmacy discharge check. Pre-admission medications come from the FHIR record; the discharge summary medication section is free text written by the discharging doctor.",
+ "seed": 1000,
+ "cases": [
+  {
+   "patient": "79f127fd",
+   "admission": "Community-acquired pneumonia",
+   "discharge_text": "Continue insulin 70/30. New: lactulose 10 ml twice daily. Continue chlorpheniramine maleate. Rest of regimen as before.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "continued",
+     "#3": "continued",
+     "#4": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": false,
+    "interaction": false,
+    "justification": 0
+   },
+   "construction": {
+    "planted_issue": "none",
+    "blanket": true,
+    "new": [
+     "lactulose 10 ml twice daily"
+    ]
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "a63d231a",
+   "admission": "NSTEMI",
+   "discharge_text": "New: clarithromycin 500 mg twice daily for 7 days for chest infection. Simvastatin 40 mg increased due to kidney function. New: prednisolone 30 mg daily for 5 days for COPD exacerbation. Toprol XL STOPPED: side effects. Continue lisinopril 10 mg. Continue simvastatin 20 mg. Rest of regimen as before.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "continued",
+     "#3": "continued",
+     "#4": "continued",
+     "#5": "dose_changed",
+     "#6": "continued",
+     "#7": "continued",
+     "#8": "continued",
+     "#9": "stopped",
+     "#10": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": true,
+    "interaction": true,
+    "justification": 3
+   },
+   "construction": {
+    "planted_issue": "interaction",
+    "blanket": true,
+    "new": [
+     "clarithromycin 500 mg twice daily for 7 days",
+     "prednisolone 30 mg daily for 5 days"
+    ]
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "d2233a50",
+   "admission": "Fall at home",
+   "discharge_text": "Fexofenadine hydrochloride 30 mg STOPPED: falls risk. Continue tramadol hydrochloride 50 mg. New: pantoprazole 40 mg daily. Continue all other regular medications.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "continued",
+     "#3": "stopped"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": false,
+    "interaction": false,
+    "justification": 2
+   },
+   "construction": {
+    "planted_issue": "none",
+    "blanket": true,
+    "new": [
+     "pantoprazole 40 mg daily"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "ad062942",
+   "admission": "Cellulitis",
+   "discharge_text": "Continue hydrocortisone. Continue acetaminophen 325 mg / oxycodone hydrochloride 10 mg. Continue lisinopril 10 mg. Continue HCTZ. Continue Norco. Continue fentanyl 0.025 mg/hr. Continue amlodipine 2.5 mg. New: enalapril 5 mg twice daily. Continue tacrolimus 5 mg. Continue diphenhydramine hydrochloride 25 mg.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "continued",
+     "#3": "continued",
+     "#4": "continued",
+     "#5": "continued",
+     "#6": "continued",
+     "#7": "continued",
+     "#8": "continued"
+    },
+    "allergy_conflict": true,
+    "duplicate_therapy": true,
+    "interaction": false,
+    "justification": 0
+   },
+   "construction": {
+    "planted_issue": "allergy",
+    "blanket": false,
+    "new": [
+     "enalapril 5 mg twice daily"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "b34fe768",
+   "admission": "Community-acquired pneumonia",
+   "discharge_text": "Metoprolol succinate 100 mg STOPPED: course completed. New: co-trimoxazole 960 mg twice daily for UTI. Continue acetaminophen 300 mg / hydrocodone bitartrate 5 mg. New: pantoprazole 40 mg daily. Diphenhydramine hydrochloride 25 mg STOPPED: course completed. Continue clopidogrel 75 mg. Continue Humulin 70/30. Simvastatin 20 mg STOPPED: duplicate therapy. All other medications unchanged.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "continued",
+     "#3": "continued",
+     "#4": "continued",
+     "#5": "continued",
+     "#6": "stopped",
+     "#7": "stopped",
+     "#8": "continued",
+     "#9": "stopped"
+    },
+    "allergy_conflict": true,
+    "duplicate_therapy": true,
+    "interaction": false,
+    "justification": 2
+   },
+   "construction": {
+    "planted_issue": "allergy",
+    "blanket": true,
+    "new": [
+     "co-trimoxazole 960 mg twice daily",
+     "pantoprazole 40 mg daily"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "88c967d8",
+   "admission": "Heart failure exacerbation",
+   "discharge_text": "Continue insulin 70/30. New: ramipril 2.5 mg daily. Continue 0.3 ml epinephrine. Continue terfenadine 60 mg. Amlodipine 2.5 mg STOPPED: duplicate therapy.",
+   "reference": {
+    "med_status": {
+     "#0": "not_mentioned",
+     "#1": "not_mentioned",
+     "#2": "stopped",
+     "#3": "continued",
+     "#4": "continued",
+     "#5": "continued"
+    },
+    "allergy_conflict": true,
+    "duplicate_therapy": false,
+    "interaction": false,
+    "justification": 2
+   },
+   "construction": {
+    "planted_issue": "allergy",
+    "blanket": false,
+    "new": [
+     "ramipril 2.5 mg daily"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "99009ab0",
+   "admission": "Heart failure exacerbation",
+   "discharge_text": "New: paracetamol 1 g four times daily. New: aspirin 75 mg daily for secondary prevention. Continue EpiPen. Rest of regimen as before.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "continued",
+     "#3": "continued",
+     "#4": "continued"
+    },
+    "allergy_conflict": true,
+    "duplicate_therapy": false,
+    "interaction": false,
+    "justification": 2
+   },
+   "construction": {
+    "planted_issue": "allergy",
+    "blanket": true,
+    "new": [
+     "aspirin 75 mg daily",
+     "paracetamol 1 g four times daily"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "ad76f4f3",
+   "admission": "Cellulitis",
+   "discharge_text": "Continue amlodipine 2.5 mg. New: nitrofurantoin 100 mg twice daily for 5 days. Rest of regimen as before.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "continued",
+     "#3": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": false,
+    "interaction": false,
+    "justification": 0
+   },
+   "construction": {
+    "planted_issue": "none",
+    "blanket": true,
+    "new": [
+     "nitrofurantoin 100 mg twice daily for 5 days"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "6bfa2e71",
+   "admission": "Urinary tract infection",
+   "discharge_text": "Continue albuterol. Continue ibuprofen 400 mg. Continue chlorpheniramine maleate. Fluticasone propionate changed to as needed only. New: Ecotrin (aspirin) 81 mg daily. New: senna 15 mg at night for constipation.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "dose_changed",
+     "#2": "continued",
+     "#3": "continued"
+    },
+    "allergy_conflict": true,
+    "duplicate_therapy": false,
+    "interaction": false,
+    "justification": 1
+   },
+   "construction": {
+    "planted_issue": "allergy",
+    "blanket": false,
+    "new": [
+     "Ecotrin (aspirin) 81 mg daily",
+     "senna 15 mg at night"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "e1dc0b42",
+   "admission": "Acute kidney injury",
+   "discharge_text": "Continue metoprolol succinate 100 mg. Continue clopidogrel 75 mg. New: aspirin 75 mg daily for secondary prevention. New: melatonin 2 mg at night for sleep. Simvastatin 20 mg reduced to once daily following low blood pressure. Continue nitroglycerin.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "dose_changed",
+     "#2": "continued",
+     "#3": "continued"
+    },
+    "allergy_conflict": true,
+    "duplicate_therapy": false,
+    "interaction": false,
+    "justification": 3
+   },
+   "construction": {
+    "planted_issue": "allergy",
+    "blanket": false,
+    "new": [
+     "aspirin 75 mg daily",
+     "melatonin 2 mg at night"
+    ]
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "7874647f",
+   "admission": "Cellulitis",
+   "discharge_text": "Continue simvastatin 20 mg. New: cefalexin 500 mg four times daily for 7 days for cellulitis. Doxycycline hyclate 100 mg STOPPED. New: flucloxacillin 500 mg four times daily for cellulitis. Continue carvedilol 6.25 mg. Nitroglycerin WITHHELD until kidney function recovers; GP to review in 1 week. Pravastatin sodium 20 mg changed to as needed only for better symptom control. Continue all other regular medications.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "continued",
+     "#3": "dose_changed",
+     "#4": "continued",
+     "#5": "continued",
+     "#6": "continued",
+     "#7": "continued",
+     "#8": "withheld",
+     "#9": "stopped"
+    },
+    "allergy_conflict": true,
+    "duplicate_therapy": true,
+    "interaction": false,
+    "justification": 2
+   },
+   "construction": {
+    "planted_issue": "allergy",
+    "blanket": true,
+    "new": [
+     "flucloxacillin 500 mg four times daily",
+     "cefalexin 500 mg four times daily for 7 days"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "04857b9f",
+   "admission": "Cellulitis",
+   "discharge_text": "Continue metformin hydrochloride 500 mg. New: pantoprazole 40 mg daily. Continue simvastatin 20 mg. Continue Humulin 70/30. Tacrolimus 1 mg STOPPED: falls risk. Continue Toprol XL. Continue nitroglycerin. Lisinopril 10 mg WITHHELD until kidney function recovers; GP to review in 1 week.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "stopped",
+     "#2": "continued",
+     "#3": "withheld",
+     "#4": "not_mentioned",
+     "#5": "continued",
+     "#6": "continued",
+     "#7": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": false,
+    "interaction": false,
+    "justification": 2
+   },
+   "construction": {
+    "planted_issue": "none",
+    "blanket": false,
+    "new": [
+     "pantoprazole 40 mg daily"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "5fd0070a",
+   "admission": "Cellulitis",
+   "discharge_text": "Continue naproxen sodium 220 mg. New: co-amoxiclav 625 mg three times daily. Continue lisinopril 10 mg. New: amoxicillin 500 mg three times daily for 5 days. Continue amlodipine 2.5 mg. Continue GTN spray. Toprol XL STOPPED: falls risk. Continue tacrolimus 1 mg. Simvastatin 20 mg reduced to half the previous dose. Continue clopidogrel 75 mg.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "continued",
+     "#3": "continued",
+     "#4": "continued",
+     "#5": "dose_changed",
+     "#6": "stopped",
+     "#7": "continued"
+    },
+    "allergy_conflict": true,
+    "duplicate_therapy": true,
+    "interaction": false,
+    "justification": 1
+   },
+   "construction": {
+    "planted_issue": "allergy",
+    "blanket": false,
+    "new": [
+     "co-amoxiclav 625 mg three times daily",
+     "amoxicillin 500 mg three times daily for 5 days"
+    ]
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "2c4e829a",
+   "admission": "Cellulitis",
+   "discharge_text": "Continue losartan potassium 50 mg. Continue labetalol hydrochloride 200 mg. New: ramipril 2.5 mg daily for blood pressure. Continue hydrocortisone. New: prednisolone 30 mg daily for 5 days for COPD exacerbation. Metoprolol succinate 100 mg STOPPED. Clopidogrel 75 mg STOPPED: no longer indicated. Rest of regimen as before.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "stopped",
+     "#3": "continued",
+     "#4": "stopped",
+     "#5": "continued",
+     "#6": "continued",
+     "#7": "continued",
+     "#8": "continued",
+     "#9": "continued"
+    },
+    "allergy_conflict": true,
+    "duplicate_therapy": true,
+    "interaction": false,
+    "justification": 2
+   },
+   "construction": {
+    "planted_issue": "allergy",
+    "blanket": true,
+    "new": [
+     "ramipril 2.5 mg daily",
+     "prednisolone 30 mg daily for 5 days"
+    ]
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "152d1f94",
+   "admission": "NSTEMI",
+   "discharge_text": "Continue acetaminophen 325 mg / oxycodone hydrochloride 10 mg. Loratadine 10 mg WITHHELD. Continue losartan potassium 25 mg. Continue hydrochlorothiazide 25 mg. New: spironolactone 25 mg daily for heart failure. Continue fentanyl 0.025 mg/hr. Continue EpiPen.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "continued",
+     "#3": "continued",
+     "#4": "withheld",
+     "#5": "continued",
+     "#6": "not_mentioned"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": true,
+    "interaction": true,
+    "justification": 2
+   },
+   "construction": {
+    "planted_issue": "interaction",
+    "blanket": false,
+    "new": [
+     "spironolactone 25 mg daily"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "dbe3571e",
+   "admission": "Urinary tract infection",
+   "discharge_text": "New: levothyroxine 50 micrograms daily for hypothyroidism. Continue EpiPen. New: Ecotrin (aspirin) 81 mg daily. Continue fentanyl 0.025 mg/hr. Norco STOPPED.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "stopped",
+     "#2": "not_mentioned",
+     "#3": "continued"
+    },
+    "allergy_conflict": true,
+    "duplicate_therapy": false,
+    "interaction": false,
+    "justification": 1
+   },
+   "construction": {
+    "planted_issue": "allergy",
+    "blanket": false,
+    "new": [
+     "Ecotrin (aspirin) 81 mg daily",
+     "levothyroxine 50 micrograms daily"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "2a6fc9f2",
+   "admission": "Fall at home",
+   "discharge_text": "Acetaminophen 325 mg / oxycodone hydrochloride 10 mg increased. Continue simvastatin 20 mg. Doxycycline hyclate 100 mg STOPPED. Continue GTN spray. Continue astemizole 10 mg. Naproxen sodium 220 mg STOPPED. Continue clopidogrel 75 mg. Continue B12 injections. New: co-amoxiclav 625 mg three times daily for chest infection. Continue acetaminophen 300 mg / hydrocodone bitartrate 5 mg. Continue hydrocortisone.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "not_mentioned",
+     "#3": "continued",
+     "#4": "dose_changed",
+     "#5": "stopped",
+     "#6": "continued",
+     "#7": "stopped",
+     "#8": "continued",
+     "#9": "continued",
+     "#10": "continued"
+    },
+    "allergy_conflict": true,
+    "duplicate_therapy": true,
+    "interaction": false,
+    "justification": 1
+   },
+   "construction": {
+    "planted_issue": "allergy",
+    "blanket": false,
+    "new": [
+     "co-amoxiclav 625 mg three times daily"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "cadaa0af",
+   "admission": "Urinary tract infection",
+   "discharge_text": "Hydrocortisone WITHHELD until kidney function recovers; GP to review in 1 week. Continue alendronic acid 10 mg. Continue simvastatin 20 mg. New: enalapril 5 mg twice daily for heart failure. Continue clopidogrel 75 mg.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "continued",
+     "#3": "not_mentioned",
+     "#4": "not_mentioned",
+     "#5": "withheld"
+    },
+    "allergy_conflict": true,
+    "duplicate_therapy": false,
+    "interaction": false,
+    "justification": 3
+   },
+   "construction": {
+    "planted_issue": "allergy",
+    "blanket": false,
+    "new": [
+     "enalapril 5 mg twice daily"
+    ]
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "9dc282ba",
+   "admission": "Acute kidney injury",
+   "discharge_text": "Continue simvastatin 10 mg. New: doxycycline 100 mg daily for 5 days. Continue metoprolol succinate 100 mg. Continue metformin hydrochloride 500 mg. Continue amlodipine 2.5 mg. Continue losartan potassium 25 mg. Continue Plavix. Continue simvastatin 20 mg.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "continued",
+     "#3": "continued",
+     "#4": "continued",
+     "#5": "continued",
+     "#6": "continued",
+     "#7": "not_mentioned"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": true,
+    "interaction": false,
+    "justification": 0
+   },
+   "construction": {
+    "planted_issue": "none",
+    "blanket": false,
+    "new": [
+     "doxycycline 100 mg daily for 5 days"
+    ]
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "9e451bf9",
+   "admission": "COPD exacerbation",
+   "discharge_text": "Continue fluticasone propionate / salmeterol. Continue 0.3 ml epinephrine. Continue chlorpheniramine maleate. New: levothyroxine 50 micrograms daily for hypothyroidism. New: Ecotrin (aspirin) 81 mg daily for secondary prevention.",
+   "reference": {
+    "med_status": {
+     "#0": "not_mentioned",
+     "#1": "continued",
+     "#2": "continued",
+     "#3": "continued"
+    },
+    "allergy_conflict": true,
+    "duplicate_therapy": false,
+    "interaction": false,
+    "justification": 3
+   },
+   "construction": {
+    "planted_issue": "allergy",
+    "blanket": false,
+    "new": [
+     "Ecotrin (aspirin) 81 mg daily",
+     "levothyroxine 50 micrograms daily"
+    ]
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "cb892168",
+   "admission": "Acute kidney injury",
+   "discharge_text": "0.3 ml epinephrine STOPPED: falls risk. Continue terfenadine 60 mg. Sertraline 100 mg WITHHELD. New: doxycycline 100 mg daily for 5 days. New: flucloxacillin 500 mg four times daily for cellulitis. All other medications unchanged.",
+   "reference": {
+    "med_status": {
+     "#0": "withheld",
+     "#1": "continued",
+     "#2": "stopped",
+     "#3": "continued"
+    },
+    "allergy_conflict": true,
+    "duplicate_therapy": false,
+    "interaction": false,
+    "justification": 2
+   },
+   "construction": {
+    "planted_issue": "allergy",
+    "blanket": true,
+    "new": [
+     "flucloxacillin 500 mg four times daily",
+     "doxycycline 100 mg daily for 5 days"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "f8417b33",
+   "admission": "Fall at home",
+   "discharge_text": "Continue galantamine 4 mg. Continue nitroglycerin. New: aspirin 75 mg daily for secondary prevention. Continue metoprolol succinate 100 mg. All other medications unchanged.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "continued",
+     "#3": "continued",
+     "#4": "continued",
+     "#5": "continued",
+     "#6": "continued"
+    },
+    "allergy_conflict": true,
+    "duplicate_therapy": false,
+    "interaction": false,
+    "justification": 3
+   },
+   "construction": {
+    "planted_issue": "allergy",
+    "blanket": true,
+    "new": [
+     "aspirin 75 mg daily"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "086297c8",
+   "admission": "Acute kidney injury",
+   "discharge_text": "Continue 0.3 ml epinephrine. New: melatonin 2 mg at night. Continue fluticasone propionate. Continue losartan potassium 25 mg. Continue diphenhydramine hydrochloride 25 mg. Ventolin STOPPED: course completed.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "stopped",
+     "#3": "continued",
+     "#4": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": false,
+    "interaction": false,
+    "justification": 2
+   },
+   "construction": {
+    "planted_issue": "none",
+    "blanket": false,
+    "new": [
+     "melatonin 2 mg at night"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "49f219ae",
+   "admission": "COPD exacerbation",
+   "discharge_text": "New: cefalexin 500 mg four times daily for 7 days for cellulitis. Simvastatin 20 mg WITHHELD for 7 days after the procedure, then restart. Continue HCTZ. All other medications unchanged.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "continued",
+     "#3": "continued",
+     "#4": "continued",
+     "#5": "continued",
+     "#6": "withheld",
+     "#7": "continued",
+     "#8": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": false,
+    "interaction": false,
+    "justification": 3
+   },
+   "construction": {
+    "planted_issue": "none",
+    "blanket": true,
+    "new": [
+     "cefalexin 500 mg four times daily for 7 days"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "fc77b459",
+   "admission": "Community-acquired pneumonia",
+   "discharge_text": "New: sildenafil 50 mg as needed. Clopidogrel 75 mg STOPPED: side effects. New: doxycycline 100 mg daily for 5 days for chest infection. Toprol XL reduced to once daily due to kidney function. All other medications unchanged.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "stopped",
+     "#2": "continued",
+     "#3": "dose_changed",
+     "#4": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": false,
+    "interaction": true,
+    "justification": 2
+   },
+   "construction": {
+    "planted_issue": "interaction",
+    "blanket": true,
+    "new": [
+     "sildenafil 50 mg as needed",
+     "doxycycline 100 mg daily for 5 days"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "977fc6b5",
+   "admission": "Cellulitis",
+   "discharge_text": "Plavix STOPPED. Continue simvastatin 20 mg. Continue GTN spray. Metoprolol succinate 100 mg STOPPED. New: amiodarone 200 mg daily.",
+   "reference": {
+    "med_status": {
+     "#0": "not_mentioned",
+     "#1": "stopped",
+     "#2": "continued",
+     "#3": "stopped",
+     "#4": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": false,
+    "interaction": true,
+    "justification": 0
+   },
+   "construction": {
+    "planted_issue": "interaction",
+    "blanket": false,
+    "new": [
+     "amiodarone 200 mg daily"
+    ]
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "b8987eb2",
+   "admission": "Community-acquired pneumonia",
+   "discharge_text": "Continue Plavix. Continue metoprolol succinate 100 mg. Simvastatin 20 mg STOPPED: falls risk. New: levothyroxine 50 micrograms daily for hypothyroidism. Continue nitroglycerin. Rest of regimen as before.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "stopped",
+     "#2": "continued",
+     "#3": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": false,
+    "interaction": false,
+    "justification": 3
+   },
+   "construction": {
+    "planted_issue": "none",
+    "blanket": true,
+    "new": [
+     "levothyroxine 50 micrograms daily"
+    ]
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "af4481dc",
+   "admission": "Fall at home",
+   "discharge_text": "New: naproxen 500 mg twice daily for back pain. Continue clopidogrel 75 mg. Continue rosuvastatin calcium 10 mg. Continue atenolol 50 mg. Hydrochlorothiazide 12.5 mg / lisinopril 20 mg changed to as needed only after review of blood results. Continue metformin hydrochloride 500 mg. Aspirin 81 mg STOPPED: acute kidney injury. Continue all other regular medications.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "stopped",
+     "#3": "continued",
+     "#4": "continued",
+     "#5": "dose_changed",
+     "#6": "continued",
+     "#7": "continued",
+     "#8": "continued",
+     "#9": "continued",
+     "#10": "continued",
+     "#11": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": true,
+    "interaction": true,
+    "justification": 3
+   },
+   "construction": {
+    "planted_issue": "interaction",
+    "blanket": true,
+    "new": [
+     "naproxen 500 mg twice daily"
+    ]
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "b495df2a",
+   "admission": "Heart failure exacerbation",
+   "discharge_text": "Continue metoprolol succinate 100 mg. Continue simvastatin 10 mg. Continue simvastatin 20 mg. GTN spray reduced to once daily after review of blood results. New: doxycycline 100 mg daily for 5 days. Continue amlodipine 2.5 mg. Continue clopidogrel 75 mg. Continue tacrolimus 1 mg.",
+   "reference": {
+    "med_status": {
+     "#0": "not_mentioned",
+     "#1": "continued",
+     "#2": "continued",
+     "#3": "continued",
+     "#4": "continued",
+     "#5": "continued",
+     "#6": "continued",
+     "#7": "dose_changed"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": true,
+    "interaction": false,
+    "justification": 2
+   },
+   "construction": {
+    "planted_issue": "none",
+    "blanket": false,
+    "new": [
+     "doxycycline 100 mg daily for 5 days"
+    ]
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "d643b49c",
+   "admission": "Cellulitis",
+   "discharge_text": "Ethinyl estradiol 0.000625 mg/hr / etonogestrel 0.005 mg/hr vaginal STOPPED: side effects. Continue clopidogrel 75 mg. New: amoxicillin 500 mg three times daily for 5 days for chest infection. Continue Toprol XL.",
+   "reference": {
+    "med_status": {
+     "#0": "stopped",
+     "#1": "continued",
+     "#2": "not_mentioned",
+     "#3": "continued",
+     "#4": "not_mentioned"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": false,
+    "interaction": false,
+    "justification": 3
+   },
+   "construction": {
+    "planted_issue": "none",
+    "blanket": false,
+    "new": [
+     "amoxicillin 500 mg three times daily for 5 days"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "d4c1ac54",
+   "admission": "Cellulitis",
+   "discharge_text": "Continue amlodipine 2.5 mg. Simvastatin 20 mg WITHHELD until kidney function recovers; GP to review in 1 week. Continue Toprol XL. Alendronic acid 10 mg STOPPED: course completed. New: cefalexin 500 mg four times daily for 7 days. Continue hydrochlorothiazide 25 mg. Continue donepezil hydrochloride 10 mg / memantine hydrochloride 28 mg. Continue nitroglycerin. Continue simvastatin 10 mg.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "continued",
+     "#3": "stopped",
+     "#4": "continued",
+     "#5": "not_mentioned",
+     "#6": "withheld",
+     "#7": "continued",
+     "#8": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": false,
+    "interaction": false,
+    "justification": 2
+   },
+   "construction": {
+    "planted_issue": "none",
+    "blanket": false,
+    "new": [
+     "cefalexin 500 mg four times daily for 7 days"
+    ]
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "85d49635",
+   "admission": "NSTEMI",
+   "discharge_text": "Continue simvastatin 20 mg. New: fluconazole 150 mg daily for 7 days for oral thrush. GTN spray WITHHELD for 7 days after the procedure, then restart. Continue hydrochlorothiazide 25 mg. Continue simvastatin 10 mg. Continue Plavix. Amlodipine 2.5 mg reduced to half the previous dose. Vitamin b12 changed to as needed only for better symptom control. Continue metoprolol succinate 100 mg. Lisinopril 10 mg WITHHELD until kidney function recovers; GP to review in 1 week.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "withheld",
+     "#3": "dose_changed",
+     "#4": "continued",
+     "#5": "continued",
+     "#6": "continued",
+     "#7": "withheld",
+     "#8": "dose_changed"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": true,
+    "interaction": true,
+    "justification": 2
+   },
+   "construction": {
+    "planted_issue": "interaction",
+    "blanket": false,
+    "new": [
+     "fluconazole 150 mg daily for 7 days"
+    ]
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "4899ed95",
+   "admission": "Heart failure exacerbation",
+   "discharge_text": "Continue prasugrel 10 mg. Continue nitroglycerin. Continue aspirin 81 mg. Atorvastatin 80 mg reduced to half the previous dose. Continue Toprol XL. Continue carvedilol 25 mg. Continue simvastatin 20 mg. Ferrous sulfate 325 mg WITHHELD until reviewed in clinic. New: cefalexin 500 mg four times daily for 7 days.",
+   "reference": {
+    "med_status": {
+     "#0": "not_mentioned",
+     "#1": "continued",
+     "#2": "continued",
+     "#3": "continued",
+     "#4": "continued",
+     "#5": "continued",
+     "#6": "dose_changed",
+     "#7": "not_mentioned",
+     "#8": "continued",
+     "#9": "withheld"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": true,
+    "interaction": false,
+    "justification": 1
+   },
+   "construction": {
+    "planted_issue": "none",
+    "blanket": false,
+    "new": [
+     "cefalexin 500 mg four times daily for 7 days"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "7d09a39f",
+   "admission": "Cellulitis",
+   "discharge_text": "Lisinopril 10 mg reduced to half the previous dose due to kidney function. New: indapamide 2.5 mg daily. Continue naproxen sodium 220 mg. Continue HCTZ. Continue Humulin 70/30. Continue amlodipine 2.5 mg.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "not_mentioned",
+     "#3": "dose_changed",
+     "#4": "continued",
+     "#5": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": true,
+    "interaction": false,
+    "justification": 2
+   },
+   "construction": {
+    "planted_issue": "duplicate",
+    "blanket": false,
+    "new": [
+     "indapamide 2.5 mg daily"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "36992017",
+   "admission": "NSTEMI",
+   "discharge_text": "Continue hydrocortisone. Continue 0.3 ml epinephrine. Continue acetaminophen 325 mg / oxycodone hydrochloride 10 mg. New: pantoprazole 40 mg daily for gastric protection. Continue loratadine 10 mg. New: fluconazole 150 mg daily for 7 days for oral thrush. Oxycodone hydrochloride 10 mg STOPPED.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "stopped",
+     "#2": "not_mentioned",
+     "#3": "continued",
+     "#4": "continued",
+     "#5": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": false,
+    "interaction": false,
+    "justification": 2
+   },
+   "construction": {
+    "planted_issue": "interaction",
+    "blanket": false,
+    "new": [
+     "fluconazole 150 mg daily for 7 days",
+     "pantoprazole 40 mg daily"
+    ]
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "1fcef962",
+   "admission": "NSTEMI",
+   "discharge_text": "New: spironolactone 25 mg daily for heart failure. Continue metoprolol succinate 100 mg. Continue naproxen sodium 220 mg. Clopidogrel 75 mg increased due to kidney function. Continue all other regular medications.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "continued",
+     "#3": "dose_changed",
+     "#4": "continued",
+     "#5": "continued",
+     "#6": "continued",
+     "#7": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": true,
+    "interaction": true,
+    "justification": 3
+   },
+   "construction": {
+    "planted_issue": "interaction",
+    "blanket": true,
+    "new": [
+     "spironolactone 25 mg daily"
+    ]
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "36218842",
+   "admission": "Fall at home",
+   "discharge_text": "Continue simvastatin 20 mg. New: prednisolone 30 mg daily for 5 days. Nitroglycerin WITHHELD until reviewed in clinic. Acetaminophen 300 mg / hydrocodone bitartrate 5 mg STOPPED. Metoprolol succinate 100 mg STOPPED: duplicate therapy. Continue OxyContin. New: amiodarone 200 mg daily for atrial fibrillation.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "stopped",
+     "#2": "not_mentioned",
+     "#3": "continued",
+     "#4": "stopped",
+     "#5": "withheld"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": false,
+    "interaction": true,
+    "justification": 2
+   },
+   "construction": {
+    "planted_issue": "interaction",
+    "blanket": false,
+    "new": [
+     "amiodarone 200 mg daily",
+     "prednisolone 30 mg daily for 5 days"
+    ]
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "21b57aa5",
+   "admission": "Community-acquired pneumonia",
+   "discharge_text": "Continue nitroglycerin. Simvastatin 20 mg STOPPED. New: furosemide 40 mg in the morning for fluid overload. All other medications unchanged.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "stopped",
+     "#2": "continued",
+     "#3": "continued",
+     "#4": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": false,
+    "interaction": false,
+    "justification": 2
+   },
+   "construction": {
+    "planted_issue": "none",
+    "blanket": true,
+    "new": [
+     "furosemide 40 mg in the morning"
+    ]
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "b1b44768",
+   "admission": "Acute kidney injury",
+   "discharge_text": "Continue metoprolol succinate 100 mg. Continue atorvastatin 10 mg. Continue simvastatin 20 mg. New: melatonin 2 mg at night for sleep. Continue clopidogrel 75 mg. Continue carvedilol 6.25 mg. Continue nitroglycerin. Continue prasugrel 10 mg. Lisinopril 5 mg STOPPED: course completed. Continue amlodipine 2.5 mg. Continue aspirin 81 mg.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "continued",
+     "#3": "continued",
+     "#4": "stopped",
+     "#5": "continued",
+     "#6": "continued",
+     "#7": "continued",
+     "#8": "continued",
+     "#9": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": true,
+    "interaction": false,
+    "justification": 3
+   },
+   "construction": {
+    "planted_issue": "none",
+    "blanket": false,
+    "new": [
+     "melatonin 2 mg at night"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "97250121",
+   "admission": "Heart failure exacerbation",
+   "discharge_text": "EpiPen WITHHELD until reviewed in clinic. Continue loratadine 5 mg. New: furosemide 40 mg in the morning. New: cetirizine 10 mg daily for hay fever.",
+   "reference": {
+    "med_status": {
+     "#0": "not_mentioned",
+     "#1": "not_mentioned",
+     "#2": "continued",
+     "#3": "withheld"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": true,
+    "interaction": false,
+    "justification": 2
+   },
+   "construction": {
+    "planted_issue": "duplicate",
+    "blanket": false,
+    "new": [
+     "cetirizine 10 mg daily",
+     "furosemide 40 mg in the morning"
+    ]
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "03f6c139",
+   "admission": "Acute kidney injury",
+   "discharge_text": "Continue lisinopril 10 mg. New: doxycycline 100 mg daily for 5 days. Continue Humulin 70/30. New: co-trimoxazole 960 mg twice daily. Hydrochlorothiazide 25 mg STOPPED: side effects. Continue amlodipine 2.5 mg.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "stopped",
+     "#2": "continued",
+     "#3": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": false,
+    "interaction": true,
+    "justification": 1
+   },
+   "construction": {
+    "planted_issue": "interaction",
+    "blanket": false,
+    "new": [
+     "co-trimoxazole 960 mg twice daily",
+     "doxycycline 100 mg daily for 5 days"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "7d0557e0",
+   "admission": "Fall at home",
+   "discharge_text": "Continue lisinopril 10 mg. Continue B12 injections. New: ramipril 5 mg daily for blood pressure. Insulin 70/30 STOPPED: duplicate therapy. New: amoxicillin 500 mg three times daily for 5 days for chest infection.",
+   "reference": {
+    "med_status": {
+     "#0": "stopped",
+     "#1": "not_mentioned",
+     "#2": "continued",
+     "#3": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": true,
+    "interaction": false,
+    "justification": 3
+   },
+   "construction": {
+    "planted_issue": "duplicate",
+    "blanket": false,
+    "new": [
+     "ramipril 5 mg daily",
+     "amoxicillin 500 mg three times daily for 5 days"
+    ]
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "d3e6d8f6",
+   "admission": "COPD exacerbation",
+   "discharge_text": "New: amoxicillin 500 mg three times daily for 5 days for chest infection. Continue lisinopril 10 mg. Hydrochlorothiazide 25 mg STOPPED: falls risk. Rest of regimen as before.",
+   "reference": {
+    "med_status": {
+     "#0": "stopped",
+     "#1": "continued",
+     "#2": "continued",
+     "#3": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": false,
+    "interaction": false,
+    "justification": 3
+   },
+   "construction": {
+    "planted_issue": "none",
+    "blanket": true,
+    "new": [
+     "amoxicillin 500 mg three times daily for 5 days"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "76411cab",
+   "admission": "COPD exacerbation",
+   "discharge_text": "New: sildenafil 50 mg as needed. Clopidogrel 75 mg STOPPED: duplicate therapy. Continue GTN spray. Continue metoprolol succinate 100 mg. Simvastatin 20 mg STOPPED: course completed. New: levothyroxine 50 micrograms daily for hypothyroidism. Continue alendronic acid 10 mg.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "stopped",
+     "#2": "stopped",
+     "#3": "continued",
+     "#4": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": false,
+    "interaction": true,
+    "justification": 2
+   },
+   "construction": {
+    "planted_issue": "interaction",
+    "blanket": false,
+    "new": [
+     "sildenafil 50 mg as needed",
+     "levothyroxine 50 micrograms daily"
+    ]
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "3ea32393",
+   "admission": "Urinary tract infection",
+   "discharge_text": "New: cefalexin 500 mg four times daily for 7 days for cellulitis. Continue metoprolol succinate 100 mg. Simvastatin 10 mg STOPPED. Continue nitroglycerin. Rest of regimen as before.",
+   "reference": {
+    "med_status": {
+     "#0": "stopped",
+     "#1": "continued",
+     "#2": "continued",
+     "#3": "continued",
+     "#4": "continued",
+     "#5": "continued",
+     "#6": "continued",
+     "#7": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": true,
+    "interaction": false,
+    "justification": 2
+   },
+   "construction": {
+    "planted_issue": "none",
+    "blanket": true,
+    "new": [
+     "cefalexin 500 mg four times daily for 7 days"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "a5d4795e",
+   "admission": "Heart failure exacerbation",
+   "discharge_text": "Amlodipine 2.5 mg WITHHELD until kidney function recovers; GP to review in 1 week. New: doxycycline 100 mg daily for 5 days for chest infection. New: amiodarone 200 mg daily for atrial fibrillation. Simvastatin 10 mg reduced to once daily due to kidney function. Rest of regimen as before.",
+   "reference": {
+    "med_status": {
+     "#0": "dose_changed",
+     "#1": "continued",
+     "#2": "continued",
+     "#3": "withheld",
+     "#4": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": false,
+    "interaction": true,
+    "justification": 3
+   },
+   "construction": {
+    "planted_issue": "interaction",
+    "blanket": true,
+    "new": [
+     "amiodarone 200 mg daily",
+     "doxycycline 100 mg daily for 5 days"
+    ]
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "8e394032",
+   "admission": "NSTEMI",
+   "discharge_text": "Continue simvastatin 20 mg. Continue clopidogrel 75 mg. New: doxycycline 100 mg daily for 5 days. Continue Toprol XL. New: bisoprolol 2.5 mg daily for rate control. GTN spray STOPPED.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "continued",
+     "#3": "stopped"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": true,
+    "interaction": false,
+    "justification": 1
+   },
+   "construction": {
+    "planted_issue": "duplicate",
+    "blanket": false,
+    "new": [
+     "bisoprolol 2.5 mg daily",
+     "doxycycline 100 mg daily for 5 days"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "366af3d1",
+   "admission": "Heart failure exacerbation",
+   "discharge_text": "Continue insulin 70/30. New: cefalexin 500 mg four times daily for 7 days. Continue lisinopril 10 mg. Continue simvastatin 20 mg. Continue tacrolimus 1 mg. Clopidogrel 75 mg STOPPED: side effects. Continue simvastatin 10 mg. Continue nitroglycerin. Continue metoprolol succinate 100 mg. Continue vitamin b12.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "continued",
+     "#3": "continued",
+     "#4": "stopped",
+     "#5": "continued",
+     "#6": "continued",
+     "#7": "continued",
+     "#8": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": true,
+    "interaction": false,
+    "justification": 2
+   },
+   "construction": {
+    "planted_issue": "none",
+    "blanket": false,
+    "new": [
+     "cefalexin 500 mg four times daily for 7 days"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "d7cff9ac",
+   "admission": "Heart failure exacerbation",
+   "discharge_text": "New: omeprazole 20 mg daily for reflux. New: pantoprazole 40 mg daily. Continue lisinopril 10 mg. Continue metoprolol succinate 100 mg. Continue simvastatin 20 mg. Continue nitroglycerin. Continue clopidogrel 75 mg.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "continued",
+     "#3": "continued",
+     "#4": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": true,
+    "interaction": true,
+    "justification": 2
+   },
+   "construction": {
+    "planted_issue": "interaction",
+    "blanket": false,
+    "new": [
+     "omeprazole 20 mg daily",
+     "pantoprazole 40 mg daily"
+    ]
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "92e83f49",
+   "admission": "Acute kidney injury",
+   "discharge_text": "Continue EpiPen. Continue albuterol. New: erythromycin 500 mg four times daily. Continue fluticasone propionate. Continue terfenadine 60 mg.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "continued",
+     "#3": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": false,
+    "interaction": true,
+    "justification": 0
+   },
+   "construction": {
+    "planted_issue": "interaction",
+    "blanket": false,
+    "new": [
+     "erythromycin 500 mg four times daily"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "368156af",
+   "admission": "Acute kidney injury",
+   "discharge_text": "Continue hydrochlorothiazide 25 mg. New: amiodarone 200 mg daily for atrial fibrillation. Simvastatin 10 mg STOPPED: duplicate therapy. Continue metoprolol succinate 100 mg. Simvastatin 20 mg reduced to once daily after review of blood results. Astemizole 10 mg STOPPED: no longer indicated. New: lactulose 10 ml twice daily for constipation. Tacrolimus 1 mg STOPPED: falls risk. Lisinopril 10 mg WITHHELD until kidney function recovers; GP to review in 1 week. Continue clopidogrel 75 mg. All other medications unchanged.",
+   "reference": {
+    "med_status": {
+     "#0": "stopped",
+     "#1": "continued",
+     "#2": "stopped",
+     "#3": "withheld",
+     "#4": "continued",
+     "#5": "dose_changed",
+     "#6": "continued",
+     "#7": "continued",
+     "#8": "stopped",
+     "#9": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": false,
+    "interaction": true,
+    "justification": 3
+   },
+   "construction": {
+    "planted_issue": "interaction",
+    "blanket": true,
+    "new": [
+     "amiodarone 200 mg daily",
+     "lactulose 10 ml twice daily"
+    ]
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "08ecd137",
+   "admission": "Urinary tract infection",
+   "discharge_text": "New: melatonin 2 mg at night. Diphenhydramine hydrochloride 25 mg STOPPED. New: spironolactone 25 mg daily for heart failure. 0.3 ml epinephrine changed to as needed only. Continue all other regular medications.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "stopped",
+     "#3": "dose_changed"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": false,
+    "interaction": true,
+    "justification": 1
+   },
+   "construction": {
+    "planted_issue": "interaction",
+    "blanket": true,
+    "new": [
+     "spironolactone 25 mg daily",
+     "melatonin 2 mg at night"
+    ]
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "7eabe8d1",
+   "admission": "Community-acquired pneumonia",
+   "discharge_text": "Continue simvastatin 10 mg. Amlodipine 2.5 mg reduced to half the previous dose after review of blood results. Continue hydrochlorothiazide 25 mg. New: melatonin 2 mg at night for sleep. Naproxen sodium 220 mg STOPPED. New: erythromycin 500 mg four times daily.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "dose_changed",
+     "#3": "stopped"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": false,
+    "interaction": true,
+    "justification": 2
+   },
+   "construction": {
+    "planted_issue": "interaction",
+    "blanket": false,
+    "new": [
+     "erythromycin 500 mg four times daily",
+     "melatonin 2 mg at night"
+    ]
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "c77fe86f",
+   "admission": "Heart failure exacerbation",
+   "discharge_text": "Continue nitroglycerin. Continue ferrous sulfate 325 mg. New: lactulose 10 ml twice daily. Simvastatin 10 mg STOPPED. Continue Toprol XL.",
+   "reference": {
+    "med_status": {
+     "#0": "stopped",
+     "#1": "continued",
+     "#2": "continued",
+     "#3": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": false,
+    "interaction": false,
+    "justification": 0
+   },
+   "construction": {
+    "planted_issue": "none",
+    "blanket": false,
+    "new": [
+     "lactulose 10 ml twice daily"
+    ]
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "24d5caff",
+   "admission": "Urinary tract infection",
+   "discharge_text": "Continue simvastatin 10 mg. Continue naproxen sodium 220 mg. New: levothyroxine 50 micrograms daily for hypothyroidism. Simvastatin 20 mg reduced to once daily following low blood pressure. Continue nitroglycerin. Continue lisinopril 10 mg. Continue clopidogrel 75 mg. Continue amlodipine 2.5 mg. Continue metoprolol succinate 100 mg. Continue hydrochlorothiazide 25 mg.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "continued",
+     "#3": "continued",
+     "#4": "continued",
+     "#5": "dose_changed",
+     "#6": "continued",
+     "#7": "continued",
+     "#8": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": true,
+    "interaction": false,
+    "justification": 3
+   },
+   "construction": {
+    "planted_issue": "none",
+    "blanket": false,
+    "new": [
+     "levothyroxine 50 micrograms daily"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "215a1d73",
+   "admission": "COPD exacerbation",
+   "discharge_text": "Simvastatin 10 mg STOPPED. Simvastatin 20 mg WITHHELD. New: melatonin 2 mg at night. Toprol XL reduced to once daily due to kidney function. Continue nitroglycerin.",
+   "reference": {
+    "med_status": {
+     "#0": "stopped",
+     "#1": "not_mentioned",
+     "#2": "withheld",
+     "#3": "dose_changed",
+     "#4": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": false,
+    "interaction": false,
+    "justification": 1
+   },
+   "construction": {
+    "planted_issue": "none",
+    "blanket": false,
+    "new": [
+     "melatonin 2 mg at night"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "46ecce0a",
+   "admission": "NSTEMI",
+   "discharge_text": "Digoxin 0.125 mg STOPPED: course completed. Continue fentanyl 0.025 mg/hr. New: indapamide 2.5 mg daily for blood pressure. Continue clopidogrel 75 mg. Continue warfarin sodium 5 mg. Verapamil hydrochloride 80 mg STOPPED: course completed. Continue hydrochlorothiazide 25 mg. Continue metoprolol succinate 100 mg. Continue simvastatin 20 mg. Continue lisinopril 10 mg. Norco changed to as needed only. New: senna 15 mg at night for constipation.",
+   "reference": {
+    "med_status": {
+     "#0": "stopped",
+     "#1": "stopped",
+     "#2": "continued",
+     "#3": "continued",
+     "#4": "continued",
+     "#5": "continued",
+     "#6": "dose_changed",
+     "#7": "continued",
+     "#8": "continued",
+     "#9": "continued",
+     "#10": "not_mentioned"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": true,
+    "interaction": false,
+    "justification": 2
+   },
+   "construction": {
+    "planted_issue": "duplicate",
+    "blanket": false,
+    "new": [
+     "indapamide 2.5 mg daily",
+     "senna 15 mg at night"
+    ]
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "3cf065be",
+   "admission": "Urinary tract infection",
+   "discharge_text": "Continue hydrochlorothiazide 25 mg. Continue amlodipine 2.5 mg. New: paracetamol 1 g four times daily. Continue acetaminophen 300 mg / hydrocodone bitartrate 5 mg. Continue lisinopril 10 mg. Continue Humulin 70/30. Continue fentanyl 0.025 mg/hr. Percocet STOPPED: no longer indicated. New: spironolactone 25 mg daily.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "stopped",
+     "#3": "continued",
+     "#4": "continued",
+     "#5": "continued",
+     "#6": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": true,
+    "interaction": true,
+    "justification": 1
+   },
+   "construction": {
+    "planted_issue": "interaction",
+    "blanket": false,
+    "new": [
+     "spironolactone 25 mg daily",
+     "paracetamol 1 g four times daily"
+    ]
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "74666880",
+   "admission": "Heart failure exacerbation",
+   "discharge_text": "Acetaminophen 300 mg / codeine phosphate 15 mg WITHHELD for 7 days after the procedure, then restart. Continue Toprol XL. Continue clopidogrel 75 mg. Continue simvastatin 20 mg. Continue naproxen sodium 220 mg. Continue simvastatin 10 mg. Continue nitroglycerin. New: doxycycline 100 mg daily for 5 days for chest infection.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "withheld",
+     "#2": "continued",
+     "#3": "continued",
+     "#4": "continued",
+     "#5": "continued",
+     "#6": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": true,
+    "interaction": false,
+    "justification": 3
+   },
+   "construction": {
+    "planted_issue": "none",
+    "blanket": false,
+    "new": [
+     "doxycycline 100 mg daily for 5 days"
+    ]
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "16b2404b",
+   "admission": "Cellulitis",
+   "discharge_text": "Continue simvastatin 10 mg. Continue hydrochlorothiazide 25 mg. Continue simvastatin 20 mg. Continue clopidogrel 75 mg. Continue metoprolol succinate 100 mg. Donepezil hydrochloride 10 mg / memantine hydrochloride 28 mg STOPPED: side effects. New: clarithromycin 500 mg twice daily for 7 days for chest infection. New: furosemide 40 mg in the morning. Continue GTN spray.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "stopped",
+     "#3": "continued",
+     "#4": "continued",
+     "#5": "continued",
+     "#6": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": true,
+    "interaction": true,
+    "justification": 2
+   },
+   "construction": {
+    "planted_issue": "interaction",
+    "blanket": false,
+    "new": [
+     "clarithromycin 500 mg twice daily for 7 days",
+     "furosemide 40 mg in the morning"
+    ]
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "e7969043",
+   "admission": "NSTEMI",
+   "discharge_text": "Continue Plavix. Simvastatin 20 mg STOPPED: acute kidney injury. Naproxen sodium 220 mg STOPPED: no longer indicated. New: pantoprazole 40 mg daily. Continue nitroglycerin. Rest of regimen as before.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "continued",
+     "#3": "stopped",
+     "#4": "continued",
+     "#5": "continued",
+     "#6": "stopped",
+     "#7": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": false,
+    "interaction": false,
+    "justification": 2
+   },
+   "construction": {
+    "planted_issue": "none",
+    "blanket": true,
+    "new": [
+     "pantoprazole 40 mg daily"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "d9a018ff",
+   "admission": "Acute kidney injury",
+   "discharge_text": "New: cefalexin 500 mg four times daily for 7 days for cellulitis. All other medications unchanged.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "continued",
+     "#3": "continued",
+     "#4": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": true,
+    "interaction": false,
+    "justification": 3
+   },
+   "construction": {
+    "planted_issue": "none",
+    "blanket": true,
+    "new": [
+     "cefalexin 500 mg four times daily for 7 days"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "1c9818e0",
+   "admission": "Cellulitis",
+   "discharge_text": "Continue nitroglycerin. Hydrocortisone STOPPED: course completed. Continue clopidogrel 75 mg. Continue metoprolol tartrate 25 mg. New: clarithromycin 500 mg twice daily for 7 days. Continue simvastatin 40 mg. Continue acetaminophen 325 mg. Continue aspirin 81 mg. Toprol XL reduced to once daily following low blood pressure. Lisinopril 5 mg STOPPED: acute kidney injury.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "not_mentioned",
+     "#3": "dose_changed",
+     "#4": "continued",
+     "#5": "continued",
+     "#6": "continued",
+     "#7": "continued",
+     "#8": "stopped",
+     "#9": "stopped"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": true,
+    "interaction": true,
+    "justification": 2
+   },
+   "construction": {
+    "planted_issue": "interaction",
+    "blanket": false,
+    "new": [
+     "clarithromycin 500 mg twice daily for 7 days"
+    ]
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "d129790f",
+   "admission": "Acute kidney injury",
+   "discharge_text": "Lisinopril 10 mg reduced to once daily after review of blood results. Continue Plavix. New: lactulose 10 ml twice daily. Continue metoprolol succinate 100 mg. Alendronic acid 10 mg STOPPED: duplicate therapy. Rest of regimen as before.",
+   "reference": {
+    "med_status": {
+     "#0": "dose_changed",
+     "#1": "stopped",
+     "#2": "continued",
+     "#3": "continued",
+     "#4": "continued",
+     "#5": "continued",
+     "#6": "continued",
+     "#7": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": true,
+    "interaction": false,
+    "justification": 2
+   },
+   "construction": {
+    "planted_issue": "none",
+    "blanket": true,
+    "new": [
+     "lactulose 10 ml twice daily"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "4ad440ea",
+   "admission": "Fall at home",
+   "discharge_text": "New: ibuprofen 400 mg three times daily. All other medications unchanged.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "continued",
+     "#3": "continued",
+     "#4": "continued",
+     "#5": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": true,
+    "interaction": true,
+    "justification": 0
+   },
+   "construction": {
+    "planted_issue": "interaction",
+    "blanket": true,
+    "new": [
+     "ibuprofen 400 mg three times daily"
+    ]
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "fb907263",
+   "admission": "Fall at home",
+   "discharge_text": "Continue aspirin 81 mg. New: paracetamol 1 g four times daily for pain. Atorvastatin 20 mg changed to as needed only. Atenolol 100 mg WITHHELD. Nitroglycerin STOPPED. Continue lisinopril 40 mg. Continue metoprolol succinate 100 mg.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "withheld",
+     "#2": "dose_changed",
+     "#3": "continued",
+     "#4": "continued",
+     "#5": "stopped"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": false,
+    "interaction": false,
+    "justification": 1
+   },
+   "construction": {
+    "planted_issue": "none",
+    "blanket": false,
+    "new": [
+     "paracetamol 1 g four times daily"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "77bf78d1",
+   "admission": "Urinary tract infection",
+   "discharge_text": "New: melatonin 2 mg at night for sleep. Fluticasone propionate / salmeterol WITHHELD. New: co-trimoxazole 960 mg twice daily for UTI. Continue all other regular medications.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "withheld",
+     "#3": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": false,
+    "interaction": true,
+    "justification": 2
+   },
+   "construction": {
+    "planted_issue": "interaction",
+    "blanket": true,
+    "new": [
+     "co-trimoxazole 960 mg twice daily",
+     "melatonin 2 mg at night"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "3994b5fb",
+   "admission": "COPD exacerbation",
+   "discharge_text": "Continue acetaminophen 325 mg. New: oxycodone 5 mg every 4 hours as needed. Continue acetaminophen 300 mg / hydrocodone bitartrate 10 mg. Continue sertraline 100 mg. Continue acetaminophen 300 mg / hydrocodone bitartrate 5 mg. Continue naproxen sodium 220 mg.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "continued",
+     "#3": "continued",
+     "#4": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": true,
+    "interaction": false,
+    "justification": 0
+   },
+   "construction": {
+    "planted_issue": "duplicate",
+    "blanket": false,
+    "new": [
+     "oxycodone 5 mg every 4 hours as needed"
+    ]
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "5354bd02",
+   "admission": "Acute kidney injury",
+   "discharge_text": "Continue alendronic acid 10 mg. Continue simvastatin 20 mg. Continue nitroglycerin. New: fluconazole 150 mg daily for 7 days for oral thrush. Rest of regimen as before.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "continued",
+     "#3": "continued",
+     "#4": "continued",
+     "#5": "continued",
+     "#6": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": true,
+    "interaction": true,
+    "justification": 3
+   },
+   "construction": {
+    "planted_issue": "interaction",
+    "blanket": true,
+    "new": [
+     "fluconazole 150 mg daily for 7 days"
+    ]
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "bd667c2e",
+   "admission": "Fall at home",
+   "discharge_text": "Tramadol hydrochloride 50 mg STOPPED: falls risk. Continue Percocet. New: cefalexin 500 mg four times daily for 7 days for cellulitis. Continue ibuprofen 400 mg. Continue metformin hydrochloride 500 mg.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "stopped",
+     "#3": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": false,
+    "interaction": false,
+    "justification": 3
+   },
+   "construction": {
+    "planted_issue": "none",
+    "blanket": false,
+    "new": [
+     "cefalexin 500 mg four times daily for 7 days"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "8f55d217",
+   "admission": "Acute kidney injury",
+   "discharge_text": "Simvastatin 20 mg STOPPED: duplicate therapy. Continue lisinopril 10 mg. New: prednisolone 30 mg daily for 5 days. Continue clopidogrel 75 mg. Continue metoprolol succinate 100 mg. New: naproxen 500 mg twice daily for back pain.",
+   "reference": {
+    "med_status": {
+     "#0": "not_mentioned",
+     "#1": "continued",
+     "#2": "continued",
+     "#3": "stopped",
+     "#4": "continued",
+     "#5": "not_mentioned"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": false,
+    "interaction": true,
+    "justification": 2
+   },
+   "construction": {
+    "planted_issue": "interaction",
+    "blanket": false,
+    "new": [
+     "naproxen 500 mg twice daily",
+     "prednisolone 30 mg daily for 5 days"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "cff5c987",
+   "admission": "Acute kidney injury",
+   "discharge_text": "Continue donepezil hydrochloride 10 mg / memantine hydrochloride 28 mg. Continue nitroglycerin. New: prednisolone 30 mg daily for 5 days for COPD exacerbation. Simvastatin 10 mg STOPPED: duplicate therapy. Continue alendronic acid 10 mg. Aspirin 81 mg WITHHELD until reviewed in clinic. Rest of regimen as before.",
+   "reference": {
+    "med_status": {
+     "#0": "stopped",
+     "#1": "continued",
+     "#2": "continued",
+     "#3": "withheld",
+     "#4": "continued",
+     "#5": "continued",
+     "#6": "continued",
+     "#7": "continued",
+     "#8": "continued",
+     "#9": "continued",
+     "#10": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": true,
+    "interaction": false,
+    "justification": 3
+   },
+   "construction": {
+    "planted_issue": "none",
+    "blanket": true,
+    "new": [
+     "prednisolone 30 mg daily for 5 days"
+    ]
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "a4c29643",
+   "admission": "NSTEMI",
+   "discharge_text": "Continue GTN spray. New: senna 15 mg at night for constipation. Continue fentanyl 0.025 mg/hr. Metoprolol succinate 100 mg STOPPED. Continue simvastatin 20 mg. Oxycodone hydrochloride 10 mg STOPPED: duplicate therapy. Continue hydrocodone bitartrate 10 mg. Continue Plavix. Continue Norco. Acetaminophen 325 mg / oxycodone hydrochloride 10 mg STOPPED: acute kidney injury.",
+   "reference": {
+    "med_status": {
+     "#0": "stopped",
+     "#1": "stopped",
+     "#2": "continued",
+     "#3": "continued",
+     "#4": "continued",
+     "#5": "continued",
+     "#6": "continued",
+     "#7": "stopped",
+     "#8": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": true,
+    "interaction": false,
+    "justification": 2
+   },
+   "construction": {
+    "planted_issue": "none",
+    "blanket": false,
+    "new": [
+     "senna 15 mg at night"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "f302a65c",
+   "admission": "Heart failure exacerbation",
+   "discharge_text": "New: nitrofurantoin 100 mg twice daily for 5 days. Continue simvastatin 20 mg. Alendronic acid 10 mg STOPPED. Continue Toprol XL. Continue GTN spray. Donepezil hydrochloride 10 mg / memantine hydrochloride 28 mg WITHHELD for 7 days after the procedure, then restart.",
+   "reference": {
+    "med_status": {
+     "#0": "stopped",
+     "#1": "withheld",
+     "#2": "continued",
+     "#3": "continued",
+     "#4": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": false,
+    "interaction": false,
+    "justification": 1
+   },
+   "construction": {
+    "planted_issue": "none",
+    "blanket": false,
+    "new": [
+     "nitrofurantoin 100 mg twice daily for 5 days"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "4c783998",
+   "admission": "Acute kidney injury",
+   "discharge_text": "Continue metoprolol succinate 100 mg. Nitroglycerin STOPPED. Continue clopidogrel 75 mg. Penicillin v potassium 500 mg STOPPED: acute kidney injury. Continue hydrochlorothiazide 25 mg. Continue ferrous sulfate 325 mg. Continue amlodipine 2.5 mg. Continue simvastatin 10 mg. Continue simvastatin 20 mg. Continue alendronic acid 10 mg. New: naproxen 500 mg twice daily for back pain.",
+   "reference": {
+    "med_status": {
+     "#0": "stopped",
+     "#1": "not_mentioned",
+     "#2": "continued",
+     "#3": "continued",
+     "#4": "continued",
+     "#5": "continued",
+     "#6": "continued",
+     "#7": "continued",
+     "#8": "continued",
+     "#9": "stopped",
+     "#10": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": true,
+    "interaction": true,
+    "justification": 2
+   },
+   "construction": {
+    "planted_issue": "interaction",
+    "blanket": false,
+    "new": [
+     "naproxen 500 mg twice daily"
+    ]
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "f93b7489",
+   "admission": "COPD exacerbation",
+   "discharge_text": "Clopidogrel 75 mg WITHHELD. Continue nitroglycerin. Continue Toprol XL. Simvastatin 20 mg reduced to once daily. New: melatonin 2 mg at night for sleep.",
+   "reference": {
+    "med_status": {
+     "#0": "withheld",
+     "#1": "dose_changed",
+     "#2": "continued",
+     "#3": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": false,
+    "interaction": false,
+    "justification": 1
+   },
+   "construction": {
+    "planted_issue": "none",
+    "blanket": false,
+    "new": [
+     "melatonin 2 mg at night"
+    ]
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "c3470559",
+   "admission": "Acute kidney injury",
+   "discharge_text": "Amlodipine 2.5 mg WITHHELD. Continue acetaminophen 300 mg / hydrocodone bitartrate 5 mg. Continue tramadol hydrochloride 50 mg. New: co-trimoxazole 960 mg twice daily for UTI. All other medications unchanged.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "continued",
+     "#2": "continued",
+     "#3": "withheld",
+     "#4": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": true,
+    "interaction": false,
+    "justification": 2
+   },
+   "construction": {
+    "planted_issue": "interaction",
+    "blanket": true,
+    "new": [
+     "co-trimoxazole 960 mg twice daily"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "dee41e03",
+   "admission": "Acute kidney injury",
+   "discharge_text": "New: spironolactone 25 mg daily for heart failure. Amlodipine 2.5 mg STOPPED. New: paracetamol 1 g four times daily. Lisinopril 10 mg changed to as needed only following low blood pressure. Continue acetaminophen 325 mg. All other medications unchanged.",
+   "reference": {
+    "med_status": {
+     "#0": "continued",
+     "#1": "dose_changed",
+     "#2": "stopped",
+     "#3": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": true,
+    "interaction": true,
+    "justification": 2
+   },
+   "construction": {
+    "planted_issue": "interaction",
+    "blanket": true,
+    "new": [
+     "spironolactone 25 mg daily",
+     "paracetamol 1 g four times daily"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "patient": "d2c775c0",
+   "admission": "Urinary tract infection",
+   "discharge_text": "Hydrochlorothiazide 25 mg STOPPED. New: cefalexin 500 mg four times daily for 7 days. Continue Plavix. New: ticagrelor 90 mg twice daily. Nitroglycerin STOPPED: falls risk. Lisinopril 10 mg reduced to once daily due to kidney function. Rest of regimen as before.",
+   "reference": {
+    "med_status": {
+     "#0": "stopped",
+     "#1": "dose_changed",
+     "#2": "continued",
+     "#3": "continued",
+     "#4": "continued",
+     "#5": "stopped"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": true,
+    "interaction": false,
+    "justification": 1
+   },
+   "construction": {
+    "planted_issue": "duplicate",
+    "blanket": true,
+    "new": [
+     "ticagrelor 90 mg twice daily",
+     "cefalexin 500 mg four times daily for 7 days"
+    ]
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "841382d0",
+   "admission": "Heart failure exacerbation",
+   "discharge_text": "Metoprolol succinate 100 mg STOPPED: falls risk. New: Tylenol 1 g four times daily for pain. Oxycodone hydrochloride 10 mg increased. Simvastatin 20 mg STOPPED. Clopidogrel 75 mg STOPPED. New: paracetamol 1 g four times daily for pain. All other medications unchanged.",
+   "reference": {
+    "med_status": {
+     "#0": "dose_changed",
+     "#1": "continued",
+     "#2": "stopped",
+     "#3": "stopped",
+     "#4": "stopped",
+     "#5": "continued",
+     "#6": "continued"
+    },
+    "allergy_conflict": false,
+    "duplicate_therapy": true,
+    "interaction": false,
+    "justification": 2
+   },
+   "construction": {
+    "planted_issue": "duplicate",
+    "blanket": true,
+    "new": [
+     "Tylenol 1 g four times daily",
+     "paracetamol 1 g four times daily"
+    ]
+   },
+   "split": "dev"
+  }
+ ]
+}

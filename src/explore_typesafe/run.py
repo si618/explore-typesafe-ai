@@ -22,7 +22,7 @@ MODEL = "jev-1.13.0"  # pinned rather than jev-latest so results are reproducibl
 
 
 def run(name: str, client: TypeSafeClient) -> dict:
-    mod = import_module(f"explore_typesafe.{name}")
+    mod = import_module(f"explore_typesafe.{name.removesuffix('_gen')}")
     scenario = load_scenario(name)
     cases = []
     for case in scenario["cases"]:

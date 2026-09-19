@@ -1,0 +1,2104 @@
+{
+ "resourceType": "Bundle",
+ "id": "snapshot-7828ed11-2f29-4cf5-d946-82c52770fc93",
+ "type": "collection",
+ "timestamp": "2026-09-19T00:00:00Z",
+ "entry": [
+  {
+   "fullUrl": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "7828ed11-2f29-4cf5-d946-82c52770fc93",
+    "identifier": [
+     {
+      "system": "https://github.com/synthetichealth/synthea",
+      "value": "7828ed11-2f29-4cf5-d946-82c52770fc93"
+     }
+    ],
+    "name": [
+     {
+      "use": "official",
+      "family": "Acevedo301",
+      "given": [
+       "Lucas404"
+      ],
+      "prefix": [
+       "Mr."
+      ]
+     }
+    ],
+    "gender": "male",
+    "birthDate": "1981-02-13",
+    "address": [
+     {
+      "city": "Framingham",
+      "state": "MA",
+      "postalCode": "01701",
+      "country": "US"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7828ed11-2f29-4cf5-d1ee-80cc01622d03",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "7828ed11-2f29-4cf5-d1ee-80cc01622d03",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "40055000",
+       "display": "Chronic sinusitis (disorder)"
+      }
+     ],
+     "text": "Chronic sinusitis (disorder)"
+    },
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "onsetDateTime": "1993-03-12T21:32:42+09:30",
+    "recordedDate": "1993-03-12T21:32:42+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7828ed11-2f29-4cf5-7125-51fb73ea2f8c",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "7828ed11-2f29-4cf5-7125-51fb73ea2f8c",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "160968000",
+       "display": "Risk activity involvement (finding)"
+      }
+     ],
+     "text": "Risk activity involvement (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "onsetDateTime": "1998-04-03T07:32:40+09:30",
+    "recordedDate": "1998-04-03T07:32:40+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7828ed11-2f29-4cf5-79e7-912c2cf7ee6d",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "7828ed11-2f29-4cf5-79e7-912c2cf7ee6d",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "105531004",
+       "display": "Housing unsatisfactory (finding)"
+      }
+     ],
+     "text": "Housing unsatisfactory (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "onsetDateTime": "1999-04-09T07:19:48+09:30",
+    "recordedDate": "1999-04-09T07:19:48+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7828ed11-2f29-4cf5-b56a-bee2c7722d64",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "7828ed11-2f29-4cf5-b56a-bee2c7722d64",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "473461003",
+       "display": "Educated to high school level (finding)"
+      }
+     ],
+     "text": "Educated to high school level (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "onsetDateTime": "1999-04-09T07:19:48+09:30",
+    "recordedDate": "1999-04-09T07:19:48+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7828ed11-2f29-4cf5-fcb9-a7ecbbd9d41e",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "7828ed11-2f29-4cf5-fcb9-a7ecbbd9d41e",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "714628002",
+       "display": "Prediabetes (finding)"
+      }
+     ],
+     "text": "Prediabetes (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "onsetDateTime": "2012-04-27T06:32:42+09:30",
+    "recordedDate": "2012-04-27T06:32:42+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7828ed11-2f29-4cf5-b691-17201ebdd10e",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "7828ed11-2f29-4cf5-b691-17201ebdd10e",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "271737000",
+       "display": "Anemia (disorder)"
+      }
+     ],
+     "text": "Anemia (disorder)"
+    },
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "onsetDateTime": "2012-04-27T06:32:42+09:30",
+    "recordedDate": "2012-04-27T06:32:42+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7828ed11-2f29-4cf5-3f71-4ce93faef149",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "7828ed11-2f29-4cf5-3f71-4ce93faef149",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "59621000",
+       "display": "Essential hypertension (disorder)"
+      }
+     ],
+     "text": "Essential hypertension (disorder)"
+    },
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "onsetDateTime": "2015-05-01T06:32:42+09:30",
+    "recordedDate": "2015-05-01T06:32:42+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7828ed11-2f29-4cf5-b700-041b56081025",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "7828ed11-2f29-4cf5-b700-041b56081025",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "44054006",
+       "display": "Diabetes mellitus type 2 (disorder)"
+      }
+     ],
+     "text": "Diabetes mellitus type 2 (disorder)"
+    },
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "onsetDateTime": "2015-05-01T06:32:42+09:30",
+    "recordedDate": "2015-05-01T06:32:42+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7828ed11-2f29-4cf5-b252-3f0074b20eef",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "7828ed11-2f29-4cf5-b252-3f0074b20eef",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "302870006",
+       "display": "Hypertriglyceridemia (disorder)"
+      }
+     ],
+     "text": "Hypertriglyceridemia (disorder)"
+    },
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "onsetDateTime": "2016-05-06T06:32:42+09:30",
+    "recordedDate": "2016-05-06T06:32:42+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7828ed11-2f29-4cf5-4781-a50c6972d2ac",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "7828ed11-2f29-4cf5-4781-a50c6972d2ac",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "368581000119106",
+       "display": "Neuropathy due to type 2 diabetes mellitus (disorder)"
+      }
+     ],
+     "text": "Neuropathy due to type 2 diabetes mellitus (disorder)"
+    },
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "onsetDateTime": "2016-05-06T06:32:42+09:30",
+    "recordedDate": "2016-05-06T06:32:42+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7828ed11-2f29-4cf5-710f-fae80cece370",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "7828ed11-2f29-4cf5-710f-fae80cece370",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "237602007",
+       "display": "Metabolic syndrome X (disorder)"
+      }
+     ],
+     "text": "Metabolic syndrome X (disorder)"
+    },
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "onsetDateTime": "2017-05-12T06:32:42+09:30",
+    "recordedDate": "2017-05-12T06:32:42+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7828ed11-2f29-4cf5-597b-0808d79cce91",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "7828ed11-2f29-4cf5-597b-0808d79cce91",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "162864005",
+       "display": "Body mass index 30+ - obesity (finding)"
+      }
+     ],
+     "text": "Body mass index 30+ - obesity (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "onsetDateTime": "2025-06-27T06:32:42+09:30",
+    "recordedDate": "2025-06-27T06:32:42+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7828ed11-2f29-4cf5-2184-8143f939fada",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "7828ed11-2f29-4cf5-2184-8143f939fada",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "80394007",
+       "display": "Hyperglycemia (disorder)"
+      }
+     ],
+     "text": "Hyperglycemia (disorder)"
+    },
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "onsetDateTime": "2025-09-12T06:32:42+09:30",
+    "recordedDate": "2025-09-12T06:32:42+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7828ed11-2f29-4cf5-b64f-3ea13ecc2035",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "7828ed11-2f29-4cf5-b64f-3ea13ecc2035",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "422650009",
+       "display": "Social isolation (finding)"
+      }
+     ],
+     "text": "Social isolation (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "onsetDateTime": "2025-09-12T07:08:59+09:30",
+    "recordedDate": "2025-09-12T07:08:59+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7828ed11-2f29-4cf5-c92b-d6d0d6d42db0",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "7828ed11-2f29-4cf5-c92b-d6d0d6d42db0",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "73438004",
+       "display": "Unemployed (finding)"
+      }
+     ],
+     "text": "Unemployed (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "onsetDateTime": "2026-07-03T07:03:03+09:30",
+    "recordedDate": "2026-07-03T07:03:03+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7828ed11-2f29-4cf5-bf85-967fb9e91bab",
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "7828ed11-2f29-4cf5-bf85-967fb9e91bab",
+    "status": "active",
+    "intent": "order",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+        "code": "community",
+        "display": "Community"
+       }
+      ],
+      "text": "Community"
+     }
+    ],
+    "medication": {
+     "concept": {
+      "coding": [
+       {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "310798",
+        "display": "Hydrochlorothiazide 25 MG Oral Tablet"
+       }
+      ],
+      "text": "Hydrochlorothiazide 25 MG Oral Tablet"
+     }
+    },
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "authoredOn": "2026-07-03T06:32:42+09:30",
+    "dosageInstruction": [
+     {
+      "sequence": 1,
+      "timing": {
+       "repeat": {
+        "frequency": 1,
+        "period": 1.0,
+        "periodUnit": "d"
+       }
+      },
+      "doseAndRate": [
+       {
+        "type": {
+         "coding": [
+          {
+           "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+           "code": "ordered",
+           "display": "Ordered"
+          }
+         ]
+        },
+        "doseQuantity": {
+         "value": 1.0
+        }
+       }
+      ],
+      "asNeeded": false
+     }
+    ],
+    "reason": [
+     {
+      "concept": {
+       "text": "Essential hypertension (disorder)"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7828ed11-2f29-4cf5-e3e1-8a2841ce4d4a",
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "7828ed11-2f29-4cf5-e3e1-8a2841ce4d4a",
+    "status": "active",
+    "intent": "order",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+        "code": "community",
+        "display": "Community"
+       }
+      ],
+      "text": "Community"
+     }
+    ],
+    "medication": {
+     "concept": {
+      "coding": [
+       {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "860975",
+        "display": "24 HR Metformin hydrochloride 500 MG Extended Release Oral Tablet"
+       }
+      ],
+      "text": "24 HR Metformin hydrochloride 500 MG Extended Release Oral Tablet"
+     }
+    },
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "authoredOn": "2026-07-03T06:32:42+09:30",
+    "reason": [
+     {
+      "concept": {
+       "text": "Diabetes mellitus type 2 (disorder)"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7828ed11-2f29-4cf5-ab46-3cf58b7f2ba5",
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "7828ed11-2f29-4cf5-ab46-3cf58b7f2ba5",
+    "status": "active",
+    "intent": "order",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+        "code": "community",
+        "display": "Community"
+       }
+      ],
+      "text": "Community"
+     }
+    ],
+    "medication": {
+     "concept": {
+      "coding": [
+       {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "308136",
+        "display": "amLODIPine 2.5 MG Oral Tablet"
+       }
+      ],
+      "text": "amLODIPine 2.5 MG Oral Tablet"
+     }
+    },
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "authoredOn": "2026-07-03T06:32:42+09:30",
+    "dosageInstruction": [
+     {
+      "sequence": 1,
+      "timing": {
+       "repeat": {
+        "frequency": 1,
+        "period": 1.0,
+        "periodUnit": "d"
+       }
+      },
+      "doseAndRate": [
+       {
+        "type": {
+         "coding": [
+          {
+           "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+           "code": "ordered",
+           "display": "Ordered"
+          }
+         ]
+        },
+        "doseQuantity": {
+         "value": 1.0
+        }
+       }
+      ],
+      "asNeeded": false
+     }
+    ],
+    "reason": [
+     {
+      "concept": {
+       "text": "Essential hypertension (disorder)"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7828ed11-2f29-4cf5-7d52-2029e261fee5",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "7828ed11-2f29-4cf5-7d52-2029e261fee5",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "4548-4",
+       "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+      }
+     ],
+     "text": "Hemoglobin A1c/Hemoglobin.total in Blood"
+    },
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "effectiveDateTime": "2026-07-03T06:32:42+09:30",
+    "valueQuantity": {
+     "value": 6.05,
+     "unit": "%",
+     "system": "http://unitsofmeasure.org",
+     "code": "%"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7828ed11-2f29-4cf5-ed99-9e8cba09b9b0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "7828ed11-2f29-4cf5-ed99-9e8cba09b9b0",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs",
+        "display": "Vital signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "39156-5",
+       "display": "Body mass index (BMI) [Ratio]"
+      }
+     ],
+     "text": "Body mass index (BMI) [Ratio]"
+    },
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "effectiveDateTime": "2026-07-03T06:32:42+09:30",
+    "valueQuantity": {
+     "value": 30.19,
+     "unit": "kg/m2",
+     "system": "http://unitsofmeasure.org",
+     "code": "kg/m2"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7828ed11-2f29-4cf5-e815-9f9838870c7c",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "7828ed11-2f29-4cf5-e815-9f9838870c7c",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs",
+        "display": "Vital signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "85354-9",
+       "display": "Blood pressure panel with all children optional"
+      }
+     ],
+     "text": "Blood pressure panel with all children optional"
+    },
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "effectiveDateTime": "2026-07-03T06:32:42+09:30",
+    "component": [
+     {
+      "code": {
+       "coding": [
+        {
+         "system": "http://loinc.org",
+         "code": "8462-4",
+         "display": "Diastolic Blood Pressure"
+        }
+       ],
+       "text": "Diastolic Blood Pressure"
+      },
+      "valueQuantity": {
+       "value": 91,
+       "unit": "mm[Hg]",
+       "system": "http://unitsofmeasure.org",
+       "code": "mm[Hg]"
+      }
+     },
+     {
+      "code": {
+       "coding": [
+        {
+         "system": "http://loinc.org",
+         "code": "8480-6",
+         "display": "Systolic Blood Pressure"
+        }
+       ],
+       "text": "Systolic Blood Pressure"
+      },
+      "valueQuantity": {
+       "value": 118,
+       "unit": "mm[Hg]",
+       "system": "http://unitsofmeasure.org",
+       "code": "mm[Hg]"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7828ed11-2f29-4cf5-9487-41957496ef94",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "7828ed11-2f29-4cf5-9487-41957496ef94",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs",
+        "display": "Vital signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Heart rate"
+      }
+     ],
+     "text": "Heart rate"
+    },
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "effectiveDateTime": "2026-07-03T06:32:42+09:30",
+    "valueQuantity": {
+     "value": 85,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7828ed11-2f29-4cf5-8832-7fcd96a0cfe6",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "7828ed11-2f29-4cf5-8832-7fcd96a0cfe6",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs",
+        "display": "Vital signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "9279-1",
+       "display": "Respiratory rate"
+      }
+     ],
+     "text": "Respiratory rate"
+    },
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "effectiveDateTime": "2026-07-03T06:32:42+09:30",
+    "valueQuantity": {
+     "value": 13,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7828ed11-2f29-4cf5-7071-c242a9fa90b0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "7828ed11-2f29-4cf5-7071-c242a9fa90b0",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "6298-4",
+       "display": "Potassium [Moles/volume] in Blood"
+      }
+     ],
+     "text": "Potassium [Moles/volume] in Blood"
+    },
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "effectiveDateTime": "2026-07-03T06:32:42+09:30",
+    "valueQuantity": {
+     "value": 4.35,
+     "unit": "mmol/L",
+     "system": "http://unitsofmeasure.org",
+     "code": "mmol/L"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7828ed11-2f29-4cf5-d9fa-4c186d17b83f",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "7828ed11-2f29-4cf5-d9fa-4c186d17b83f",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "2093-3",
+       "display": "Cholesterol [Mass/volume] in Serum or Plasma"
+      }
+     ],
+     "text": "Cholesterol [Mass/volume] in Serum or Plasma"
+    },
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "effectiveDateTime": "2026-07-03T06:32:42+09:30",
+    "valueQuantity": {
+     "value": 203.1,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7828ed11-2f29-4cf5-0c1f-fe0dfac9d3ce",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "7828ed11-2f29-4cf5-0c1f-fe0dfac9d3ce",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "33914-3",
+       "display": "Glomerular filtration rate [Volume Rate/Area] in Serum or Plasma by Creatinine-based formula (MDRD)/1.73 sq M"
+      }
+     ],
+     "text": "Glomerular filtration rate [Volume Rate/Area] in Serum or Plasma by Creatinine-based formula (MDRD)/1.73 sq M"
+    },
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "effectiveDateTime": "2026-07-03T06:32:42+09:30",
+    "valueQuantity": {
+     "value": 98.27,
+     "unit": "mL/min/{1.73_m2}",
+     "system": "http://unitsofmeasure.org",
+     "code": "mL/min/{1.73_m2}"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7828ed11-2f29-4cf5-5509-3f42e2f25be8",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "7828ed11-2f29-4cf5-5509-3f42e2f25be8",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "718-7",
+       "display": "Hemoglobin [Mass/volume] in Blood"
+      }
+     ],
+     "text": "Hemoglobin [Mass/volume] in Blood"
+    },
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "effectiveDateTime": "2025-06-27T06:32:42+09:30",
+    "valueQuantity": {
+     "value": 13.251,
+     "unit": "g/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "g/dL"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7828ed11-2f29-4cf5-5d13-b287d5f8ed6a",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "7828ed11-2f29-4cf5-5d13-b287d5f8ed6a",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs",
+        "display": "Vital signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8310-5",
+       "display": "Body temperature"
+      },
+      {
+       "system": "http://loinc.org",
+       "code": "8331-1",
+       "display": "Oral temperature"
+      }
+     ],
+     "text": "Body temperature"
+    },
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "effectiveDateTime": "2025-09-19T06:32:42+09:30",
+    "valueQuantity": {
+     "value": 38.486,
+     "unit": "Cel",
+     "system": "http://unitsofmeasure.org",
+     "code": "Cel"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7828ed11-2f29-4cf5-00f6-3732d5b94336",
+   "resource": {
+    "resourceType": "Encounter",
+    "id": "7828ed11-2f29-4cf5-00f6-3732d5b94336",
+    "status": "completed",
+    "class": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB"
+       }
+      ]
+     }
+    ],
+    "type": [
+     {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "36228007",
+        "display": "Ophthalmic examination and evaluation (procedure)"
+       }
+      ],
+      "text": "Ophthalmic examination and evaluation (procedure)"
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "actualPeriod": {
+     "start": "2026-08-29T10:11:38+09:30",
+     "end": "2026-08-29T10:55:38+09:30"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7828ed11-2f29-4cf5-0294-f31b5b83d06b",
+   "resource": {
+    "resourceType": "Encounter",
+    "id": "7828ed11-2f29-4cf5-0294-f31b5b83d06b",
+    "status": "completed",
+    "class": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB"
+       }
+      ]
+     }
+    ],
+    "type": [
+     {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "185349003",
+        "display": "Encounter for check up (procedure)"
+       }
+      ],
+      "text": "Encounter for check up (procedure)"
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "actualPeriod": {
+     "start": "2026-07-17T06:32:42+09:30",
+     "end": "2026-07-17T10:05:11+09:30"
+    },
+    "reason": [
+     {
+      "value": [
+       {
+        "concept": {
+         "coding": [
+          {
+           "system": "http://snomed.info/sct",
+           "code": "103697008",
+           "display": "Patient referral for dental care (procedure)"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7828ed11-2f29-4cf5-7c89-744ca7a7168e",
+   "resource": {
+    "resourceType": "Encounter",
+    "id": "7828ed11-2f29-4cf5-7c89-744ca7a7168e",
+    "status": "completed",
+    "class": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB"
+       }
+      ]
+     }
+    ],
+    "type": [
+     {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "162673000",
+        "display": "General examination of patient (procedure)"
+       }
+      ],
+      "text": "General examination of patient (procedure)"
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "actualPeriod": {
+     "start": "2026-07-03T06:32:42+09:30",
+     "end": "2026-07-03T07:03:03+09:30"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7828ed11-2f29-4cf5-8659-e654e99dfeb3",
+   "resource": {
+    "resourceType": "Encounter",
+    "id": "7828ed11-2f29-4cf5-8659-e654e99dfeb3",
+    "status": "completed",
+    "class": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB"
+       }
+      ]
+     }
+    ],
+    "type": [
+     {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "36228007",
+        "display": "Ophthalmic examination and evaluation (procedure)"
+       }
+      ],
+      "text": "Ophthalmic examination and evaluation (procedure)"
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "actualPeriod": {
+     "start": "2025-10-03T09:52:42+09:30",
+     "end": "2025-10-03T10:36:42+09:30"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7828ed11-2f29-4cf5-0ff1-14941893976f",
+   "resource": {
+    "resourceType": "Encounter",
+    "id": "7828ed11-2f29-4cf5-0ff1-14941893976f",
+    "status": "completed",
+    "class": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB"
+       }
+      ]
+     }
+    ],
+    "type": [
+     {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "185349003",
+        "display": "Encounter for check up (procedure)"
+       }
+      ],
+      "text": "Encounter for check up (procedure)"
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "actualPeriod": {
+     "start": "2025-09-26T06:32:42+09:30",
+     "end": "2025-09-26T10:32:00+09:30"
+    },
+    "reason": [
+     {
+      "value": [
+       {
+        "concept": {
+         "coding": [
+          {
+           "system": "http://snomed.info/sct",
+           "code": "66383009",
+           "display": "Gingivitis (disorder)"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:c974db14-7e30-2529-abd2-b52f54919624",
+   "resource": {
+    "resourceType": "DocumentReference",
+    "id": "c974db14-7e30-2529-abd2-b52f54919624",
+    "status": "current",
+    "type": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "34117-2",
+       "display": "History and physical note"
+      },
+      {
+       "system": "http://loinc.org",
+       "code": "51847-2",
+       "display": "Evaluation + Plan note"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+        "code": "clinical-note",
+        "display": "Clinical Note"
+       }
+      ]
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "date": "2026-08-29T10:11:38.459+09:30",
+    "content": [
+     {
+      "attachment": {
+       "contentType": "text/plain; charset=utf-8",
+       "data": "CjIwMjYtMDgtMjkKCiMgQ2hpZWYgQ29tcGxhaW50Ci0gVGluZ2xpbmcgaW4gSGFuZHMgYW5kIEZlZXQKCgojIEhpc3Rvcnkgb2YgUHJlc2VudCBJbGxuZXNzCkx1Y2FzNDA0IGlzIGEgNDUgeWVhci1vbGQgaGlzcGFuaWMgd2hpdGUgbWFsZS4gUGF0aWVudCBoYXMgYSBoaXN0b3J5IG9mIHN0cmVwdG9jb2NjYWwgc29yZSB0aHJvYXQgKGRpc29yZGVyKSwgbWVkaWNhdGlvbiByZXZpZXcgZHVlIChzaXR1YXRpb24pLCB1bmVtcGxveWVkIChmaW5kaW5nKSwgZnJhY3R1cmVkIGRlbnRhbCBmaWxsaW5nIChmaW5kaW5nKSwgcGFydC10aW1lIGVtcGxveW1lbnQgKGZpbmRpbmcpLCBsaW1pdGVkIHNvY2lhbCBjb250YWN0IChmaW5kaW5nKSwgcmVwb3J0cyBvZiB2aW9sZW5jZSBpbiB0aGUgZW52aXJvbm1lbnQgKGZpbmRpbmcpLCBmdWxsLXRpbWUgZW1wbG95bWVudCAoZmluZGluZyksIGxhY2VyYXRpb24gb2YgaGFuZCAoZGlzb3JkZXIpLCBsYWNlcmF0aW9uIC0gaW5qdXJ5IChkaXNvcmRlciksIGdpbmdpdml0aXMgKGRpc29yZGVyKSwgbG9vc2UgZGVudGFsIGZpbGxpbmcgKGZpbmRpbmcpLCBzdHJlc3MgKGZpbmRpbmcpLgoKIyBTb2NpYWwgSGlzdG9yeQpQYXRpZW50IGlzIHNpbmdsZS4gUGF0aWVudCBxdWl0IHNtb2tpbmcgYXQgYWdlIDE3IGFuZCBpcyBhbiBhbGNvaG9saWMuCiBQYXRpZW50IGlkZW50aWZpZXMgYXMgaGV0ZXJvc2V4dWFsLgoKUGF0aWVudCBjb21lcyBmcm9tIGEgbWlkZGxlIHNvY2lvZWNvbm9taWMgYmFja2dyb3VuZC4KIFBhdGllbnQgaGFzIGEgaGlnaCBzY2hvb2wgZWR1Y2F0aW9uLgpQYXRpZW50IGN1cnJlbnRseSBoYXMgTWVkaWNhaWQuCgojIEFsbGVyZ2llcwpObyBLbm93biBBbGxlcmdpZXMuCgojIE1lZGljYXRpb25zCnRyb3BpY2FtaWRlIDUgbWcvbWwgb3BodGhhbG1pYyBzb2x1dGlvbjsgMjQgaHIgbWV0Zm9ybWluIGh5ZHJvY2hsb3JpZGUgNTAwIG1nIGV4dGVuZGVkIHJlbGVhc2Ugb3JhbCB0YWJsZXQ7IGh5ZHJvY2hsb3JvdGhpYXppZGUgMjUgbWcgb3JhbCB0YWJsZXQ7IHBlbmljaWxsaW4gdiBwb3Rhc3NpdW0gNTAwIG1nIG9yYWwgdGFibGV0OyBhbWxvZGlwaW5lIDIuNSBtZyBvcmFsIHRhYmxldDsgaWJ1cHJvZmVuIDIwMCBtZyBvcmFsIHRhYmxldDsgbmFwcm94ZW4gc29kaXVtIDIyMCBtZyBvcmFsIHRhYmxldDsgc29kaXVtIGZsdW9yaWRlIDAuMDI3MiBtZy9tZyBvcmFsIGdlbAoKIyBBc3Nlc3NtZW50IGFuZCBQbGFuCgoKCiMjIFBsYW4KClRoZSBmb2xsb3dpbmcgcHJvY2VkdXJlcyB3ZXJlIGNvbmR1Y3RlZDoKLSB2aXN1YWwgYWN1aXR5IHRlc3RpbmcgKHByb2NlZHVyZSkKLSBpbnRyYW9jdWxhciBwcmVzc3VyZSB0ZXN0IChwcm9jZWR1cmUpCi0gb2N1bGFyIHNsaXQgbGFtcCBleGFtaW5hdGlvbiAocHJvY2VkdXJlKQotIGluZGlyZWN0IGdvbmlvc2NvcHkgKHByb2NlZHVyZSkKLSBjYW1lcmEgZnVuZG9zY29weSAocHJvY2VkdXJlKQotIGRpYWJldGljIHJldGluYWwgZXllIGV4YW0gKHByb2NlZHVyZSkKVGhlIHBhdGllbnQgd2FzIHByZXNjcmliZWQgdGhlIGZvbGxvd2luZyBtZWRpY2F0aW9uczoKLSB0cm9waWNhbWlkZSA1IG1nL21sIG9waHRoYWxtaWMgc29sdXRpb24K"
+      }
+     }
+    ],
+    "period": {
+     "start": "2026-08-29T10:11:38+09:30",
+     "end": "2026-08-29T10:55:38+09:30"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:bdca0f63-8c52-2f88-23e1-1f11b22fd136",
+   "resource": {
+    "resourceType": "DocumentReference",
+    "id": "bdca0f63-8c52-2f88-23e1-1f11b22fd136",
+    "status": "superseded",
+    "type": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "34117-2",
+       "display": "History and physical note"
+      },
+      {
+       "system": "http://loinc.org",
+       "code": "51847-2",
+       "display": "Evaluation + Plan note"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+        "code": "clinical-note",
+        "display": "Clinical Note"
+       }
+      ]
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "date": "2026-07-17T06:32:42.459+09:30",
+    "content": [
+     {
+      "attachment": {
+       "contentType": "text/plain; charset=utf-8",
+       "data": "CjIwMjYtMDctMTcKCiMgQ2hpZWYgQ29tcGxhaW50Ci0gVGluZ2xpbmcgaW4gSGFuZHMgYW5kIEZlZXQKCgojIEhpc3Rvcnkgb2YgUHJlc2VudCBJbGxuZXNzCkx1Y2FzNDA0IGlzIGEgNDUgeWVhci1vbGQgaGlzcGFuaWMgd2hpdGUgbWFsZS4gUGF0aWVudCBoYXMgYSBoaXN0b3J5IG9mIHN0cmVwdG9jb2NjYWwgc29yZSB0aHJvYXQgKGRpc29yZGVyKSwgcGFydC10aW1lIGVtcGxveW1lbnQgKGZpbmRpbmcpLCBtZWRpY2F0aW9uIHJldmlldyBkdWUgKHNpdHVhdGlvbiksIGxpbWl0ZWQgc29jaWFsIGNvbnRhY3QgKGZpbmRpbmcpLCByZXBvcnRzIG9mIHZpb2xlbmNlIGluIHRoZSBlbnZpcm9ubWVudCAoZmluZGluZyksIGZ1bGwtdGltZSBlbXBsb3ltZW50IChmaW5kaW5nKSwgdW5lbXBsb3llZCAoZmluZGluZyksIGxhY2VyYXRpb24gb2YgaGFuZCAoZGlzb3JkZXIpLCBsYWNlcmF0aW9uIC0gaW5qdXJ5IChkaXNvcmRlciksIGdpbmdpdml0aXMgKGRpc29yZGVyKSwgbG9vc2UgZGVudGFsIGZpbGxpbmcgKGZpbmRpbmcpLCBzdHJlc3MgKGZpbmRpbmcpLgoKIyBTb2NpYWwgSGlzdG9yeQpQYXRpZW50IGlzIHNpbmdsZS4gUGF0aWVudCBxdWl0IHNtb2tpbmcgYXQgYWdlIDE3IGFuZCBpcyBhbiBhbGNvaG9saWMuCiBQYXRpZW50IGlkZW50aWZpZXMgYXMgaGV0ZXJvc2V4dWFsLgoKUGF0aWVudCBjb21lcyBmcm9tIGEgbWlkZGxlIHNvY2lvZWNvbm9taWMgYmFja2dyb3VuZC4KIFBhdGllbnQgaGFzIGEgaGlnaCBzY2hvb2wgZWR1Y2F0aW9uLgpQYXRpZW50IGN1cnJlbnRseSBoYXMgTWVkaWNhaWQuCgojIEFsbGVyZ2llcwpObyBLbm93biBBbGxlcmdpZXMuCgojIE1lZGljYXRpb25zCnRyb3BpY2FtaWRlIDUgbWcvbWwgb3BodGhhbG1pYyBzb2x1dGlvbjsgMjQgaHIgbWV0Zm9ybWluIGh5ZHJvY2hsb3JpZGUgNTAwIG1nIGV4dGVuZGVkIHJlbGVhc2Ugb3JhbCB0YWJsZXQ7IGh5ZHJvY2hsb3JvdGhpYXppZGUgMjUgbWcgb3JhbCB0YWJsZXQ7IHBlbmljaWxsaW4gdiBwb3Rhc3NpdW0gNTAwIG1nIG9yYWwgdGFibGV0OyBhbWxvZGlwaW5lIDIuNSBtZyBvcmFsIHRhYmxldDsgaWJ1cHJvZmVuIDIwMCBtZyBvcmFsIHRhYmxldDsgbmFwcm94ZW4gc29kaXVtIDIyMCBtZyBvcmFsIHRhYmxldDsgc29kaXVtIGZsdW9yaWRlIDAuMDI3MiBtZy9tZyBvcmFsIGdlbAoKIyBBc3Nlc3NtZW50IGFuZCBQbGFuClBhdGllbnQgaXMgcHJlc2VudGluZyB3aXRoIGZyYWN0dXJlZCBkZW50YWwgZmlsbGluZyAoZmluZGluZykuIAoKCiMjIFBsYW4KClRoZSBmb2xsb3dpbmcgcHJvY2VkdXJlcyB3ZXJlIGNvbmR1Y3RlZDoKLSBkZW50YWwgY29uc3VsdGF0aW9uIGFuZCByZXBvcnQgKHByb2NlZHVyZSkKLSBkZW50YWwgY2FyZSAocmVnaW1lL3RoZXJhcHkpCi0gcmVtb3ZhbCBvZiBzdXByYWdpbmdpdmFsIHBsYXF1ZSBhbmQgY2FsY3VsdXMgZnJvbSBhbGwgdGVldGggdXNpbmcgZGVudGFsIGluc3RydW1lbnQgKHByb2NlZHVyZSkKLSByZW1vdmFsIG9mIHN1YmdpbmdpdmFsIHBsYXF1ZSBhbmQgY2FsY3VsdXMgZnJvbSBhbGwgdGVldGggdXNpbmcgZGVudGFsIGluc3RydW1lbnQgKHByb2NlZHVyZSkKLSBleGFtaW5hdGlvbiBvZiBnaW5naXZhZSAocHJvY2VkdXJlKQotIGFwcGxpY2F0aW9uIG9mIGNvbXBvc2l0ZSBkZW50YWwgZmlsbGluZyBtYXRlcmlhbCB0byBkZW50aW4gb2YgdG9vdGggZm9sbG93aW5nIGZyYWN0dXJlIG9mIHRvb3RoIChwcm9jZWR1cmUpCi0gb3JhbCBoZWFsdGggZWR1Y2F0aW9uIChwcm9jZWR1cmUpCg=="
+      }
+     }
+    ],
+    "period": {
+     "start": "2026-07-17T06:32:42+09:30",
+     "end": "2026-07-17T10:05:11+09:30"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:c81c45ff-0427-ac6a-9e7d-b6f9e6858685",
+   "resource": {
+    "resourceType": "DocumentReference",
+    "id": "c81c45ff-0427-ac6a-9e7d-b6f9e6858685",
+    "status": "superseded",
+    "type": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "34117-2",
+       "display": "History and physical note"
+      },
+      {
+       "system": "http://loinc.org",
+       "code": "51847-2",
+       "display": "Evaluation + Plan note"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+        "code": "clinical-note",
+        "display": "Clinical Note"
+       }
+      ]
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "date": "2026-07-03T06:32:42.459+09:30",
+    "content": [
+     {
+      "attachment": {
+       "contentType": "text/plain; charset=utf-8",
+       "data": "CjIwMjYtMDctMDMKCiMgQ2hpZWYgQ29tcGxhaW50Ci0gVGluZ2xpbmcgaW4gSGFuZHMgYW5kIEZlZXQKCgojIEhpc3Rvcnkgb2YgUHJlc2VudCBJbGxuZXNzCkx1Y2FzNDA0IGlzIGEgNDUgeWVhci1vbGQgaGlzcGFuaWMgd2hpdGUgbWFsZS4gUGF0aWVudCBoYXMgYSBoaXN0b3J5IG9mIHN0cmVwdG9jb2NjYWwgc29yZSB0aHJvYXQgKGRpc29yZGVyKSwgcGFydC10aW1lIGVtcGxveW1lbnQgKGZpbmRpbmcpLCBtZWRpY2F0aW9uIHJldmlldyBkdWUgKHNpdHVhdGlvbiksIGxpbWl0ZWQgc29jaWFsIGNvbnRhY3QgKGZpbmRpbmcpLCByZXBvcnRzIG9mIHZpb2xlbmNlIGluIHRoZSBlbnZpcm9ubWVudCAoZmluZGluZyksIGZ1bGwtdGltZSBlbXBsb3ltZW50IChmaW5kaW5nKSwgdW5lbXBsb3llZCAoZmluZGluZyksIGxhY2VyYXRpb24gb2YgaGFuZCAoZGlzb3JkZXIpLCBsYWNlcmF0aW9uIC0gaW5qdXJ5IChkaXNvcmRlciksIGdpbmdpdml0aXMgKGRpc29yZGVyKSwgbG9vc2UgZGVudGFsIGZpbGxpbmcgKGZpbmRpbmcpLCBzdHJlc3MgKGZpbmRpbmcpLgoKIyBTb2NpYWwgSGlzdG9yeQpQYXRpZW50IGlzIHNpbmdsZS4gUGF0aWVudCBxdWl0IHNtb2tpbmcgYXQgYWdlIDE3IGFuZCBpcyBhbiBhbGNvaG9saWMuCiBQYXRpZW50IGlkZW50aWZpZXMgYXMgaGV0ZXJvc2V4dWFsLgoKUGF0aWVudCBjb21lcyBmcm9tIGEgbWlkZGxlIHNvY2lvZWNvbm9taWMgYmFja2dyb3VuZC4KIFBhdGllbnQgaGFzIGEgaGlnaCBzY2hvb2wgZWR1Y2F0aW9uLgpQYXRpZW50IGN1cnJlbnRseSBoYXMgTWVkaWNhaWQuCgojIEFsbGVyZ2llcwpObyBLbm93biBBbGxlcmdpZXMuCgojIE1lZGljYXRpb25zCnRyb3BpY2FtaWRlIDUgbWcvbWwgb3BodGhhbG1pYyBzb2x1dGlvbjsgMjQgaHIgbWV0Zm9ybWluIGh5ZHJvY2hsb3JpZGUgNTAwIG1nIGV4dGVuZGVkIHJlbGVhc2Ugb3JhbCB0YWJsZXQ7IGh5ZHJvY2hsb3JvdGhpYXppZGUgMjUgbWcgb3JhbCB0YWJsZXQ7IHBlbmljaWxsaW4gdiBwb3Rhc3NpdW0gNTAwIG1nIG9yYWwgdGFibGV0OyBhbWxvZGlwaW5lIDIuNSBtZyBvcmFsIHRhYmxldDsgaWJ1cHJvZmVuIDIwMCBtZyBvcmFsIHRhYmxldDsgbmFwcm94ZW4gc29kaXVtIDIyMCBtZyBvcmFsIHRhYmxldDsgc29kaXVtIGZsdW9yaWRlIDAuMDI3MiBtZy9tZyBvcmFsIGdlbAoKIyBBc3Nlc3NtZW50IGFuZCBQbGFuClBhdGllbnQgaXMgcHJlc2VudGluZyB3aXRoIG1lZGljYXRpb24gcmV2aWV3IGR1ZSAoc2l0dWF0aW9uKSwgdW5lbXBsb3llZCAoZmluZGluZykuIAoKCiMjIFBsYW4KClRoZSBmb2xsb3dpbmcgcHJvY2VkdXJlcyB3ZXJlIGNvbmR1Y3RlZDoKLSBtZWRpY2F0aW9uIHJlY29uY2lsaWF0aW9uIChwcm9jZWR1cmUpCi0gYXNzZXNzbWVudCBvZiBoZWFsdGggYW5kIHNvY2lhbCBjYXJlIG5lZWRzIChwcm9jZWR1cmUpCi0gZGVwcmVzc2lvbiBzY3JlZW5pbmcgKHByb2NlZHVyZSkKLSBkZXByZXNzaW9uIHNjcmVlbmluZyAocHJvY2VkdXJlKQotIGFzc2Vzc21lbnQgb2Ygc3Vic3RhbmNlIHVzZSAocHJvY2VkdXJlKQotIGFzc2Vzc21lbnQgdXNpbmcgYWxjb2hvbCB1c2UgZGlzb3JkZXJzIGlkZW50aWZpY2F0aW9uIHRlc3QgLSBjb25zdW1wdGlvbiAocHJvY2VkdXJlKQotIHBhdGllbnQgcmVmZXJyYWwgZm9yIGRlbnRhbCBjYXJlIChwcm9jZWR1cmUpClRoZSBmb2xsb3dpbmcgbGFiIHJlcG9ydHMgd2VyZSBjb21wbGV0ZWQ6Ci0gYmFzaWMgbWV0YWJvbGljIHBhbmVsIC0gYmxvb2QKLSBsaXBpZCBwYW5lbCB3aXRoIGRpcmVjdCBsZGwgLSBzZXJ1bSBvciBwbGFzbWEKLSBwYXRpZW50IGhlYWx0aCBxdWVzdGlvbm5haXJlIDIgaXRlbSAocGhxLTIpIFtyZXBvcnRlZF0KLSBhbGNvaG9sIHVzZSBkaXNvcmRlciBpZGVudGlmaWNhdGlvbiB0ZXN0IC0gY29uc3VtcHRpb24gW2F1ZGl0LWNdClRoZSBwYXRpZW50IHdhcyBwcmVzY3JpYmVkIHRoZSBmb2xsb3dpbmcgbWVkaWNhdGlvbnM6Ci0gaHlkcm9jaGxvcm90aGlhemlkZSAyNSBtZyBvcmFsIHRhYmxldAotIDI0IGhyIG1ldGZvcm1pbiBoeWRyb2NobG9yaWRlIDUwMCBtZyBleHRlbmRlZCByZWxlYXNlIG9yYWwgdGFibGV0Ci0gYW1sb2RpcGluZSAyLjUgbWcgb3JhbCB0YWJsZXQK"
+      }
+     }
+    ],
+    "period": {
+     "start": "2026-07-03T06:32:42+09:30",
+     "end": "2026-07-03T07:03:03+09:30"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:ff61a1db-4988-2564-e1bf-7bf61fe9965f",
+   "resource": {
+    "resourceType": "DocumentReference",
+    "id": "ff61a1db-4988-2564-e1bf-7bf61fe9965f",
+    "status": "superseded",
+    "type": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "34117-2",
+       "display": "History and physical note"
+      },
+      {
+       "system": "http://loinc.org",
+       "code": "51847-2",
+       "display": "Evaluation + Plan note"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+        "code": "clinical-note",
+        "display": "Clinical Note"
+       }
+      ]
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "date": "2025-10-03T09:52:42.459+09:30",
+    "content": [
+     {
+      "attachment": {
+       "contentType": "text/plain; charset=utf-8",
+       "data": "CjIwMjUtMTAtMDMKCiMgQ2hpZWYgQ29tcGxhaW50Ci0gVGluZ2xpbmcgaW4gSGFuZHMgYW5kIEZlZXQKCgojIEhpc3Rvcnkgb2YgUHJlc2VudCBJbGxuZXNzCkx1Y2FzNDA0IGlzIGEgNDQgeWVhci1vbGQgaGlzcGFuaWMgd2hpdGUgbWFsZS4gUGF0aWVudCBoYXMgYSBoaXN0b3J5IG9mIHN0cmVwdG9jb2NjYWwgc29yZSB0aHJvYXQgKGRpc29yZGVyKSwgcGFydC10aW1lIGVtcGxveW1lbnQgKGZpbmRpbmcpLCBtZWRpY2F0aW9uIHJldmlldyBkdWUgKHNpdHVhdGlvbiksIGxpbWl0ZWQgc29jaWFsIGNvbnRhY3QgKGZpbmRpbmcpLCByZXBvcnRzIG9mIHZpb2xlbmNlIGluIHRoZSBlbnZpcm9ubWVudCAoZmluZGluZyksIGZ1bGwtdGltZSBlbXBsb3ltZW50IChmaW5kaW5nKSwgdW5lbXBsb3llZCAoZmluZGluZyksIGxhY2VyYXRpb24gb2YgaGFuZCAoZGlzb3JkZXIpLCBsYWNlcmF0aW9uIC0gaW5qdXJ5IChkaXNvcmRlciksIGdpbmdpdml0aXMgKGRpc29yZGVyKSwgbG9vc2UgZGVudGFsIGZpbGxpbmcgKGZpbmRpbmcpLCBzdHJlc3MgKGZpbmRpbmcpLgoKIyBTb2NpYWwgSGlzdG9yeQpQYXRpZW50IGlzIHNpbmdsZS4gUGF0aWVudCBxdWl0IHNtb2tpbmcgYXQgYWdlIDE3IGFuZCBpcyBhbiBhbGNvaG9saWMuCiBQYXRpZW50IGlkZW50aWZpZXMgYXMgaGV0ZXJvc2V4dWFsLgoKUGF0aWVudCBjb21lcyBmcm9tIGEgbWlkZGxlIHNvY2lvZWNvbm9taWMgYmFja2dyb3VuZC4KIFBhdGllbnQgaGFzIGEgaGlnaCBzY2hvb2wgZWR1Y2F0aW9uLgpQYXRpZW50IGN1cnJlbnRseSBoYXMgTWVkaWNhaWQuCgojIEFsbGVyZ2llcwpObyBLbm93biBBbGxlcmdpZXMuCgojIE1lZGljYXRpb25zCnRyb3BpY2FtaWRlIDUgbWcvbWwgb3BodGhhbG1pYyBzb2x1dGlvbjsgMjQgaHIgbWV0Zm9ybWluIGh5ZHJvY2hsb3JpZGUgNTAwIG1nIGV4dGVuZGVkIHJlbGVhc2Ugb3JhbCB0YWJsZXQ7IGh5ZHJvY2hsb3JvdGhpYXppZGUgMjUgbWcgb3JhbCB0YWJsZXQ7IHBlbmljaWxsaW4gdiBwb3Rhc3NpdW0gNTAwIG1nIG9yYWwgdGFibGV0OyBhbWxvZGlwaW5lIDIuNSBtZyBvcmFsIHRhYmxldDsgaWJ1cHJvZmVuIDIwMCBtZyBvcmFsIHRhYmxldDsgbmFwcm94ZW4gc29kaXVtIDIyMCBtZyBvcmFsIHRhYmxldDsgc29kaXVtIGZsdW9yaWRlIDAuMDI3MiBtZy9tZyBvcmFsIGdlbAoKIyBBc3Nlc3NtZW50IGFuZCBQbGFuCgoKCiMjIFBsYW4KClRoZSBmb2xsb3dpbmcgcHJvY2VkdXJlcyB3ZXJlIGNvbmR1Y3RlZDoKLSB2aXN1YWwgYWN1aXR5IHRlc3RpbmcgKHByb2NlZHVyZSkKLSBpbnRyYW9jdWxhciBwcmVzc3VyZSB0ZXN0IChwcm9jZWR1cmUpCi0gb2N1bGFyIHNsaXQgbGFtcCBleGFtaW5hdGlvbiAocHJvY2VkdXJlKQotIGluZGlyZWN0IGdvbmlvc2NvcHkgKHByb2NlZHVyZSkKLSBjYW1lcmEgZnVuZG9zY29weSAocHJvY2VkdXJlKQotIGRpYWJldGljIHJldGluYWwgZXllIGV4YW0gKHByb2NlZHVyZSkKVGhlIHBhdGllbnQgd2FzIHByZXNjcmliZWQgdGhlIGZvbGxvd2luZyBtZWRpY2F0aW9uczoKLSB0cm9waWNhbWlkZSA1IG1nL21sIG9waHRoYWxtaWMgc29sdXRpb24K"
+      }
+     }
+    ],
+    "period": {
+     "start": "2025-10-03T09:52:42+09:30",
+     "end": "2025-10-03T10:36:42+09:30"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:0b707030-2bed-1c87-b3ed-e15f18fa87b7",
+   "resource": {
+    "resourceType": "DocumentReference",
+    "id": "0b707030-2bed-1c87-b3ed-e15f18fa87b7",
+    "status": "superseded",
+    "type": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "34117-2",
+       "display": "History and physical note"
+      },
+      {
+       "system": "http://loinc.org",
+       "code": "51847-2",
+       "display": "Evaluation + Plan note"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+        "code": "clinical-note",
+        "display": "Clinical Note"
+       }
+      ]
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "date": "2025-09-26T06:32:42.459+09:30",
+    "content": [
+     {
+      "attachment": {
+       "contentType": "text/plain; charset=utf-8",
+       "data": "CjIwMjUtMDktMjYKCiMgQ2hpZWYgQ29tcGxhaW50Ci0gVGluZ2xpbmcgaW4gSGFuZHMgYW5kIEZlZXQKCgojIEhpc3Rvcnkgb2YgUHJlc2VudCBJbGxuZXNzCkx1Y2FzNDA0IGlzIGEgNDQgeWVhci1vbGQgaGlzcGFuaWMgd2hpdGUgbWFsZS4gUGF0aWVudCBoYXMgYSBoaXN0b3J5IG9mIHN0cmVwdG9jb2NjYWwgc29yZSB0aHJvYXQgKGRpc29yZGVyKSwgcGFydC10aW1lIGVtcGxveW1lbnQgKGZpbmRpbmcpLCBtZWRpY2F0aW9uIHJldmlldyBkdWUgKHNpdHVhdGlvbiksIGxpbWl0ZWQgc29jaWFsIGNvbnRhY3QgKGZpbmRpbmcpLCByZXBvcnRzIG9mIHZpb2xlbmNlIGluIHRoZSBlbnZpcm9ubWVudCAoZmluZGluZyksIGZ1bGwtdGltZSBlbXBsb3ltZW50IChmaW5kaW5nKSwgdW5lbXBsb3llZCAoZmluZGluZyksIGxhY2VyYXRpb24gb2YgaGFuZCAoZGlzb3JkZXIpLCBsYWNlcmF0aW9uIC0gaW5qdXJ5IChkaXNvcmRlciksIGdpbmdpdml0aXMgKGRpc29yZGVyKSwgc3RyZXNzIChmaW5kaW5nKS4KCiMgU29jaWFsIEhpc3RvcnkKUGF0aWVudCBpcyBzaW5nbGUuIFBhdGllbnQgcXVpdCBzbW9raW5nIGF0IGFnZSAxNyBhbmQgaXMgYW4gYWxjb2hvbGljLgogUGF0aWVudCBpZGVudGlmaWVzIGFzIGhldGVyb3NleHVhbC4KClBhdGllbnQgY29tZXMgZnJvbSBhIG1pZGRsZSBzb2Npb2Vjb25vbWljIGJhY2tncm91bmQuCiBQYXRpZW50IGhhcyBhIGhpZ2ggc2Nob29sIGVkdWNhdGlvbi4KUGF0aWVudCBjdXJyZW50bHkgaGFzIE1lZGljYWlkLgoKIyBBbGxlcmdpZXMKTm8gS25vd24gQWxsZXJnaWVzLgoKIyBNZWRpY2F0aW9ucwp0cm9waWNhbWlkZSA1IG1nL21sIG9waHRoYWxtaWMgc29sdXRpb247IDI0IGhyIG1ldGZvcm1pbiBoeWRyb2NobG9yaWRlIDUwMCBtZyBleHRlbmRlZCByZWxlYXNlIG9yYWwgdGFibGV0OyBoeWRyb2NobG9yb3RoaWF6aWRlIDI1IG1nIG9yYWwgdGFibGV0OyBwZW5pY2lsbGluIHYgcG90YXNzaXVtIDUwMCBtZyBvcmFsIHRhYmxldDsgYW1sb2RpcGluZSAyLjUgbWcgb3JhbCB0YWJsZXQ7IGlidXByb2ZlbiAyMDAgbWcgb3JhbCB0YWJsZXQ7IG5hcHJveGVuIHNvZGl1bSAyMjAgbWcgb3JhbCB0YWJsZXQKCiMgQXNzZXNzbWVudCBhbmQgUGxhbgpQYXRpZW50IGlzIHByZXNlbnRpbmcgd2l0aCBsb29zZSBkZW50YWwgZmlsbGluZyAoZmluZGluZykuIAoKCiMjIFBsYW4KClRoZSBmb2xsb3dpbmcgcHJvY2VkdXJlcyB3ZXJlIGNvbmR1Y3RlZDoKLSBkZW50YWwgY29uc3VsdGF0aW9uIGFuZCByZXBvcnQgKHByb2NlZHVyZSkKLSBkZW50YWwgY2FyZSAocmVnaW1lL3RoZXJhcHkpCi0gcmVtb3ZhbCBvZiBzdXByYWdpbmdpdmFsIHBsYXF1ZSBhbmQgY2FsY3VsdXMgZnJvbSBhbGwgdGVldGggdXNpbmcgZGVudGFsIGluc3RydW1lbnQgKHByb2NlZHVyZSkKLSByZW1vdmFsIG9mIHN1YmdpbmdpdmFsIHBsYXF1ZSBhbmQgY2FsY3VsdXMgZnJvbSBhbGwgdGVldGggdXNpbmcgZGVudGFsIGluc3RydW1lbnQgKHByb2NlZHVyZSkKLSBleGFtaW5hdGlvbiBvZiBnaW5naXZhZSAocHJvY2VkdXJlKQotIGFwcGxpY2F0aW9uIG9mIGNvbXBvc2l0ZSBkZW50YWwgZmlsbGluZyBtYXRlcmlhbCB0byBkZW50aW4gb2YgdG9vdGggZm9sbG93aW5nIGZyYWN0dXJlIG9mIHRvb3RoIChwcm9jZWR1cmUpCi0gZGVudGFsIGZsdW9yaWRlIHRyZWF0bWVudCAocHJvY2VkdXJlKQotIG9yYWwgaGVhbHRoIGVkdWNhdGlvbiAocHJvY2VkdXJlKQpUaGUgcGF0aWVudCB3YXMgcHJlc2NyaWJlZCB0aGUgZm9sbG93aW5nIG1lZGljYXRpb25zOgotIHNvZGl1bSBmbHVvcmlkZSAwLjAyNzIgbWcvbWcgb3JhbCBnZWwK"
+      }
+     }
+    ],
+    "period": {
+     "start": "2025-09-26T06:32:42+09:30",
+     "end": "2025-09-26T10:32:00+09:30"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:aa34f3e6-fcc4-841e-bd23-c4bdafcf0bf5",
+   "resource": {
+    "resourceType": "DocumentReference",
+    "id": "aa34f3e6-fcc4-841e-bd23-c4bdafcf0bf5",
+    "status": "superseded",
+    "type": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "34117-2",
+       "display": "History and physical note"
+      },
+      {
+       "system": "http://loinc.org",
+       "code": "51847-2",
+       "display": "Evaluation + Plan note"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+        "code": "clinical-note",
+        "display": "Clinical Note"
+       }
+      ]
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "date": "2025-09-19T06:32:42.459+09:30",
+    "content": [
+     {
+      "attachment": {
+       "contentType": "text/plain; charset=utf-8",
+       "data": "CjIwMjUtMDktMTkKCiMgQ2hpZWYgQ29tcGxhaW50Ci0gVGluZ2xpbmcgaW4gSGFuZHMgYW5kIEZlZXQKCgojIEhpc3Rvcnkgb2YgUHJlc2VudCBJbGxuZXNzCkx1Y2FzNDA0IGlzIGEgNDQgeWVhci1vbGQgaGlzcGFuaWMgd2hpdGUgbWFsZS4gUGF0aWVudCBoYXMgYSBoaXN0b3J5IG9mIHBhcnQtdGltZSBlbXBsb3ltZW50IChmaW5kaW5nKSwgbWVkaWNhdGlvbiByZXZpZXcgZHVlIChzaXR1YXRpb24pLCBsaW1pdGVkIHNvY2lhbCBjb250YWN0IChmaW5kaW5nKSwgcmVwb3J0cyBvZiB2aW9sZW5jZSBpbiB0aGUgZW52aXJvbm1lbnQgKGZpbmRpbmcpLCBmdWxsLXRpbWUgZW1wbG95bWVudCAoZmluZGluZyksIHVuZW1wbG95ZWQgKGZpbmRpbmcpLCBsYWNlcmF0aW9uIG9mIGhhbmQgKGRpc29yZGVyKSwgbGFjZXJhdGlvbiAtIGluanVyeSAoZGlzb3JkZXIpLCBnaW5naXZpdGlzIChkaXNvcmRlciksIHN0cmVzcyAoZmluZGluZykuCgojIFNvY2lhbCBIaXN0b3J5ClBhdGllbnQgaXMgc2luZ2xlLiBQYXRpZW50IHF1aXQgc21va2luZyBhdCBhZ2UgMTcgYW5kIGlzIGFuIGFsY29ob2xpYy4KIFBhdGllbnQgaWRlbnRpZmllcyBhcyBoZXRlcm9zZXh1YWwuCgpQYXRpZW50IGNvbWVzIGZyb20gYSBtaWRkbGUgc29jaW9lY29ub21pYyBiYWNrZ3JvdW5kLgogUGF0aWVudCBoYXMgYSBoaWdoIHNjaG9vbCBlZHVjYXRpb24uClBhdGllbnQgY3VycmVudGx5IGhhcyBNZWRpY2FpZC4KCiMgQWxsZXJnaWVzCk5vIEtub3duIEFsbGVyZ2llcy4KCiMgTWVkaWNhdGlvbnMKdHJvcGljYW1pZGUgNSBtZy9tbCBvcGh0aGFsbWljIHNvbHV0aW9uOyAyNCBociBtZXRmb3JtaW4gaHlkcm9jaGxvcmlkZSA1MDAgbWcgZXh0ZW5kZWQgcmVsZWFzZSBvcmFsIHRhYmxldDsgaHlkcm9jaGxvcm90aGlhemlkZSAyNSBtZyBvcmFsIHRhYmxldDsgYW1sb2RpcGluZSAyLjUgbWcgb3JhbCB0YWJsZXQ7IGlidXByb2ZlbiAyMDAgbWcgb3JhbCB0YWJsZXQ7IG5hcHJveGVuIHNvZGl1bSAyMjAgbWcgb3JhbCB0YWJsZXQKCiMgQXNzZXNzbWVudCBhbmQgUGxhbgpQYXRpZW50IGlzIHByZXNlbnRpbmcgd2l0aCBzdHJlcHRvY29jY2FsIHNvcmUgdGhyb2F0IChkaXNvcmRlcikuIAoKCiMjIFBsYW4KClRoZSBmb2xsb3dpbmcgcHJvY2VkdXJlcyB3ZXJlIGNvbmR1Y3RlZDoKLSB0aHJvYXQgY3VsdHVyZSAocHJvY2VkdXJlKQpUaGUgcGF0aWVudCB3YXMgcHJlc2NyaWJlZCB0aGUgZm9sbG93aW5nIG1lZGljYXRpb25zOgotIHBlbmljaWxsaW4gdiBwb3Rhc3NpdW0gNTAwIG1nIG9yYWwgdGFibGV0Cg=="
+      }
+     }
+    ],
+    "period": {
+     "start": "2025-09-19T06:32:42+09:30",
+     "end": "2025-09-19T06:47:42+09:30"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:056fba1e-ff10-a564-b2d5-d12ead368305",
+   "resource": {
+    "resourceType": "DocumentReference",
+    "id": "056fba1e-ff10-a564-b2d5-d12ead368305",
+    "status": "superseded",
+    "type": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "34117-2",
+       "display": "History and physical note"
+      },
+      {
+       "system": "http://loinc.org",
+       "code": "51847-2",
+       "display": "Evaluation + Plan note"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+        "code": "clinical-note",
+        "display": "Clinical Note"
+       }
+      ]
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "date": "2025-09-12T06:32:42.459+09:30",
+    "content": [
+     {
+      "attachment": {
+       "contentType": "text/plain; charset=utf-8",
+       "data": "CjIwMjUtMDktMTIKCiMgQ2hpZWYgQ29tcGxhaW50Ci0gVGluZ2xpbmcgaW4gSGFuZHMgYW5kIEZlZXQKCgojIEhpc3Rvcnkgb2YgUHJlc2VudCBJbGxuZXNzCkx1Y2FzNDA0IGlzIGEgNDQgeWVhci1vbGQgaGlzcGFuaWMgd2hpdGUgbWFsZS4gUGF0aWVudCBoYXMgYSBoaXN0b3J5IG9mIHBhcnQtdGltZSBlbXBsb3ltZW50IChmaW5kaW5nKSwgbWVkaWNhdGlvbiByZXZpZXcgZHVlIChzaXR1YXRpb24pLCBsaW1pdGVkIHNvY2lhbCBjb250YWN0IChmaW5kaW5nKSwgcmVwb3J0cyBvZiB2aW9sZW5jZSBpbiB0aGUgZW52aXJvbm1lbnQgKGZpbmRpbmcpLCBmdWxsLXRpbWUgZW1wbG95bWVudCAoZmluZGluZyksIHVuZW1wbG95ZWQgKGZpbmRpbmcpLCBsYWNlcmF0aW9uIG9mIGhhbmQgKGRpc29yZGVyKSwgbGFjZXJhdGlvbiAtIGluanVyeSAoZGlzb3JkZXIpLCBzdHJlc3MgKGZpbmRpbmcpLgoKIyBTb2NpYWwgSGlzdG9yeQpQYXRpZW50IGlzIHNpbmdsZS4gUGF0aWVudCBxdWl0IHNtb2tpbmcgYXQgYWdlIDE3IGFuZCBpcyBhbiBhbGNvaG9saWMuCiBQYXRpZW50IGlkZW50aWZpZXMgYXMgaGV0ZXJvc2V4dWFsLgoKUGF0aWVudCBjb21lcyBmcm9tIGEgbWlkZGxlIHNvY2lvZWNvbm9taWMgYmFja2dyb3VuZC4KIFBhdGllbnQgaGFzIGEgaGlnaCBzY2hvb2wgZWR1Y2F0aW9uLgpQYXRpZW50IGN1cnJlbnRseSBoYXMgTWVkaWNhaWQuCgojIEFsbGVyZ2llcwpObyBLbm93biBBbGxlcmdpZXMuCgojIE1lZGljYXRpb25zCnRyb3BpY2FtaWRlIDUgbWcvbWwgb3BodGhhbG1pYyBzb2x1dGlvbjsgMjQgaHIgbWV0Zm9ybWluIGh5ZHJvY2hsb3JpZGUgNTAwIG1nIGV4dGVuZGVkIHJlbGVhc2Ugb3JhbCB0YWJsZXQ7IGh5ZHJvY2hsb3JvdGhpYXppZGUgMjUgbWcgb3JhbCB0YWJsZXQ7IGFtbG9kaXBpbmUgMi41IG1nIG9yYWwgdGFibGV0OyBpYnVwcm9mZW4gMjAwIG1nIG9yYWwgdGFibGV0OyBuYXByb3hlbiBzb2RpdW0gMjIwIG1nIG9yYWwgdGFibGV0CgojIEFzc2Vzc21lbnQgYW5kIFBsYW4KUGF0aWVudCBpcyBwcmVzZW50aW5nIHdpdGggbWVkaWNhdGlvbiByZXZpZXcgZHVlIChzaXR1YXRpb24pLCBoeXBlcmdseWNlbWlhIChkaXNvcmRlciksIGZ1bGwtdGltZSBlbXBsb3ltZW50IChmaW5kaW5nKSwgc29jaWFsIGlzb2xhdGlvbiAoZmluZGluZyksIHN0cmVzcyAoZmluZGluZyksIGdpbmdpdml0aXMgKGRpc29yZGVyKS4gCgoKIyMgUGxhbgpQYXRpZW50IHdhcyBnaXZlbiB0aGUgZm9sbG93aW5nIGltbXVuaXphdGlvbnM6IGluZmx1ZW56YSwgc3BsaXQgdmlydXMsIHRyaXZhbGVudCwgcGYuIApUaGUgZm9sbG93aW5nIHByb2NlZHVyZXMgd2VyZSBjb25kdWN0ZWQ6Ci0gbWVkaWNhdGlvbiByZWNvbmNpbGlhdGlvbiAocHJvY2VkdXJlKQotIGFzc2Vzc21lbnQgb2YgaGVhbHRoIGFuZCBzb2NpYWwgY2FyZSBuZWVkcyAocHJvY2VkdXJlKQotIGRlcHJlc3Npb24gc2NyZWVuaW5nIChwcm9jZWR1cmUpCi0gZGVwcmVzc2lvbiBzY3JlZW5pbmcgKHByb2NlZHVyZSkKLSBwYXRpZW50IHJlZmVycmFsIGZvciBkZW50YWwgY2FyZSAocHJvY2VkdXJlKQpUaGUgZm9sbG93aW5nIGxhYiByZXBvcnRzIHdlcmUgY29tcGxldGVkOgotIGJhc2ljIG1ldGFib2xpYyBwYW5lbCAtIGJsb29kCi0gbGlwaWQgcGFuZWwgd2l0aCBkaXJlY3QgbGRsIC0gc2VydW0gb3IgcGxhc21hCi0gcGF0aWVudCBoZWFsdGggcXVlc3Rpb25uYWlyZSAyIGl0ZW0gKHBocS0yKSBbcmVwb3J0ZWRdClRoZSBwYXRpZW50IHdhcyBwcmVzY3JpYmVkIHRoZSBmb2xsb3dpbmcgbWVkaWNhdGlvbnM6Ci0gaHlkcm9jaGxvcm90aGlhemlkZSAyNSBtZyBvcmFsIHRhYmxldAotIDI0IGhyIG1ldGZvcm1pbiBoeWRyb2NobG9yaWRlIDUwMCBtZyBleHRlbmRlZCByZWxlYXNlIG9yYWwgdGFibGV0Ci0gYW1sb2RpcGluZSAyLjUgbWcgb3JhbCB0YWJsZXQK"
+      }
+     }
+    ],
+    "period": {
+     "start": "2025-09-12T06:32:42+09:30",
+     "end": "2025-09-12T07:08:59+09:30"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:66cc0d20-4bc2-748c-cce3-1cce71a01639",
+   "resource": {
+    "resourceType": "DocumentReference",
+    "id": "66cc0d20-4bc2-748c-cce3-1cce71a01639",
+    "status": "superseded",
+    "type": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "34117-2",
+       "display": "History and physical note"
+      },
+      {
+       "system": "http://loinc.org",
+       "code": "51847-2",
+       "display": "Evaluation + Plan note"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+        "code": "clinical-note",
+        "display": "Clinical Note"
+       }
+      ]
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "date": "2025-06-27T06:32:42.459+09:30",
+    "content": [
+     {
+      "attachment": {
+       "contentType": "text/plain; charset=utf-8",
+       "data": "CjIwMjUtMDYtMjcKCiMgQ2hpZWYgQ29tcGxhaW50Ci0gVGluZ2xpbmcgaW4gSGFuZHMgYW5kIEZlZXQKCgojIEhpc3Rvcnkgb2YgUHJlc2VudCBJbGxuZXNzCkx1Y2FzNDA0IGlzIGEgNDQgeWVhci1vbGQgaGlzcGFuaWMgd2hpdGUgbWFsZS4gUGF0aWVudCBoYXMgYSBoaXN0b3J5IG9mIHBhcnQtdGltZSBlbXBsb3ltZW50IChmaW5kaW5nKSwgbWVkaWNhdGlvbiByZXZpZXcgZHVlIChzaXR1YXRpb24pLCBsaW1pdGVkIHNvY2lhbCBjb250YWN0IChmaW5kaW5nKSwgZnVsbC10aW1lIGVtcGxveW1lbnQgKGZpbmRpbmcpLCBsYWNlcmF0aW9uIG9mIGhhbmQgKGRpc29yZGVyKSwgbGFjZXJhdGlvbiAtIGluanVyeSAoZGlzb3JkZXIpLCBzdHJlc3MgKGZpbmRpbmcpLgoKIyBTb2NpYWwgSGlzdG9yeQpQYXRpZW50IGlzIHNpbmdsZS4gUGF0aWVudCBxdWl0IHNtb2tpbmcgYXQgYWdlIDE3IGFuZCBpcyBhbiBhbGNvaG9saWMuCiBQYXRpZW50IGlkZW50aWZpZXMgYXMgaGV0ZXJvc2V4dWFsLgoKUGF0aWVudCBjb21lcyBmcm9tIGEgbWlkZGxlIHNvY2lvZWNvbm9taWMgYmFja2dyb3VuZC4KIFBhdGllbnQgaGFzIGEgaGlnaCBzY2hvb2wgZWR1Y2F0aW9uLgpQYXRpZW50IGN1cnJlbnRseSBoYXMgTWVkaWNhaWQuCgojIEFsbGVyZ2llcwpObyBLbm93biBBbGxlcmdpZXMuCgojIE1lZGljYXRpb25zCnRyb3BpY2FtaWRlIDUgbWcvbWwgb3BodGhhbG1pYyBzb2x1dGlvbjsgaHlkcm9jaGxvcm90aGlhemlkZSAyNSBtZyBvcmFsIHRhYmxldDsgYW1sb2RpcGluZSAyLjUgbWcgb3JhbCB0YWJsZXQ7IGlidXByb2ZlbiAyMDAgbWcgb3JhbCB0YWJsZXQ7IG5hcHJveGVuIHNvZGl1bSAyMjAgbWcgb3JhbCB0YWJsZXQKCiMgQXNzZXNzbWVudCBhbmQgUGxhbgpQYXRpZW50IGlzIHByZXNlbnRpbmcgd2l0aCBib2R5IG1hc3MgaW5kZXggMzArIC0gb2Jlc2l0eSAoZmluZGluZyksIHVuZW1wbG95ZWQgKGZpbmRpbmcpLCByZXBvcnRzIG9mIHZpb2xlbmNlIGluIHRoZSBlbnZpcm9ubWVudCAoZmluZGluZykuIAoKCiMjIFBsYW4KUGF0aWVudCB3YXMgZ2l2ZW4gdGhlIGZvbGxvd2luZyBpbW11bml6YXRpb25zOiBpbmZsdWVuemEsIHNwbGl0IHZpcnVzLCB0cml2YWxlbnQsIHBmLiAKVGhlIGZvbGxvd2luZyBwcm9jZWR1cmVzIHdlcmUgY29uZHVjdGVkOgotIG1lZGljYXRpb24gcmVjb25jaWxpYXRpb24gKHByb2NlZHVyZSkKLSBhc3Nlc3NtZW50IG9mIGhlYWx0aCBhbmQgc29jaWFsIGNhcmUgbmVlZHMgKHByb2NlZHVyZSkKLSBzY3JlZW5pbmcgZm9yIGRvbWVzdGljIGFidXNlIChwcm9jZWR1cmUpCi0gZGVwcmVzc2lvbiBzY3JlZW5pbmcgKHByb2NlZHVyZSkKLSBkZXByZXNzaW9uIHNjcmVlbmluZyAocHJvY2VkdXJlKQotIGRlcHJlc3Npb24gc2NyZWVuaW5nIHVzaW5nIHBhdGllbnQgaGVhbHRoIHF1ZXN0aW9ubmFpcmUgbmluZSBpdGVtIHNjb3JlIChwcm9jZWR1cmUpClRoZSBmb2xsb3dpbmcgbGFiIHJlcG9ydHMgd2VyZSBjb21wbGV0ZWQ6Ci0gYmFzaWMgbWV0YWJvbGljIHBhbmVsIC0gYmxvb2QKLSBsaXBpZCBwYW5lbCB3aXRoIGRpcmVjdCBsZGwgLSBzZXJ1bSBvciBwbGFzbWEKLSBjYmMgcGFuZWwgLSBibG9vZCBieSBhdXRvbWF0ZWQgY291bnQKLSBodW1pbGlhdGlvbiwgYWZyYWlkLCByYXBlLCBhbmQga2ljayBxdWVzdGlvbm5haXJlIFtoYXJrXQotIHBhdGllbnQgaGVhbHRoIHF1ZXN0aW9ubmFpcmUgMiBpdGVtIChwaHEtMikgW3JlcG9ydGVkXQotIHBocS05IHF1aWNrIGRlcHJlc3Npb24gYXNzZXNzbWVudCBwYW5lbCBbcmVwb3J0ZWQucGhxXQpUaGUgcGF0aWVudCB3YXMgcHJlc2NyaWJlZCB0aGUgZm9sbG93aW5nIG1lZGljYXRpb25zOgotIGh5ZHJvY2hsb3JvdGhpYXppZGUgMjUgbWcgb3JhbCB0YWJsZXQKLSBhbWxvZGlwaW5lIDIuNSBtZyBvcmFsIHRhYmxldAotIDI0IGhyIG1ldGZvcm1pbiBoeWRyb2NobG9yaWRlIDUwMCBtZyBleHRlbmRlZCByZWxlYXNlIG9yYWwgdGFibGV0Cg=="
+      }
+     }
+    ],
+    "period": {
+     "start": "2025-06-27T06:32:42+09:30",
+     "end": "2025-06-27T07:07:49+09:30"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:b25f3049-4694-8eb6-a823-ebfd7c415158",
+   "resource": {
+    "resourceType": "DocumentReference",
+    "id": "b25f3049-4694-8eb6-a823-ebfd7c415158",
+    "status": "superseded",
+    "type": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "34117-2",
+       "display": "History and physical note"
+      },
+      {
+       "system": "http://loinc.org",
+       "code": "51847-2",
+       "display": "Evaluation + Plan note"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+        "code": "clinical-note",
+        "display": "Clinical Note"
+       }
+      ]
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "date": "2024-11-07T10:34:01.459+10:30",
+    "content": [
+     {
+      "attachment": {
+       "contentType": "text/plain; charset=utf-8",
+       "data": "CjIwMjQtMTEtMDcKCiMgQ2hpZWYgQ29tcGxhaW50Ci0gVGluZ2xpbmcgaW4gSGFuZHMgYW5kIEZlZXQKCgojIEhpc3Rvcnkgb2YgUHJlc2VudCBJbGxuZXNzCkx1Y2FzNDA0IGlzIGEgNDMgeWVhci1vbGQgaGlzcGFuaWMgd2hpdGUgbWFsZS4gUGF0aWVudCBoYXMgYSBoaXN0b3J5IG9mIHBhcnQtdGltZSBlbXBsb3ltZW50IChmaW5kaW5nKSwgbWVkaWNhdGlvbiByZXZpZXcgZHVlIChzaXR1YXRpb24pLCBsaW1pdGVkIHNvY2lhbCBjb250YWN0IChmaW5kaW5nKSwgZnVsbC10aW1lIGVtcGxveW1lbnQgKGZpbmRpbmcpLCBsYWNlcmF0aW9uIG9mIGhhbmQgKGRpc29yZGVyKSwgbGFjZXJhdGlvbiAtIGluanVyeSAoZGlzb3JkZXIpLCBzdHJlc3MgKGZpbmRpbmcpLgoKIyBTb2NpYWwgSGlzdG9yeQpQYXRpZW50IGlzIHNpbmdsZS4gUGF0aWVudCBxdWl0IHNtb2tpbmcgYXQgYWdlIDE3IGFuZCBpcyBhbiBhbGNvaG9saWMuCiBQYXRpZW50IGlkZW50aWZpZXMgYXMgaGV0ZXJvc2V4dWFsLgoKUGF0aWVudCBjb21lcyBmcm9tIGEgbWlkZGxlIHNvY2lvZWNvbm9taWMgYmFja2dyb3VuZC4KIFBhdGllbnQgaGFzIGEgaGlnaCBzY2hvb2wgZWR1Y2F0aW9uLgpQYXRpZW50IGN1cnJlbnRseSBoYXMgTWVkaWNhaWQuCgojIEFsbGVyZ2llcwpObyBLbm93biBBbGxlcmdpZXMuCgojIE1lZGljYXRpb25zCnRyb3BpY2FtaWRlIDUgbWcvbWwgb3BodGhhbG1pYyBzb2x1dGlvbjsgaHlkcm9jaGxvcm90aGlhemlkZSAyNSBtZyBvcmFsIHRhYmxldDsgYW1sb2RpcGluZSAyLjUgbWcgb3JhbCB0YWJsZXQ7IGlidXByb2ZlbiAyMDAgbWcgb3JhbCB0YWJsZXQ7IG5hcHJveGVuIHNvZGl1bSAyMjAgbWcgb3JhbCB0YWJsZXQKCiMgQXNzZXNzbWVudCBhbmQgUGxhbgoKCgojIyBQbGFuCgpUaGUgZm9sbG93aW5nIHByb2NlZHVyZXMgd2VyZSBjb25kdWN0ZWQ6Ci0gdmlzdWFsIGFjdWl0eSB0ZXN0aW5nIChwcm9jZWR1cmUpCi0gaW50cmFvY3VsYXIgcHJlc3N1cmUgdGVzdCAocHJvY2VkdXJlKQotIG9jdWxhciBzbGl0IGxhbXAgZXhhbWluYXRpb24gKHByb2NlZHVyZSkKLSBpbmRpcmVjdCBnb25pb3Njb3B5IChwcm9jZWR1cmUpCi0gY2FtZXJhIGZ1bmRvc2NvcHkgKHByb2NlZHVyZSkKLSBkaWFiZXRpYyByZXRpbmFsIGV5ZSBleGFtIChwcm9jZWR1cmUpClRoZSBwYXRpZW50IHdhcyBwcmVzY3JpYmVkIHRoZSBmb2xsb3dpbmcgbWVkaWNhdGlvbnM6Ci0gdHJvcGljYW1pZGUgNSBtZy9tbCBvcGh0aGFsbWljIHNvbHV0aW9uCg=="
+      }
+     }
+    ],
+    "period": {
+     "start": "2024-11-07T10:34:01+10:30",
+     "end": "2024-11-07T11:18:01+10:30"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:164a0ae1-103b-ac49-817a-b35e816a9956",
+   "resource": {
+    "resourceType": "DocumentReference",
+    "id": "164a0ae1-103b-ac49-817a-b35e816a9956",
+    "status": "superseded",
+    "type": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "34117-2",
+       "display": "History and physical note"
+      },
+      {
+       "system": "http://loinc.org",
+       "code": "51847-2",
+       "display": "Evaluation + Plan note"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+        "code": "clinical-note",
+        "display": "Clinical Note"
+       }
+      ]
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:7828ed11-2f29-4cf5-d946-82c52770fc93"
+    },
+    "date": "2024-07-05T06:32:42.459+09:30",
+    "content": [
+     {
+      "attachment": {
+       "contentType": "text/plain; charset=utf-8",
+       "data": "CjIwMjQtMDctMDUKCiMgQ2hpZWYgQ29tcGxhaW50Ci0gVGluZ2xpbmcgaW4gSGFuZHMgYW5kIEZlZXQKCgojIEhpc3Rvcnkgb2YgUHJlc2VudCBJbGxuZXNzCkx1Y2FzNDA0IGlzIGEgNDMgeWVhci1vbGQgaGlzcGFuaWMgd2hpdGUgbWFsZS4gUGF0aWVudCBoYXMgYSBoaXN0b3J5IG9mIHBhcnQtdGltZSBlbXBsb3ltZW50IChmaW5kaW5nKSwgbWVkaWNhdGlvbiByZXZpZXcgZHVlIChzaXR1YXRpb24pLCBsaW1pdGVkIHNvY2lhbCBjb250YWN0IChmaW5kaW5nKSwgZnVsbC10aW1lIGVtcGxveW1lbnQgKGZpbmRpbmcpLCBsYWNlcmF0aW9uIG9mIGhhbmQgKGRpc29yZGVyKSwgbGFjZXJhdGlvbiAtIGluanVyeSAoZGlzb3JkZXIpLCBzdHJlc3MgKGZpbmRpbmcpLgoKIyBTb2NpYWwgSGlzdG9yeQpQYXRpZW50IGlzIHNpbmdsZS4gUGF0aWVudCBxdWl0IHNtb2tpbmcgYXQgYWdlIDE3IGFuZCBpcyBhbiBhbGNvaG9saWMuCiBQYXRpZW50IGlkZW50aWZpZXMgYXMgaGV0ZXJvc2V4dWFsLgoKUGF0aWVudCBjb21lcyBmcm9tIGEgbWlkZGxlIHNvY2lvZWNvbm9taWMgYmFja2dyb3VuZC4KIFBhdGllbnQgaGFzIGEgaGlnaCBzY2hvb2wgZWR1Y2F0aW9uLgpQYXRpZW50IGN1cnJlbnRseSBoYXMgTWVkaWNhaWQuCgojIEFsbGVyZ2llcwpObyBLbm93biBBbGxlcmdpZXMuCgojIE1lZGljYXRpb25zCnRyb3BpY2FtaWRlIDUgbWcvbWwgb3BodGhhbG1pYyBzb2x1dGlvbjsgaHlkcm9jaGxvcm90aGlhemlkZSAyNSBtZyBvcmFsIHRhYmxldDsgYW1sb2RpcGluZSAyLjUgbWcgb3JhbCB0YWJsZXQ7IGlidXByb2ZlbiAyMDAgbWcgb3JhbCB0YWJsZXQ7IG5hcHJveGVuIHNvZGl1bSAyMjAgbWcgb3JhbCB0YWJsZXQKCiMgQXNzZXNzbWVudCBhbmQgUGxhbgoKCgojIyBQbGFuCgpUaGUgZm9sbG93aW5nIHByb2NlZHVyZXMgd2VyZSBjb25kdWN0ZWQ6Ci0gZGVudGFsIGNvbnN1bHRhdGlvbiBhbmQgcmVwb3J0IChwcm9jZWR1cmUpCi0gZGVudGFsIGNhcmUgKHJlZ2ltZS90aGVyYXB5KQotIHJlbW92YWwgb2Ygc3VwcmFnaW5naXZhbCBwbGFxdWUgYW5kIGNhbGN1bHVzIGZyb20gYWxsIHRlZXRoIHVzaW5nIGRlbnRhbCBpbnN0cnVtZW50IChwcm9jZWR1cmUpCi0gcmVtb3ZhbCBvZiBzdWJnaW5naXZhbCBwbGFxdWUgYW5kIGNhbGN1bHVzIGZyb20gYWxsIHRlZXRoIHVzaW5nIGRlbnRhbCBpbnN0cnVtZW50IChwcm9jZWR1cmUpCi0gZGVudGFsIHBsYWluIHgtcmF5IGJpdGV3aW5nIChwcm9jZWR1cmUpCi0gZXhhbWluYXRpb24gb2YgZ2luZ2l2YWUgKHByb2NlZHVyZSkKLSBvcmFsIGhlYWx0aCBlZHVjYXRpb24gKHByb2NlZHVyZSkK"
+      }
+     }
+    ],
+    "period": {
+     "start": "2024-07-05T06:32:42+09:30",
+     "end": "2024-07-05T09:55:38+09:30"
+    }
+   }
+  }
+ ]
+}

@@ -18,7 +18,8 @@ from pathlib import Path
 from fhir.resources.bundle import Bundle
 
 ROOT = Path(__file__).resolve().parents[2]
-RAW_DIR = ROOT / "data" / "synthea-r4"
+RAW_DIR = ROOT / "data" / "synthea-r4"  # original 100 patients (seed 618), committed
+RAW_EXTRA_DIR = ROOT / "data" / "synthea-r4-extra"  # +900 patients (seed 619), published as a release asset
 R5_DIR = ROOT / "data" / "fhir-r5"
 
 # LOINC codes kept as "latest value" observations.
@@ -171,7 +172,24 @@ def _encounter(r: dict, subject: dict) -> dict:
     return out
 
 
-def to_r5_snapshot(r4_bundle: dict, recent_encounters: int = 5) -> dict:
+def _document(r: dict, subject: dict) -> dict:
+    out = {
+        "resourceType": "DocumentReference",
+        "id": r["id"],
+        "status": r["status"],
+        "type": _concept(r.get("type")),
+        "category": [_concept(c) for c in r.get("category", [])] or None,
+        "subject": subject,
+        "date": r.get("date"),
+        "content": [{"attachment": {k: v for k, v in c["attachment"].items() if k in ("contentType", "data")}}
+                    for c in r.get("content", [])],
+        # R5: context.period moved to DocumentReference.period
+        "period": (r.get("context") or {}).get("period"),
+    }
+    return {k: v for k, v in out.items() if v is not None}
+
+
+def to_r5_snapshot(r4_bundle: dict, recent_encounters: int = 5, recent_notes: int = 10) -> dict:
     resources = [e["resource"] for e in r4_bundle["entry"]]
     by_type: dict[str, list[dict]] = {}
     for r in resources:
@@ -206,6 +224,9 @@ def to_r5_snapshot(r4_bundle: dict, recent_encounters: int = 5) -> dict:
 
     encounters = sorted(by_type.get("Encounter", []), key=lambda e: e["period"]["start"], reverse=True)
     out.extend(_encounter(e, subject) for e in encounters[:recent_encounters])
+
+    notes = sorted(by_type.get("DocumentReference", []), key=lambda d: d.get("date", ""), reverse=True)
+    out.extend(_document(d, subject) for d in notes[:recent_notes])
 
     bundle = {
         "resourceType": "Bundle",
@@ -256,7 +277,7 @@ def load_snapshots() -> dict[str, dict]:
 
 def build_all() -> None:
     R5_DIR.mkdir(parents=True, exist_ok=True)
-    for path in sorted(RAW_DIR.glob("*.json.gz")):
+    for path in sorted([*RAW_DIR.glob("*.json.gz"), *RAW_EXTRA_DIR.glob("*.json.gz")]):
         bundle = to_r5_snapshot(json.load(gzip.open(path)))
         pid = bundle["entry"][0]["resource"]["id"]
         (R5_DIR / f"{pid}.json").write_text(json.dumps(bundle, indent=1))

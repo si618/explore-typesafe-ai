@@ -1,0 +1,2391 @@
+{
+ "scenario": "s1_ward_gen",
+ "title": "Ward deterioration huddle (generated)",
+ "setting": "Acute medical ward, 20 inpatients, evening safety huddle. Charted observations plus the nurse's latest progress note.",
+ "seed": 1000,
+ "cases": [
+  {
+   "patient": "5a4666c8",
+   "admission": "Community-acquired pneumonia",
+   "obs": {
+    "rr": 16,
+    "spo2": 98,
+    "sbp": 116,
+    "hr": 62,
+    "temp": 36.8,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Settled day. Mobilising with physio, eating and drinking well. Muddled since lunchtime, which is new for his. Not sure where he is.",
+   "reference": {
+    "new_confusion": true,
+    "infection": false,
+    "concern": 2,
+    "pattern": [
+     "neurological",
+     "other"
+    ]
+   },
+   "construction": {
+    "driver_concern": 0,
+    "mental": "new",
+    "infection": "none"
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "8943c7f4",
+   "admission": "Fall at home",
+   "obs": {
+    "rr": 17,
+    "spo2": 97,
+    "sbp": 137,
+    "hr": 101,
+    "temp": 38.6,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Not confused or drowsy at any point this shift. Observations stable all shift. Bowels open, passing urine normally. New burning when passing urine and cloudy, smelly urine.",
+   "reference": {
+    "new_confusion": false,
+    "infection": true,
+    "concern": 2,
+    "pattern": [
+     "sepsis_infection"
+    ]
+   },
+   "construction": {
+    "driver_concern": 0,
+    "mental": "negated",
+    "infection": "active"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "3489a180",
+   "admission": "Urinary tract infection",
+   "obs": {
+    "rr": 16,
+    "spo2": 98,
+    "sbp": 138,
+    "hr": 67,
+    "temp": 37.3,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Orientated to time and place, answering questions appropriately. Pain a little worse on movement this afternoon, settled with PRN analgesia.",
+   "reference": {
+    "new_confusion": false,
+    "infection": false,
+    "concern": 1,
+    "pattern": [
+     "no_acute_change",
+     "other"
+    ]
+   },
+   "construction": {
+    "driver_concern": 1,
+    "mental": "normal",
+    "infection": "none"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "a37919c7",
+   "admission": "Acute kidney injury",
+   "obs": {
+    "rr": 15,
+    "spo2": 97,
+    "sbp": 133,
+    "hr": 70,
+    "temp": 37.1,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Blood sugars running 13-16 today, not eating much of the hospital food. Orientated to time and place, answering questions appropriately.",
+   "reference": {
+    "new_confusion": false,
+    "infection": false,
+    "concern": 1,
+    "pattern": [
+     "no_acute_change",
+     "metabolic_renal"
+    ]
+   },
+   "construction": {
+    "driver_concern": 1,
+    "mental": "normal",
+    "infection": "none"
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "48805e22",
+   "admission": "Fall at home",
+   "obs": {
+    "rr": 20,
+    "spo2": 95,
+    "sbp": 114,
+    "hr": 96,
+    "temp": 38.7,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Usual baseline cognitive impairment, oriented to person only as always. Had a brief dizzy spell on standing, BP dropped to 94 systolic, now resolved lying flat. New burning when passing urine and cloudy, smelly urine.",
+   "reference": {
+    "new_confusion": false,
+    "infection": true,
+    "concern": 2,
+    "pattern": [
+     "cardiac",
+     "other",
+     "sepsis_infection"
+    ]
+   },
+   "construction": {
+    "driver_concern": 2,
+    "mental": "baseline",
+    "infection": "active"
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "0223f1e2",
+   "admission": "Community-acquired pneumonia",
+   "obs": {
+    "rr": 20,
+    "spo2": 94,
+    "sbp": 102,
+    "hr": 102,
+    "temp": 37.4,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Day 3 of IV antibiotics for pneumonia, improving. Alert and orientated, chatting with visitors. Had a brief dizzy spell on standing, BP dropped to 94 systolic, now resolved lying flat.",
+   "reference": {
+    "new_confusion": false,
+    "infection": true,
+    "concern": 2,
+    "pattern": [
+     "cardiac",
+     "other"
+    ]
+   },
+   "construction": {
+    "driver_concern": 2,
+    "mental": "normal",
+    "infection": "treated"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "5669b8f0",
+   "admission": "COPD exacerbation",
+   "obs": {
+    "rr": 19,
+    "spo2": 96,
+    "sbp": 130,
+    "hr": 68,
+    "temp": 36.4,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Found on the floor, unresponsive for about a minute, now groggy. Much more drowsy than this morning, only opens eyes when spoken to loudly.",
+   "reference": {
+    "new_confusion": true,
+    "infection": false,
+    "concern": 3,
+    "pattern": [
+     "neurological",
+     "cardiac"
+    ]
+   },
+   "construction": {
+    "driver_concern": 3,
+    "mental": "drowsy",
+    "infection": "none"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "c548e9df",
+   "admission": "Chest pain under investigation",
+   "obs": {
+    "rr": 28,
+    "spo2": 92,
+    "sbp": 90,
+    "hr": 114,
+    "temp": 37.8,
+    "on_o2": true,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Not confused or drowsy at any point this shift. Very breathless at rest, can only speak in single words, sats falling.",
+   "reference": {
+    "new_confusion": false,
+    "infection": false,
+    "concern": 3,
+    "pattern": [
+     "respiratory"
+    ]
+   },
+   "construction": {
+    "driver_concern": 3,
+    "mental": "negated",
+    "infection": "none"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "b8987eb2",
+   "admission": "Cellulitis",
+   "obs": {
+    "rr": 16,
+    "spo2": 96,
+    "sbp": 145,
+    "hr": 65,
+    "temp": 37.1,
+    "on_o2": false,
+    "acvpu": "V",
+    "spo2_scale": 1
+   },
+   "note": "Comfortable, pain controlled with regular paracetamol. Wound clean and dry. Much more drowsy than this morning, only opens eyes when spoken to loudly.",
+   "reference": {
+    "new_confusion": true,
+    "infection": false,
+    "concern": 2,
+    "pattern": [
+     "neurological",
+     "other"
+    ]
+   },
+   "construction": {
+    "driver_concern": 0,
+    "mental": "drowsy",
+    "infection": "none"
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "a32a0f06",
+   "admission": "Community-acquired pneumonia",
+   "obs": {
+    "rr": 16,
+    "spo2": 98,
+    "sbp": 121,
+    "hr": 86,
+    "temp": 36.7,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Good day, walked to the day room twice. Keen to go home tomorrow. Orientated to time and place, answering questions appropriately.",
+   "reference": {
+    "new_confusion": false,
+    "infection": false,
+    "concern": 0,
+    "pattern": [
+     "no_acute_change"
+    ]
+   },
+   "construction": {
+    "driver_concern": 0,
+    "mental": "normal",
+    "infection": "none"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "b9f516ae",
+   "admission": "Cellulitis",
+   "obs": {
+    "rr": 17,
+    "spo2": 96,
+    "sbp": 115,
+    "hr": 65,
+    "temp": 36.7,
+    "on_o2": false,
+    "acvpu": "V",
+    "spo2_scale": 1
+   },
+   "note": "Mild ankle swelling noted, fluid balance slightly positive. Otherwise well. Much more drowsy than this morning, only opens eyes when spoken to loudly. Continues oral antibiotics for UTI, symptoms settling.",
+   "reference": {
+    "new_confusion": true,
+    "infection": true,
+    "concern": 2,
+    "pattern": [
+     "neurological",
+     "other"
+    ]
+   },
+   "construction": {
+    "driver_concern": 1,
+    "mental": "drowsy",
+    "infection": "treated"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "2b1aa1cb",
+   "admission": "Community-acquired pneumonia",
+   "obs": {
+    "rr": 18,
+    "spo2": 98,
+    "sbp": 117,
+    "hr": 76,
+    "temp": 37.3,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Alert and orientated, chatting with visitors. Complaining of constipation, bowels not opened for 3 days. Laxatives given. Day 3 of IV antibiotics for pneumonia, improving.",
+   "reference": {
+    "new_confusion": false,
+    "infection": true,
+    "concern": 1,
+    "pattern": [
+     "no_acute_change",
+     "other"
+    ]
+   },
+   "construction": {
+    "driver_concern": 1,
+    "mental": "normal",
+    "infection": "treated"
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "7b9ffa3a",
+   "admission": "COPD exacerbation",
+   "obs": {
+    "rr": 20,
+    "spo2": 94,
+    "sbp": 107,
+    "hr": 90,
+    "temp": 36.8,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Muddled since lunchtime, which is new for his. Not sure where he is. New irregular pulse noted at 18:00, patient says heart feels like it is fluttering.",
+   "reference": {
+    "new_confusion": true,
+    "infection": false,
+    "concern": 2,
+    "pattern": [
+     "cardiac"
+    ]
+   },
+   "construction": {
+    "driver_concern": 2,
+    "mental": "new",
+    "infection": "none"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "c0d126a2",
+   "admission": "Acute kidney injury",
+   "obs": {
+    "rr": 22,
+    "spo2": 96,
+    "sbp": 111,
+    "hr": 98,
+    "temp": 37.4,
+    "on_o2": false,
+    "acvpu": "V",
+    "spo2_scale": 1
+   },
+   "note": "Afebrile, no signs of infection. Hard to rouse for evening medications, which is not like him. New irregular pulse noted at 18:00, patient says heart feels like it is fluttering.",
+   "reference": {
+    "new_confusion": true,
+    "infection": false,
+    "concern": 2,
+    "pattern": [
+     "cardiac"
+    ]
+   },
+   "construction": {
+    "driver_concern": 2,
+    "mental": "drowsy",
+    "infection": "negated"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "6088cb20",
+   "admission": "Community-acquired pneumonia",
+   "obs": {
+    "rr": 22,
+    "spo2": 94,
+    "sbp": 91,
+    "hr": 125,
+    "temp": 37.4,
+    "on_o2": true,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Very breathless at rest, can only speak in single words, sats falling. Pulling at lines and talking to people who are not there, which is new.",
+   "reference": {
+    "new_confusion": true,
+    "infection": false,
+    "concern": 3,
+    "pattern": [
+     "respiratory"
+    ]
+   },
+   "construction": {
+    "driver_concern": 3,
+    "mental": "new",
+    "infection": "none"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "468b7d88",
+   "admission": "Elective hip replacement",
+   "obs": {
+    "rr": 26,
+    "spo2": 92,
+    "sbp": 83,
+    "hr": 116,
+    "temp": 37.6,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Vomited a large amount of fresh red blood, looks pale and clammy. Alert and orientated, chatting with visitors. Afebrile, no signs of infection.",
+   "reference": {
+    "new_confusion": false,
+    "infection": false,
+    "concern": 3,
+    "pattern": [
+     "bleeding"
+    ]
+   },
+   "construction": {
+    "driver_concern": 3,
+    "mental": "normal",
+    "infection": "negated"
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "dabbffd6",
+   "admission": "Chest pain under investigation",
+   "obs": {
+    "rr": 15,
+    "spo2": 96,
+    "sbp": 142,
+    "hr": 76,
+    "temp": 36.6,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Alert and orientated, chatting with visitors. Comfortable, pain controlled with regular paracetamol. Wound clean and dry.",
+   "reference": {
+    "new_confusion": false,
+    "infection": false,
+    "concern": 0,
+    "pattern": [
+     "no_acute_change"
+    ]
+   },
+   "construction": {
+    "driver_concern": 0,
+    "mental": "normal",
+    "infection": "none"
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "8499d867",
+   "admission": "Urinary tract infection",
+   "obs": {
+    "rr": 16,
+    "spo2": 98,
+    "sbp": 124,
+    "hr": 70,
+    "temp": 36.6,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Observations stable all shift. Bowels open, passing urine normally. Much more drowsy than this morning, only opens eyes when spoken to loudly. Temperature normal, chest clear, urine clear.",
+   "reference": {
+    "new_confusion": true,
+    "infection": false,
+    "concern": 2,
+    "pattern": [
+     "neurological",
+     "other"
+    ]
+   },
+   "construction": {
+    "driver_concern": 0,
+    "mental": "drowsy",
+    "infection": "negated"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "78decd95",
+   "admission": "Heart failure exacerbation",
+   "obs": {
+    "rr": 16,
+    "spo2": 99,
+    "sbp": 145,
+    "hr": 76,
+    "temp": 36.9,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Temperature normal, chest clear, urine clear. Pain a little worse on movement this afternoon, settled with PRN analgesia. No confusion, knows where he is and why he is here.",
+   "reference": {
+    "new_confusion": false,
+    "infection": false,
+    "concern": 1,
+    "pattern": [
+     "no_acute_change",
+     "other"
+    ]
+   },
+   "construction": {
+    "driver_concern": 1,
+    "mental": "negated",
+    "infection": "negated"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "788246ce",
+   "admission": "Cellulitis",
+   "obs": {
+    "rr": 17,
+    "spo2": 99,
+    "sbp": 137,
+    "hr": 85,
+    "temp": 36.9,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Alert and orientated, chatting with visitors. Mild ankle swelling noted, fluid balance slightly positive. Otherwise well. Afebrile, no signs of infection.",
+   "reference": {
+    "new_confusion": false,
+    "infection": false,
+    "concern": 1,
+    "pattern": [
+     "no_acute_change",
+     "metabolic_renal"
+    ]
+   },
+   "construction": {
+    "driver_concern": 1,
+    "mental": "normal",
+    "infection": "negated"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "ab229778",
+   "admission": "Cellulitis",
+   "obs": {
+    "rr": 19,
+    "spo2": 94,
+    "sbp": 100,
+    "hr": 104,
+    "temp": 37.2,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Muddled since lunchtime, which is new for his. Not sure where he is. New irregular pulse noted at 18:00, patient says heart feels like it is fluttering. Day 3 of IV antibiotics for pneumonia, improving.",
+   "reference": {
+    "new_confusion": true,
+    "infection": true,
+    "concern": 2,
+    "pattern": [
+     "cardiac"
+    ]
+   },
+   "construction": {
+    "driver_concern": 2,
+    "mental": "new",
+    "infection": "treated"
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "da7959c4",
+   "admission": "Urinary tract infection",
+   "obs": {
+    "rr": 17,
+    "spo2": 96,
+    "sbp": 126,
+    "hr": 74,
+    "temp": 37.3,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Family say he is 'just not himself' today and quieter than usual. Orientated to time and place, answering questions appropriately. Continues oral antibiotics for UTI, symptoms settling.",
+   "reference": {
+    "new_confusion": false,
+    "infection": true,
+    "concern": 2,
+    "pattern": [
+     "other",
+     "neurological"
+    ],
+    "ambiguous": [
+     "new_confusion"
+    ]
+   },
+   "construction": {
+    "driver_concern": 2,
+    "mental": "normal",
+    "infection": "treated"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "92a0643d",
+   "admission": "Urinary tract infection",
+   "obs": {
+    "rr": 23,
+    "spo2": 93,
+    "sbp": 82,
+    "hr": 120,
+    "temp": 36.2,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Central crushing chest pain for 20 minutes, sweaty and grey, not settling with GTN. Usual baseline cognitive impairment, oriented to person only as always.",
+   "reference": {
+    "new_confusion": false,
+    "infection": false,
+    "concern": 3,
+    "pattern": [
+     "cardiac"
+    ]
+   },
+   "construction": {
+    "driver_concern": 3,
+    "mental": "baseline",
+    "infection": "none"
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "bdb4683a",
+   "admission": "Urinary tract infection",
+   "obs": {
+    "rr": 23,
+    "spo2": 93,
+    "sbp": 90,
+    "hr": 124,
+    "temp": 37.2,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Breathing slow and shallow after extra PRN morphine, pupils pinpoint. Newly confused this evening: thinks it is 1985 and is trying to leave the ward.",
+   "reference": {
+    "new_confusion": true,
+    "infection": false,
+    "concern": 3,
+    "pattern": [
+     "drug_or_substance",
+     "respiratory"
+    ]
+   },
+   "construction": {
+    "driver_concern": 3,
+    "mental": "new",
+    "infection": "none"
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "bcb2cc46",
+   "admission": "Community-acquired pneumonia",
+   "obs": {
+    "rr": 16,
+    "spo2": 96,
+    "sbp": 124,
+    "hr": 80,
+    "temp": 36.8,
+    "on_o2": false,
+    "acvpu": "V",
+    "spo2_scale": 1
+   },
+   "note": "Settled day. Mobilising with physio, eating and drinking well. Much more drowsy than this morning, only opens eyes when spoken to loudly.",
+   "reference": {
+    "new_confusion": true,
+    "infection": false,
+    "concern": 2,
+    "pattern": [
+     "neurological",
+     "other"
+    ]
+   },
+   "construction": {
+    "driver_concern": 0,
+    "mental": "drowsy",
+    "infection": "none"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "0ea7cd2f",
+   "admission": "Acute kidney injury",
+   "obs": {
+    "rr": 16,
+    "spo2": 99,
+    "sbp": 117,
+    "hr": 84,
+    "temp": 37.0,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Alert and orientated, chatting with visitors. Observations stable all shift. Bowels open, passing urine normally.",
+   "reference": {
+    "new_confusion": false,
+    "infection": false,
+    "concern": 0,
+    "pattern": [
+     "no_acute_change"
+    ]
+   },
+   "construction": {
+    "driver_concern": 0,
+    "mental": "normal",
+    "infection": "none"
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "c23ede60",
+   "admission": "Chest pain under investigation",
+   "obs": {
+    "rr": 15,
+    "spo2": 99,
+    "sbp": 139,
+    "hr": 64,
+    "temp": 36.5,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Blood sugars running 13-16 today, not eating much of the hospital food. Muddled since lunchtime, which is new for her. Not sure where she is.",
+   "reference": {
+    "new_confusion": true,
+    "infection": false,
+    "concern": 2,
+    "pattern": [
+     "neurological",
+     "other"
+    ]
+   },
+   "construction": {
+    "driver_concern": 1,
+    "mental": "new",
+    "infection": "none"
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "04e3b6cd",
+   "admission": "Acute kidney injury",
+   "obs": {
+    "rr": 17,
+    "spo2": 96,
+    "sbp": 140,
+    "hr": 86,
+    "temp": 36.9,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Orientated to time and place, answering questions appropriately. Continues oral antibiotics for UTI, symptoms settling. Pain a little worse on movement this afternoon, settled with PRN analgesia.",
+   "reference": {
+    "new_confusion": false,
+    "infection": true,
+    "concern": 1,
+    "pattern": [
+     "no_acute_change",
+     "other"
+    ]
+   },
+   "construction": {
+    "driver_concern": 1,
+    "mental": "normal",
+    "infection": "treated"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "48a49a15",
+   "admission": "Fall at home",
+   "obs": {
+    "rr": 14,
+    "spo2": 97,
+    "sbp": 131,
+    "hr": 76,
+    "temp": 37.2,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Orientated to time and place, answering questions appropriately. Family say he is 'just not himself' today and quieter than usual. Afebrile, no signs of infection.",
+   "reference": {
+    "new_confusion": false,
+    "infection": false,
+    "concern": 2,
+    "pattern": [
+     "other",
+     "neurological"
+    ],
+    "ambiguous": [
+     "new_confusion"
+    ]
+   },
+   "construction": {
+    "driver_concern": 2,
+    "mental": "normal",
+    "infection": "negated"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "8b0ca282",
+   "admission": "Community-acquired pneumonia",
+   "obs": {
+    "rr": 21,
+    "spo2": 94,
+    "sbp": 104,
+    "hr": 94,
+    "temp": 37.2,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Orientated to time and place, answering questions appropriately. Temperature normal, chest clear, urine clear. New irregular pulse noted at 18:00, patient says heart feels like it is fluttering.",
+   "reference": {
+    "new_confusion": false,
+    "infection": false,
+    "concern": 2,
+    "pattern": [
+     "cardiac"
+    ]
+   },
+   "construction": {
+    "driver_concern": 2,
+    "mental": "normal",
+    "infection": "negated"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "783a4331",
+   "admission": "Fall at home",
+   "obs": {
+    "rr": 23,
+    "spo2": 92,
+    "sbp": 103,
+    "hr": 126,
+    "temp": 38.8,
+    "on_o2": true,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Very breathless at rest, can only speak in single words, sats falling. Alert and orientated, chatting with visitors. New burning when passing urine and cloudy, smelly urine.",
+   "reference": {
+    "new_confusion": false,
+    "infection": true,
+    "concern": 3,
+    "pattern": [
+     "respiratory",
+     "sepsis_infection"
+    ]
+   },
+   "construction": {
+    "driver_concern": 3,
+    "mental": "normal",
+    "infection": "active"
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "1ef88d1d",
+   "admission": "Urinary tract infection",
+   "obs": {
+    "rr": 19,
+    "spo2": 97,
+    "sbp": 162,
+    "hr": 82,
+    "temp": 36.6,
+    "on_o2": false,
+    "acvpu": "V",
+    "spo2_scale": 1
+   },
+   "note": "Afebrile, no signs of infection. Hard to rouse for evening medications, which is not like him. Found on the floor, unresponsive for about a minute, now groggy.",
+   "reference": {
+    "new_confusion": true,
+    "infection": false,
+    "concern": 3,
+    "pattern": [
+     "neurological",
+     "cardiac"
+    ]
+   },
+   "construction": {
+    "driver_concern": 3,
+    "mental": "drowsy",
+    "infection": "negated"
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "195b1ae4",
+   "admission": "Fall at home",
+   "obs": {
+    "rr": 16,
+    "spo2": 97,
+    "sbp": 136,
+    "hr": 73,
+    "temp": 36.9,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Alert and orientated, chatting with visitors. Good day, walked to the day room twice. Keen to go home tomorrow.",
+   "reference": {
+    "new_confusion": false,
+    "infection": false,
+    "concern": 0,
+    "pattern": [
+     "no_acute_change"
+    ]
+   },
+   "construction": {
+    "driver_concern": 0,
+    "mental": "normal",
+    "infection": "none"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "cadaa0af",
+   "admission": "Elective hip replacement",
+   "obs": {
+    "rr": 15,
+    "spo2": 98,
+    "sbp": 125,
+    "hr": 107,
+    "temp": 38.6,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Good day, walked to the day room twice. Keen to go home tomorrow. No confusion, knows where he is and why he is here. Cellulitis spreading beyond the marked line, hot and red.",
+   "reference": {
+    "new_confusion": false,
+    "infection": true,
+    "concern": 2,
+    "pattern": [
+     "sepsis_infection"
+    ]
+   },
+   "construction": {
+    "driver_concern": 0,
+    "mental": "negated",
+    "infection": "active"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "45bbcc74",
+   "admission": "Chest pain under investigation",
+   "obs": {
+    "rr": 17,
+    "spo2": 97,
+    "sbp": 129,
+    "hr": 67,
+    "temp": 37.0,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Complaining of constipation, bowels not opened for 3 days. Laxatives given. Day 3 of IV antibiotics for pneumonia, improving. Alert and orientated, chatting with visitors.",
+   "reference": {
+    "new_confusion": false,
+    "infection": true,
+    "concern": 1,
+    "pattern": [
+     "no_acute_change",
+     "other"
+    ]
+   },
+   "construction": {
+    "driver_concern": 1,
+    "mental": "normal",
+    "infection": "treated"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "e0f0e98e",
+   "admission": "Heart failure exacerbation",
+   "obs": {
+    "rr": 15,
+    "spo2": 99,
+    "sbp": 122,
+    "hr": 80,
+    "temp": 36.8,
+    "on_o2": false,
+    "acvpu": "V",
+    "spo2_scale": 1
+   },
+   "note": "Hard to rouse for evening medications, which is not like him. Complaining of constipation, bowels not opened for 3 days. Laxatives given. Afebrile, no signs of infection.",
+   "reference": {
+    "new_confusion": true,
+    "infection": false,
+    "concern": 2,
+    "pattern": [
+     "neurological",
+     "other"
+    ]
+   },
+   "construction": {
+    "driver_concern": 1,
+    "mental": "drowsy",
+    "infection": "negated"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "554cebd5",
+   "admission": "Acute kidney injury",
+   "obs": {
+    "rr": 15,
+    "spo2": 99,
+    "sbp": 125,
+    "hr": 74,
+    "temp": 37.3,
+    "on_o2": false,
+    "acvpu": "V",
+    "spo2_scale": 1
+   },
+   "note": "Much more drowsy than this morning, only opens eyes when spoken to loudly. Family say he is 'just not himself' today and quieter than usual.",
+   "reference": {
+    "new_confusion": true,
+    "infection": false,
+    "concern": 2,
+    "pattern": [
+     "other",
+     "neurological"
+    ]
+   },
+   "construction": {
+    "driver_concern": 2,
+    "mental": "drowsy",
+    "infection": "none"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "3f8d716a",
+   "admission": "Fall at home",
+   "obs": {
+    "rr": 22,
+    "spo2": 95,
+    "sbp": 111,
+    "hr": 102,
+    "temp": 37.3,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Brief episode of chest discomfort after walking to the toilet, settled with rest after 5 minutes. Orientated to time and place, answering questions appropriately. Temperature normal, chest clear, urine clear.",
+   "reference": {
+    "new_confusion": false,
+    "infection": false,
+    "concern": 2,
+    "pattern": [
+     "cardiac"
+    ]
+   },
+   "construction": {
+    "driver_concern": 2,
+    "mental": "normal",
+    "infection": "negated"
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "bd667c2e",
+   "admission": "Community-acquired pneumonia",
+   "obs": {
+    "rr": 27,
+    "spo2": 94,
+    "sbp": 104,
+    "hr": 119,
+    "temp": 37.3,
+    "on_o2": true,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Central crushing chest pain for 20 minutes, sweaty and grey, not settling with GTN. Alert and orientated, chatting with visitors. Temperature normal, chest clear, urine clear.",
+   "reference": {
+    "new_confusion": false,
+    "infection": false,
+    "concern": 3,
+    "pattern": [
+     "cardiac"
+    ]
+   },
+   "construction": {
+    "driver_concern": 3,
+    "mental": "normal",
+    "infection": "negated"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "70d6b7bf",
+   "admission": "Fall at home",
+   "obs": {
+    "rr": 22,
+    "spo2": 92,
+    "sbp": 87,
+    "hr": 123,
+    "temp": 37.0,
+    "on_o2": true,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Afebrile, no signs of infection. Usual baseline cognitive impairment, oriented to person only as always. Central crushing chest pain for 20 minutes, sweaty and grey, not settling with GTN.",
+   "reference": {
+    "new_confusion": false,
+    "infection": false,
+    "concern": 3,
+    "pattern": [
+     "cardiac"
+    ]
+   },
+   "construction": {
+    "driver_concern": 3,
+    "mental": "baseline",
+    "infection": "negated"
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "e41e384b",
+   "admission": "Elective hip replacement",
+   "obs": {
+    "rr": 17,
+    "spo2": 96,
+    "sbp": 140,
+    "hr": 66,
+    "temp": 37.0,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Continues oral antibiotics for UTI, symptoms settling. Alert and orientated, chatting with visitors. Observations stable all shift. Bowels open, passing urine normally.",
+   "reference": {
+    "new_confusion": false,
+    "infection": true,
+    "concern": 1,
+    "pattern": [
+     "no_acute_change"
+    ]
+   },
+   "construction": {
+    "driver_concern": 0,
+    "mental": "normal",
+    "infection": "treated"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "413a1701",
+   "admission": "COPD exacerbation",
+   "obs": {
+    "rr": 16,
+    "spo2": 97,
+    "sbp": 138,
+    "hr": 83,
+    "temp": 36.4,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Comfortable, pain controlled with regular paracetamol. Wound clean and dry. Alert and orientated, chatting with visitors.",
+   "reference": {
+    "new_confusion": false,
+    "infection": false,
+    "concern": 0,
+    "pattern": [
+     "no_acute_change"
+    ]
+   },
+   "construction": {
+    "driver_concern": 0,
+    "mental": "normal",
+    "infection": "none"
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "d7cff9ac",
+   "admission": "Fall at home",
+   "obs": {
+    "rr": 14,
+    "spo2": 98,
+    "sbp": 122,
+    "hr": 80,
+    "temp": 37.1,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Complaining of constipation, bowels not opened for 3 days. Laxatives given. Orientated to time and place, answering questions appropriately.",
+   "reference": {
+    "new_confusion": false,
+    "infection": false,
+    "concern": 1,
+    "pattern": [
+     "no_acute_change",
+     "other"
+    ]
+   },
+   "construction": {
+    "driver_concern": 1,
+    "mental": "normal",
+    "infection": "none"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "a6bd56d6",
+   "admission": "Acute kidney injury",
+   "obs": {
+    "rr": 15,
+    "spo2": 98,
+    "sbp": 128,
+    "hr": 70,
+    "temp": 36.6,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Orientated to time and place, answering questions appropriately. Complaining of constipation, bowels not opened for 3 days. Laxatives given. Day 3 of IV antibiotics for pneumonia, improving.",
+   "reference": {
+    "new_confusion": false,
+    "infection": true,
+    "concern": 1,
+    "pattern": [
+     "no_acute_change",
+     "other"
+    ]
+   },
+   "construction": {
+    "driver_concern": 1,
+    "mental": "normal",
+    "infection": "treated"
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "862ba432",
+   "admission": "Urinary tract infection",
+   "obs": {
+    "rr": 20,
+    "spo2": 96,
+    "sbp": 114,
+    "hr": 98,
+    "temp": 36.9,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Brief episode of chest discomfort after walking to the toilet, settled with rest after 5 minutes. Orientated to time and place, answering questions appropriately.",
+   "reference": {
+    "new_confusion": false,
+    "infection": false,
+    "concern": 2,
+    "pattern": [
+     "cardiac"
+    ]
+   },
+   "construction": {
+    "driver_concern": 2,
+    "mental": "normal",
+    "infection": "none"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "8361befb",
+   "admission": "Chest pain under investigation",
+   "obs": {
+    "rr": 21,
+    "spo2": 95,
+    "sbp": 106,
+    "hr": 104,
+    "temp": 37.8,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Brief episode of chest discomfort after walking to the toilet, settled with rest after 5 minutes. Orientated to time and place, answering questions appropriately.",
+   "reference": {
+    "new_confusion": false,
+    "infection": false,
+    "concern": 2,
+    "pattern": [
+     "cardiac"
+    ]
+   },
+   "construction": {
+    "driver_concern": 2,
+    "mental": "normal",
+    "infection": "none"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "b34fe768",
+   "admission": "COPD exacerbation",
+   "obs": {
+    "rr": 29,
+    "spo2": 92,
+    "sbp": 87,
+    "hr": 117,
+    "temp": 38.4,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "No confusion, knows where she is and why she is here. New burning when passing urine and cloudy, smelly urine. Very breathless at rest, can only speak in single words, sats falling.",
+   "reference": {
+    "new_confusion": false,
+    "infection": true,
+    "concern": 3,
+    "pattern": [
+     "respiratory",
+     "sepsis_infection"
+    ]
+   },
+   "construction": {
+    "driver_concern": 3,
+    "mental": "negated",
+    "infection": "active"
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "92aff385",
+   "admission": "Fall at home",
+   "obs": {
+    "rr": 18,
+    "spo2": 96,
+    "sbp": 145,
+    "hr": 72,
+    "temp": 37.1,
+    "on_o2": false,
+    "acvpu": "V",
+    "spo2_scale": 1
+   },
+   "note": "Found on the floor, unresponsive for about a minute, now groggy. Hard to rouse for evening medications, which is not like him. Continues oral antibiotics for UTI, symptoms settling.",
+   "reference": {
+    "new_confusion": true,
+    "infection": true,
+    "concern": 3,
+    "pattern": [
+     "neurological",
+     "cardiac"
+    ]
+   },
+   "construction": {
+    "driver_concern": 3,
+    "mental": "drowsy",
+    "infection": "treated"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "a882bca2",
+   "admission": "Community-acquired pneumonia",
+   "obs": {
+    "rr": 18,
+    "spo2": 97,
+    "sbp": 125,
+    "hr": 78,
+    "temp": 36.5,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Good day, walked to the day room twice. Keen to go home tomorrow. Alert and orientated, chatting with visitors.",
+   "reference": {
+    "new_confusion": false,
+    "infection": false,
+    "concern": 0,
+    "pattern": [
+     "no_acute_change"
+    ]
+   },
+   "construction": {
+    "driver_concern": 0,
+    "mental": "normal",
+    "infection": "none"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "aef97ea3",
+   "admission": "Cellulitis",
+   "obs": {
+    "rr": 17,
+    "spo2": 97,
+    "sbp": 139,
+    "hr": 87,
+    "temp": 37.1,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Observations stable all shift. Bowels open, passing urine normally. Day 3 of IV antibiotics for pneumonia, improving. Orientated to time and place, answering questions appropriately.",
+   "reference": {
+    "new_confusion": false,
+    "infection": true,
+    "concern": 1,
+    "pattern": [
+     "no_acute_change"
+    ]
+   },
+   "construction": {
+    "driver_concern": 0,
+    "mental": "normal",
+    "infection": "treated"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "7451f8c3",
+   "admission": "Chest pain under investigation",
+   "obs": {
+    "rr": 17,
+    "spo2": 98,
+    "sbp": 124,
+    "hr": 70,
+    "temp": 36.4,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Orientated to time and place, answering questions appropriately. Pain a little worse on movement this afternoon, settled with PRN analgesia.",
+   "reference": {
+    "new_confusion": false,
+    "infection": false,
+    "concern": 1,
+    "pattern": [
+     "no_acute_change",
+     "other"
+    ]
+   },
+   "construction": {
+    "driver_concern": 1,
+    "mental": "normal",
+    "infection": "none"
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "6f2032ab",
+   "admission": "Heart failure exacerbation",
+   "obs": {
+    "rr": 14,
+    "spo2": 98,
+    "sbp": 143,
+    "hr": 78,
+    "temp": 37.4,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Afebrile, no signs of infection. Mild ankle swelling noted, fluid balance slightly positive. Otherwise well. Muddled since lunchtime, which is new for his. Not sure where he is.",
+   "reference": {
+    "new_confusion": true,
+    "infection": false,
+    "concern": 2,
+    "pattern": [
+     "neurological",
+     "other"
+    ]
+   },
+   "construction": {
+    "driver_concern": 1,
+    "mental": "new",
+    "infection": "negated"
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "2d6fd4fc",
+   "admission": "Urinary tract infection",
+   "obs": {
+    "rr": 22,
+    "spo2": 95,
+    "sbp": 106,
+    "hr": 90,
+    "temp": 36.6,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Brief episode of chest discomfort after walking to the toilet, settled with rest after 5 minutes. Alert and orientated, chatting with visitors.",
+   "reference": {
+    "new_confusion": false,
+    "infection": false,
+    "concern": 2,
+    "pattern": [
+     "cardiac"
+    ]
+   },
+   "construction": {
+    "driver_concern": 2,
+    "mental": "normal",
+    "infection": "none"
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "817a9df6",
+   "admission": "Chest pain under investigation",
+   "obs": {
+    "rr": 18,
+    "spo2": 99,
+    "sbp": 135,
+    "hr": 64,
+    "temp": 37.3,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Family say she is 'just not herself' today and quieter than usual. Alert and orientated, chatting with visitors.",
+   "reference": {
+    "new_confusion": false,
+    "infection": false,
+    "concern": 2,
+    "pattern": [
+     "other",
+     "neurological"
+    ],
+    "ambiguous": [
+     "new_confusion"
+    ]
+   },
+   "construction": {
+    "driver_concern": 2,
+    "mental": "normal",
+    "infection": "none"
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "94cde698",
+   "admission": "COPD exacerbation",
+   "obs": {
+    "rr": 28,
+    "spo2": 92,
+    "sbp": 98,
+    "hr": 123,
+    "temp": 37.6,
+    "on_o2": false,
+    "acvpu": "V",
+    "spo2_scale": 1
+   },
+   "note": "Very breathless at rest, can only speak in single words, sats falling. Much more drowsy than this morning, only opens eyes when spoken to loudly.",
+   "reference": {
+    "new_confusion": true,
+    "infection": false,
+    "concern": 3,
+    "pattern": [
+     "respiratory"
+    ]
+   },
+   "construction": {
+    "driver_concern": 3,
+    "mental": "drowsy",
+    "infection": "none"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "85d49635",
+   "admission": "Heart failure exacerbation",
+   "obs": {
+    "rr": 19,
+    "spo2": 98,
+    "sbp": 149,
+    "hr": 75,
+    "temp": 36.9,
+    "on_o2": false,
+    "acvpu": "V",
+    "spo2_scale": 1
+   },
+   "note": "Found on the floor, unresponsive for about a minute, now groggy. Hard to rouse for evening medications, which is not like her.",
+   "reference": {
+    "new_confusion": true,
+    "infection": false,
+    "concern": 3,
+    "pattern": [
+     "neurological",
+     "cardiac"
+    ]
+   },
+   "construction": {
+    "driver_concern": 3,
+    "mental": "drowsy",
+    "infection": "none"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "f0d41263",
+   "admission": "Community-acquired pneumonia",
+   "obs": {
+    "rr": 18,
+    "spo2": 99,
+    "sbp": 142,
+    "hr": 77,
+    "temp": 36.9,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Settled day. Mobilising with physio, eating and drinking well. Muddled since lunchtime, which is new for his. Not sure where he is.",
+   "reference": {
+    "new_confusion": true,
+    "infection": false,
+    "concern": 2,
+    "pattern": [
+     "neurological",
+     "other"
+    ]
+   },
+   "construction": {
+    "driver_concern": 0,
+    "mental": "new",
+    "infection": "none"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "7d7d8df2",
+   "admission": "Urinary tract infection",
+   "obs": {
+    "rr": 15,
+    "spo2": 97,
+    "sbp": 125,
+    "hr": 64,
+    "temp": 36.8,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Orientated to time and place, answering questions appropriately. Observations stable all shift. Bowels open, passing urine normally.",
+   "reference": {
+    "new_confusion": false,
+    "infection": false,
+    "concern": 0,
+    "pattern": [
+     "no_acute_change"
+    ]
+   },
+   "construction": {
+    "driver_concern": 0,
+    "mental": "normal",
+    "infection": "none"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "8717dfbf",
+   "admission": "COPD exacerbation",
+   "obs": {
+    "rr": 17,
+    "spo2": 98,
+    "sbp": 127,
+    "hr": 98,
+    "temp": 38.7,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Pulling at lines and talking to people who are not there, which is new. Mild ankle swelling noted, fluid balance slightly positive. Otherwise well. New burning when passing urine and cloudy, smelly urine.",
+   "reference": {
+    "new_confusion": true,
+    "infection": true,
+    "concern": 2,
+    "pattern": [
+     "sepsis_infection",
+     "neurological",
+     "other"
+    ]
+   },
+   "construction": {
+    "driver_concern": 1,
+    "mental": "new",
+    "infection": "active"
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "f8417b33",
+   "admission": "Community-acquired pneumonia",
+   "obs": {
+    "rr": 15,
+    "spo2": 98,
+    "sbp": 138,
+    "hr": 83,
+    "temp": 36.6,
+    "on_o2": false,
+    "acvpu": "V",
+    "spo2_scale": 1
+   },
+   "note": "Blood sugars running 13-16 today, not eating much of the hospital food. Much more drowsy than this morning, only opens eyes when spoken to loudly.",
+   "reference": {
+    "new_confusion": true,
+    "infection": false,
+    "concern": 2,
+    "pattern": [
+     "neurological",
+     "other"
+    ]
+   },
+   "construction": {
+    "driver_concern": 1,
+    "mental": "drowsy",
+    "infection": "none"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "15dcc6dc",
+   "admission": "Cellulitis",
+   "obs": {
+    "rr": 17,
+    "spo2": 96,
+    "sbp": 128,
+    "hr": 65,
+    "temp": 36.7,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Orientated to time and place, answering questions appropriately. Continues oral antibiotics for UTI, symptoms settling. Family say he is 'just not himself' today and quieter than usual.",
+   "reference": {
+    "new_confusion": false,
+    "infection": true,
+    "concern": 2,
+    "pattern": [
+     "other",
+     "neurological"
+    ],
+    "ambiguous": [
+     "new_confusion"
+    ]
+   },
+   "construction": {
+    "driver_concern": 2,
+    "mental": "normal",
+    "infection": "treated"
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "1ef6f488",
+   "admission": "Acute kidney injury",
+   "obs": {
+    "rr": 20,
+    "spo2": 96,
+    "sbp": 101,
+    "hr": 90,
+    "temp": 36.7,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Day 3 of IV antibiotics for pneumonia, improving. Had a brief dizzy spell on standing, BP dropped to 94 systolic, now resolved lying flat. Alert and orientated, chatting with visitors.",
+   "reference": {
+    "new_confusion": false,
+    "infection": true,
+    "concern": 2,
+    "pattern": [
+     "cardiac",
+     "other"
+    ]
+   },
+   "construction": {
+    "driver_concern": 2,
+    "mental": "normal",
+    "infection": "treated"
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "c3f08a5b",
+   "admission": "Elective hip replacement",
+   "obs": {
+    "rr": 17,
+    "spo2": 95,
+    "sbp": 128,
+    "hr": 85,
+    "temp": 37.2,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Afebrile, no signs of infection. Hard to rouse for evening medications, which is not like him. Found on the floor, unresponsive for about a minute, now groggy.",
+   "reference": {
+    "new_confusion": true,
+    "infection": false,
+    "concern": 3,
+    "pattern": [
+     "neurological",
+     "cardiac"
+    ]
+   },
+   "construction": {
+    "driver_concern": 3,
+    "mental": "drowsy",
+    "infection": "negated"
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "8011f216",
+   "admission": "Acute kidney injury",
+   "obs": {
+    "rr": 26,
+    "spo2": 93,
+    "sbp": 91,
+    "hr": 116,
+    "temp": 36.2,
+    "on_o2": true,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Day 3 of IV antibiotics for pneumonia, improving. Orientated to time and place, answering questions appropriately. Central crushing chest pain for 20 minutes, sweaty and grey, not settling with GTN.",
+   "reference": {
+    "new_confusion": false,
+    "infection": true,
+    "concern": 3,
+    "pattern": [
+     "cardiac"
+    ]
+   },
+   "construction": {
+    "driver_concern": 3,
+    "mental": "normal",
+    "infection": "treated"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "49aa53d0",
+   "admission": "Elective hip replacement",
+   "obs": {
+    "rr": 18,
+    "spo2": 99,
+    "sbp": 119,
+    "hr": 75,
+    "temp": 36.4,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Observations stable all shift. Bowels open, passing urine normally. Alert and orientated, chatting with visitors.",
+   "reference": {
+    "new_confusion": false,
+    "infection": false,
+    "concern": 0,
+    "pattern": [
+     "no_acute_change"
+    ]
+   },
+   "construction": {
+    "driver_concern": 0,
+    "mental": "normal",
+    "infection": "none"
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "8b7ce586",
+   "admission": "Acute kidney injury",
+   "obs": {
+    "rr": 17,
+    "spo2": 96,
+    "sbp": 131,
+    "hr": 88,
+    "temp": 36.9,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Settled day. Mobilising with physio, eating and drinking well. Orientated to time and place, answering questions appropriately.",
+   "reference": {
+    "new_confusion": false,
+    "infection": false,
+    "concern": 0,
+    "pattern": [
+     "no_acute_change"
+    ]
+   },
+   "construction": {
+    "driver_concern": 0,
+    "mental": "normal",
+    "infection": "none"
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "31217538",
+   "admission": "Community-acquired pneumonia",
+   "obs": {
+    "rr": 18,
+    "spo2": 98,
+    "sbp": 129,
+    "hr": 109,
+    "temp": 38.4,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Blood sugars running 13-16 today, not eating much of the hospital food. Muddled since lunchtime, which is new for his. Not sure where he is. Spiked a temperature of 38.7 with rigors, blood cultures sent.",
+   "reference": {
+    "new_confusion": true,
+    "infection": true,
+    "concern": 2,
+    "pattern": [
+     "sepsis_infection",
+     "neurological",
+     "other"
+    ]
+   },
+   "construction": {
+    "driver_concern": 1,
+    "mental": "new",
+    "infection": "active"
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "d9606297",
+   "admission": "Community-acquired pneumonia",
+   "obs": {
+    "rr": 15,
+    "spo2": 99,
+    "sbp": 135,
+    "hr": 88,
+    "temp": 37.0,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Afebrile, no signs of infection. Blood sugars running 13-16 today, not eating much of the hospital food. Not confused or drowsy at any point this shift.",
+   "reference": {
+    "new_confusion": false,
+    "infection": false,
+    "concern": 1,
+    "pattern": [
+     "no_acute_change",
+     "metabolic_renal"
+    ]
+   },
+   "construction": {
+    "driver_concern": 1,
+    "mental": "negated",
+    "infection": "negated"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "1837c2b8",
+   "admission": "Heart failure exacerbation",
+   "obs": {
+    "rr": 18,
+    "spo2": 95,
+    "sbp": 100,
+    "hr": 105,
+    "temp": 38.4,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Cough now productive of green sputum, febrile at 38.4. Brief episode of chest discomfort after walking to the toilet, settled with rest after 5 minutes. Orientated to time and place, answering questions appropriately.",
+   "reference": {
+    "new_confusion": false,
+    "infection": true,
+    "concern": 2,
+    "pattern": [
+     "cardiac",
+     "sepsis_infection"
+    ]
+   },
+   "construction": {
+    "driver_concern": 2,
+    "mental": "normal",
+    "infection": "active"
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "09b36ca6",
+   "admission": "Urinary tract infection",
+   "obs": {
+    "rr": 22,
+    "spo2": 96,
+    "sbp": 117,
+    "hr": 102,
+    "temp": 38.6,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "New irregular pulse noted at 18:00, patient says heart feels like it is fluttering. Alert and orientated, chatting with visitors. Spiked a temperature of 38.7 with rigors, blood cultures sent.",
+   "reference": {
+    "new_confusion": false,
+    "infection": true,
+    "concern": 2,
+    "pattern": [
+     "cardiac",
+     "sepsis_infection"
+    ]
+   },
+   "construction": {
+    "driver_concern": 2,
+    "mental": "normal",
+    "infection": "active"
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "415c3e38",
+   "admission": "Chest pain under investigation",
+   "obs": {
+    "rr": 26,
+    "spo2": 94,
+    "sbp": 90,
+    "hr": 107,
+    "temp": 36.4,
+    "on_o2": true,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Orientated to time and place, answering questions appropriately. Very breathless at rest, can only speak in single words, sats falling.",
+   "reference": {
+    "new_confusion": false,
+    "infection": false,
+    "concern": 3,
+    "pattern": [
+     "respiratory"
+    ]
+   },
+   "construction": {
+    "driver_concern": 3,
+    "mental": "normal",
+    "infection": "none"
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "1a495d27",
+   "admission": "Chest pain under investigation",
+   "obs": {
+    "rr": 25,
+    "spo2": 91,
+    "sbp": 89,
+    "hr": 114,
+    "temp": 36.9,
+    "on_o2": true,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Temperature normal, chest clear, urine clear. Much more drowsy than this morning, only opens eyes when spoken to loudly. Very breathless at rest, can only speak in single words, sats falling.",
+   "reference": {
+    "new_confusion": true,
+    "infection": false,
+    "concern": 3,
+    "pattern": [
+     "respiratory"
+    ]
+   },
+   "construction": {
+    "driver_concern": 3,
+    "mental": "drowsy",
+    "infection": "negated"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "8ed26e64",
+   "admission": "Elective hip replacement",
+   "obs": {
+    "rr": 14,
+    "spo2": 99,
+    "sbp": 133,
+    "hr": 101,
+    "temp": 38.8,
+    "on_o2": false,
+    "acvpu": "V",
+    "spo2_scale": 1
+   },
+   "note": "New burning when passing urine and cloudy, smelly urine. Much more drowsy than this morning, only opens eyes when spoken to loudly. Settled day. Mobilising with physio, eating and drinking well.",
+   "reference": {
+    "new_confusion": true,
+    "infection": true,
+    "concern": 2,
+    "pattern": [
+     "sepsis_infection",
+     "neurological",
+     "other"
+    ]
+   },
+   "construction": {
+    "driver_concern": 0,
+    "mental": "drowsy",
+    "infection": "active"
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "7a81171f",
+   "admission": "Urinary tract infection",
+   "obs": {
+    "rr": 15,
+    "spo2": 99,
+    "sbp": 129,
+    "hr": 99,
+    "temp": 38.7,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Newly confused this evening: thinks it is 1985 and is trying to leave the ward. Cellulitis spreading beyond the marked line, hot and red. Settled day. Mobilising with physio, eating and drinking well.",
+   "reference": {
+    "new_confusion": true,
+    "infection": true,
+    "concern": 2,
+    "pattern": [
+     "sepsis_infection",
+     "neurological",
+     "other"
+    ]
+   },
+   "construction": {
+    "driver_concern": 0,
+    "mental": "new",
+    "infection": "active"
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "f5dbb125",
+   "admission": "Cellulitis",
+   "obs": {
+    "rr": 17,
+    "spo2": 98,
+    "sbp": 143,
+    "hr": 79,
+    "temp": 36.4,
+    "on_o2": false,
+    "acvpu": "V",
+    "spo2_scale": 1
+   },
+   "note": "Much more drowsy than this morning, only opens eyes when spoken to loudly. Blood sugars running 13-16 today, not eating much of the hospital food.",
+   "reference": {
+    "new_confusion": true,
+    "infection": false,
+    "concern": 2,
+    "pattern": [
+     "neurological",
+     "other"
+    ]
+   },
+   "construction": {
+    "driver_concern": 1,
+    "mental": "drowsy",
+    "infection": "none"
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "1521f244",
+   "admission": "COPD exacerbation",
+   "obs": {
+    "rr": 14,
+    "spo2": 96,
+    "sbp": 130,
+    "hr": 83,
+    "temp": 36.4,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Alert and orientated, chatting with visitors. Complaining of constipation, bowels not opened for 3 days. Laxatives given.",
+   "reference": {
+    "new_confusion": false,
+    "infection": false,
+    "concern": 1,
+    "pattern": [
+     "no_acute_change",
+     "other"
+    ]
+   },
+   "construction": {
+    "driver_concern": 1,
+    "mental": "normal",
+    "infection": "none"
+   },
+   "split": "test"
+  },
+  {
+   "patient": "328acbee",
+   "admission": "Chest pain under investigation",
+   "obs": {
+    "rr": 19,
+    "spo2": 94,
+    "sbp": 116,
+    "hr": 102,
+    "temp": 36.6,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "New irregular pulse noted at 18:00, patient says heart feels like it is fluttering. Alert and orientated, chatting with visitors.",
+   "reference": {
+    "new_confusion": false,
+    "infection": false,
+    "concern": 2,
+    "pattern": [
+     "cardiac"
+    ]
+   },
+   "construction": {
+    "driver_concern": 2,
+    "mental": "normal",
+    "infection": "none"
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "bc65525b",
+   "admission": "Fall at home",
+   "obs": {
+    "rr": 19,
+    "spo2": 96,
+    "sbp": 101,
+    "hr": 97,
+    "temp": 37.2,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "New irregular pulse noted at 18:00, patient says heart feels like it is fluttering. No confusion, knows where she is and why she is here.",
+   "reference": {
+    "new_confusion": false,
+    "infection": false,
+    "concern": 2,
+    "pattern": [
+     "cardiac"
+    ]
+   },
+   "construction": {
+    "driver_concern": 2,
+    "mental": "negated",
+    "infection": "none"
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "939c850b",
+   "admission": "Cellulitis",
+   "obs": {
+    "rr": 15,
+    "spo2": 97,
+    "sbp": 137,
+    "hr": 65,
+    "temp": 36.9,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Temperature normal, chest clear, urine clear. Newly confused this evening: thinks it is 1985 and is trying to leave the ward. Sudden left-sided weakness and slurred speech noticed at 21:10.",
+   "reference": {
+    "new_confusion": true,
+    "infection": false,
+    "concern": 3,
+    "pattern": [
+     "neurological"
+    ]
+   },
+   "construction": {
+    "driver_concern": 3,
+    "mental": "new",
+    "infection": "negated"
+   },
+   "split": "dev"
+  },
+  {
+   "patient": "f0b9627c",
+   "admission": "Urinary tract infection",
+   "obs": {
+    "rr": 23,
+    "spo2": 93,
+    "sbp": 88,
+    "hr": 116,
+    "temp": 38.7,
+    "on_o2": false,
+    "acvpu": "A",
+    "spo2_scale": 1
+   },
+   "note": "Spiked a temperature of 38.7 with rigors, blood cultures sent. Not confused or drowsy at any point this shift. Vomited a large amount of fresh red blood, looks pale and clammy.",
+   "reference": {
+    "new_confusion": false,
+    "infection": true,
+    "concern": 3,
+    "pattern": [
+     "bleeding",
+     "sepsis_infection"
+    ]
+   },
+   "construction": {
+    "driver_concern": 3,
+    "mental": "negated",
+    "infection": "active"
+   },
+   "split": "dev"
+  }
+ ]
+}

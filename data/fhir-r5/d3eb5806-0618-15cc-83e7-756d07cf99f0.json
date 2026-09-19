@@ -1,0 +1,1569 @@
+{
+ "resourceType": "Bundle",
+ "id": "snapshot-d3eb5806-0618-15cc-83e7-756d07cf99f0",
+ "type": "collection",
+ "timestamp": "2026-09-19T00:00:00Z",
+ "entry": [
+  {
+   "fullUrl": "urn:uuid:d3eb5806-0618-15cc-83e7-756d07cf99f0",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "d3eb5806-0618-15cc-83e7-756d07cf99f0",
+    "identifier": [
+     {
+      "system": "https://github.com/synthetichealth/synthea",
+      "value": "d3eb5806-0618-15cc-83e7-756d07cf99f0"
+     }
+    ],
+    "name": [
+     {
+      "use": "official",
+      "family": "King743",
+      "given": [
+       "Angeles319"
+      ],
+      "prefix": [
+       "Mrs."
+      ]
+     }
+    ],
+    "gender": "female",
+    "birthDate": "1993-09-26",
+    "address": [
+     {
+      "city": "Georgetown",
+      "state": "MA",
+      "postalCode": "00000",
+      "country": "US"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:d3eb5806-0618-15cc-a5c3-997eea1cd68a",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "d3eb5806-0618-15cc-a5c3-997eea1cd68a",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "128613002",
+       "display": "Seizure disorder (disorder)"
+      }
+     ],
+     "text": "Seizure disorder (disorder)"
+    },
+    "subject": {
+     "reference": "urn:uuid:d3eb5806-0618-15cc-83e7-756d07cf99f0"
+    },
+    "onsetDateTime": "1993-10-06T19:26:16+09:30",
+    "recordedDate": "1993-10-06T19:26:16+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:d3eb5806-0618-15cc-cc9f-15124888ca1e",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "d3eb5806-0618-15cc-cc9f-15124888ca1e",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "1290882004",
+       "display": "History of seizure (situation)"
+      }
+     ],
+     "text": "History of seizure (situation)"
+    },
+    "subject": {
+     "reference": "urn:uuid:d3eb5806-0618-15cc-83e7-756d07cf99f0"
+    },
+    "onsetDateTime": "1993-10-06T19:26:16+09:30",
+    "recordedDate": "1993-10-06T19:26:16+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:d3eb5806-0618-15cc-7ca7-214c412c5728",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "d3eb5806-0618-15cc-7ca7-214c412c5728",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "473461003",
+       "display": "Educated to high school level (finding)"
+      }
+     ],
+     "text": "Educated to high school level (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:d3eb5806-0618-15cc-83e7-756d07cf99f0"
+    },
+    "onsetDateTime": "2011-11-20T20:57:14+10:30",
+    "recordedDate": "2011-11-20T20:57:14+10:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:d3eb5806-0618-15cc-1e1a-73a5ddaeabbb",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "d3eb5806-0618-15cc-1e1a-73a5ddaeabbb",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "422650009",
+       "display": "Social isolation (finding)"
+      }
+     ],
+     "text": "Social isolation (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:d3eb5806-0618-15cc-83e7-756d07cf99f0"
+    },
+    "onsetDateTime": "2011-11-20T20:57:14+10:30",
+    "recordedDate": "2011-11-20T20:57:14+10:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:d3eb5806-0618-15cc-16b7-c2b9cdfe06ac",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "d3eb5806-0618-15cc-16b7-c2b9cdfe06ac",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "314529007",
+       "display": "Medication review due (situation)"
+      }
+     ],
+     "text": "Medication review due (situation)"
+    },
+    "subject": {
+     "reference": "urn:uuid:d3eb5806-0618-15cc-83e7-756d07cf99f0"
+    },
+    "onsetDateTime": "2015-11-29T20:26:16+10:30",
+    "recordedDate": "2015-11-29T20:26:16+10:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:d3eb5806-0618-15cc-91f8-e27af8a188a4",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "d3eb5806-0618-15cc-91f8-e27af8a188a4",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "162864005",
+       "display": "Body mass index 30+ - obesity (finding)"
+      }
+     ],
+     "text": "Body mass index 30+ - obesity (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:d3eb5806-0618-15cc-83e7-756d07cf99f0"
+    },
+    "onsetDateTime": "2015-11-29T20:26:16+10:30",
+    "recordedDate": "2015-11-29T20:26:16+10:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:d3eb5806-0618-15cc-9e65-57be84c1f82d",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "d3eb5806-0618-15cc-9e65-57be84c1f82d",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "160903007",
+       "display": "Full-time employment (finding)"
+      }
+     ],
+     "text": "Full-time employment (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:d3eb5806-0618-15cc-83e7-756d07cf99f0"
+    },
+    "onsetDateTime": "2021-01-17T21:14:26+10:30",
+    "recordedDate": "2021-01-17T21:14:26+10:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:d3eb5806-0618-15cc-7e43-4b19115d48bf",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "d3eb5806-0618-15cc-7e43-4b19115d48bf",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "73595000",
+       "display": "Stress (finding)"
+      }
+     ],
+     "text": "Stress (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:d3eb5806-0618-15cc-83e7-756d07cf99f0"
+    },
+    "onsetDateTime": "2021-12-05T21:25:25+10:30",
+    "recordedDate": "2021-12-05T21:25:25+10:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:d3eb5806-0618-15cc-9078-46ee4900c44c",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "d3eb5806-0618-15cc-9078-46ee4900c44c",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "161744009",
+       "display": "Past pregnancy history of miscarriage (situation)"
+      }
+     ],
+     "text": "Past pregnancy history of miscarriage (situation)"
+    },
+    "subject": {
+     "reference": "urn:uuid:d3eb5806-0618-15cc-83e7-756d07cf99f0"
+    },
+    "onsetDateTime": "2023-06-29T19:26:16+09:30",
+    "recordedDate": "2023-06-29T19:26:16+09:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:d3eb5806-0618-15cc-87e4-a4eebb58769e",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "d3eb5806-0618-15cc-87e4-a4eebb58769e",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "423315002",
+       "display": "Limited social contact (finding)"
+      }
+     ],
+     "text": "Limited social contact (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:d3eb5806-0618-15cc-83e7-756d07cf99f0"
+    },
+    "onsetDateTime": "2024-12-08T21:02:25+10:30",
+    "recordedDate": "2024-12-08T21:02:25+10:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:d3eb5806-0618-15cc-70cb-be5d8b2aa867",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "d3eb5806-0618-15cc-70cb-be5d8b2aa867",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+       "code": "active"
+      }
+     ]
+    },
+    "verificationStatus": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+       "code": "confirmed"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "code": "encounter-diagnosis",
+        "display": "Encounter Diagnosis"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "424393004",
+       "display": "Reports of violence in the environment (finding)"
+      }
+     ],
+     "text": "Reports of violence in the environment (finding)"
+    },
+    "subject": {
+     "reference": "urn:uuid:d3eb5806-0618-15cc-83e7-756d07cf99f0"
+    },
+    "onsetDateTime": "2024-12-08T21:02:25+10:30",
+    "recordedDate": "2024-12-08T21:02:25+10:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:d3eb5806-0618-15cc-7792-0fe0166b02f2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "d3eb5806-0618-15cc-7792-0fe0166b02f2",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs",
+        "display": "Vital signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "39156-5",
+       "display": "Body mass index (BMI) [Ratio]"
+      }
+     ],
+     "text": "Body mass index (BMI) [Ratio]"
+    },
+    "subject": {
+     "reference": "urn:uuid:d3eb5806-0618-15cc-83e7-756d07cf99f0"
+    },
+    "effectiveDateTime": "2024-12-08T20:26:16+10:30",
+    "valueQuantity": {
+     "value": 28.57,
+     "unit": "kg/m2",
+     "system": "http://unitsofmeasure.org",
+     "code": "kg/m2"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:d3eb5806-0618-15cc-a4e2-ebac17fd8bc7",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "d3eb5806-0618-15cc-a4e2-ebac17fd8bc7",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs",
+        "display": "Vital signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "85354-9",
+       "display": "Blood pressure panel with all children optional"
+      }
+     ],
+     "text": "Blood pressure panel with all children optional"
+    },
+    "subject": {
+     "reference": "urn:uuid:d3eb5806-0618-15cc-83e7-756d07cf99f0"
+    },
+    "effectiveDateTime": "2024-12-08T20:26:16+10:30",
+    "component": [
+     {
+      "code": {
+       "coding": [
+        {
+         "system": "http://loinc.org",
+         "code": "8462-4",
+         "display": "Diastolic Blood Pressure"
+        }
+       ],
+       "text": "Diastolic Blood Pressure"
+      },
+      "valueQuantity": {
+       "value": 88,
+       "unit": "mm[Hg]",
+       "system": "http://unitsofmeasure.org",
+       "code": "mm[Hg]"
+      }
+     },
+     {
+      "code": {
+       "coding": [
+        {
+         "system": "http://loinc.org",
+         "code": "8480-6",
+         "display": "Systolic Blood Pressure"
+        }
+       ],
+       "text": "Systolic Blood Pressure"
+      },
+      "valueQuantity": {
+       "value": 136,
+       "unit": "mm[Hg]",
+       "system": "http://unitsofmeasure.org",
+       "code": "mm[Hg]"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:d3eb5806-0618-15cc-312c-798157b6d6ef",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "d3eb5806-0618-15cc-312c-798157b6d6ef",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs",
+        "display": "Vital signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Heart rate"
+      }
+     ],
+     "text": "Heart rate"
+    },
+    "subject": {
+     "reference": "urn:uuid:d3eb5806-0618-15cc-83e7-756d07cf99f0"
+    },
+    "effectiveDateTime": "2024-12-08T20:26:16+10:30",
+    "valueQuantity": {
+     "value": 74,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:d3eb5806-0618-15cc-7d92-d1c1a4192b42",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "d3eb5806-0618-15cc-7d92-d1c1a4192b42",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs",
+        "display": "Vital signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "9279-1",
+       "display": "Respiratory rate"
+      }
+     ],
+     "text": "Respiratory rate"
+    },
+    "subject": {
+     "reference": "urn:uuid:d3eb5806-0618-15cc-83e7-756d07cf99f0"
+    },
+    "effectiveDateTime": "2024-12-08T20:26:16+10:30",
+    "valueQuantity": {
+     "value": 13,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:d3eb5806-0618-15cc-b0c7-81dd34b02cab",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "d3eb5806-0618-15cc-b0c7-81dd34b02cab",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "2093-3",
+       "display": "Cholesterol [Mass/volume] in Serum or Plasma"
+      }
+     ],
+     "text": "Cholesterol [Mass/volume] in Serum or Plasma"
+    },
+    "subject": {
+     "reference": "urn:uuid:d3eb5806-0618-15cc-83e7-756d07cf99f0"
+    },
+    "effectiveDateTime": "2024-12-08T20:26:16+10:30",
+    "valueQuantity": {
+     "value": 198.74,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:d3eb5806-0618-15cc-b663-bde127c109bc",
+   "resource": {
+    "resourceType": "Encounter",
+    "id": "d3eb5806-0618-15cc-b663-bde127c109bc",
+    "status": "completed",
+    "class": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB"
+       }
+      ]
+     }
+    ],
+    "type": [
+     {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "698314001",
+        "display": "Consultation for treatment (procedure)"
+       }
+      ],
+      "text": "Consultation for treatment (procedure)"
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:d3eb5806-0618-15cc-83e7-756d07cf99f0"
+    },
+    "actualPeriod": {
+     "start": "2026-01-11T20:26:16+10:30",
+     "end": "2026-01-11T20:46:41+10:30"
+    },
+    "reason": [
+     {
+      "value": [
+       {
+        "concept": {
+         "coding": [
+          {
+           "system": "http://snomed.info/sct",
+           "code": "389095005",
+           "display": "Contraception care (regime/therapy)"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:d3eb5806-0618-15cc-fa76-ac9e2966cc56",
+   "resource": {
+    "resourceType": "Encounter",
+    "id": "d3eb5806-0618-15cc-fa76-ac9e2966cc56",
+    "status": "completed",
+    "class": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB"
+       }
+      ]
+     }
+    ],
+    "type": [
+     {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "424619006",
+        "display": "Prenatal visit (regime/therapy)"
+       }
+      ],
+      "text": "Prenatal visit (regime/therapy)"
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:d3eb5806-0618-15cc-83e7-756d07cf99f0"
+    },
+    "actualPeriod": {
+     "start": "2026-01-03T20:26:16+10:30",
+     "end": "2026-01-03T20:41:16+10:30"
+    },
+    "reason": [
+     {
+      "value": [
+       {
+        "concept": {
+         "coding": [
+          {
+           "system": "http://snomed.info/sct",
+           "code": "72892002",
+           "display": "Normal pregnancy (finding)"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:d3eb5806-0618-15cc-9158-078138f504cb",
+   "resource": {
+    "resourceType": "Encounter",
+    "id": "d3eb5806-0618-15cc-9158-078138f504cb",
+    "status": "completed",
+    "class": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB"
+       }
+      ]
+     }
+    ],
+    "type": [
+     {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "270427003",
+        "display": "Patient-initiated encounter (procedure)"
+       }
+      ],
+      "text": "Patient-initiated encounter (procedure)"
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:d3eb5806-0618-15cc-83e7-756d07cf99f0"
+    },
+    "actualPeriod": {
+     "start": "2025-12-26T20:26:16+10:30",
+     "end": "2025-12-26T20:41:16+10:30"
+    },
+    "reason": [
+     {
+      "value": [
+       {
+        "concept": {
+         "coding": [
+          {
+           "system": "http://snomed.info/sct",
+           "code": "72892002",
+           "display": "Normal pregnancy (finding)"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:d3eb5806-0618-15cc-0cc3-1763d2fe21a5",
+   "resource": {
+    "resourceType": "Encounter",
+    "id": "d3eb5806-0618-15cc-0cc3-1763d2fe21a5",
+    "status": "completed",
+    "class": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB"
+       }
+      ]
+     }
+    ],
+    "type": [
+     {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "424441002",
+        "display": "Prenatal initial visit (regime/therapy)"
+       }
+      ],
+      "text": "Prenatal initial visit (regime/therapy)"
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:d3eb5806-0618-15cc-83e7-756d07cf99f0"
+    },
+    "actualPeriod": {
+     "start": "2025-12-14T20:26:16+10:30",
+     "end": "2025-12-14T20:41:16+10:30"
+    },
+    "reason": [
+     {
+      "value": [
+       {
+        "concept": {
+         "coding": [
+          {
+           "system": "http://snomed.info/sct",
+           "code": "72892002",
+           "display": "Normal pregnancy (finding)"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:d3eb5806-0618-15cc-9862-eb5e74c5f983",
+   "resource": {
+    "resourceType": "Encounter",
+    "id": "d3eb5806-0618-15cc-9862-eb5e74c5f983",
+    "status": "completed",
+    "class": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB"
+       }
+      ]
+     }
+    ],
+    "type": [
+     {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "308335008",
+        "display": "Patient encounter procedure (procedure)"
+       }
+      ],
+      "text": "Patient encounter procedure (procedure)"
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:d3eb5806-0618-15cc-83e7-756d07cf99f0"
+    },
+    "actualPeriod": {
+     "start": "2025-10-26T20:26:16+10:30",
+     "end": "2025-10-26T21:13:04+10:30"
+    },
+    "reason": [
+     {
+      "value": [
+       {
+        "concept": {
+         "coding": [
+          {
+           "system": "http://snomed.info/sct",
+           "code": "389095005",
+           "display": "Contraception care (regime/therapy)"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7075c37d-8683-30cc-0575-02ba83c9b64f",
+   "resource": {
+    "resourceType": "DocumentReference",
+    "id": "7075c37d-8683-30cc-0575-02ba83c9b64f",
+    "status": "current",
+    "type": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "34117-2",
+       "display": "History and physical note"
+      },
+      {
+       "system": "http://loinc.org",
+       "code": "51847-2",
+       "display": "Evaluation + Plan note"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+        "code": "clinical-note",
+        "display": "Clinical Note"
+       }
+      ]
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:d3eb5806-0618-15cc-83e7-756d07cf99f0"
+    },
+    "date": "2026-01-11T20:26:16.957+10:30",
+    "content": [
+     {
+      "attachment": {
+       "contentType": "text/plain; charset=utf-8",
+       "data": "CjIwMjYtMDEtMTEKCiMgQ2hpZWYgQ29tcGxhaW50Ck5vIGNvbXBsYWludHMuCgojIEhpc3Rvcnkgb2YgUHJlc2VudCBJbGxuZXNzCkFuZ2VsZXMzMTkgaXMgYSAzMiB5ZWFyLW9sZCBub25oaXNwYW5pYyB3aGl0ZSBmZW1hbGUuIFBhdGllbnQgaGFzIGEgaGlzdG9yeSBvZiBibGlnaHRlZCBvdnVtIChkaXNvcmRlciksIG1pc2NhcnJpYWdlIGluIGZpcnN0IHRyaW1lc3RlciAoZGlzb3JkZXIpLCB2aXJhbCBzaW51c2l0aXMgKGRpc29yZGVyKSwgbm9ybWFsIHByZWduYW5jeSAoZmluZGluZykuCgojIFNvY2lhbCBIaXN0b3J5ClBhdGllbnQgaXMgbWFycmllZC4gUGF0aWVudCBoYXMgbmV2ZXIgc21va2VkLgogUGF0aWVudCBpZGVudGlmaWVzIGFzIGhldGVyb3NleHVhbC4KClBhdGllbnQgY29tZXMgZnJvbSBhIG1pZGRsZSBzb2Npb2Vjb25vbWljIGJhY2tncm91bmQuCiBQYXRpZW50IGhhcyBhIGhpZ2ggc2Nob29sIGVkdWNhdGlvbi4KUGF0aWVudCBjdXJyZW50bHkgaGFzIE1lZGljYXJlLgoKIyBBbGxlcmdpZXMKTm8gS25vd24gQWxsZXJnaWVzLgoKIyBNZWRpY2F0aW9ucwphbW94aWNpbGxpbiAyNTAgbWcgLyBjbGF2dWxhbmF0ZSAxMjUgbWcgb3JhbCB0YWJsZXQKCiMgQXNzZXNzbWVudCBhbmQgUGxhbgoKCgojIyBQbGFuCgpUaGUgZm9sbG93aW5nIHByb2NlZHVyZXMgd2VyZSBjb25kdWN0ZWQ6Ci0gaW1wbGFudGF0aW9uIG9mIHN1YmN1dGFuZW91cyBjb250cmFjZXB0aXZlIChwcm9jZWR1cmUpClRoZSBwYXRpZW50IHdhcyBwcmVzY3JpYmVkIHRoZSBmb2xsb3dpbmcgbWVkaWNhdGlvbnM6Ci0gZXRvbm9nZXN0cmVsIDY4IG1nIGRydWcgaW1wbGFudAo="
+      }
+     }
+    ],
+    "period": {
+     "start": "2026-01-11T20:26:16+10:30",
+     "end": "2026-01-11T20:46:41+10:30"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:0cbd64d5-cce0-f1cd-01d7-7ae020ddeec1",
+   "resource": {
+    "resourceType": "DocumentReference",
+    "id": "0cbd64d5-cce0-f1cd-01d7-7ae020ddeec1",
+    "status": "superseded",
+    "type": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "34117-2",
+       "display": "History and physical note"
+      },
+      {
+       "system": "http://loinc.org",
+       "code": "51847-2",
+       "display": "Evaluation + Plan note"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+        "code": "clinical-note",
+        "display": "Clinical Note"
+       }
+      ]
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:d3eb5806-0618-15cc-83e7-756d07cf99f0"
+    },
+    "date": "2026-01-03T20:26:16.957+10:30",
+    "content": [
+     {
+      "attachment": {
+       "contentType": "text/plain; charset=utf-8",
+       "data": "CjIwMjYtMDEtMDMKCiMgQ2hpZWYgQ29tcGxhaW50Ck5vIGNvbXBsYWludHMuCgojIEhpc3Rvcnkgb2YgUHJlc2VudCBJbGxuZXNzCkFuZ2VsZXMzMTkgaXMgYSAzMiB5ZWFyLW9sZCBub25oaXNwYW5pYyB3aGl0ZSBmZW1hbGUuIFBhdGllbnQgaGFzIGEgaGlzdG9yeSBvZiBibGlnaHRlZCBvdnVtIChkaXNvcmRlciksIG1pc2NhcnJpYWdlIGluIGZpcnN0IHRyaW1lc3RlciAoZGlzb3JkZXIpLCB2aXJhbCBzaW51c2l0aXMgKGRpc29yZGVyKSwgbm9ybWFsIHByZWduYW5jeSAoZmluZGluZykuCgojIFNvY2lhbCBIaXN0b3J5ClBhdGllbnQgaXMgbWFycmllZC4gUGF0aWVudCBoYXMgbmV2ZXIgc21va2VkLgogUGF0aWVudCBpZGVudGlmaWVzIGFzIGhldGVyb3NleHVhbC4KClBhdGllbnQgY29tZXMgZnJvbSBhIG1pZGRsZSBzb2Npb2Vjb25vbWljIGJhY2tncm91bmQuCiBQYXRpZW50IGhhcyBhIGhpZ2ggc2Nob29sIGVkdWNhdGlvbi4KUGF0aWVudCBjdXJyZW50bHkgaGFzIE1lZGljYXJlLgoKIyBBbGxlcmdpZXMKTm8gS25vd24gQWxsZXJnaWVzLgoKIyBNZWRpY2F0aW9ucwphbW94aWNpbGxpbiAyNTAgbWcgLyBjbGF2dWxhbmF0ZSAxMjUgbWcgb3JhbCB0YWJsZXQKCiMgQXNzZXNzbWVudCBhbmQgUGxhbgoKCgojIyBQbGFuCgpUaGUgZm9sbG93aW5nIHByb2NlZHVyZXMgd2VyZSBjb25kdWN0ZWQ6Ci0gcGFzc2l2ZSBpbW11bml6YXRpb24gKHByb2NlZHVyZSkKLSBwcmVnbmFuY3kgdGVybWluYXRpb24gY2FyZSAocmVnaW1lL3RoZXJhcHkpCi0gcGh5c2ljYWwgZXhhbWluYXRpb24gcHJvY2VkdXJlIChwcm9jZWR1cmUpCi0gZGVwcmVzc2lvbiBzY3JlZW5pbmcgKHByb2NlZHVyZSkK"
+      }
+     }
+    ],
+    "period": {
+     "start": "2026-01-03T20:26:16+10:30",
+     "end": "2026-01-03T20:41:16+10:30"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:24b8ee53-bc6d-6259-78b5-eb47b1877863",
+   "resource": {
+    "resourceType": "DocumentReference",
+    "id": "24b8ee53-bc6d-6259-78b5-eb47b1877863",
+    "status": "superseded",
+    "type": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "34117-2",
+       "display": "History and physical note"
+      },
+      {
+       "system": "http://loinc.org",
+       "code": "51847-2",
+       "display": "Evaluation + Plan note"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+        "code": "clinical-note",
+        "display": "Clinical Note"
+       }
+      ]
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:d3eb5806-0618-15cc-83e7-756d07cf99f0"
+    },
+    "date": "2025-12-26T20:26:16.957+10:30",
+    "content": [
+     {
+      "attachment": {
+       "contentType": "text/plain; charset=utf-8",
+       "data": "CjIwMjUtMTItMjYKCiMgQ2hpZWYgQ29tcGxhaW50Ck5vIGNvbXBsYWludHMuCgojIEhpc3Rvcnkgb2YgUHJlc2VudCBJbGxuZXNzCkFuZ2VsZXMzMTkgaXMgYSAzMiB5ZWFyLW9sZCBub25oaXNwYW5pYyB3aGl0ZSBmZW1hbGUuIFBhdGllbnQgaGFzIGEgaGlzdG9yeSBvZiBibGlnaHRlZCBvdnVtIChkaXNvcmRlciksIG1pc2NhcnJpYWdlIGluIGZpcnN0IHRyaW1lc3RlciAoZGlzb3JkZXIpLCB2aXJhbCBzaW51c2l0aXMgKGRpc29yZGVyKSwgbm9ybWFsIHByZWduYW5jeSAoZmluZGluZykuCgojIFNvY2lhbCBIaXN0b3J5ClBhdGllbnQgaXMgbWFycmllZC4gUGF0aWVudCBoYXMgbmV2ZXIgc21va2VkLgogUGF0aWVudCBpZGVudGlmaWVzIGFzIGhldGVyb3NleHVhbC4KClBhdGllbnQgY29tZXMgZnJvbSBhIG1pZGRsZSBzb2Npb2Vjb25vbWljIGJhY2tncm91bmQuCiBQYXRpZW50IGhhcyBhIGhpZ2ggc2Nob29sIGVkdWNhdGlvbi4KUGF0aWVudCBjdXJyZW50bHkgaGFzIE1lZGljYXJlLgoKIyBBbGxlcmdpZXMKTm8gS25vd24gQWxsZXJnaWVzLgoKIyBNZWRpY2F0aW9ucwphbW94aWNpbGxpbiAyNTAgbWcgLyBjbGF2dWxhbmF0ZSAxMjUgbWcgb3JhbCB0YWJsZXQKCiMgQXNzZXNzbWVudCBhbmQgUGxhbgoKCgojIyBQbGFuCgpUaGUgZm9sbG93aW5nIHByb2NlZHVyZXMgd2VyZSBjb25kdWN0ZWQ6Ci0gY291bnNlbGluZyBmb3IgdGVybWluYXRpb24gb2YgcHJlZ25hbmN5IChwcm9jZWR1cmUpCi0gaW5kdWNlZCB0ZXJtaW5hdGlvbiBvZiBwcmVnbmFuY3kgKHByb2NlZHVyZSkK"
+      }
+     }
+    ],
+    "period": {
+     "start": "2025-12-26T20:26:16+10:30",
+     "end": "2025-12-26T20:41:16+10:30"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:0bf50e00-631e-022a-5d96-6ea5a2edd169",
+   "resource": {
+    "resourceType": "DocumentReference",
+    "id": "0bf50e00-631e-022a-5d96-6ea5a2edd169",
+    "status": "superseded",
+    "type": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "34117-2",
+       "display": "History and physical note"
+      },
+      {
+       "system": "http://loinc.org",
+       "code": "51847-2",
+       "display": "Evaluation + Plan note"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+        "code": "clinical-note",
+        "display": "Clinical Note"
+       }
+      ]
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:d3eb5806-0618-15cc-83e7-756d07cf99f0"
+    },
+    "date": "2025-12-14T20:26:16.957+10:30",
+    "content": [
+     {
+      "attachment": {
+       "contentType": "text/plain; charset=utf-8",
+       "data": "CjIwMjUtMTItMTQKCiMgQ2hpZWYgQ29tcGxhaW50Ck5vIGNvbXBsYWludHMuCgojIEhpc3Rvcnkgb2YgUHJlc2VudCBJbGxuZXNzCkFuZ2VsZXMzMTkgaXMgYSAzMiB5ZWFyLW9sZCBub25oaXNwYW5pYyB3aGl0ZSBmZW1hbGUuIFBhdGllbnQgaGFzIGEgaGlzdG9yeSBvZiBibGlnaHRlZCBvdnVtIChkaXNvcmRlciksIG1pc2NhcnJpYWdlIGluIGZpcnN0IHRyaW1lc3RlciAoZGlzb3JkZXIpLCB2aXJhbCBzaW51c2l0aXMgKGRpc29yZGVyKSwgbm9ybWFsIHByZWduYW5jeSAoZmluZGluZykuCgojIFNvY2lhbCBIaXN0b3J5ClBhdGllbnQgaXMgbWFycmllZC4gUGF0aWVudCBoYXMgbmV2ZXIgc21va2VkLgogUGF0aWVudCBpZGVudGlmaWVzIGFzIGhldGVyb3NleHVhbC4KClBhdGllbnQgY29tZXMgZnJvbSBhIG1pZGRsZSBzb2Npb2Vjb25vbWljIGJhY2tncm91bmQuCiBQYXRpZW50IGhhcyBhIGhpZ2ggc2Nob29sIGVkdWNhdGlvbi4KUGF0aWVudCBjdXJyZW50bHkgaGFzIE1lZGljYXJlLgoKIyBBbGxlcmdpZXMKTm8gS25vd24gQWxsZXJnaWVzLgoKIyBNZWRpY2F0aW9ucwphbW94aWNpbGxpbiAyNTAgbWcgLyBjbGF2dWxhbmF0ZSAxMjUgbWcgb3JhbCB0YWJsZXQKCiMgQXNzZXNzbWVudCBhbmQgUGxhbgpQYXRpZW50IGlzIHByZXNlbnRpbmcgd2l0aCBub3JtYWwgcHJlZ25hbmN5IChmaW5kaW5nKS4gCgoKIyMgUGxhbgoKVGhlIGZvbGxvd2luZyBwcm9jZWR1cmVzIHdlcmUgY29uZHVjdGVkOgotIHN0YW5kYXJkIHByZWduYW5jeSB0ZXN0IChwcm9jZWR1cmUpCi0gdWx0cmFzb3VuZCBzY2FuIGZvciBmZXRhbCB2aWFiaWxpdHkgKHByb2NlZHVyZSkK"
+      }
+     }
+    ],
+    "period": {
+     "start": "2025-12-14T20:26:16+10:30",
+     "end": "2025-12-14T20:41:16+10:30"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:e1ba31b4-6567-094e-c959-da8515b9a936",
+   "resource": {
+    "resourceType": "DocumentReference",
+    "id": "e1ba31b4-6567-094e-c959-da8515b9a936",
+    "status": "superseded",
+    "type": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "34117-2",
+       "display": "History and physical note"
+      },
+      {
+       "system": "http://loinc.org",
+       "code": "51847-2",
+       "display": "Evaluation + Plan note"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+        "code": "clinical-note",
+        "display": "Clinical Note"
+       }
+      ]
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:d3eb5806-0618-15cc-83e7-756d07cf99f0"
+    },
+    "date": "2025-10-26T20:26:16.957+10:30",
+    "content": [
+     {
+      "attachment": {
+       "contentType": "text/plain; charset=utf-8",
+       "data": "CjIwMjUtMTAtMjYKCiMgQ2hpZWYgQ29tcGxhaW50Ck5vIGNvbXBsYWludHMuCgojIEhpc3Rvcnkgb2YgUHJlc2VudCBJbGxuZXNzCkFuZ2VsZXMzMTkgaXMgYSAzMiB5ZWFyLW9sZCBub25oaXNwYW5pYyB3aGl0ZSBmZW1hbGUuIFBhdGllbnQgaGFzIGEgaGlzdG9yeSBvZiBibGlnaHRlZCBvdnVtIChkaXNvcmRlciksIG1pc2NhcnJpYWdlIGluIGZpcnN0IHRyaW1lc3RlciAoZGlzb3JkZXIpLCB2aXJhbCBzaW51c2l0aXMgKGRpc29yZGVyKSwgbm9ybWFsIHByZWduYW5jeSAoZmluZGluZykuCgojIFNvY2lhbCBIaXN0b3J5ClBhdGllbnQgaXMgbWFycmllZC4gUGF0aWVudCBoYXMgbmV2ZXIgc21va2VkLgogUGF0aWVudCBpZGVudGlmaWVzIGFzIGhldGVyb3NleHVhbC4KClBhdGllbnQgY29tZXMgZnJvbSBhIG1pZGRsZSBzb2Npb2Vjb25vbWljIGJhY2tncm91bmQuCiBQYXRpZW50IGhhcyBhIGhpZ2ggc2Nob29sIGVkdWNhdGlvbi4KUGF0aWVudCBjdXJyZW50bHkgaGFzIE1lZGljYXJlLgoKIyBBbGxlcmdpZXMKTm8gS25vd24gQWxsZXJnaWVzLgoKIyBNZWRpY2F0aW9ucwphbW94aWNpbGxpbiAyNTAgbWcgLyBjbGF2dWxhbmF0ZSAxMjUgbWcgb3JhbCB0YWJsZXQKCiMgQXNzZXNzbWVudCBhbmQgUGxhbgoKCgojIyBQbGFuCgpUaGUgZm9sbG93aW5nIHByb2NlZHVyZXMgd2VyZSBjb25kdWN0ZWQ6Ci0gcmVtb3ZhbCBvZiBpbnRyYXV0ZXJpbmUgY29udHJhY2VwdGl2ZSBkZXZpY2UgKHByb2NlZHVyZSkK"
+      }
+     }
+    ],
+    "period": {
+     "start": "2025-10-26T20:26:16+10:30",
+     "end": "2025-10-26T21:13:04+10:30"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:5062a1d7-f08b-2734-00b5-41bfd82ad005",
+   "resource": {
+    "resourceType": "DocumentReference",
+    "id": "5062a1d7-f08b-2734-00b5-41bfd82ad005",
+    "status": "superseded",
+    "type": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "34117-2",
+       "display": "History and physical note"
+      },
+      {
+       "system": "http://loinc.org",
+       "code": "51847-2",
+       "display": "Evaluation + Plan note"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+        "code": "clinical-note",
+        "display": "Clinical Note"
+       }
+      ]
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:d3eb5806-0618-15cc-83e7-756d07cf99f0"
+    },
+    "date": "2024-12-08T20:26:16.957+10:30",
+    "content": [
+     {
+      "attachment": {
+       "contentType": "text/plain; charset=utf-8",
+       "data": "CjIwMjQtMTItMDgKCiMgQ2hpZWYgQ29tcGxhaW50Ck5vIGNvbXBsYWludHMuCgojIEhpc3Rvcnkgb2YgUHJlc2VudCBJbGxuZXNzCkFuZ2VsZXMzMTkgaXMgYSAzMSB5ZWFyLW9sZCBub25oaXNwYW5pYyB3aGl0ZSBmZW1hbGUuIFBhdGllbnQgaGFzIGEgaGlzdG9yeSBvZiBibGlnaHRlZCBvdnVtIChkaXNvcmRlciksIG1pc2NhcnJpYWdlIGluIGZpcnN0IHRyaW1lc3RlciAoZGlzb3JkZXIpLCB2aXJhbCBzaW51c2l0aXMgKGRpc29yZGVyKSwgbm9ybWFsIHByZWduYW5jeSAoZmluZGluZykuCgojIFNvY2lhbCBIaXN0b3J5ClBhdGllbnQgaXMgbWFycmllZC4gUGF0aWVudCBoYXMgbmV2ZXIgc21va2VkLgogUGF0aWVudCBpZGVudGlmaWVzIGFzIGhldGVyb3NleHVhbC4KClBhdGllbnQgY29tZXMgZnJvbSBhIG1pZGRsZSBzb2Npb2Vjb25vbWljIGJhY2tncm91bmQuCiBQYXRpZW50IGhhcyBhIGhpZ2ggc2Nob29sIGVkdWNhdGlvbi4KUGF0aWVudCBjdXJyZW50bHkgaGFzIE1lZGljYXJlLgoKIyBBbGxlcmdpZXMKTm8gS25vd24gQWxsZXJnaWVzLgoKIyBNZWRpY2F0aW9ucwphbW94aWNpbGxpbiAyNTAgbWcgLyBjbGF2dWxhbmF0ZSAxMjUgbWcgb3JhbCB0YWJsZXQKCiMgQXNzZXNzbWVudCBhbmQgUGxhbgpQYXRpZW50IGlzIHByZXNlbnRpbmcgd2l0aCBsaW1pdGVkIHNvY2lhbCBjb250YWN0IChmaW5kaW5nKSwgcmVwb3J0cyBvZiB2aW9sZW5jZSBpbiB0aGUgZW52aXJvbm1lbnQgKGZpbmRpbmcpLiAKCgojIyBQbGFuClBhdGllbnQgd2FzIGdpdmVuIHRoZSBmb2xsb3dpbmcgaW1tdW5pemF0aW9uczogaW5mbHVlbnphLCBzcGxpdCB2aXJ1cywgdHJpdmFsZW50LCBwZiwgdGQgKGFkdWx0KSwgNSBsZiB0ZXRhbnVzIHRveG9pZCwgcHJlc2VydmF0aXZlIGZyZWUsIGFkc29yYmVkLiAKVGhlIGZvbGxvd2luZyBwcm9jZWR1cmVzIHdlcmUgY29uZHVjdGVkOgotIGFzc2Vzc21lbnQgb2YgaGVhbHRoIGFuZCBzb2NpYWwgY2FyZSBuZWVkcyAocHJvY2VkdXJlKQotIGFzc2Vzc21lbnQgb2YgYW54aWV0eSAocHJvY2VkdXJlKQotIGRlcHJlc3Npb24gc2NyZWVuaW5nIChwcm9jZWR1cmUpCi0gZGVwcmVzc2lvbiBzY3JlZW5pbmcgKHByb2NlZHVyZSkKLSBhc3Nlc3NtZW50IG9mIHN1YnN0YW5jZSB1c2UgKHByb2NlZHVyZSkKLSBhc3Nlc3NtZW50IHVzaW5nIGFsY29ob2wgdXNlIGRpc29yZGVycyBpZGVudGlmaWNhdGlvbiB0ZXN0IC0gY29uc3VtcHRpb24gKHByb2NlZHVyZSkKVGhlIGZvbGxvd2luZyBsYWIgcmVwb3J0cyB3ZXJlIGNvbXBsZXRlZDoKLSBsaXBpZCBwYW5lbCB3aXRoIGRpcmVjdCBsZGwgLSBzZXJ1bSBvciBwbGFzbWEKLSBnZW5lcmFsaXplZCBhbnhpZXR5IGRpc29yZGVyIDcgaXRlbSAoZ2FkLTcpCi0gcGF0aWVudCBoZWFsdGggcXVlc3Rpb25uYWlyZSAyIGl0ZW0gKHBocS0yKSBbcmVwb3J0ZWRdCi0gYWxjb2hvbCB1c2UgZGlzb3JkZXIgaWRlbnRpZmljYXRpb24gdGVzdCAtIGNvbnN1bXB0aW9uIFthdWRpdC1jXQo="
+      }
+     }
+    ],
+    "period": {
+     "start": "2024-12-08T20:26:16+10:30",
+     "end": "2024-12-08T21:02:25+10:30"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:d689ba12-365e-8f0c-029e-620c30467940",
+   "resource": {
+    "resourceType": "DocumentReference",
+    "id": "d689ba12-365e-8f0c-029e-620c30467940",
+    "status": "superseded",
+    "type": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "34117-2",
+       "display": "History and physical note"
+      },
+      {
+       "system": "http://loinc.org",
+       "code": "51847-2",
+       "display": "Evaluation + Plan note"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+        "code": "clinical-note",
+        "display": "Clinical Note"
+       }
+      ]
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:d3eb5806-0618-15cc-83e7-756d07cf99f0"
+    },
+    "date": "2024-08-06T09:26:16.957+09:30",
+    "content": [
+     {
+      "attachment": {
+       "contentType": "text/plain; charset=utf-8",
+       "data": "CjIwMjQtMDgtMDYKCiMgQ2hpZWYgQ29tcGxhaW50Ck5vIGNvbXBsYWludHMuCgojIEhpc3Rvcnkgb2YgUHJlc2VudCBJbGxuZXNzCkFuZ2VsZXMzMTkgaXMgYSAzMCB5ZWFyLW9sZCBub25oaXNwYW5pYyB3aGl0ZSBmZW1hbGUuIFBhdGllbnQgaGFzIGEgaGlzdG9yeSBvZiBibGlnaHRlZCBvdnVtIChkaXNvcmRlciksIG1pc2NhcnJpYWdlIGluIGZpcnN0IHRyaW1lc3RlciAoZGlzb3JkZXIpLCB2aXJhbCBzaW51c2l0aXMgKGRpc29yZGVyKSwgbm9ybWFsIHByZWduYW5jeSAoZmluZGluZykuCgojIFNvY2lhbCBIaXN0b3J5ClBhdGllbnQgaXMgbWFycmllZC4gUGF0aWVudCBoYXMgbmV2ZXIgc21va2VkLgogUGF0aWVudCBpZGVudGlmaWVzIGFzIGhldGVyb3NleHVhbC4KClBhdGllbnQgY29tZXMgZnJvbSBhIG1pZGRsZSBzb2Npb2Vjb25vbWljIGJhY2tncm91bmQuCiBQYXRpZW50IGhhcyBhIGhpZ2ggc2Nob29sIGVkdWNhdGlvbi4KUGF0aWVudCBjdXJyZW50bHkgaGFzIE1lZGljYXJlLgoKIyBBbGxlcmdpZXMKTm8gS25vd24gQWxsZXJnaWVzLgoKIyBNZWRpY2F0aW9ucwpObyBBY3RpdmUgTWVkaWNhdGlvbnMuCgojIEFzc2Vzc21lbnQgYW5kIFBsYW4KUGF0aWVudCBpcyBwcmVzZW50aW5nIHdpdGggdmlyYWwgc2ludXNpdGlzIChkaXNvcmRlcikuIAoKCiMjIFBsYW4KClRoZSBwYXRpZW50IHdhcyBwcmVzY3JpYmVkIHRoZSBmb2xsb3dpbmcgbWVkaWNhdGlvbnM6Ci0gYW1veGljaWxsaW4gMjUwIG1nIC8gY2xhdnVsYW5hdGUgMTI1IG1nIG9yYWwgdGFibGV0Cg=="
+      }
+     }
+    ],
+    "period": {
+     "start": "2024-08-06T09:26:16+09:30",
+     "end": "2024-08-06T09:41:16+09:30"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:2ba79ff5-e620-2248-289b-950ffc2a7645",
+   "resource": {
+    "resourceType": "DocumentReference",
+    "id": "2ba79ff5-e620-2248-289b-950ffc2a7645",
+    "status": "superseded",
+    "type": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "34117-2",
+       "display": "History and physical note"
+      },
+      {
+       "system": "http://loinc.org",
+       "code": "51847-2",
+       "display": "Evaluation + Plan note"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+        "code": "clinical-note",
+        "display": "Clinical Note"
+       }
+      ]
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:d3eb5806-0618-15cc-83e7-756d07cf99f0"
+    },
+    "date": "2024-03-10T20:26:16.957+10:30",
+    "content": [
+     {
+      "attachment": {
+       "contentType": "text/plain; charset=utf-8",
+       "data": "CjIwMjQtMDMtMTAKCiMgQ2hpZWYgQ29tcGxhaW50Ck5vIGNvbXBsYWludHMuCgojIEhpc3Rvcnkgb2YgUHJlc2VudCBJbGxuZXNzCkFuZ2VsZXMzMTkgaXMgYSAzMCB5ZWFyLW9sZCBub25oaXNwYW5pYyB3aGl0ZSBmZW1hbGUuIFBhdGllbnQgaGFzIGEgaGlzdG9yeSBvZiBibGlnaHRlZCBvdnVtIChkaXNvcmRlciksIG1pc2NhcnJpYWdlIGluIGZpcnN0IHRyaW1lc3RlciAoZGlzb3JkZXIpLCBub3JtYWwgcHJlZ25hbmN5IChmaW5kaW5nKS4KCiMgU29jaWFsIEhpc3RvcnkKUGF0aWVudCBpcyBtYXJyaWVkLiBQYXRpZW50IGhhcyBuZXZlciBzbW9rZWQuCiBQYXRpZW50IGlkZW50aWZpZXMgYXMgaGV0ZXJvc2V4dWFsLgoKUGF0aWVudCBjb21lcyBmcm9tIGEgbWlkZGxlIHNvY2lvZWNvbm9taWMgYmFja2dyb3VuZC4KIFBhdGllbnQgaGFzIGEgaGlnaCBzY2hvb2wgZWR1Y2F0aW9uLgpQYXRpZW50IGN1cnJlbnRseSBoYXMgTWVkaWNhcmUuCgojIEFsbGVyZ2llcwpObyBLbm93biBBbGxlcmdpZXMuCgojIE1lZGljYXRpb25zCk5vIEFjdGl2ZSBNZWRpY2F0aW9ucy4KCiMgQXNzZXNzbWVudCBhbmQgUGxhbgpQYXRpZW50IGlzIHByZXNlbnRpbmcgd2l0aCB2aXJhbCBzaW51c2l0aXMgKGRpc29yZGVyKS4gCgoKIyMgUGxhbgoK"
+      }
+     }
+    ],
+    "period": {
+     "start": "2024-03-10T20:26:16+10:30",
+     "end": "2024-03-10T20:41:16+10:30"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:b1b0cf6b-d988-71db-ab98-b99f059d19d5",
+   "resource": {
+    "resourceType": "DocumentReference",
+    "id": "b1b0cf6b-d988-71db-ab98-b99f059d19d5",
+    "status": "superseded",
+    "type": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "34117-2",
+       "display": "History and physical note"
+      },
+      {
+       "system": "http://loinc.org",
+       "code": "51847-2",
+       "display": "Evaluation + Plan note"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+        "code": "clinical-note",
+        "display": "Clinical Note"
+       }
+      ]
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:d3eb5806-0618-15cc-83e7-756d07cf99f0"
+    },
+    "date": "2023-12-31T14:26:16.957+10:30",
+    "content": [
+     {
+      "attachment": {
+       "contentType": "text/plain; charset=utf-8",
+       "data": "CjIwMjMtMTItMzEKCiMgQ2hpZWYgQ29tcGxhaW50Ck5vIGNvbXBsYWludHMuCgojIEhpc3Rvcnkgb2YgUHJlc2VudCBJbGxuZXNzCkFuZ2VsZXMzMTkgaXMgYSAzMCB5ZWFyLW9sZCBub25oaXNwYW5pYyB3aGl0ZSBmZW1hbGUuIFBhdGllbnQgaGFzIGEgaGlzdG9yeSBvZiBibGlnaHRlZCBvdnVtIChkaXNvcmRlciksIG1pc2NhcnJpYWdlIGluIGZpcnN0IHRyaW1lc3RlciAoZGlzb3JkZXIpLCBub3JtYWwgcHJlZ25hbmN5IChmaW5kaW5nKS4KCiMgU29jaWFsIEhpc3RvcnkKUGF0aWVudCBpcyBtYXJyaWVkLiBQYXRpZW50IGhhcyBuZXZlciBzbW9rZWQuCiBQYXRpZW50IGlkZW50aWZpZXMgYXMgaGV0ZXJvc2V4dWFsLgoKUGF0aWVudCBjb21lcyBmcm9tIGEgbWlkZGxlIHNvY2lvZWNvbm9taWMgYmFja2dyb3VuZC4KIFBhdGllbnQgaGFzIGEgaGlnaCBzY2hvb2wgZWR1Y2F0aW9uLgpQYXRpZW50IGN1cnJlbnRseSBoYXMgTWVkaWNhcmUuCgojIEFsbGVyZ2llcwpObyBLbm93biBBbGxlcmdpZXMuCgojIE1lZGljYXRpb25zCk5vIEFjdGl2ZSBNZWRpY2F0aW9ucy4KCiMgQXNzZXNzbWVudCBhbmQgUGxhbgoKCgojIyBQbGFuCgpUaGUgZm9sbG93aW5nIHByb2NlZHVyZXMgd2VyZSBjb25kdWN0ZWQ6Ci0gaW5zZXJ0aW9uIG9mIGludHJhdXRlcmluZSBjb250cmFjZXB0aXZlIGRldmljZSAocHJvY2VkdXJlKQo="
+      }
+     }
+    ],
+    "period": {
+     "start": "2023-12-31T14:26:16+10:30",
+     "end": "2023-12-31T15:33:51+10:30"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:ac53670f-8f00-d284-4ad2-0a42504b5224",
+   "resource": {
+    "resourceType": "DocumentReference",
+    "id": "ac53670f-8f00-d284-4ad2-0a42504b5224",
+    "status": "superseded",
+    "type": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "34117-2",
+       "display": "History and physical note"
+      },
+      {
+       "system": "http://loinc.org",
+       "code": "51847-2",
+       "display": "Evaluation + Plan note"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+        "code": "clinical-note",
+        "display": "Clinical Note"
+       }
+      ]
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:d3eb5806-0618-15cc-83e7-756d07cf99f0"
+    },
+    "date": "2023-12-27T20:26:16.957+10:30",
+    "content": [
+     {
+      "attachment": {
+       "contentType": "text/plain; charset=utf-8",
+       "data": "CjIwMjMtMTItMjcKCiMgQ2hpZWYgQ29tcGxhaW50Ck5vIGNvbXBsYWludHMuCgojIEhpc3Rvcnkgb2YgUHJlc2VudCBJbGxuZXNzCkFuZ2VsZXMzMTkgaXMgYSAzMCB5ZWFyLW9sZCBub25oaXNwYW5pYyB3aGl0ZSBmZW1hbGUuIFBhdGllbnQgaGFzIGEgaGlzdG9yeSBvZiBibGlnaHRlZCBvdnVtIChkaXNvcmRlciksIG1pc2NhcnJpYWdlIGluIGZpcnN0IHRyaW1lc3RlciAoZGlzb3JkZXIpLCBub3JtYWwgcHJlZ25hbmN5IChmaW5kaW5nKS4KCiMgU29jaWFsIEhpc3RvcnkKUGF0aWVudCBpcyBtYXJyaWVkLiBQYXRpZW50IGhhcyBuZXZlciBzbW9rZWQuCiBQYXRpZW50IGlkZW50aWZpZXMgYXMgaGV0ZXJvc2V4dWFsLgoKUGF0aWVudCBjb21lcyBmcm9tIGEgbWlkZGxlIHNvY2lvZWNvbm9taWMgYmFja2dyb3VuZC4KIFBhdGllbnQgaGFzIGEgaGlnaCBzY2hvb2wgZWR1Y2F0aW9uLgpQYXRpZW50IGN1cnJlbnRseSBoYXMgTWVkaWNhcmUuCgojIEFsbGVyZ2llcwpObyBLbm93biBBbGxlcmdpZXMuCgojIE1lZGljYXRpb25zCk5vIEFjdGl2ZSBNZWRpY2F0aW9ucy4KCiMgQXNzZXNzbWVudCBhbmQgUGxhbgoKCgojIyBQbGFuCgo="
+      }
+     }
+    ],
+    "period": {
+     "start": "2023-12-27T20:26:16+10:30",
+     "end": "2023-12-27T20:41:16+10:30"
+    }
+   }
+  }
+ ]
+}

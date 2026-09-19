@@ -2082,6 +2082,496 @@
      "end": "2025-05-02T07:00:15+09:30"
     }
    }
+  },
+  {
+   "fullUrl": "urn:uuid:05398143-db0e-4131-75eb-5d7ae274f2e4",
+   "resource": {
+    "resourceType": "DocumentReference",
+    "id": "05398143-db0e-4131-75eb-5d7ae274f2e4",
+    "status": "current",
+    "type": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "34117-2",
+       "display": "History and physical note"
+      },
+      {
+       "system": "http://loinc.org",
+       "code": "51847-2",
+       "display": "Evaluation + Plan note"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+        "code": "clinical-note",
+        "display": "Clinical Note"
+       }
+      ]
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:8f23e265-3932-3d39-66fb-5ff439ab581f"
+    },
+    "date": "2026-05-22T06:16:15.330+09:30",
+    "content": [
+     {
+      "attachment": {
+       "contentType": "text/plain; charset=utf-8",
+       "data": "CjIwMjYtMDUtMjIKCiMgQ2hpZWYgQ29tcGxhaW50Ci0gRGVjcmVhc2VkIENvbW11bmljYXRpb24KLSBNZW1vcnkgTG9zcwotIERlY3JlYXNlZCBBdHRlbnRpdmVuZXNzCi0gRGVjcmVhc2VkIGluIEp1ZGdlbWVudAotIENvbmZ1c2lvbgoKCiMgSGlzdG9yeSBvZiBQcmVzZW50IElsbG5lc3MKSGFycmlzNzg5IGlzIGEgODAgeWVhci1vbGQgbm9uaGlzcGFuaWMgd2hpdGUgbWFsZS4gUGF0aWVudCBoYXMgYSBoaXN0b3J5IG9mIHBhcnQtdGltZSBlbXBsb3ltZW50IChmaW5kaW5nKSwgZnJhY3R1cmUgb2YgZm9yZWFybSAoZGlzb3JkZXIpLCBhY3V0ZSBicm9uY2hpdGlzIChkaXNvcmRlciksIG1lZGljYXRpb24gcmV2aWV3IGR1ZSAoc2l0dWF0aW9uKSwgbGltaXRlZCBzb2NpYWwgY29udGFjdCAoZmluZGluZyksIG5vdCBpbiBsYWJvciBmb3JjZSAoZmluZGluZyksIGZ1bGwtdGltZSBlbXBsb3ltZW50IChmaW5kaW5nKSwgZnJhY3R1cmUgb2YgYm9uZSAoZGlzb3JkZXIpLCB2aXJhbCBzaW51c2l0aXMgKGRpc29yZGVyKSwgZ2luZ2l2aXRpcyAoZGlzb3JkZXIpLCBzdHJlc3MgKGZpbmRpbmcpLCBzb2NpYWwgaXNvbGF0aW9uIChmaW5kaW5nKS4KCiMgU29jaWFsIEhpc3RvcnkKUGF0aWVudCBpcyBtYXJyaWVkLiBQYXRpZW50IGhhcyBuZXZlciBzbW9rZWQuCiBQYXRpZW50IGlkZW50aWZpZXMgYXMgaGV0ZXJvc2V4dWFsLgoKUGF0aWVudCBjb21lcyBmcm9tIGEgbWlkZGxlIHNvY2lvZWNvbm9taWMgYmFja2dyb3VuZC4KIFBhdGllbnQgaGFzIGEgaGlnaCBzY2hvb2wgZWR1Y2F0aW9uLgpQYXRpZW50IGN1cnJlbnRseSBoYXMgTWVkaWNhcmUuCgojIEFsbGVyZ2llcwpObyBLbm93biBBbGxlcmdpZXMuCgojIE1lZGljYXRpb25zCmxpc2lub3ByaWwgMTAgbWcgb3JhbCB0YWJsZXQ7IHRyb3BpY2FtaWRlIDUgbWcvbWwgb3BodGhhbG1pYyBzb2x1dGlvbjsgYWNldGFtaW5vcGhlbiAzMjUgbWcgb3JhbCB0YWJsZXQ7IDI0IGhyIG1ldGZvcm1pbiBoeWRyb2NobG9yaWRlIDUwMCBtZyBleHRlbmRlZCByZWxlYXNlIG9yYWwgdGFibGV0OyBtZXBlcmlkaW5lIGh5ZHJvY2hsb3JpZGUgNTAgbWcgb3JhbCB0YWJsZXQ7IG5hcHJveGVuIHNvZGl1bSAyMjAgbWcgb3JhbCB0YWJsZXQ7IHNvZGl1bSBmbHVvcmlkZSAwLjAyNzIgbWcvbWcgb3JhbCBnZWwKCiMgQXNzZXNzbWVudCBhbmQgUGxhbgoKCgojIyBQbGFuCgpUaGUgZm9sbG93aW5nIHByb2NlZHVyZXMgd2VyZSBjb25kdWN0ZWQ6Ci0gZGVudGFsIGNvbnN1bHRhdGlvbiBhbmQgcmVwb3J0IChwcm9jZWR1cmUpCi0gZGVudGFsIGNhcmUgKHJlZ2ltZS90aGVyYXB5KQotIHJlbW92YWwgb2Ygc3VwcmFnaW5naXZhbCBwbGFxdWUgYW5kIGNhbGN1bHVzIGZyb20gYWxsIHRlZXRoIHVzaW5nIGRlbnRhbCBpbnN0cnVtZW50IChwcm9jZWR1cmUpCi0gcmVtb3ZhbCBvZiBzdWJnaW5naXZhbCBwbGFxdWUgYW5kIGNhbGN1bHVzIGZyb20gYWxsIHRlZXRoIHVzaW5nIGRlbnRhbCBpbnN0cnVtZW50IChwcm9jZWR1cmUpCi0gZXhhbWluYXRpb24gb2YgZ2luZ2l2YWUgKHByb2NlZHVyZSkKLSBvcmFsIGhlYWx0aCBlZHVjYXRpb24gKHByb2NlZHVyZSkK"
+      }
+     }
+    ],
+    "period": {
+     "start": "2026-05-22T06:16:15+09:30",
+     "end": "2026-05-22T08:59:39+09:30"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:45fc694c-b2a0-b43c-fe6a-781a1607959f",
+   "resource": {
+    "resourceType": "DocumentReference",
+    "id": "45fc694c-b2a0-b43c-fe6a-781a1607959f",
+    "status": "superseded",
+    "type": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "34117-2",
+       "display": "History and physical note"
+      },
+      {
+       "system": "http://loinc.org",
+       "code": "51847-2",
+       "display": "Evaluation + Plan note"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+        "code": "clinical-note",
+        "display": "Clinical Note"
+       }
+      ]
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:8f23e265-3932-3d39-66fb-5ff439ab581f"
+    },
+    "date": "2026-05-08T06:16:15.330+09:30",
+    "content": [
+     {
+      "attachment": {
+       "contentType": "text/plain; charset=utf-8",
+       "data": "CjIwMjYtMDUtMDgKCiMgQ2hpZWYgQ29tcGxhaW50Ci0gRGVjcmVhc2VkIENvbW11bmljYXRpb24KLSBNZW1vcnkgTG9zcwotIERlY3JlYXNlZCBBdHRlbnRpdmVuZXNzCi0gRGVjcmVhc2VkIGluIEp1ZGdlbWVudAotIENvbmZ1c2lvbgoKCiMgSGlzdG9yeSBvZiBQcmVzZW50IElsbG5lc3MKSGFycmlzNzg5IGlzIGEgODAgeWVhci1vbGQgbm9uaGlzcGFuaWMgd2hpdGUgbWFsZS4gUGF0aWVudCBoYXMgYSBoaXN0b3J5IG9mIHBhcnQtdGltZSBlbXBsb3ltZW50IChmaW5kaW5nKSwgZnJhY3R1cmUgb2YgZm9yZWFybSAoZGlzb3JkZXIpLCBhY3V0ZSBicm9uY2hpdGlzIChkaXNvcmRlciksIG1lZGljYXRpb24gcmV2aWV3IGR1ZSAoc2l0dWF0aW9uKSwgbGltaXRlZCBzb2NpYWwgY29udGFjdCAoZmluZGluZyksIG5vdCBpbiBsYWJvciBmb3JjZSAoZmluZGluZyksIGZ1bGwtdGltZSBlbXBsb3ltZW50IChmaW5kaW5nKSwgZnJhY3R1cmUgb2YgYm9uZSAoZGlzb3JkZXIpLCB2aXJhbCBzaW51c2l0aXMgKGRpc29yZGVyKSwgZ2luZ2l2aXRpcyAoZGlzb3JkZXIpLCBzdHJlc3MgKGZpbmRpbmcpLCBzb2NpYWwgaXNvbGF0aW9uIChmaW5kaW5nKS4KCiMgU29jaWFsIEhpc3RvcnkKUGF0aWVudCBpcyBtYXJyaWVkLiBQYXRpZW50IGhhcyBuZXZlciBzbW9rZWQuCiBQYXRpZW50IGlkZW50aWZpZXMgYXMgaGV0ZXJvc2V4dWFsLgoKUGF0aWVudCBjb21lcyBmcm9tIGEgbWlkZGxlIHNvY2lvZWNvbm9taWMgYmFja2dyb3VuZC4KIFBhdGllbnQgaGFzIGEgaGlnaCBzY2hvb2wgZWR1Y2F0aW9uLgpQYXRpZW50IGN1cnJlbnRseSBoYXMgTWVkaWNhcmUuCgojIEFsbGVyZ2llcwpObyBLbm93biBBbGxlcmdpZXMuCgojIE1lZGljYXRpb25zCmxpc2lub3ByaWwgMTAgbWcgb3JhbCB0YWJsZXQ7IHRyb3BpY2FtaWRlIDUgbWcvbWwgb3BodGhhbG1pYyBzb2x1dGlvbjsgYWNldGFtaW5vcGhlbiAzMjUgbWcgb3JhbCB0YWJsZXQ7IDI0IGhyIG1ldGZvcm1pbiBoeWRyb2NobG9yaWRlIDUwMCBtZyBleHRlbmRlZCByZWxlYXNlIG9yYWwgdGFibGV0OyBtZXBlcmlkaW5lIGh5ZHJvY2hsb3JpZGUgNTAgbWcgb3JhbCB0YWJsZXQ7IG5hcHJveGVuIHNvZGl1bSAyMjAgbWcgb3JhbCB0YWJsZXQ7IHNvZGl1bSBmbHVvcmlkZSAwLjAyNzIgbWcvbWcgb3JhbCBnZWwKCiMgQXNzZXNzbWVudCBhbmQgUGxhbgoKCgojIyBQbGFuCgpUaGUgZm9sbG93aW5nIHByb2NlZHVyZXMgd2VyZSBjb25kdWN0ZWQ6Ci0gdmlzdWFsIGFjdWl0eSB0ZXN0aW5nIChwcm9jZWR1cmUpCi0gaW50cmFvY3VsYXIgcHJlc3N1cmUgdGVzdCAocHJvY2VkdXJlKQotIG9jdWxhciBzbGl0IGxhbXAgZXhhbWluYXRpb24gKHByb2NlZHVyZSkKLSBpbmRpcmVjdCBnb25pb3Njb3B5IChwcm9jZWR1cmUpCi0gY2FtZXJhIGZ1bmRvc2NvcHkgKHByb2NlZHVyZSkKLSBkaWFiZXRpYyByZXRpbmFsIGV5ZSBleGFtIChwcm9jZWR1cmUpClRoZSBwYXRpZW50IHdhcyBwcmVzY3JpYmVkIHRoZSBmb2xsb3dpbmcgbWVkaWNhdGlvbnM6Ci0gdHJvcGljYW1pZGUgNSBtZy9tbCBvcGh0aGFsbWljIHNvbHV0aW9uCg=="
+      }
+     }
+    ],
+    "period": {
+     "start": "2026-05-08T06:16:15+09:30",
+     "end": "2026-05-08T07:00:15+09:30"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7880bdd1-1578-8039-e68f-8b347c59e3f1",
+   "resource": {
+    "resourceType": "DocumentReference",
+    "id": "7880bdd1-1578-8039-e68f-8b347c59e3f1",
+    "status": "superseded",
+    "type": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "34117-2",
+       "display": "History and physical note"
+      },
+      {
+       "system": "http://loinc.org",
+       "code": "51847-2",
+       "display": "Evaluation + Plan note"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+        "code": "clinical-note",
+        "display": "Clinical Note"
+       }
+      ]
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:8f23e265-3932-3d39-66fb-5ff439ab581f"
+    },
+    "date": "2026-05-01T06:16:15.330+09:30",
+    "content": [
+     {
+      "attachment": {
+       "contentType": "text/plain; charset=utf-8",
+       "data": "CjIwMjYtMDUtMDEKCiMgQ2hpZWYgQ29tcGxhaW50Ci0gRGVjcmVhc2VkIENvbW11bmljYXRpb24KLSBNZW1vcnkgTG9zcwotIERlY3JlYXNlZCBBdHRlbnRpdmVuZXNzCi0gRGVjcmVhc2VkIGluIEp1ZGdlbWVudAotIENvbmZ1c2lvbgoKCiMgSGlzdG9yeSBvZiBQcmVzZW50IElsbG5lc3MKSGFycmlzNzg5IGlzIGEgODAgeWVhci1vbGQgbm9uaGlzcGFuaWMgd2hpdGUgbWFsZS4gUGF0aWVudCBoYXMgYSBoaXN0b3J5IG9mIHBhcnQtdGltZSBlbXBsb3ltZW50IChmaW5kaW5nKSwgZnJhY3R1cmUgb2YgZm9yZWFybSAoZGlzb3JkZXIpLCBhY3V0ZSBicm9uY2hpdGlzIChkaXNvcmRlciksIG1lZGljYXRpb24gcmV2aWV3IGR1ZSAoc2l0dWF0aW9uKSwgbGltaXRlZCBzb2NpYWwgY29udGFjdCAoZmluZGluZyksIG5vdCBpbiBsYWJvciBmb3JjZSAoZmluZGluZyksIGZ1bGwtdGltZSBlbXBsb3ltZW50IChmaW5kaW5nKSwgZnJhY3R1cmUgb2YgYm9uZSAoZGlzb3JkZXIpLCB2aXJhbCBzaW51c2l0aXMgKGRpc29yZGVyKSwgZ2luZ2l2aXRpcyAoZGlzb3JkZXIpLCBzdHJlc3MgKGZpbmRpbmcpLCBzb2NpYWwgaXNvbGF0aW9uIChmaW5kaW5nKS4KCiMgU29jaWFsIEhpc3RvcnkKUGF0aWVudCBpcyBtYXJyaWVkLiBQYXRpZW50IGhhcyBuZXZlciBzbW9rZWQuCiBQYXRpZW50IGlkZW50aWZpZXMgYXMgaGV0ZXJvc2V4dWFsLgoKUGF0aWVudCBjb21lcyBmcm9tIGEgbWlkZGxlIHNvY2lvZWNvbm9taWMgYmFja2dyb3VuZC4KIFBhdGllbnQgaGFzIGEgaGlnaCBzY2hvb2wgZWR1Y2F0aW9uLgpQYXRpZW50IGN1cnJlbnRseSBoYXMgTWVkaWNhcmUuCgojIEFsbGVyZ2llcwpObyBLbm93biBBbGxlcmdpZXMuCgojIE1lZGljYXRpb25zCmxpc2lub3ByaWwgMTAgbWcgb3JhbCB0YWJsZXQ7IHRyb3BpY2FtaWRlIDUgbWcvbWwgb3BodGhhbG1pYyBzb2x1dGlvbjsgYWNldGFtaW5vcGhlbiAzMjUgbWcgb3JhbCB0YWJsZXQ7IDI0IGhyIG1ldGZvcm1pbiBoeWRyb2NobG9yaWRlIDUwMCBtZyBleHRlbmRlZCByZWxlYXNlIG9yYWwgdGFibGV0OyBtZXBlcmlkaW5lIGh5ZHJvY2hsb3JpZGUgNTAgbWcgb3JhbCB0YWJsZXQ7IG5hcHJveGVuIHNvZGl1bSAyMjAgbWcgb3JhbCB0YWJsZXQ7IHNvZGl1bSBmbHVvcmlkZSAwLjAyNzIgbWcvbWcgb3JhbCBnZWwKCiMgQXNzZXNzbWVudCBhbmQgUGxhbgpQYXRpZW50IGlzIHByZXNlbnRpbmcgd2l0aCBtZWRpY2F0aW9uIHJldmlldyBkdWUgKHNpdHVhdGlvbikuIAoKCiMjIFBsYW4KUGF0aWVudCB3YXMgZ2l2ZW4gdGhlIGZvbGxvd2luZyBpbW11bml6YXRpb25zOiBpbmZsdWVuemEsIHNwbGl0IHZpcnVzLCB0cml2YWxlbnQsIHBmLiAKVGhlIGZvbGxvd2luZyBwcm9jZWR1cmVzIHdlcmUgY29uZHVjdGVkOgotIHNsZWVwIGFwbmVhIGFzc2Vzc21lbnQgKHByb2NlZHVyZSkKLSBhc3Nlc3NtZW50IG9mIGhlYWx0aCBhbmQgc29jaWFsIGNhcmUgbmVlZHMgKHByb2NlZHVyZSkKLSBhc3Nlc3NtZW50IG9mIGFueGlldHkgKHByb2NlZHVyZSkKLSBhc3Nlc3NtZW50IHVzaW5nIG1vcnNlIGZhbGwgc2NhbGUgKHByb2NlZHVyZSkKLSBhc3Nlc3NtZW50IG9mIHN1YnN0YW5jZSB1c2UgKHByb2NlZHVyZSkKLSBhc3Nlc3NtZW50IHVzaW5nIGFsY29ob2wgdXNlIGRpc29yZGVycyBpZGVudGlmaWNhdGlvbiB0ZXN0IC0gY29uc3VtcHRpb24gKHByb2NlZHVyZSkKLSBwYXRpZW50IHJlZmVycmFsIGZvciBkZW50YWwgY2FyZSAocHJvY2VkdXJlKQpUaGUgZm9sbG93aW5nIGxhYiByZXBvcnRzIHdlcmUgY29tcGxldGVkOgotIGJhc2ljIG1ldGFib2xpYyBwYW5lbCAtIGJsb29kCi0gbGlwaWQgcGFuZWwgd2l0aCBkaXJlY3QgbGRsIC0gc2VydW0gb3IgcGxhc21hCi0gZ2VuZXJhbGl6ZWQgYW54aWV0eSBkaXNvcmRlciA3IGl0ZW0gKGdhZC03KQotIG1vcnNlIGZhbGwgc2NhbGUgcGFuZWwKLSBhbGNvaG9sIHVzZSBkaXNvcmRlciBpZGVudGlmaWNhdGlvbiB0ZXN0IC0gY29uc3VtcHRpb24gW2F1ZGl0LWNdClRoZSBwYXRpZW50IHdhcyBwcmVzY3JpYmVkIHRoZSBmb2xsb3dpbmcgbWVkaWNhdGlvbnM6Ci0gMjQgaHIgbWV0Zm9ybWluIGh5ZHJvY2hsb3JpZGUgNTAwIG1nIGV4dGVuZGVkIHJlbGVhc2Ugb3JhbCB0YWJsZXQKLSBsaXNpbm9wcmlsIDEwIG1nIG9yYWwgdGFibGV0Cg=="
+      }
+     }
+    ],
+    "period": {
+     "start": "2026-05-01T06:16:15+09:30",
+     "end": "2026-05-01T07:11:23+09:30"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:e989818e-9dca-b716-5a3b-5dc5a53168ca",
+   "resource": {
+    "resourceType": "DocumentReference",
+    "id": "e989818e-9dca-b716-5a3b-5dc5a53168ca",
+    "status": "superseded",
+    "type": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "34117-2",
+       "display": "History and physical note"
+      },
+      {
+       "system": "http://loinc.org",
+       "code": "51847-2",
+       "display": "Evaluation + Plan note"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+        "code": "clinical-note",
+        "display": "Clinical Note"
+       }
+      ]
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:8f23e265-3932-3d39-66fb-5ff439ab581f"
+    },
+    "date": "2025-05-16T06:16:15.330+09:30",
+    "content": [
+     {
+      "attachment": {
+       "contentType": "text/plain; charset=utf-8",
+       "data": "CjIwMjUtMDUtMTYKCiMgQ2hpZWYgQ29tcGxhaW50Ci0gRGVjcmVhc2VkIENvbW11bmljYXRpb24KLSBNZW1vcnkgTG9zcwotIERlY3JlYXNlZCBBdHRlbnRpdmVuZXNzCi0gRGVjcmVhc2VkIGluIEp1ZGdlbWVudAotIENvbmZ1c2lvbgoKCiMgSGlzdG9yeSBvZiBQcmVzZW50IElsbG5lc3MKSGFycmlzNzg5IGlzIGEgNzkgeWVhci1vbGQgbm9uaGlzcGFuaWMgd2hpdGUgbWFsZS4gUGF0aWVudCBoYXMgYSBoaXN0b3J5IG9mIHBhcnQtdGltZSBlbXBsb3ltZW50IChmaW5kaW5nKSwgZnJhY3R1cmUgb2YgZm9yZWFybSAoZGlzb3JkZXIpLCBhY3V0ZSBicm9uY2hpdGlzIChkaXNvcmRlciksIG1lZGljYXRpb24gcmV2aWV3IGR1ZSAoc2l0dWF0aW9uKSwgbGltaXRlZCBzb2NpYWwgY29udGFjdCAoZmluZGluZyksIG5vdCBpbiBsYWJvciBmb3JjZSAoZmluZGluZyksIGZ1bGwtdGltZSBlbXBsb3ltZW50IChmaW5kaW5nKSwgZnJhY3R1cmUgb2YgYm9uZSAoZGlzb3JkZXIpLCB2aXJhbCBzaW51c2l0aXMgKGRpc29yZGVyKSwgZ2luZ2l2aXRpcyAoZGlzb3JkZXIpLCBzdHJlc3MgKGZpbmRpbmcpLCBzb2NpYWwgaXNvbGF0aW9uIChmaW5kaW5nKS4KCiMgU29jaWFsIEhpc3RvcnkKUGF0aWVudCBpcyBtYXJyaWVkLiBQYXRpZW50IGhhcyBuZXZlciBzbW9rZWQuCiBQYXRpZW50IGlkZW50aWZpZXMgYXMgaGV0ZXJvc2V4dWFsLgoKUGF0aWVudCBjb21lcyBmcm9tIGEgbWlkZGxlIHNvY2lvZWNvbm9taWMgYmFja2dyb3VuZC4KIFBhdGllbnQgaGFzIGEgaGlnaCBzY2hvb2wgZWR1Y2F0aW9uLgpQYXRpZW50IGN1cnJlbnRseSBoYXMgTWVkaWNhcmUuCgojIEFsbGVyZ2llcwpObyBLbm93biBBbGxlcmdpZXMuCgojIE1lZGljYXRpb25zCmxpc2lub3ByaWwgMTAgbWcgb3JhbCB0YWJsZXQ7IHRyb3BpY2FtaWRlIDUgbWcvbWwgb3BodGhhbG1pYyBzb2x1dGlvbjsgYWNldGFtaW5vcGhlbiAzMjUgbWcgb3JhbCB0YWJsZXQ7IDI0IGhyIG1ldGZvcm1pbiBoeWRyb2NobG9yaWRlIDUwMCBtZyBleHRlbmRlZCByZWxlYXNlIG9yYWwgdGFibGV0OyBtZXBlcmlkaW5lIGh5ZHJvY2hsb3JpZGUgNTAgbWcgb3JhbCB0YWJsZXQ7IG5hcHJveGVuIHNvZGl1bSAyMjAgbWcgb3JhbCB0YWJsZXQ7IHNvZGl1bSBmbHVvcmlkZSAwLjAyNzIgbWcvbWcgb3JhbCBnZWwKCiMgQXNzZXNzbWVudCBhbmQgUGxhbgoKCgojIyBQbGFuCgpUaGUgZm9sbG93aW5nIHByb2NlZHVyZXMgd2VyZSBjb25kdWN0ZWQ6Ci0gZGVudGFsIGNvbnN1bHRhdGlvbiBhbmQgcmVwb3J0IChwcm9jZWR1cmUpCi0gZGVudGFsIGNhcmUgKHJlZ2ltZS90aGVyYXB5KQotIHJlbW92YWwgb2Ygc3VwcmFnaW5naXZhbCBwbGFxdWUgYW5kIGNhbGN1bHVzIGZyb20gYWxsIHRlZXRoIHVzaW5nIGRlbnRhbCBpbnN0cnVtZW50IChwcm9jZWR1cmUpCi0gcmVtb3ZhbCBvZiBzdWJnaW5naXZhbCBwbGFxdWUgYW5kIGNhbGN1bHVzIGZyb20gYWxsIHRlZXRoIHVzaW5nIGRlbnRhbCBpbnN0cnVtZW50IChwcm9jZWR1cmUpCi0gZGVudGFsIHBsYWluIHgtcmF5IGJpdGV3aW5nIChwcm9jZWR1cmUpCi0gZXhhbWluYXRpb24gb2YgZ2luZ2l2YWUgKHByb2NlZHVyZSkKLSBvcmFsIGhlYWx0aCBlZHVjYXRpb24gKHByb2NlZHVyZSkK"
+      }
+     }
+    ],
+    "period": {
+     "start": "2025-05-16T06:16:15+09:30",
+     "end": "2025-05-16T09:17:44+09:30"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:8517668b-9723-bfd9-93e4-c9f278877847",
+   "resource": {
+    "resourceType": "DocumentReference",
+    "id": "8517668b-9723-bfd9-93e4-c9f278877847",
+    "status": "superseded",
+    "type": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "34117-2",
+       "display": "History and physical note"
+      },
+      {
+       "system": "http://loinc.org",
+       "code": "51847-2",
+       "display": "Evaluation + Plan note"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+        "code": "clinical-note",
+        "display": "Clinical Note"
+       }
+      ]
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:8f23e265-3932-3d39-66fb-5ff439ab581f"
+    },
+    "date": "2025-05-02T06:16:15.330+09:30",
+    "content": [
+     {
+      "attachment": {
+       "contentType": "text/plain; charset=utf-8",
+       "data": "CjIwMjUtMDUtMDIKCiMgQ2hpZWYgQ29tcGxhaW50Ci0gRGVjcmVhc2VkIENvbW11bmljYXRpb24KLSBNZW1vcnkgTG9zcwotIERlY3JlYXNlZCBBdHRlbnRpdmVuZXNzCi0gRGVjcmVhc2VkIGluIEp1ZGdlbWVudAotIENvbmZ1c2lvbgoKCiMgSGlzdG9yeSBvZiBQcmVzZW50IElsbG5lc3MKSGFycmlzNzg5IGlzIGEgNzkgeWVhci1vbGQgbm9uaGlzcGFuaWMgd2hpdGUgbWFsZS4gUGF0aWVudCBoYXMgYSBoaXN0b3J5IG9mIHBhcnQtdGltZSBlbXBsb3ltZW50IChmaW5kaW5nKSwgZnJhY3R1cmUgb2YgZm9yZWFybSAoZGlzb3JkZXIpLCBhY3V0ZSBicm9uY2hpdGlzIChkaXNvcmRlciksIG1lZGljYXRpb24gcmV2aWV3IGR1ZSAoc2l0dWF0aW9uKSwgbGltaXRlZCBzb2NpYWwgY29udGFjdCAoZmluZGluZyksIG5vdCBpbiBsYWJvciBmb3JjZSAoZmluZGluZyksIGZ1bGwtdGltZSBlbXBsb3ltZW50IChmaW5kaW5nKSwgZnJhY3R1cmUgb2YgYm9uZSAoZGlzb3JkZXIpLCB2aXJhbCBzaW51c2l0aXMgKGRpc29yZGVyKSwgZ2luZ2l2aXRpcyAoZGlzb3JkZXIpLCBzdHJlc3MgKGZpbmRpbmcpLCBzb2NpYWwgaXNvbGF0aW9uIChmaW5kaW5nKS4KCiMgU29jaWFsIEhpc3RvcnkKUGF0aWVudCBpcyBtYXJyaWVkLiBQYXRpZW50IGhhcyBuZXZlciBzbW9rZWQuCiBQYXRpZW50IGlkZW50aWZpZXMgYXMgaGV0ZXJvc2V4dWFsLgoKUGF0aWVudCBjb21lcyBmcm9tIGEgbWlkZGxlIHNvY2lvZWNvbm9taWMgYmFja2dyb3VuZC4KIFBhdGllbnQgaGFzIGEgaGlnaCBzY2hvb2wgZWR1Y2F0aW9uLgpQYXRpZW50IGN1cnJlbnRseSBoYXMgTWVkaWNhcmUuCgojIEFsbGVyZ2llcwpObyBLbm93biBBbGxlcmdpZXMuCgojIE1lZGljYXRpb25zCmxpc2lub3ByaWwgMTAgbWcgb3JhbCB0YWJsZXQ7IHRyb3BpY2FtaWRlIDUgbWcvbWwgb3BodGhhbG1pYyBzb2x1dGlvbjsgYWNldGFtaW5vcGhlbiAzMjUgbWcgb3JhbCB0YWJsZXQ7IDI0IGhyIG1ldGZvcm1pbiBoeWRyb2NobG9yaWRlIDUwMCBtZyBleHRlbmRlZCByZWxlYXNlIG9yYWwgdGFibGV0OyBtZXBlcmlkaW5lIGh5ZHJvY2hsb3JpZGUgNTAgbWcgb3JhbCB0YWJsZXQ7IG5hcHJveGVuIHNvZGl1bSAyMjAgbWcgb3JhbCB0YWJsZXQ7IHNvZGl1bSBmbHVvcmlkZSAwLjAyNzIgbWcvbWcgb3JhbCBnZWwKCiMgQXNzZXNzbWVudCBhbmQgUGxhbgoKCgojIyBQbGFuCgpUaGUgZm9sbG93aW5nIHByb2NlZHVyZXMgd2VyZSBjb25kdWN0ZWQ6Ci0gdmlzdWFsIGFjdWl0eSB0ZXN0aW5nIChwcm9jZWR1cmUpCi0gaW50cmFvY3VsYXIgcHJlc3N1cmUgdGVzdCAocHJvY2VkdXJlKQotIG9jdWxhciBzbGl0IGxhbXAgZXhhbWluYXRpb24gKHByb2NlZHVyZSkKLSBpbmRpcmVjdCBnb25pb3Njb3B5IChwcm9jZWR1cmUpCi0gY2FtZXJhIGZ1bmRvc2NvcHkgKHByb2NlZHVyZSkKLSBkaWFiZXRpYyByZXRpbmFsIGV5ZSBleGFtIChwcm9jZWR1cmUpClRoZSBwYXRpZW50IHdhcyBwcmVzY3JpYmVkIHRoZSBmb2xsb3dpbmcgbWVkaWNhdGlvbnM6Ci0gdHJvcGljYW1pZGUgNSBtZy9tbCBvcGh0aGFsbWljIHNvbHV0aW9uCg=="
+      }
+     }
+    ],
+    "period": {
+     "start": "2025-05-02T06:16:15+09:30",
+     "end": "2025-05-02T07:00:15+09:30"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:e3f7f27d-e058-c818-67ab-4b5798b1b634",
+   "resource": {
+    "resourceType": "DocumentReference",
+    "id": "e3f7f27d-e058-c818-67ab-4b5798b1b634",
+    "status": "superseded",
+    "type": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "34117-2",
+       "display": "History and physical note"
+      },
+      {
+       "system": "http://loinc.org",
+       "code": "51847-2",
+       "display": "Evaluation + Plan note"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+        "code": "clinical-note",
+        "display": "Clinical Note"
+       }
+      ]
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:8f23e265-3932-3d39-66fb-5ff439ab581f"
+    },
+    "date": "2025-04-25T06:16:15.330+09:30",
+    "content": [
+     {
+      "attachment": {
+       "contentType": "text/plain; charset=utf-8",
+       "data": "CjIwMjUtMDQtMjUKCiMgQ2hpZWYgQ29tcGxhaW50Ci0gRGVjcmVhc2VkIENvbW11bmljYXRpb24KLSBNZW1vcnkgTG9zcwotIERlY3JlYXNlZCBBdHRlbnRpdmVuZXNzCi0gRGVjcmVhc2VkIGluIEp1ZGdlbWVudAotIENvbmZ1c2lvbgoKCiMgSGlzdG9yeSBvZiBQcmVzZW50IElsbG5lc3MKSGFycmlzNzg5IGlzIGEgNzkgeWVhci1vbGQgbm9uaGlzcGFuaWMgd2hpdGUgbWFsZS4gUGF0aWVudCBoYXMgYSBoaXN0b3J5IG9mIHBhcnQtdGltZSBlbXBsb3ltZW50IChmaW5kaW5nKSwgZnJhY3R1cmUgb2YgZm9yZWFybSAoZGlzb3JkZXIpLCBhY3V0ZSBicm9uY2hpdGlzIChkaXNvcmRlciksIG1lZGljYXRpb24gcmV2aWV3IGR1ZSAoc2l0dWF0aW9uKSwgbGltaXRlZCBzb2NpYWwgY29udGFjdCAoZmluZGluZyksIG5vdCBpbiBsYWJvciBmb3JjZSAoZmluZGluZyksIGZ1bGwtdGltZSBlbXBsb3ltZW50IChmaW5kaW5nKSwgZnJhY3R1cmUgb2YgYm9uZSAoZGlzb3JkZXIpLCB2aXJhbCBzaW51c2l0aXMgKGRpc29yZGVyKSwgZ2luZ2l2aXRpcyAoZGlzb3JkZXIpLCBzdHJlc3MgKGZpbmRpbmcpLgoKIyBTb2NpYWwgSGlzdG9yeQpQYXRpZW50IGlzIG1hcnJpZWQuIFBhdGllbnQgaGFzIG5ldmVyIHNtb2tlZC4KIFBhdGllbnQgaWRlbnRpZmllcyBhcyBoZXRlcm9zZXh1YWwuCgpQYXRpZW50IGNvbWVzIGZyb20gYSBtaWRkbGUgc29jaW9lY29ub21pYyBiYWNrZ3JvdW5kLgogUGF0aWVudCBoYXMgYSBoaWdoIHNjaG9vbCBlZHVjYXRpb24uClBhdGllbnQgY3VycmVudGx5IGhhcyBNZWRpY2FyZS4KCiMgQWxsZXJnaWVzCk5vIEtub3duIEFsbGVyZ2llcy4KCiMgTWVkaWNhdGlvbnMKbGlzaW5vcHJpbCAxMCBtZyBvcmFsIHRhYmxldDsgdHJvcGljYW1pZGUgNSBtZy9tbCBvcGh0aGFsbWljIHNvbHV0aW9uOyBhY2V0YW1pbm9waGVuIDMyNSBtZyBvcmFsIHRhYmxldDsgMjQgaHIgbWV0Zm9ybWluIGh5ZHJvY2hsb3JpZGUgNTAwIG1nIGV4dGVuZGVkIHJlbGVhc2Ugb3JhbCB0YWJsZXQ7IG1lcGVyaWRpbmUgaHlkcm9jaGxvcmlkZSA1MCBtZyBvcmFsIHRhYmxldDsgbmFwcm94ZW4gc29kaXVtIDIyMCBtZyBvcmFsIHRhYmxldDsgc29kaXVtIGZsdW9yaWRlIDAuMDI3MiBtZy9tZyBvcmFsIGdlbAoKIyBBc3Nlc3NtZW50IGFuZCBQbGFuClBhdGllbnQgaXMgcHJlc2VudGluZyB3aXRoIG1lZGljYXRpb24gcmV2aWV3IGR1ZSAoc2l0dWF0aW9uKSwgZnVsbC10aW1lIGVtcGxveW1lbnQgKGZpbmRpbmcpLCBzb2NpYWwgaXNvbGF0aW9uIChmaW5kaW5nKSwgc3RyZXNzIChmaW5kaW5nKS4gCgoKIyMgUGxhbgoKVGhlIGZvbGxvd2luZyBwcm9jZWR1cmVzIHdlcmUgY29uZHVjdGVkOgotIG1lZGljYXRpb24gcmVjb25jaWxpYXRpb24gKHByb2NlZHVyZSkKLSBhc3Nlc3NtZW50IG9mIGhlYWx0aCBhbmQgc29jaWFsIGNhcmUgbmVlZHMgKHByb2NlZHVyZSkKLSBhc3Nlc3NtZW50IG9mIGFueGlldHkgKHByb2NlZHVyZSkKLSBhc3Nlc3NtZW50IHVzaW5nIG1vcnNlIGZhbGwgc2NhbGUgKHByb2NlZHVyZSkKLSBzY3JlZW5pbmcgZm9yIGRvbWVzdGljIGFidXNlIChwcm9jZWR1cmUpCi0gZGVwcmVzc2lvbiBzY3JlZW5pbmcgKHByb2NlZHVyZSkKLSBkZXByZXNzaW9uIHNjcmVlbmluZyAocHJvY2VkdXJlKQotIHBhdGllbnQgcmVmZXJyYWwgZm9yIGRlbnRhbCBjYXJlIChwcm9jZWR1cmUpClRoZSBmb2xsb3dpbmcgbGFiIHJlcG9ydHMgd2VyZSBjb21wbGV0ZWQ6Ci0gYmFzaWMgbWV0YWJvbGljIHBhbmVsIC0gYmxvb2QKLSBsaXBpZCBwYW5lbCB3aXRoIGRpcmVjdCBsZGwgLSBzZXJ1bSBvciBwbGFzbWEKLSBnZW5lcmFsaXplZCBhbnhpZXR5IGRpc29yZGVyIDcgaXRlbSAoZ2FkLTcpCi0gbW9yc2UgZmFsbCBzY2FsZSBwYW5lbAotIGh1bWlsaWF0aW9uLCBhZnJhaWQsIHJhcGUsIGFuZCBraWNrIHF1ZXN0aW9ubmFpcmUgW2hhcmtdCi0gcGF0aWVudCBoZWFsdGggcXVlc3Rpb25uYWlyZSAyIGl0ZW0gKHBocS0yKSBbcmVwb3J0ZWRdClRoZSBwYXRpZW50IHdhcyBwcmVzY3JpYmVkIHRoZSBmb2xsb3dpbmcgbWVkaWNhdGlvbnM6Ci0gMjQgaHIgbWV0Zm9ybWluIGh5ZHJvY2hsb3JpZGUgNTAwIG1nIGV4dGVuZGVkIHJlbGVhc2Ugb3JhbCB0YWJsZXQKLSBsaXNpbm9wcmlsIDEwIG1nIG9yYWwgdGFibGV0Cg=="
+      }
+     }
+    ],
+    "period": {
+     "start": "2025-04-25T06:16:15+09:30",
+     "end": "2025-04-25T07:07:52+09:30"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:ab2cbb31-267a-0b86-1ba3-264c5d85254a",
+   "resource": {
+    "resourceType": "DocumentReference",
+    "id": "ab2cbb31-267a-0b86-1ba3-264c5d85254a",
+    "status": "superseded",
+    "type": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "34117-2",
+       "display": "History and physical note"
+      },
+      {
+       "system": "http://loinc.org",
+       "code": "51847-2",
+       "display": "Evaluation + Plan note"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+        "code": "clinical-note",
+        "display": "Clinical Note"
+       }
+      ]
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:8f23e265-3932-3d39-66fb-5ff439ab581f"
+    },
+    "date": "2025-02-07T07:16:15.330+10:30",
+    "content": [
+     {
+      "attachment": {
+       "contentType": "text/plain; charset=utf-8",
+       "data": "CjIwMjUtMDItMDcKCiMgQ2hpZWYgQ29tcGxhaW50Ci0gRGVjcmVhc2VkIENvbW11bmljYXRpb24KLSBNZW1vcnkgTG9zcwotIERlY3JlYXNlZCBBdHRlbnRpdmVuZXNzCi0gRGVjcmVhc2VkIGluIEp1ZGdlbWVudAotIENvbmZ1c2lvbgoKCiMgSGlzdG9yeSBvZiBQcmVzZW50IElsbG5lc3MKSGFycmlzNzg5IGlzIGEgNzkgeWVhci1vbGQgbm9uaGlzcGFuaWMgd2hpdGUgbWFsZS4gUGF0aWVudCBoYXMgYSBoaXN0b3J5IG9mIHBhcnQtdGltZSBlbXBsb3ltZW50IChmaW5kaW5nKSwgZnJhY3R1cmUgb2YgZm9yZWFybSAoZGlzb3JkZXIpLCBhY3V0ZSBicm9uY2hpdGlzIChkaXNvcmRlciksIG1lZGljYXRpb24gcmV2aWV3IGR1ZSAoc2l0dWF0aW9uKSwgbGltaXRlZCBzb2NpYWwgY29udGFjdCAoZmluZGluZyksIGZ1bGwtdGltZSBlbXBsb3ltZW50IChmaW5kaW5nKSwgZnJhY3R1cmUgb2YgYm9uZSAoZGlzb3JkZXIpLCB2aXJhbCBzaW51c2l0aXMgKGRpc29yZGVyKSwgZ2luZ2l2aXRpcyAoZGlzb3JkZXIpLCBzdHJlc3MgKGZpbmRpbmcpLgoKIyBTb2NpYWwgSGlzdG9yeQpQYXRpZW50IGlzIG1hcnJpZWQuIFBhdGllbnQgaGFzIG5ldmVyIHNtb2tlZC4KIFBhdGllbnQgaWRlbnRpZmllcyBhcyBoZXRlcm9zZXh1YWwuCgpQYXRpZW50IGNvbWVzIGZyb20gYSBtaWRkbGUgc29jaW9lY29ub21pYyBiYWNrZ3JvdW5kLgogUGF0aWVudCBoYXMgYSBoaWdoIHNjaG9vbCBlZHVjYXRpb24uClBhdGllbnQgY3VycmVudGx5IGhhcyBNZWRpY2FyZS4KCiMgQWxsZXJnaWVzCk5vIEtub3duIEFsbGVyZ2llcy4KCiMgTWVkaWNhdGlvbnMKbGlzaW5vcHJpbCAxMCBtZyBvcmFsIHRhYmxldDsgdHJvcGljYW1pZGUgNSBtZy9tbCBvcGh0aGFsbWljIHNvbHV0aW9uOyBhY2V0YW1pbm9waGVuIDMyNSBtZyBvcmFsIHRhYmxldDsgMjQgaHIgbWV0Zm9ybWluIGh5ZHJvY2hsb3JpZGUgNTAwIG1nIGV4dGVuZGVkIHJlbGVhc2Ugb3JhbCB0YWJsZXQ7IG1lcGVyaWRpbmUgaHlkcm9jaGxvcmlkZSA1MCBtZyBvcmFsIHRhYmxldDsgbmFwcm94ZW4gc29kaXVtIDIyMCBtZyBvcmFsIHRhYmxldDsgc29kaXVtIGZsdW9yaWRlIDAuMDI3MiBtZy9tZyBvcmFsIGdlbAoKIyBBc3Nlc3NtZW50IGFuZCBQbGFuClBhdGllbnQgaXMgcHJlc2VudGluZyB3aXRoIG1lZGljYXRpb24gcmV2aWV3IGR1ZSAoc2l0dWF0aW9uKSwgbm90IGluIGxhYm9yIGZvcmNlIChmaW5kaW5nKS4gCgoKIyMgUGxhbgpQYXRpZW50IHdhcyBnaXZlbiB0aGUgZm9sbG93aW5nIGltbXVuaXphdGlvbnM6IGluZmx1ZW56YSwgc3BsaXQgdmlydXMsIHRyaXZhbGVudCwgcGYuIApUaGUgZm9sbG93aW5nIHByb2NlZHVyZXMgd2VyZSBjb25kdWN0ZWQ6Ci0gbWVkaWNhdGlvbiByZWNvbmNpbGlhdGlvbiAocHJvY2VkdXJlKQotIGFzc2Vzc21lbnQgb2YgaGVhbHRoIGFuZCBzb2NpYWwgY2FyZSBuZWVkcyAocHJvY2VkdXJlKQotIGFzc2Vzc21lbnQgb2YgYW54aWV0eSAocHJvY2VkdXJlKQotIGFzc2Vzc21lbnQgdXNpbmcgbW9yc2UgZmFsbCBzY2FsZSAocHJvY2VkdXJlKQotIGRlcHJlc3Npb24gc2NyZWVuaW5nIChwcm9jZWR1cmUpCi0gZGVwcmVzc2lvbiBzY3JlZW5pbmcgKHByb2NlZHVyZSkKLSBhc3Nlc3NtZW50IG9mIHN1YnN0YW5jZSB1c2UgKHByb2NlZHVyZSkKLSBzY3JlZW5pbmcgZm9yIGRydWcgYWJ1c2UgKHByb2NlZHVyZSkKVGhlIGZvbGxvd2luZyBsYWIgcmVwb3J0cyB3ZXJlIGNvbXBsZXRlZDoKLSBiYXNpYyBtZXRhYm9saWMgcGFuZWwgLSBibG9vZAotIGxpcGlkIHBhbmVsIHdpdGggZGlyZWN0IGxkbCAtIHNlcnVtIG9yIHBsYXNtYQotIGdlbmVyYWxpemVkIGFueGlldHkgZGlzb3JkZXIgNyBpdGVtIChnYWQtNykKLSBtb3JzZSBmYWxsIHNjYWxlIHBhbmVsCi0gcGF0aWVudCBoZWFsdGggcXVlc3Rpb25uYWlyZSAyIGl0ZW0gKHBocS0yKSBbcmVwb3J0ZWRdCi0gZHJ1ZyBhYnVzZSBzY3JlZW5pbmcgdGVzdC0xMCBbZGFzdC0xMF0KVGhlIHBhdGllbnQgd2FzIHByZXNjcmliZWQgdGhlIGZvbGxvd2luZyBtZWRpY2F0aW9uczoKLSAyNCBociBtZXRmb3JtaW4gaHlkcm9jaGxvcmlkZSA1MDAgbWcgZXh0ZW5kZWQgcmVsZWFzZSBvcmFsIHRhYmxldAotIGxpc2lub3ByaWwgMTAgbWcgb3JhbCB0YWJsZXQK"
+      }
+     }
+    ],
+    "period": {
+     "start": "2025-02-07T07:16:15+10:30",
+     "end": "2025-02-07T08:09:36+10:30"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:dca9c174-2884-ebcb-4d5b-9dab2feb9d7f",
+   "resource": {
+    "resourceType": "DocumentReference",
+    "id": "dca9c174-2884-ebcb-4d5b-9dab2feb9d7f",
+    "status": "superseded",
+    "type": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "34117-2",
+       "display": "History and physical note"
+      },
+      {
+       "system": "http://loinc.org",
+       "code": "51847-2",
+       "display": "Evaluation + Plan note"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+        "code": "clinical-note",
+        "display": "Clinical Note"
+       }
+      ]
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:8f23e265-3932-3d39-66fb-5ff439ab581f"
+    },
+    "date": "2025-01-31T07:16:15.330+10:30",
+    "content": [
+     {
+      "attachment": {
+       "contentType": "text/plain; charset=utf-8",
+       "data": "CjIwMjUtMDEtMzEKCiMgQ2hpZWYgQ29tcGxhaW50Ci0gRGVjcmVhc2VkIENvbW11bmljYXRpb24KLSBNZW1vcnkgTG9zcwotIERlY3JlYXNlZCBBdHRlbnRpdmVuZXNzCi0gRGVjcmVhc2VkIGluIEp1ZGdlbWVudAotIENvbmZ1c2lvbgoKCiMgSGlzdG9yeSBvZiBQcmVzZW50IElsbG5lc3MKSGFycmlzNzg5IGlzIGEgNzkgeWVhci1vbGQgbm9uaGlzcGFuaWMgd2hpdGUgbWFsZS4gUGF0aWVudCBoYXMgYSBoaXN0b3J5IG9mIHBhcnQtdGltZSBlbXBsb3ltZW50IChmaW5kaW5nKSwgZnJhY3R1cmUgb2YgZm9yZWFybSAoZGlzb3JkZXIpLCBtZWRpY2F0aW9uIHJldmlldyBkdWUgKHNpdHVhdGlvbiksIGxpbWl0ZWQgc29jaWFsIGNvbnRhY3QgKGZpbmRpbmcpLCBmdWxsLXRpbWUgZW1wbG95bWVudCAoZmluZGluZyksIGZyYWN0dXJlIG9mIGJvbmUgKGRpc29yZGVyKSwgdmlyYWwgc2ludXNpdGlzIChkaXNvcmRlciksIGdpbmdpdml0aXMgKGRpc29yZGVyKSwgc3RyZXNzIChmaW5kaW5nKS4KCiMgU29jaWFsIEhpc3RvcnkKUGF0aWVudCBpcyBtYXJyaWVkLiBQYXRpZW50IGhhcyBuZXZlciBzbW9rZWQuCiBQYXRpZW50IGlkZW50aWZpZXMgYXMgaGV0ZXJvc2V4dWFsLgoKUGF0aWVudCBjb21lcyBmcm9tIGEgbWlkZGxlIHNvY2lvZWNvbm9taWMgYmFja2dyb3VuZC4KIFBhdGllbnQgaGFzIGEgaGlnaCBzY2hvb2wgZWR1Y2F0aW9uLgpQYXRpZW50IGN1cnJlbnRseSBoYXMgTWVkaWNhcmUuCgojIEFsbGVyZ2llcwpObyBLbm93biBBbGxlcmdpZXMuCgojIE1lZGljYXRpb25zCmxpc2lub3ByaWwgMTAgbWcgb3JhbCB0YWJsZXQ7IHRyb3BpY2FtaWRlIDUgbWcvbWwgb3BodGhhbG1pYyBzb2x1dGlvbjsgMjQgaHIgbWV0Zm9ybWluIGh5ZHJvY2hsb3JpZGUgNTAwIG1nIGV4dGVuZGVkIHJlbGVhc2Ugb3JhbCB0YWJsZXQ7IG1lcGVyaWRpbmUgaHlkcm9jaGxvcmlkZSA1MCBtZyBvcmFsIHRhYmxldDsgbmFwcm94ZW4gc29kaXVtIDIyMCBtZyBvcmFsIHRhYmxldDsgc29kaXVtIGZsdW9yaWRlIDAuMDI3MiBtZy9tZyBvcmFsIGdlbAoKIyBBc3Nlc3NtZW50IGFuZCBQbGFuClBhdGllbnQgaXMgcHJlc2VudGluZyB3aXRoIGFjdXRlIGJyb25jaGl0aXMgKGRpc29yZGVyKS4gCgoKIyMgUGxhbgoKVGhlIHBhdGllbnQgd2FzIHByZXNjcmliZWQgdGhlIGZvbGxvd2luZyBtZWRpY2F0aW9uczoKLSBhY2V0YW1pbm9waGVuIDMyNSBtZyBvcmFsIHRhYmxldApUaGUgcGF0aWVudCB3YXMgcGxhY2VkIG9uIGEgY2FyZXBsYW46Ci0gcmVzcGlyYXRvcnkgdGhlcmFweSAocHJvY2VkdXJlKQo="
+      }
+     }
+    ],
+    "period": {
+     "start": "2025-01-31T07:16:15+10:30",
+     "end": "2025-01-31T07:31:15+10:30"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:599d5620-8dc9-982e-7738-1cee5090090a",
+   "resource": {
+    "resourceType": "DocumentReference",
+    "id": "599d5620-8dc9-982e-7738-1cee5090090a",
+    "status": "superseded",
+    "type": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "34117-2",
+       "display": "History and physical note"
+      },
+      {
+       "system": "http://loinc.org",
+       "code": "51847-2",
+       "display": "Evaluation + Plan note"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+        "code": "clinical-note",
+        "display": "Clinical Note"
+       }
+      ]
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:8f23e265-3932-3d39-66fb-5ff439ab581f"
+    },
+    "date": "2024-05-29T12:16:15.330+09:30",
+    "content": [
+     {
+      "attachment": {
+       "contentType": "text/plain; charset=utf-8",
+       "data": "CjIwMjQtMDUtMjkKCiMgQ2hpZWYgQ29tcGxhaW50Ci0gRGVjcmVhc2VkIENvbW11bmljYXRpb24KLSBNZW1vcnkgTG9zcwotIERlY3JlYXNlZCBBdHRlbnRpdmVuZXNzCi0gRGVjcmVhc2VkIGluIEp1ZGdlbWVudAotIENvbmZ1c2lvbgoKCiMgSGlzdG9yeSBvZiBQcmVzZW50IElsbG5lc3MKSGFycmlzNzg5IGlzIGEgNzggeWVhci1vbGQgbm9uaGlzcGFuaWMgd2hpdGUgbWFsZS4gUGF0aWVudCBoYXMgYSBoaXN0b3J5IG9mIHBhcnQtdGltZSBlbXBsb3ltZW50IChmaW5kaW5nKSwgZnJhY3R1cmUgb2YgZm9yZWFybSAoZGlzb3JkZXIpLCBtZWRpY2F0aW9uIHJldmlldyBkdWUgKHNpdHVhdGlvbiksIGxpbWl0ZWQgc29jaWFsIGNvbnRhY3QgKGZpbmRpbmcpLCBmdWxsLXRpbWUgZW1wbG95bWVudCAoZmluZGluZyksIGZyYWN0dXJlIG9mIGJvbmUgKGRpc29yZGVyKSwgZ2luZ2l2aXRpcyAoZGlzb3JkZXIpLCBzdHJlc3MgKGZpbmRpbmcpLgoKIyBTb2NpYWwgSGlzdG9yeQpQYXRpZW50IGlzIG1hcnJpZWQuIFBhdGllbnQgaGFzIG5ldmVyIHNtb2tlZC4KIFBhdGllbnQgaWRlbnRpZmllcyBhcyBoZXRlcm9zZXh1YWwuCgpQYXRpZW50IGNvbWVzIGZyb20gYSBtaWRkbGUgc29jaW9lY29ub21pYyBiYWNrZ3JvdW5kLgogUGF0aWVudCBoYXMgYSBoaWdoIHNjaG9vbCBlZHVjYXRpb24uClBhdGllbnQgY3VycmVudGx5IGhhcyBNZWRpY2FyZS4KCiMgQWxsZXJnaWVzCk5vIEtub3duIEFsbGVyZ2llcy4KCiMgTWVkaWNhdGlvbnMKbGlzaW5vcHJpbCAxMCBtZyBvcmFsIHRhYmxldDsgdHJvcGljYW1pZGUgNSBtZy9tbCBvcGh0aGFsbWljIHNvbHV0aW9uOyAyNCBociBtZXRmb3JtaW4gaHlkcm9jaGxvcmlkZSA1MDAgbWcgZXh0ZW5kZWQgcmVsZWFzZSBvcmFsIHRhYmxldDsgbWVwZXJpZGluZSBoeWRyb2NobG9yaWRlIDUwIG1nIG9yYWwgdGFibGV0OyBuYXByb3hlbiBzb2RpdW0gMjIwIG1nIG9yYWwgdGFibGV0OyBzb2RpdW0gZmx1b3JpZGUgMC4wMjcyIG1nL21nIG9yYWwgZ2VsCgojIEFzc2Vzc21lbnQgYW5kIFBsYW4KUGF0aWVudCBpcyBwcmVzZW50aW5nIHdpdGggdmlyYWwgc2ludXNpdGlzIChkaXNvcmRlcikuIAoKCiMjIFBsYW4KCg=="
+      }
+     }
+    ],
+    "period": {
+     "start": "2024-05-29T12:16:15+09:30",
+     "end": "2024-05-29T12:31:15+09:30"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:a96f360a-221c-bcee-978a-b9bd7af67547",
+   "resource": {
+    "resourceType": "DocumentReference",
+    "id": "a96f360a-221c-bcee-978a-b9bd7af67547",
+    "status": "superseded",
+    "type": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "34117-2",
+       "display": "History and physical note"
+      },
+      {
+       "system": "http://loinc.org",
+       "code": "51847-2",
+       "display": "Evaluation + Plan note"
+      }
+     ]
+    },
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+        "code": "clinical-note",
+        "display": "Clinical Note"
+       }
+      ]
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:8f23e265-3932-3d39-66fb-5ff439ab581f"
+    },
+    "date": "2024-05-27T14:51:48.330+09:30",
+    "content": [
+     {
+      "attachment": {
+       "contentType": "text/plain; charset=utf-8",
+       "data": "CjIwMjQtMDUtMjcKCiMgQ2hpZWYgQ29tcGxhaW50Ci0gRGVjcmVhc2VkIENvbW11bmljYXRpb24KLSBNZW1vcnkgTG9zcwotIERlY3JlYXNlZCBBdHRlbnRpdmVuZXNzCi0gRGVjcmVhc2VkIGluIEp1ZGdlbWVudAotIENvbmZ1c2lvbgoKCiMgSGlzdG9yeSBvZiBQcmVzZW50IElsbG5lc3MKSGFycmlzNzg5IGlzIGEgNzggeWVhci1vbGQgbm9uaGlzcGFuaWMgd2hpdGUgbWFsZS4gUGF0aWVudCBoYXMgYSBoaXN0b3J5IG9mIHBhcnQtdGltZSBlbXBsb3ltZW50IChmaW5kaW5nKSwgZnJhY3R1cmUgb2YgZm9yZWFybSAoZGlzb3JkZXIpLCBtZWRpY2F0aW9uIHJldmlldyBkdWUgKHNpdHVhdGlvbiksIGxpbWl0ZWQgc29jaWFsIGNvbnRhY3QgKGZpbmRpbmcpLCBmdWxsLXRpbWUgZW1wbG95bWVudCAoZmluZGluZyksIGZyYWN0dXJlIG9mIGJvbmUgKGRpc29yZGVyKSwgZ2luZ2l2aXRpcyAoZGlzb3JkZXIpLCBzdHJlc3MgKGZpbmRpbmcpLgoKIyBTb2NpYWwgSGlzdG9yeQpQYXRpZW50IGlzIG1hcnJpZWQuIFBhdGllbnQgaGFzIG5ldmVyIHNtb2tlZC4KIFBhdGllbnQgaWRlbnRpZmllcyBhcyBoZXRlcm9zZXh1YWwuCgpQYXRpZW50IGNvbWVzIGZyb20gYSBtaWRkbGUgc29jaW9lY29ub21pYyBiYWNrZ3JvdW5kLgogUGF0aWVudCBoYXMgYSBoaWdoIHNjaG9vbCBlZHVjYXRpb24uClBhdGllbnQgY3VycmVudGx5IGhhcyBNZWRpY2FyZS4KCiMgQWxsZXJnaWVzCk5vIEtub3duIEFsbGVyZ2llcy4KCiMgTWVkaWNhdGlvbnMKbGlzaW5vcHJpbCAxMCBtZyBvcmFsIHRhYmxldDsgdHJvcGljYW1pZGUgNSBtZy9tbCBvcGh0aGFsbWljIHNvbHV0aW9uOyAyNCBociBtZXRmb3JtaW4gaHlkcm9jaGxvcmlkZSA1MDAgbWcgZXh0ZW5kZWQgcmVsZWFzZSBvcmFsIHRhYmxldDsgbWVwZXJpZGluZSBoeWRyb2NobG9yaWRlIDUwIG1nIG9yYWwgdGFibGV0OyBuYXByb3hlbiBzb2RpdW0gMjIwIG1nIG9yYWwgdGFibGV0OyBzb2RpdW0gZmx1b3JpZGUgMC4wMjcyIG1nL21nIG9yYWwgZ2VsCgojIEFzc2Vzc21lbnQgYW5kIFBsYW4KCgoKIyMgUGxhbgoKVGhlIGZvbGxvd2luZyBwcm9jZWR1cmVzIHdlcmUgY29uZHVjdGVkOgotIHZpc3VhbCBhY3VpdHkgdGVzdGluZyAocHJvY2VkdXJlKQotIGludHJhb2N1bGFyIHByZXNzdXJlIHRlc3QgKHByb2NlZHVyZSkKLSBvY3VsYXIgc2xpdCBsYW1wIGV4YW1pbmF0aW9uIChwcm9jZWR1cmUpCi0gaW5kaXJlY3QgZ29uaW9zY29weSAocHJvY2VkdXJlKQotIGNhbWVyYSBmdW5kb3Njb3B5IChwcm9jZWR1cmUpCi0gZGlhYmV0aWMgcmV0aW5hbCBleWUgZXhhbSAocHJvY2VkdXJlKQpUaGUgcGF0aWVudCB3YXMgcHJlc2NyaWJlZCB0aGUgZm9sbG93aW5nIG1lZGljYXRpb25zOgotIHRyb3BpY2FtaWRlIDUgbWcvbWwgb3BodGhhbG1pYyBzb2x1dGlvbgo="
+      }
+     }
+    ],
+    "period": {
+     "start": "2024-05-27T14:51:48+09:30",
+     "end": "2024-05-27T15:35:48+09:30"
+    }
+   }
   }
  ]
 }

@@ -75,6 +75,8 @@ def questions(case: dict) -> dict:
 def reference_statuses(case: dict) -> list[str]:
     """Map the reference's substring keys onto the FHIR medication list, one-to-one."""
     meds = patient(case["patient"])["active_medications"]
+    if all(k.startswith("#") for k in case["reference"]["med_status"]):  # generated: labels by position
+        return [case["reference"]["med_status"][f"#{i}"] for i in range(len(meds))]
     out = []
     for m in meds:
         keys = [k for k in case["reference"]["med_status"] if k in m.lower()]
