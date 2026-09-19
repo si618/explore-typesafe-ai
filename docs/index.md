@@ -34,4 +34,4 @@ flowchart LR
 !!! warning "Not clinical validation"
     The patients, notes and messages are synthetic, and a Claude model wrote the reference labels, not clinicians. There are 20 cases per scenario, so every percentage here has wide uncertainty. This is a capability demonstration, not evidence of clinical safety.
 
-Next: the [prompt and why these scenarios](prompt.md).
+Next: the [prompt and why these scenarios](prompt.md). New to the terms? See the [vocabulary](vocabulary.md).
