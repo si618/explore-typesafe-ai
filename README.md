@@ -64,3 +64,11 @@ uv run zensical serve
 `run.py` and `haiku.py` accept run names to rerun a subset, for example `uv run python -m explore_typesafe.run s4_search`.
 
 Synthetic data only. This is not clinically validated.
+
+## Licence
+
+[MIT](LICENSE), Copyright (c) 2026 Simon McKenna.
+
+The cohort under `data/` is [Synthea](https://github.com/synthetichealth/synthea) output.
+Synthea itself is Apache-2.0 and its generated data carries no use restrictions; the
+files here are output, not Synthea source.
