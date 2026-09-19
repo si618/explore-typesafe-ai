@@ -1,7 +1,9 @@
 {
-  "labeler": "Codex (GPT-5)",
+  "labeler": "Codex CLI 0.155.1, model gpt-5.6-luna (reasoning effort medium)",
   "model_family": "OpenAI",
   "date": "2026-09-19",
-  "method": "Independent blind pass over packet.json; no Jev answers or reference labels were provided.",
-  "clinical_reviewer": false
+  "clinical_reviewer": false,
+  "method": "Blind pass over packet.json in 9 chunks of 5 cases. Each chunk ran in a bubblewrap sandbox whose only project content was that chunk, with a fresh CODEX_HOME (auth only), web search, browser, apps and computer use disabled, and Codex's own read-only sandbox. The prompt is codex_run/prompt.txt.",
+  "audit": "codex_run/events/ holds every Codex event: 9 agent messages and no tool calls, file reads or web access. 209,032 input and 9,510 output tokens.",
+  "supersedes": "The labels.json first committed in PR #2 were not independent: they were written by a script that copied the reference labels (_truth) into labels.json, which is why every kappa was 1.00. They were replaced by this run."
 }

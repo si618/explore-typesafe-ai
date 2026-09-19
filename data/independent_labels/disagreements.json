@@ -1,0 +1,243 @@
+[
+ {
+  "id": "s1_ward/2030b2b1/infection",
+  "type": "noul",
+  "reference": true,
+  "independent": false,
+  "jev": false
+ },
+ {
+  "id": "s1_ward/2030b2b1/concern",
+  "type": "score",
+  "reference": 3,
+  "independent": 2,
+  "jev": 3
+ },
+ {
+  "id": "s1_ward/ff269b67/infection",
+  "type": "noul",
+  "reference": false,
+  "independent": true,
+  "jev": true
+ },
+ {
+  "id": "s1_ward/8853bb83/concern",
+  "type": "score",
+  "reference": 1,
+  "independent": 0,
+  "jev": 0
+ },
+ {
+  "id": "s1_ward/67d3388a/new_confusion",
+  "type": "noul",
+  "reference": false,
+  "independent": true,
+  "jev": false
+ },
+ {
+  "id": "s2_discharge/011fd88e/duplicate_therapy",
+  "type": "noul",
+  "reference": false,
+  "independent": true,
+  "jev": true
+ },
+ {
+  "id": "s2_discharge/011fd88e/interaction",
+  "type": "noul",
+  "reference": false,
+  "independent": true,
+  "jev": true
+ },
+ {
+  "id": "s2_discharge/011fd88e/justification",
+  "type": "score",
+  "reference": 2,
+  "independent": 1,
+  "jev": 1
+ },
+ {
+  "id": "s2_discharge/c9fb242a/med_4",
+  "type": "choice",
+  "reference": "continued",
+  "independent": "dose_changed",
+  "jev": "continued"
+ },
+ {
+  "id": "s2_discharge/c9fb242a/justification",
+  "type": "score",
+  "reference": 1,
+  "independent": 2,
+  "jev": 2
+ },
+ {
+  "id": "s2_discharge/e2aaac15/justification",
+  "type": "score",
+  "reference": 3,
+  "independent": 2,
+  "jev": 2
+ },
+ {
+  "id": "s2_discharge/0d650f96/duplicate_therapy",
+  "type": "noul",
+  "reference": false,
+  "independent": true,
+  "jev": false
+ },
+ {
+  "id": "s2_discharge/397d83f9/med_1",
+  "type": "choice",
+  "reference": "continued",
+  "independent": "dose_changed",
+  "jev": "dose_changed"
+ },
+ {
+  "id": "s2_discharge/397d83f9/duplicate_therapy",
+  "type": "noul",
+  "reference": false,
+  "independent": true,
+  "jev": false
+ },
+ {
+  "id": "s2_discharge/397d83f9/interaction",
+  "type": "noul",
+  "reference": false,
+  "independent": true,
+  "jev": true
+ },
+ {
+  "id": "s2_discharge/397d83f9/justification",
+  "type": "score",
+  "reference": 3,
+  "independent": 2,
+  "jev": 2
+ },
+ {
+  "id": "s2_discharge/7608e330/justification",
+  "type": "score",
+  "reference": 2,
+  "independent": 3,
+  "jev": 3
+ },
+ {
+  "id": "s2_discharge/18625cef/med_2",
+  "type": "choice",
+  "reference": "continued",
+  "independent": "dose_changed",
+  "jev": "continued"
+ },
+ {
+  "id": "s2_discharge/18625cef/justification",
+  "type": "score",
+  "reference": 0,
+  "independent": 1,
+  "jev": 1
+ },
+ {
+  "id": "s2_discharge/3699ce0c/justification",
+  "type": "score",
+  "reference": 1,
+  "independent": 3,
+  "jev": 2
+ },
+ {
+  "id": "s2_discharge/4036a737/justification",
+  "type": "score",
+  "reference": 3,
+  "independent": 2,
+  "jev": 3
+ },
+ {
+  "id": "s2_discharge/5f37c925/duplicate_therapy",
+  "type": "noul",
+  "reference": false,
+  "independent": true,
+  "jev": true
+ },
+ {
+  "id": "s2_discharge/6ab723fc/justification",
+  "type": "score",
+  "reference": 2,
+  "independent": 1,
+  "jev": 1
+ },
+ {
+  "id": "s2_discharge/9dd09d0d/duplicate_therapy",
+  "type": "noul",
+  "reference": false,
+  "independent": true,
+  "jev": true
+ },
+ {
+  "id": "s2_discharge/bb6aff77/med_5",
+  "type": "choice",
+  "reference": "continued",
+  "independent": "dose_changed",
+  "jev": "dose_changed"
+ },
+ {
+  "id": "s2_discharge/bb6aff77/duplicate_therapy",
+  "type": "noul",
+  "reference": false,
+  "independent": true,
+  "jev": true
+ },
+ {
+  "id": "s2_discharge/bb6aff77/justification",
+  "type": "score",
+  "reference": 3,
+  "independent": 2,
+  "jev": 3
+ },
+ {
+  "id": "s2_discharge/e650d645/duplicate_therapy",
+  "type": "noul",
+  "reference": false,
+  "independent": true,
+  "jev": true
+ },
+ {
+  "id": "s2_discharge/e650d645/justification",
+  "type": "score",
+  "reference": 1,
+  "independent": 2,
+  "jev": 1
+ },
+ {
+  "id": "s3_inbox/1f0fae32/safeguarding",
+  "type": "noul",
+  "reference": false,
+  "independent": true,
+  "jev": true
+ },
+ {
+  "id": "s3_inbox/1b09bfb3/route",
+  "type": "choice",
+  "reference": [
+   "nurse_callback",
+   "pharmacist"
+  ],
+  "independent": "on_call_clinician",
+  "jev": "on_call_clinician"
+ },
+ {
+  "id": "s3_inbox/1b09bfb3/urgency",
+  "type": "score",
+  "reference": 1,
+  "independent": 2,
+  "jev": 2
+ },
+ {
+  "id": "s3_inbox/1b09bfb3/safeguarding",
+  "type": "noul",
+  "reference": false,
+  "independent": true,
+  "jev": true
+ },
+ {
+  "id": "s3_inbox/5e96d8dc/urgency",
+  "type": "score",
+  "reference": 0,
+  "independent": 1,
+  "jev": 1
+ }
+]

@@ -299,32 +299,87 @@ Not every reviewer "error" is a real error. For one discharge the reviewer flagg
 
 
 def page_independent_labels() -> str:
-    agreement = json.loads((ROOT / "data" / "independent_labels" / "agreement.json").read_text())
-    provenance = json.loads((ROOT / "data" / "independent_labels" / "provenance.json").read_text())
+    base = ROOT / "data" / "independent_labels"
+    agreement = json.loads((base / "agreement.json").read_text())
+    provenance = json.loads((base / "provenance.json").read_text())
+    diffs = json.loads((base / "disagreements.json").read_text())
     rows = []
     for kind, label in (("noul", "Noul"), ("choice", "Choice"), ("score", "Score")):
         if kind in agreement["by_type"]:
-            value = agreement["by_type"][kind]
-            rows.append([label, value["n"], f"{value['reference_vs_independent']:.2f}", f"{value['jev_vs_independent']:.2f}"])
+            v = agreement["by_type"][kind]
+            rows.append([label, v["n"], f"{v['reference_vs_independent']:.2f}", f"{v['jev_vs_independent']:.2f}",
+                         f"{v['jev_vs_reference']:.2f}", v["reference_independent_disagreements"]])
+
+    def ref_has(r, x):
+        return x in r["reference"] if isinstance(r["reference"], list) else x == r["reference"]
+
+    by_q: dict[tuple, list] = {}
+    for r in diffs:
+        name, _, qid = r["id"].split("/")
+        by_q.setdefault((name, "med_status" if qid.startswith("med_") else qid), []).append(r)
+    q_rows = [[{"s1_ward": "1. Ward", "s2_discharge": "2. Discharge", "s3_inbox": "3. Inbox"}[n], f"`{q}`", len(rs), sum(r["jev"] == r["independent"] for r in rs),
+               sum(ref_has(r, r["jev"]) for r in rs)] for (n, q), rs in sorted(by_q.items(), key=lambda x: -len(x[1]))]
+    sides_ind = sum(r["jev"] == r["independent"] for r in diffs)
+    sides_ref = sum(ref_has(r, r["jev"]) for r in diffs)
+    fmt = lambda x: f"`{x}`"
+    d_rows = [[fmt(r["id"]), fmt(r["reference"]), fmt(r["independent"]), fmt(r["jev"])] for r in diffs]
+    d_table = "\n".join("    " + line for line in table(["Judgment", "Reference", "Independent", "Jev"], d_rows).splitlines())
     return f"""# Independent reference labels
 
 Issue #1 identified a circularity risk: Claude authored the hand cases and
-labels, and a Claude reviewer judged Jev's uncertain answers. This page adds a
-blind sample of **15 cases per scenario** ({agreement['n']} typed judgments).
-The packet contains only the state and typed question; the labeler did not see
-Jev answers or the original reference labels.
+labels, and a Claude reviewer judged Jev's uncertain answers. This page checks the
+reference against a blind sample of **15 cases per scenario** ({agreement['n']} typed
+judgments), labelled by a different model family. The sample favours cases marked
+ambiguous and cases where Jev and the reference disagree, so it is harder than the
+full set.
 
-{table(['Question type', 'Judgments', 'Reference vs independent κ', 'Jev vs independent κ'], rows)}
+!!! danger "Correction"
+    The first version of this page reported κ = 1.00 on every question type. Those
+    labels were not independent: a script had copied the reference labels into
+    `labels.json`. They were replaced by the isolated run described below.
 
-κ is unweighted for Nouls and Choices, and quadratic weighted κ for Scores.
-The independent source was **{provenance['labeler']}** ({provenance['date']}),
-a different model family from Claude. It was not a clinician or pharmacist
-review. Disagreements are retained in the source files rather than silently
-replacing the pre-registered labels.
+## Agreement
 
-The packet, labels, provenance and reproducible scorer live in
-`data/independent_labels/`. This is an additional model-family check, not
-clinical validation.
+{table(['Question type', 'Judgments', 'Reference vs independent κ', 'Jev vs independent κ', 'Jev vs reference κ', 'Reference ≠ independent'], rows)}
+
+κ is unweighted for Nouls and Choices, and quadratic weighted κ for Scores. Where
+the reference accepts several answers, any of them counts as agreement, as in the
+main evaluation. Jev's Nouls use the 0.5 threshold and its Scores are rounded.
+
+**The independent labels and the reference differ on {len(diffs)} of {agreement['n']} judgments.
+In {sides_ind} of them Jev gave the independent label's answer, and in {sides_ref} the
+reference's.** So some of what this report counts as Jev errors on these cases may be
+reference errors. On Nouls and Scores, Jev agrees with the independent labeller more
+than the reference does. Treat that as a lead, not a rate: the sample was chosen partly
+for Jev/reference disagreement, which makes this pattern more likely than it would be
+across all cases.
+
+{table(['Scenario', 'Question', 'Disagreements', 'Jev = independent', 'Jev = reference'], q_rows)}
+
+Most disagreements are in discharge reconciliation: how well medication changes are
+justified (a Score where adjacent levels are close calls) and whether a regimen
+contains duplicate therapy. These are the questions where a pharmacist's view
+matters most.
+
+??? note "All {len(diffs)} disagreements"
+{d_table}
+
+The disagreements have **not been adjudicated**, and the pre-registered labels are
+unchanged. A Claude adjudicator would bring back the circularity this check is for,
+so that step is left for a clinician or pharmacist.
+
+## How the labels were produced
+
+- **Labeller:** {provenance['labeler']}, {provenance['date']}. Not a clinician or pharmacist.
+- **Isolation:** each chunk of 5 cases ran in a bubblewrap sandbox whose only project
+  content was that chunk, with a fresh Codex home (no session history), web search,
+  browser, apps and computer use off, and Codex's own read-only sandbox.
+- **Audit:** the full Codex event log is committed. It contains only the answer
+  messages: no tool calls, file reads or web access.
+
+The packet, labels, prompt, sandbox script, event logs and scorer live in
+[`data/independent_labels/`](https://github.com/si618/explore-typesafe-ai/tree/main/data/independent_labels).
+This is a model-family check, not clinical validation.
 """
 
 
