@@ -14,6 +14,108 @@
 | Which note is the best evidence? | Choice (10 notes + none) | Ranking |
 | Taking all notes together, is the answer yes? | Noul | Detection |
 
+## Example request and response
+
+One search: the query, the ten notes, and a Noul per note plus the two whole-patient questions. `state` and `questions` are built by [`s4_search.py`](https://github.com/si618/explore-typesafe-ai/blob/main/src/explore_typesafe/s4_search.py);
+`system_one` answers every question in one request.
+
+```python
+from typesafe_sdk import AsyncTypeSafeClient
+
+state = {
+  "query": "Has the patient ever had a heart attack?",
+  "notes": [
+    {
+      "id": "note_0",
+      "date": "2023-01-01",
+      "text": "\n2023-01-01\n\n# Chief Complaint\nNo complaints.\n\n# History of Present Illness\nShara355 Roseanne877 is a 77 year-old nonhispanic white female. Patient has a history of part-time employment (finding), medication review due (situation), full-tim …"
+    },
+    {
+      "id": "note_1",
+      "date": "2023-04-27",
+      "text": "\n2023-04-27\n\n# Chief Complaint\nNo complaints.\n\n# History of Present Illness\nShara355 Roseanne877 is a 77 year-old nonhispanic white female. Patient has a history of part-time employment (finding), fracture of forearm (disorder), medication …"
+    }
+  ]
+}
+
+questions = {
+  "note_0": {
+    "type": "noul",
+    "instructions": "Does `notes[0].text` contain information showing that the answer to `query` is yes?"
+  },
+  "best": {
+    "type": "choice",
+    "instructions": "Which note is the best evidence for answering `query` with yes?",
+    "criteria": {
+      "note_0": "`notes[0]`",
+      "note_1": "`notes[1]`",
+      "note_2": "`notes[2]`",
+      "note_3": "`notes[3]`",
+      "note_4": "`notes[4]`",
+      "note_5": "`notes[5]`",
+      "note_6": "`notes[6]`",
+      "note_7": "`notes[7]`",
+      "note_8": "`notes[8]`",
+      "note_9": "`notes[9]`",
+      "none": "No note shows the answer is yes"
+    }
+  },
+  "any": {
+    "type": "noul",
+    "instructions": "Taking all of `notes` together, is the answer to `query` yes?"
+  }
+}
+
+async with AsyncTypeSafeClient(model="jev-1.13.0") as client:
+    response = await client.system_one(state, questions)
+
+body = response.raw_http_response.json()
+```
+
+The response body, exactly as recorded:
+
+```json
+{
+  "answers": {
+    "note_0": {
+      "type": "noul",
+      "noul": 0.02
+    },
+    "best": {
+      "type": "choice",
+      "choice": "note_6",
+      "confidence": 0.64,
+      "probabilities": {
+        "note_1": 0.0,
+        "note_3": 0.0,
+        "note_2": 0.0,
+        "none": 0.0,
+        "note_7": 0.31,
+        "note_4": 0.0,
+        "note_5": 0.0,
+        "note_9": 0.0,
+        "note_0": 0.0,
+        "note_6": 0.68,
+        "note_8": 0.01
+      }
+    },
+    "any": {
+      "type": "noul",
+      "noul": 0.98
+    }
+  },
+  "model": "jev-1.13.0",
+  "usage": {
+    "input_tokens": 5475,
+    "output_tokens": 313
+  }
+}
+```
+
+Request `req_01a0b717158c73fab8227773f5f52149` took **655 ms** for 12 questions
+(5,475 input / 313 output tokens). Abridged for this page: `notes` shows 2 of 10 entries; `notes[0].text` truncated from 1,260 characters; `notes[1].text` truncated from 962 characters; 3 of 12 questions and their answers shown.
+Every case of this run, untrimmed, is in [`results/s4_search.json`](https://github.com/si618/explore-typesafe-ai/blob/main/results/s4_search.json).
+
 ## Results
 
 | Method | Note precision | Note recall | Note F1 |

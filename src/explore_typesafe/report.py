@@ -15,7 +15,7 @@ from .common import RESULTS_DIR, load_scenario
 from .fhir import R5_DIR, ROOT
 from .s1_ward import BANDS
 from .s2_discharge import ACTIONS
-from .s3_inbox import QUESTIONS as S3_QUESTIONS
+from .report_example import api_example
 from .report_study import page_generated, page_haiku, page_s4, page_s5
 
 DOCS = ROOT / "docs"
@@ -45,11 +45,6 @@ def question_rows(ev: dict) -> list[list]:
             metric = f"accuracy {pct(q['accuracy'])}" + (f" (primary label {pct(q['accuracy_primary'])})" if "accuracy_primary" in q else "")
         rows.append([f"`{q['question']}`", q["type"], q["n"], metric])
     return rows
-
-
-def questions_block(questions: dict) -> str:
-    return '??? example "Exact questions sent to Jev"\n\n    ```json\n' + "\n".join(
-        "    " + line for line in json.dumps(questions, indent=2).splitlines()) + "\n    ```\n"
 
 
 def perf_line(p: dict) -> str:
@@ -96,7 +91,8 @@ flowchart LR
 | How worried should the team be? | Score (4 levels) | Scoring → Ranking | Floor on the escalation band; weight in the priority sort |
 | Main type of deterioration? | Choice (9 options) | Classification | Selects the next-step bundle (sepsis, ECG/troponin, CT head…) |
 
-{questions_block(json.loads((RESULTS_DIR / 's1_ward.json').read_text())['cases'][0]['questions'])}
+{api_example('s1_ward', '77a3db04', module='s1_ward',
+             intro='The post-op hip patient with Alzheimer\'s and new delirium, as one call.')}
 ## Results
 
 {perf_line(ev['perf'])}
@@ -135,8 +131,6 @@ def page_s2(ev: dict) -> str:
     labels = ["continued", "dose_changed", "withheld", "stopped", "not_mentioned"]
     conf_rows = [[f"**{w}**"] + [conf.get(w, {}).get(g, 0) or "·" for g in labels] for w in labels]
     errs = [[e["medication"], e["want"], e["got"], f"{e['confidence']:.2f}"] for e in ev["status_errors"]]
-    ex = json.loads((RESULTS_DIR / "s2_discharge.json").read_text())["cases"][0]
-    shown = {k: v for k, v in ex["questions"].items() if not k.startswith("med_") or k == "med_0"}
     return f"""# 2. Discharge medication reconciliation
 
 {sc['setting']}
@@ -164,7 +158,9 @@ flowchart LR
 | New drug with a clinically important interaction? | Noul | Verification |
 | How well are the changes explained? | Score (4 levels) | Scoring |
 
-{questions_block(shown).replace('Exact questions sent to Jev', 'Exact questions sent to Jev (one of the per-medication Choices shown)')}
+{api_example('s2_discharge', '18625cef', module='s2_discharge', max_items=4,
+             keep=['med_0', 'allergy_conflict', 'duplicate_therapy', 'interaction', 'justification'],
+             intro='The Norco-plus-Tylenol discharge, with one of the seven per-medication Choices shown.')}
 ## Results
 
 {perf_line(ev['perf'])}
@@ -227,7 +223,8 @@ flowchart LR
 | Medication problem? | Noul | Detection / Classification |
 | Safeguarding concern? | Noul | Detection |
 
-{questions_block(S3_QUESTIONS)}
+{api_example('s3_inbox', module='s3_inbox',
+             intro='A casually worded message that turns out to need urgent attention.')}
 ## Results
 
 {perf_line(ev['perf'])}
