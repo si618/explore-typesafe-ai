@@ -2,7 +2,7 @@
 
 Acute medical ward, 20 inpatients, evening safety huddle. Charted observations plus the nurse's latest progress note.
 
-**Question:** can Jev read the nursing note for the signals that NEWS2 misses, while code keeps doing the arithmetic?
+**Question:** can [Jev](vocabulary.md#jev) read the nursing note for the signals that [NEWS2](vocabulary.md#news2) misses, while code keeps doing the arithmetic?
 
 ```mermaid
 flowchart LR
@@ -16,16 +16,16 @@ flowchart LR
   B --> R[Ranked huddle list]
 ```
 
-| Question | Primitive | Task category | How the answer is used |
+| Question | [Primitive](vocabulary.md#primitive) | [Task category](vocabulary.md#task-categories) | How the answer is used |
 | --- | --- | --- | --- |
-| New change in mental state vs baseline? | Noul | Detection | If the chart says *Alert*, a yes becomes *Confusion* (3 NEWS2 points) |
-| Infection signs or suspicion? | Noul | Detection | With NEWS2 ≥ 5, prompts a sepsis screen |
-| How worried should the team be? | Score (4 levels) | Scoring → Ranking | Floor on the escalation band; weight in the priority sort |
-| Main type of deterioration? | Choice (9 options) | Classification | Selects the next-step bundle (sepsis, ECG/troponin, CT head…) |
+| New change in mental state vs baseline? | [Noul](vocabulary.md#noul) | Detection | If the chart says *Alert*, a yes becomes *Confusion* (3 NEWS2 points) |
+| Infection signs or suspicion? | Noul | Detection | With NEWS2 ≥ 5, prompts a [sepsis screen](vocabulary.md#sepsis-screen) |
+| How worried should the team be? | [Score](vocabulary.md#score) (4 levels) | Scoring → Ranking | Floor on the [escalation band](vocabulary.md#escalation-band); weight in the priority sort |
+| Main type of deterioration? | [Choice](vocabulary.md#choice) (9 options) | Classification | Selects the next-step bundle (sepsis, ECG/troponin, CT head…) |
 
 ## Example request and response
 
-The post-op hip patient with Alzheimer's and new delirium, as one call. `state` and `questions` are built by [`s1_ward.py`](https://github.com/si618/explore-typesafe-ai/blob/main/src/explore_typesafe/s1_ward.py);
+The post-op hip patient with Alzheimer's and new [delirium](vocabulary.md#delirium), as one call. `state` and `questions` are built by [`s1_ward.py`](https://github.com/si618/explore-typesafe-ai/blob/main/src/explore_typesafe/s1_ward.py);
 `system_one` answers every question in one request.
 
 ```python
@@ -156,23 +156,23 @@ Every case of this run, untrimmed, is in [`results/s1_ward.json`](https://github
 
 ## Results
 
-**20 requests, 80 questions** (4 per request) · latency p50 **334 ms**, p95 588 ms · 21,924 input / 3,113 output tokens · $0.0009
+**20 requests, 80 questions** (4 per request) · latency [p50](vocabulary.md#p50) **334 ms**, [p95](vocabulary.md#p95) 588 ms · 21,924 input / 3,113 output tokens · $0.0009
 
 | Question | Primitive | n | Result vs reference |
 | --- | --- | --- | --- |
-| `new_confusion` | Noul | 20 | accuracy 100% (unambiguous 100%), Brier 0.009 |
+| `new_confusion` | Noul | 20 | accuracy 100% (unambiguous 100%), [Brier](vocabulary.md#brier-score) 0.009 |
 | `infection` | Noul | 20 | accuracy 90% (unambiguous 100%), Brier 0.002 |
-| `concern` | Score | 20 | exact level 85%, MAE 0.18 |
+| `concern` | Score | 20 | exact level 85%, [MAE](vocabulary.md#mae) 0.18 |
 | `pattern` | Choice | 20 | accuracy 95% (primary label 85%) |
 
 ### Does Jev add anything to NEWS2?
 
-| Policy | Band matches reference | Under-triaged | Over-triaged |
+| Policy | Band matches reference | [Under-triaged](vocabulary.md#under-triage) | [Over-triaged](vocabulary.md#over-triage) |
 | --- | --- | --- | --- |
 | NEWS2 from charted obs only | 50% | **10** / 20 | 0 |
-| NEWS2 + Jev (confusion → ACVPU, concern floor) | 95% | **1** / 20 | 0 |
+| NEWS2 + Jev (confusion → [ACVPU](vocabulary.md#acvpu), concern floor) | 95% | **1** / 20 | 0 |
 
-NEWS2 alone under-triaged 10 patients. All of them had the key signal only in the note: ongoing ischaemic chest pain, melaena with a NEWS2 of 4, alcohol withdrawal with hallucinations, an anticoagulated fall patient becoming unrousable, undocumented delirium, a daughter saying "she's not herself", a non-verbal patient's carer reporting a change, a transient bradycardic syncope, a GCS drop from 15 to 14 on head-injury obs, and blood sugars of 14–18 in a diabetic foot infection. The ranking puts 7 of the 8 reference emergencies in the top 8.
+NEWS2 alone under-triaged 10 patients. All of them had the key signal only in the note: ongoing ischaemic chest pain, [melaena](vocabulary.md#melaena) with a NEWS2 of 4, alcohol withdrawal with hallucinations, an anticoagulated fall patient becoming unrousable, undocumented delirium, a daughter saying "she's not herself", a non-verbal patient's carer reporting a change, a transient bradycardic syncope, a GCS drop from 15 to 14 on head-injury obs, and blood sugars of 14–18 in a diabetic foot infection. The ranking puts 7 of the 8 reference emergencies in the top 8.
 
 Literal-reading check: for the patient with long-standing Alzheimer's who is *"pleasantly confused… no change from his baseline"*, Jev returned new-confusion = **0.03**. For the patient with Alzheimer's plus new delirium, it returned **0.97**. The negation-heavy note ("No chest pain. No shortness of breath. No confusion…") returned **0.04**.
 
@@ -183,7 +183,7 @@ Literal-reading check: for the patient with long-standing Alzheimer's who is *"p
     | Community-acquired pneumonia | 10 | 0.91 | 13 | 2.96 | `respiratory` | emergency | **emergency** | emergency |
     | Pyelonephritis, day 2 | 8 | 0.94 | 11 | 2.91 | `sepsis_infection` | emergency | **emergency** | emergency |
     | Acute kidney injury on CKD stage 3 | 8 | 0.90 | 8 | 3.00 | `drug_or_substance` | emergency | **emergency** | emergency |
-    | NSTEMI, day 2 | 4 | 0.91 | 7 | 2.44 | `drug_or_substance` | ward_review | **emergency** | emergency |
+    | [NSTEMI](vocabulary.md#nstemi), day 2 | 4 | 0.91 | 7 | 2.44 | `drug_or_substance` | ward_review | **emergency** | emergency |
     | Chest infection; on warfarin for AF | 4 | 0.06 | 4 | 2.85 | `bleeding` | ward_review | **emergency** | emergency |
     | Unwitnessed fall at home, on warfarin for AF | 3 | 0.98 | 3 | 2.99 | `neurological` | urgent_review | **emergency** | emergency |
     | NSTEMI, awaiting angiography | 3 | 0.04 | 3 | 2.72 | `cardiac` | ward_review | **emergency** | emergency |
@@ -198,7 +198,7 @@ Literal-reading check: for the patient with long-standing Alzheimer's who is *"p
     | Right total knee replacement, post-op day 1 | 1 | 0.03 | 1 | 0.01 | `no_acute_change` | ward_review | **ward_review** | ward_review |
     | Community-acquired pneumonia, day 4 | 0 | 0.04 | 0 | 0.07 | `no_acute_change` | routine | **routine** | routine |
     | Elective admission for respite and medication review | 0 | 0.03 | 0 | 0.03 | `no_acute_change` | routine | **routine** | routine |
-    | Inferior STEMI, day 3 post primary PCI | 0 | 0.03 | 0 | 0.01 | `no_acute_change` | routine | **routine** | routine |
+    | Inferior [STEMI](vocabulary.md#stemi), day 3 post primary [PCI](vocabulary.md#pci) | 0 | 0.03 | 0 | 0.01 | `no_acute_change` | routine | **routine** | routine |
     | Dehydration and AKI after gastroenteritis | 0 | 0.03 | 0 | 0.01 | `no_acute_change` | routine | **routine** | routine |
 
     ⬇ under-triaged vs reference · ⬆ over-triaged

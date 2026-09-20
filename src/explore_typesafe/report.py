@@ -1,7 +1,8 @@
 """Render the Zensical site (docs/) from stored results and evaluation.
 
-Narrative that doesn't depend on numbers lives in report/*.md and is copied as-is;
+Narrative that doesn't depend on numbers lives in report/*.md and is copied over;
 everything with a number in it is rendered here from results/evaluation.json.
+Every page then goes through link_vocabulary, which links first mentions to the glossary.
 """
 
 from __future__ import annotations
@@ -17,6 +18,7 @@ from .s1_ward import BANDS
 from .s2_discharge import ACTIONS
 from .report_example import api_example
 from .report_study import page_generated, page_haiku, page_s4, page_s5
+from .vocabulary import link_vocabulary
 
 DOCS = ROOT / "docs"
 GITHUB = "https://github.com/si618/explore-typesafe-ai"
@@ -583,10 +585,10 @@ def main() -> None:
         "independent-labels.md": page_independent_labels(),
         "performance.md": page_performance(evals, evals2),
     }
+    pages["prompt.md"] = (ROOT / "report" / "prompt.md").read_text()
     for name, text in pages.items():
-        (DOCS / name).write_text(text)
-    for static in ("prompt.md", "vocabulary.md"):
-        shutil.copy(ROOT / "report" / static, DOCS / static)
+        (DOCS / name).write_text(link_vocabulary(text))
+    shutil.copy(ROOT / "report" / "vocabulary.md", DOCS / "vocabulary.md")
     print("rendered", len(pages) + 1, "pages")
 
 

@@ -2,12 +2,12 @@
 
 **Setting:** predict which patients will have an **emergency or inpatient encounter in the next 12 months**, for all 1,000 patients in the cohort, as of an index date of 2025-09-19.
 
-**Why this scenario:** the TypeSafe docs describe using typed judgments as **features for classical ML**. This tests that pattern where the outcome comes from Synthea's simulated encounters, so no model wrote the labels (179 positives, 18%).
+**Why this scenario:** the TypeSafe docs describe using typed judgments as **features for classical ML**. This tests that pattern where the outcome comes from [Synthea](vocabulary.md#synthea)'s simulated encounters, so no model wrote the labels (179 positives, 18%).
 
 | Feature set | Features | Cross-validated AUROC (mean ± sd) |
 | --- | --- | --- |
 | Structured: age, sex, chronic disorder count, medication count, prior-year acute use | 5 | 0.641 ± 0.010 |
-| Jev: 10 typed judgments over the most recent note before the index date | 17 | 0.637 ± 0.006 |
+| [Jev](vocabulary.md#jev): 10 typed judgments over the most recent note before the index date | 17 | 0.637 ± 0.006 |
 | Structured + Jev | 22 | 0.649 ± 0.006 |
 
 Logistic regression, 5-fold stratified cross-validation repeated 5 times.
@@ -16,7 +16,7 @@ Logistic regression, 5-fold stratified cross-validation repeated 5 times.
 
 - **Jev features from one note match the structured baseline** (AUROC 0.64 vs 0.64), and together they add only **+0.008**. That is a small gain.
 - **The ceiling is Synthea, not the features.** Synthea's acute encounters are driven by stochastic disease modules, so every feature set sits near 0.64. This synthetic outcome can't show whether Jev features would help on real utilisation data. It can show the mechanics: 1,000 notes × 10 questions in 41 s for $0.048.
-- **The strongest single features** are the Score for overall clinical burden (AUROC 0.64) and the cardiovascular Noul (0.59).
+- **The strongest single features** are the [Score](vocabulary.md#score) for overall clinical burden (AUROC 0.64) and the cardiovascular [Noul](vocabulary.md#noul) (0.59).
 
 ??? note "Univariate AUROC of every Jev feature"
 

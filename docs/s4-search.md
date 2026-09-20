@@ -1,17 +1,17 @@
 # 4. Semantic search over notes
 
-**Setting:** a clinician asks a plain-language question ("has this patient ever had a heart attack?") and the system searches the patient's 10 most recent clinical notes (Synthea text, FHIR R5 `DocumentReference`).
+**Setting:** a clinician asks a plain-language question ("has this patient ever had a heart attack?") and the system searches the patient's 10 most recent clinical notes ([Synthea](vocabulary.md#synthea) text, [FHIR](vocabulary.md#fhir) R5 `DocumentReference`).
 
-**Why this scenario:** retrieval is one of the task categories in the TypeSafe docs, and the notes use clinical vocabulary ("myocardial infarction") that the lay question doesn't. A keyword search for the lay words is the naive baseline.
+**Why this scenario:** retrieval is one of the [task categories](vocabulary.md#task-categories) in the TypeSafe docs, and the notes use clinical vocabulary ("myocardial infarction") that the lay question doesn't. A keyword search for the lay words is the naive baseline.
 
 **Cases:** 12 queries × 25 patients (about half positive), **300 searches over 2,922 notes**.
 
 **Ground truth (objective, by regex):** a note is relevant if a Synthea `(disorder)` phrase in it matches the clinical term. No model wrote these labels.
 
-| Question per search | Primitive | Task category |
+| Question per search | [Primitive](vocabulary.md#primitive) | Task category |
 | --- | --- | --- |
-| Does `notes[i]` show the answer is yes? (one per note) | Noul ×10 | Search / Retrieval |
-| Which note is the best evidence? | Choice (10 notes + none) | Ranking |
+| Does `notes[i]` show the answer is yes? (one per note) | [Noul](vocabulary.md#noul) ×10 | Search / Retrieval |
+| Which note is the best evidence? | [Choice](vocabulary.md#choice) (10 notes + none) | Ranking |
 | Taking all notes together, is the answer yes? | Noul | Detection |
 
 ## Example request and response
@@ -121,7 +121,7 @@ Every case of this run, untrimmed, is in [`results/s4_search.json`](https://gith
 | Method | Note precision | Note recall | Note F1 |
 | --- | --- | --- | --- |
 | Lay keyword search | 64% | 25% | 0.35 |
-| Jev, all 10 notes in one request | 76% | 100% | 0.86 |
+| [Jev](vocabulary.md#jev), all 10 notes in one request | 76% | 100% | 0.86 |
 | Jev, one note per request | 67% | 100% | 0.80 |
 | Claude Haiku 4.5, all 10 notes in one request | 70% | 100% | 0.83 |
 
