@@ -25,57 +25,147 @@ flowchart LR
 | New drug with a clinically important interaction? | Noul | Verification |
 | How well are the changes explained? | Score (4 levels) | Scoring |
 
-??? example "Exact questions sent to Jev (one of the per-medication Choices shown)"
+## Example request and response
 
-    ```json
-    {
-      "med_0": {
-        "type": "choice",
-        "instructions": "According to `discharge_medication_text`, what happens at discharge to the pre-admission medication `pre_admission_medications[0]` (Hydrochlorothiazide 25 MG Oral Tablet)?",
-        "criteria": {
-          "continued": "Continued at the same dose, either named explicitly or covered by a blanket statement such as 'continue all other medications'",
-          "dose_changed": "Still taken, but the dose, frequency or directions change, for example increased, reduced, or changed to as-needed",
-          "withheld": "Paused temporarily, with a plan to restart later",
-          "stopped": "Stopped, discontinued, completed, or replaced by a different drug",
-          "not_mentioned": "Not named and not covered by any blanket statement, so its status at discharge is unknown"
-        }
+The Norco-plus-Tylenol discharge, with one of the seven per-medication Choices shown. `state` and `questions` are built by [`s2_discharge.py`](https://github.com/si618/explore-typesafe-ai/blob/main/src/explore_typesafe/s2_discharge.py);
+`system_one` answers every question in one request.
+
+```python
+from typesafe_sdk import AsyncTypeSafeClient
+
+state = {
+  "patient": {
+    "age": 87,
+    "sex": "male",
+    "allergies": [],
+    "active_conditions": [
+      "Hyperlipidemia",
+      "Ischemic heart disease",
+      "Loss of teeth"
+    ]
+  },
+  "admission_reason": "Constipation and fall",
+  "pre_admission_medications": [
+    "tramadol hydrochloride 50 MG Oral Tablet",
+    "Simvastatin 10 MG Oral Tablet",
+    "Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet",
+    "Clopidogrel 75 MG Oral Tablet"
+  ],
+  "discharge_medication_text": "Tramadol STOPPED. Continue Norco (hydrocodone/acetaminophen) 1 tablet every 6 hours as needed. New: Tylenol 1 g four times daily regularly for pain. Continue simvastatin, clopidogrel, metoprolol and GTN spray."
+}
+
+questions = {
+  "med_0": {
+    "type": "choice",
+    "instructions": "According to `discharge_medication_text`, what happens at discharge to the pre-admission medication `pre_admission_medications[0]` (tramadol hydrochloride 50 MG Oral Tablet)?",
+    "criteria": {
+      "continued": "Continued at the same dose, either named explicitly or covered by a blanket statement such as 'continue all other medications'",
+      "dose_changed": "Still taken, but the dose, frequency or directions change, for example increased, reduced, or changed to as-needed",
+      "withheld": "Paused temporarily, with a plan to restart later",
+      "stopped": "Stopped, discontinued, completed, or replaced by a different drug",
+      "not_mentioned": "Not named and not covered by any blanket statement, so its status at discharge is unknown"
+    }
+  },
+  "allergy_conflict": {
+    "type": "noul",
+    "instructions": "Does `discharge_medication_text` prescribe a medication that belongs to the same drug class as one of the patient's drug allergies listed in `patient.allergies`? Brand names and combination products count.",
+    "criteria": {
+      "true": "A prescribed or continued medication contains a drug from an allergy's drug class.",
+      "false": "No prescribed medication belongs to an allergy's drug class. Food, environmental and animal allergies do not count."
+    }
+  },
+  "duplicate_therapy": {
+    "type": "noul",
+    "instructions": "After discharge, will the patient be taking two or more medications with the same active ingredient or from the same therapeutic class for the same purpose, based on `pre_admission_medications` and `discharge_medication_text`?",
+    "criteria": {
+      "true": "Two or more concurrent medications share an active ingredient (including inside brand-name or combination products) or a therapeutic class.",
+      "false": "Each active ingredient and therapeutic class appears once. Duplicates that the discharge text stops do not count."
+    }
+  },
+  "interaction": {
+    "type": "noul",
+    "instructions": "Does a medication newly started in `discharge_medication_text` have a well-known, clinically important interaction with another medication the patient will be taking after discharge?",
+    "criteria": {
+      "true": "A new medication has a recognised interaction that prescribing guidance says to avoid or to manage actively.",
+      "false": "New medications have no clinically important interaction with the rest of the regimen, or no medication is newly started."
+    }
+  },
+  "justification": {
+    "type": "score",
+    "instructions": "How well does `discharge_medication_text` explain the medication changes it makes?",
+    "criteria": [
+      "Changes are made with no reasons given, or a blanket 'continue all' is used when the regimen clearly needed review",
+      "New or changed medications are listed, but most have no reason or follow-up plan",
+      "Most changes have a reason, but some reasons, durations or follow-up plans are missing",
+      "Every change has a clear reason, with durations or follow-up plans where needed"
+    ]
+  }
+}
+
+async with AsyncTypeSafeClient(model="jev-1.13.0") as client:
+    response = await client.system_one(state, questions)
+
+body = response.raw_http_response.json()
+```
+
+The response body, exactly as recorded:
+
+```json
+{
+  "answers": {
+    "med_0": {
+      "type": "choice",
+      "choice": "stopped",
+      "confidence": 1.0,
+      "probabilities": {
+        "stopped": 1.0,
+        "continued": 0.0,
+        "dose_changed": 0.0,
+        "withheld": 0.0,
+        "not_mentioned": 0.0
+      }
+    },
+    "allergy_conflict": {
+      "type": "noul",
+      "noul": 0.06
+    },
+    "duplicate_therapy": {
+      "type": "noul",
+      "noul": 0.89
+    },
+    "interaction": {
+      "type": "noul",
+      "noul": 0.48
+    },
+    "justification": {
+      "type": "score",
+      "score": 0.97,
+      "confidence": 0.52,
+      "legend": {
+        "0": "Changes are made with no reasons given, or a blanket 'continue all' is used when the regimen clearly needed review",
+        "1": "New or changed medications are listed, but most have no reason or follow-up plan",
+        "2": "Most changes have a reason, but some reasons, durations or follow-up plans are missing",
+        "3": "Every change has a clear reason, with durations or follow-up plans where needed"
       },
-      "allergy_conflict": {
-        "type": "noul",
-        "instructions": "Does `discharge_medication_text` prescribe a medication that belongs to the same drug class as one of the patient's drug allergies listed in `patient.allergies`? Brand names and combination products count.",
-        "criteria": {
-          "true": "A prescribed or continued medication contains a drug from an allergy's drug class.",
-          "false": "No prescribed medication belongs to an allergy's drug class. Food, environmental and animal allergies do not count."
-        }
-      },
-      "duplicate_therapy": {
-        "type": "noul",
-        "instructions": "After discharge, will the patient be taking two or more medications with the same active ingredient or from the same therapeutic class for the same purpose, based on `pre_admission_medications` and `discharge_medication_text`?",
-        "criteria": {
-          "true": "Two or more concurrent medications share an active ingredient (including inside brand-name or combination products) or a therapeutic class.",
-          "false": "Each active ingredient and therapeutic class appears once. Duplicates that the discharge text stops do not count."
-        }
-      },
-      "interaction": {
-        "type": "noul",
-        "instructions": "Does a medication newly started in `discharge_medication_text` have a well-known, clinically important interaction with another medication the patient will be taking after discharge?",
-        "criteria": {
-          "true": "A new medication has a recognised interaction that prescribing guidance says to avoid or to manage actively.",
-          "false": "New medications have no clinically important interaction with the rest of the regimen, or no medication is newly started."
-        }
-      },
-      "justification": {
-        "type": "score",
-        "instructions": "How well does `discharge_medication_text` explain the medication changes it makes?",
-        "criteria": [
-          "Changes are made with no reasons given, or a blanket 'continue all' is used when the regimen clearly needed review",
-          "New or changed medications are listed, but most have no reason or follow-up plan",
-          "Most changes have a reason, but some reasons, durations or follow-up plans are missing",
-          "Every change has a clear reason, with durations or follow-up plans where needed"
-        ]
+      "probabilities": {
+        "0": 0.25,
+        "1": 0.52,
+        "2": 0.22,
+        "3": 0.01
       }
     }
-    ```
+  },
+  "model": "jev-1.13.0",
+  "usage": {
+    "input_tokens": 2486,
+    "output_tokens": 481
+  }
+}
+```
+
+Request `req_01a0b6e1e2e175e0bb28248a8557a4fb` took **324 ms** for 11 questions
+(2,486 input / 481 output tokens). Abridged for this page: `pre_admission_medications` shows 4 of 7 entries; 5 of 11 questions and their answers shown.
+Every case of this run, untrimmed, is in [`results/s2_discharge.json`](https://github.com/si618/explore-typesafe-ai/blob/main/results/s2_discharge.json).
 
 ## Results
 

@@ -6,6 +6,7 @@ from __future__ import annotations
 import json
 
 from .common import RESULTS_DIR
+from .report_example import api_example
 
 RUNS_LABEL = {"s1_ward_gen": "1. Ward", "s2_discharge_gen": "2. Discharge", "s3_inbox_gen": "3. Inbox"}
 
@@ -122,6 +123,8 @@ def page_s4(e: dict) -> str:
 | Which note is the best evidence? | Choice (10 notes + none) | Ranking |
 | Taking all notes together, is the answer yes? | Noul | Detection |
 
+{api_example('s4_search', module='s4_search', keep=['note_0', 'best', 'any'], text_chars=240, max_items=2,
+             intro='One search: the query, the ten notes, and a Noul per note plus the two whole-patient questions.')}
 ## Results
 
 | Method | Note precision | Note recall | Note F1 |
@@ -181,6 +184,10 @@ Logistic regression, 5-fold stratified cross-validation repeated 5 times.
 ??? note "Univariate AUROC of every Jev feature"
 
 {chr(10).join('    ' + l for l in table(['Feature', 'AUROC'], [[f'`{k}`', f'{v:.3f}'] for k, v in uni]).splitlines())}
+
+{api_example('s5_features', '7d27b12f', module='s5_features', text_chars=500,
+             keep=['burden', 'diabetes_complications', 'mental_health'],
+             intro='One patient\'s most recent note before the index date, turned into ten numeric features.')}
 """
 
 

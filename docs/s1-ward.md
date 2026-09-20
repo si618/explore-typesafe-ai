@@ -23,53 +23,136 @@ flowchart LR
 | How worried should the team be? | Score (4 levels) | Scoring → Ranking | Floor on the escalation band; weight in the priority sort |
 | Main type of deterioration? | Choice (9 options) | Classification | Selects the next-step bundle (sepsis, ECG/troponin, CT head…) |
 
-??? example "Exact questions sent to Jev"
+## Example request and response
 
-    ```json
-    {
-      "new_confusion": {
-        "type": "noul",
-        "instructions": "Does `nursing_note` describe a new change in the patient's mental state or level of consciousness compared with their usual baseline, such as new confusion, disorientation, agitation, hallucinations, drowsiness or reduced responsiveness?",
-        "criteria": {
-          "true": "A change from the patient's usual mental state is described, even if they have dementia or a learning disability at baseline.",
-          "false": "Mental state is normal, or unchanged from a known baseline such as long-standing dementia that is as usual."
-        }
+The post-op hip patient with Alzheimer's and new delirium, as one call. `state` and `questions` are built by [`s1_ward.py`](https://github.com/si618/explore-typesafe-ai/blob/main/src/explore_typesafe/s1_ward.py);
+`system_one` answers every question in one request.
+
+```python
+from typesafe_sdk import AsyncTypeSafeClient
+
+state = {
+  "patient": {
+    "age": 88,
+    "sex": "male",
+    "active_conditions": [
+      "Acute non-ST segment elevation myocardial infarction",
+      "Alzheimer's disease",
+      "Anemia"
+    ]
+  },
+  "admission_reason": "Fractured neck of femur, post-op day 2 hemiarthroplasty",
+  "nursing_note": "Has Alzheimer's, but his son says he is normally chatty and knows he lives at the nursing home. Today he is muddled, picking at the sheets, pulled out his cannula and thinks it is 1970. Did not sleep last night. Bowels not opened for 4 days."
+}
+
+questions = {
+  "new_confusion": {
+    "type": "noul",
+    "instructions": "Does `nursing_note` describe a new change in the patient's mental state or level of consciousness compared with their usual baseline, such as new confusion, disorientation, agitation, hallucinations, drowsiness or reduced responsiveness?",
+    "criteria": {
+      "true": "A change from the patient's usual mental state is described, even if they have dementia or a learning disability at baseline.",
+      "false": "Mental state is normal, or unchanged from a known baseline such as long-standing dementia that is as usual."
+    }
+  },
+  "infection": {
+    "type": "noul",
+    "instructions": "Does `nursing_note` describe signs of a current infection, an infection being treated, or a suspicion of infection?",
+    "criteria": {
+      "true": "For example fever, rigors, purulent sputum, urinary symptoms, spreading redness, or an infection under treatment.",
+      "false": "No infection signs are described, or infection is explicitly ruled out."
+    }
+  },
+  "concern": {
+    "type": "score",
+    "instructions": "How worried should the ward team be about this patient right now, based on `nursing_note`?",
+    "criteria": [
+      "Stable or improving, no new problems; routine care",
+      "A minor issue to keep monitoring, with no clinical review needed today",
+      "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+      "Acute deterioration happening now that needs immediate senior review or the rapid response team"
+    ]
+  },
+  "pattern": {
+    "type": "choice",
+    "instructions": "What is the main type of clinical deterioration described in `nursing_note`?",
+    "criteria": {
+      "sepsis_infection": "Infection causing systemic illness: fever or rigors with fast heart rate, low blood pressure, new confusion or low urine output",
+      "respiratory": "Worsening breathing, rising oxygen requirement or low oxygen saturation",
+      "cardiac": "Chest pain, arrhythmia, or collapse from a heart cause",
+      "neurological": "Stroke, head injury, seizure, delirium, or reduced consciousness from a brain cause",
+      "bleeding": "Blood loss, such as black stools, vomiting blood, or bleeding with falling blood pressure",
+      "metabolic_renal": "Blood sugar, electrolyte, calcium, fluid balance or kidney problems",
+      "drug_or_substance": "Medication toxicity, over-sedation, or alcohol or drug withdrawal",
+      "other": "A concerning change that fits none of the other options",
+      "no_acute_change": "No deterioration: stable, improving, or at baseline"
+    }
+  }
+}
+
+async with AsyncTypeSafeClient(model="jev-1.13.0") as client:
+    response = await client.system_one(state, questions)
+
+body = response.raw_http_response.json()
+```
+
+The response body, exactly as recorded:
+
+```json
+{
+  "answers": {
+    "new_confusion": {
+      "type": "noul",
+      "noul": 0.97
+    },
+    "infection": {
+      "type": "noul",
+      "noul": 0.05
+    },
+    "concern": {
+      "type": "score",
+      "score": 2.24,
+      "confidence": 0.76,
+      "legend": {
+        "0": "Stable or improving, no new problems; routine care",
+        "1": "A minor issue to keep monitoring, with no clinical review needed today",
+        "2": "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
+        "3": "Acute deterioration happening now that needs immediate senior review or the rapid response team"
       },
-      "infection": {
-        "type": "noul",
-        "instructions": "Does `nursing_note` describe signs of a current infection, an infection being treated, or a suspicion of infection?",
-        "criteria": {
-          "true": "For example fever, rigors, purulent sputum, urinary symptoms, spreading redness, or an infection under treatment.",
-          "false": "No infection signs are described, or infection is explicitly ruled out."
-        }
-      },
-      "concern": {
-        "type": "score",
-        "instructions": "How worried should the ward team be about this patient right now, based on `nursing_note`?",
-        "criteria": [
-          "Stable or improving, no new problems; routine care",
-          "A minor issue to keep monitoring, with no clinical review needed today",
-          "A worrying change that needs a doctor to assess within the hour, such as a behaviour change, an event that has since resolved, or family saying the patient is not themselves",
-          "Acute deterioration happening now that needs immediate senior review or the rapid response team"
-        ]
-      },
-      "pattern": {
-        "type": "choice",
-        "instructions": "What is the main type of clinical deterioration described in `nursing_note`?",
-        "criteria": {
-          "sepsis_infection": "Infection causing systemic illness: fever or rigors with fast heart rate, low blood pressure, new confusion or low urine output",
-          "respiratory": "Worsening breathing, rising oxygen requirement or low oxygen saturation",
-          "cardiac": "Chest pain, arrhythmia, or collapse from a heart cause",
-          "neurological": "Stroke, head injury, seizure, delirium, or reduced consciousness from a brain cause",
-          "bleeding": "Blood loss, such as black stools, vomiting blood, or bleeding with falling blood pressure",
-          "metabolic_renal": "Blood sugar, electrolyte, calcium, fluid balance or kidney problems",
-          "drug_or_substance": "Medication toxicity, over-sedation, or alcohol or drug withdrawal",
-          "other": "A concerning change that fits none of the other options",
-          "no_acute_change": "No deterioration: stable, improving, or at baseline"
-        }
+      "probabilities": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.76,
+        "3": 0.24
+      }
+    },
+    "pattern": {
+      "type": "choice",
+      "choice": "neurological",
+      "confidence": 1.0,
+      "probabilities": {
+        "metabolic_renal": 0.0,
+        "cardiac": 0.0,
+        "other": 0.0,
+        "drug_or_substance": 0.0,
+        "bleeding": 0.0,
+        "sepsis_infection": 0.0,
+        "neurological": 1.0,
+        "no_acute_change": 0.0,
+        "respiratory": 0.0
       }
     }
-    ```
+  },
+  "model": "jev-1.13.0",
+  "usage": {
+    "input_tokens": 1122,
+    "output_tokens": 156
+  }
+}
+```
+
+Request `req_01a0b6e1c377775196cf7c27031aef39` took **352 ms** for 4 questions
+(1,122 input / 156 output tokens). Abridged for this page: `patient.active_conditions` shows 3 of 11 entries.
+Every case of this run, untrimmed, is in [`results/s1_ward.json`](https://github.com/si618/explore-typesafe-ai/blob/main/results/s1_ward.json).
 
 ## Results
 

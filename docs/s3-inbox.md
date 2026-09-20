@@ -20,45 +20,133 @@ flowchart LR
 | Medication problem? | Noul | Detection / Classification |
 | Safeguarding concern? | Noul | Detection |
 
-??? example "Exact questions sent to Jev"
+## Example request and response
 
-    ```json
-    {
-      "route": {
-        "type": "choice",
-        "instructions": "Who should handle `message` first?",
-        "criteria": {
-          "emergency_services": "Possible life-threatening emergency now: advise calling emergency services and alert the on-call doctor",
-          "on_call_clinician": "New or worsening symptoms that could become serious today: a doctor or senior nurse calls back within 2 hours",
-          "nurse_callback": "A clinical question or mild symptom that a nurse can handle within 1 working day",
-          "pharmacist": "A question about medication supply, doses, side effects or interactions that a pharmacist can resolve",
-          "admin": "Appointments, letters, feedback or other non-clinical requests"
-        }
-      },
-      "urgency": {
-        "type": "score",
-        "instructions": "How soon does `message` need a response from a clinician?",
-        "criteria": [
-          "Can wait up to 3 working days: an administrative or routine question with no symptoms",
-          "Within 1 working day: mild symptoms or a medication question with no immediate risk",
-          "Within 2 hours: new or worsening symptoms that could become serious today",
-          "Immediately: symptoms or statements suggesting a life-threatening emergency or immediate risk to life"
-        ]
-      },
-      "red_flag": {
-        "type": "noul",
-        "instructions": "Does `message` describe a situation that may be a life-threatening emergency needing immediate care, such as signs of a heart attack, stroke, anaphylaxis, major bleeding, sepsis, or intent to self-harm?"
-      },
-      "medication_issue": {
-        "type": "noul",
-        "instructions": "Does `message` report a problem with the patient's medication, such as a side effect, missed or incorrect doses, stopping a medicine, running out, or confusion about instructions?"
-      },
-      "safeguarding": {
-        "type": "noul",
-        "instructions": "Does `message` indicate that the patient, or someone they care for, may be unsafe at home or at risk of harm from themselves or others?"
-      }
+A casually worded message that turns out to need urgent attention. `state` and `questions` are built by [`s3_inbox.py`](https://github.com/si618/explore-typesafe-ai/blob/main/src/explore_typesafe/s3_inbox.py);
+`system_one` answers every question in one request.
+
+```python
+from typesafe_sdk import AsyncTypeSafeClient
+
+state = {
+  "patient": {
+    "age": 59,
+    "sex": "male",
+    "active_conditions": [
+      "Chronic kidney disease stage 1",
+      "Disorder of kidney due to diabetes mellitus",
+      "Essential hypertension"
+    ],
+    "active_medications": [
+      "Hydrochlorothiazide 25 MG Oral Tablet",
+      "lisinopril 10 MG Oral Tablet",
+      "amLODIPine 2.5 MG Oral Tablet"
+    ]
+  },
+  "discharge_reason": "Right knee arthroscopy",
+  "message": "Hi, since I got home my ankles are really swollen and I've only peed a little today, it's dark. Still taking all my tablets including the naproxen for my knee. Feel a bit sick. Is that normal?"
+}
+
+questions = {
+  "route": {
+    "type": "choice",
+    "instructions": "Who should handle `message` first?",
+    "criteria": {
+      "emergency_services": "Possible life-threatening emergency now: advise calling emergency services and alert the on-call doctor",
+      "on_call_clinician": "New or worsening symptoms that could become serious today: a doctor or senior nurse calls back within 2 hours",
+      "nurse_callback": "A clinical question or mild symptom that a nurse can handle within 1 working day",
+      "pharmacist": "A question about medication supply, doses, side effects or interactions that a pharmacist can resolve",
+      "admin": "Appointments, letters, feedback or other non-clinical requests"
     }
-    ```
+  },
+  "urgency": {
+    "type": "score",
+    "instructions": "How soon does `message` need a response from a clinician?",
+    "criteria": [
+      "Can wait up to 3 working days: an administrative or routine question with no symptoms",
+      "Within 1 working day: mild symptoms or a medication question with no immediate risk",
+      "Within 2 hours: new or worsening symptoms that could become serious today",
+      "Immediately: symptoms or statements suggesting a life-threatening emergency or immediate risk to life"
+    ]
+  },
+  "red_flag": {
+    "type": "noul",
+    "instructions": "Does `message` describe a situation that may be a life-threatening emergency needing immediate care, such as signs of a heart attack, stroke, anaphylaxis, major bleeding, sepsis, or intent to self-harm?"
+  },
+  "medication_issue": {
+    "type": "noul",
+    "instructions": "Does `message` report a problem with the patient's medication, such as a side effect, missed or incorrect doses, stopping a medicine, running out, or confusion about instructions?"
+  },
+  "safeguarding": {
+    "type": "noul",
+    "instructions": "Does `message` indicate that the patient, or someone they care for, may be unsafe at home or at risk of harm from themselves or others?"
+  }
+}
+
+async with AsyncTypeSafeClient(model="jev-1.13.0") as client:
+    response = await client.system_one(state, questions)
+
+body = response.raw_http_response.json()
+```
+
+The response body, exactly as recorded:
+
+```json
+{
+  "answers": {
+    "route": {
+      "type": "choice",
+      "choice": "emergency_services",
+      "confidence": 0.55,
+      "probabilities": {
+        "on_call_clinician": 0.35,
+        "nurse_callback": 0.0,
+        "emergency_services": 0.65,
+        "pharmacist": 0.0,
+        "admin": 0.0
+      }
+    },
+    "urgency": {
+      "type": "score",
+      "score": 2.35,
+      "confidence": 0.65,
+      "legend": {
+        "0": "Can wait up to 3 working days: an administrative or routine question with no symptoms",
+        "1": "Within 1 working day: mild symptoms or a medication question with no immediate risk",
+        "2": "Within 2 hours: new or worsening symptoms that could become serious today",
+        "3": "Immediately: symptoms or statements suggesting a life-threatening emergency or immediate risk to life"
+      },
+      "probabilities": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.65,
+        "3": 0.35
+      }
+    },
+    "red_flag": {
+      "type": "noul",
+      "noul": 0.6
+    },
+    "medication_issue": {
+      "type": "noul",
+      "noul": 0.76
+    },
+    "safeguarding": {
+      "type": "noul",
+      "noul": 0.29
+    }
+  },
+  "model": "jev-1.13.0",
+  "usage": {
+    "input_tokens": 896,
+    "output_tokens": 138
+  }
+}
+```
+
+Request `req_01a0b6e1ed9572b081fa2a30e6d397a4` took **322 ms** for 5 questions
+(896 input / 138 output tokens). Abridged for this page: `patient.active_conditions` shows 3 of 6 entries; `patient.active_medications` shows 3 of 4 entries.
+Every case of this run, untrimmed, is in [`results/s3_inbox.json`](https://github.com/si618/explore-typesafe-ai/blob/main/results/s3_inbox.json).
 
 ## Results
 
