@@ -1,23 +1,23 @@
 # Generated cases (dev/test)
 
-Twenty hand-written cases per scenario are enough to show behaviour but too few to measure it. For each of scenarios 1–3, **80 more cases** were generated from the 1,000-patient cohort, with **reference labels known by construction** rather than judged:
+Twenty hand-written cases per scenario are enough to show behaviour but too few to measure it. For each of scenarios 1–3, **80 more cases** were generated from the 1,000-patient cohort, with **[reference labels](vocabulary.md#reference-label) known by construction** rather than judged:
 
 - **Ward:** notes are assembled from labelled snippets (a driver that sets concern and pattern, a mental-state snippet, an infection snippet), and vital signs are drawn to match.
-- **Discharge:** the plan is built in code from per-medication actions, new drugs, reasons and phrasing variants. Allergy, duplicate and interaction labels are computed from the final regimen using class and interaction tables.
+- **Discharge:** the plan is built in code from per-medication actions, new drugs, reasons and phrasing variants. Allergy, duplicate and [interaction](vocabulary.md#interaction) labels are computed from the final regimen using class and interaction tables.
 - **Inbox:** messages combine a labelled intent with optional benign add-ons, tone variants and a prompt-injection prefix that must not change the labels.
 
 Cases are split 50/50 into **dev** (used for threshold tuning) and **test** (used only for reporting). The labels and splits were committed before any model saw these cases. The generator is [`generate.py`](https://github.com/si618/explore-typesafe-ai/blob/main/src/explore_typesafe/generate.py).
 
 ## Per-question results
 
-Noul accuracy is at the default 0.5 threshold. The last column is test accuracy at the threshold that maximised **dev** accuracy.
+[Noul](vocabulary.md#noul) accuracy is at the default 0.5 threshold. The last column is test accuracy at the threshold that maximised **dev** accuracy.
 
-| Scenario | Question | Primitive | Dev | Test | Test, dev-tuned threshold |
+| Scenario | Question | [Primitive](vocabulary.md#primitive) | Dev | Test | Test, dev-tuned threshold |
 | --- | --- | --- | --- | --- | --- |
 | 1. Ward | `new_confusion` | Noul | 95% | 95% | 98% @ 0.80 |
 | 1. Ward | `infection` | Noul | 98% | 100% | 100% @ 0.55 |
-| 1. Ward | `concern` | Score | 90% · MAE 0.14 | 78% · MAE 0.25 | – |
-| 1. Ward | `pattern` | Choice | 95% | 92% | – |
+| 1. Ward | `concern` | [Score](vocabulary.md#score) | 90% · [MAE](vocabulary.md#mae) 0.14 | 78% · MAE 0.25 | – |
+| 1. Ward | `pattern` | [Choice](vocabulary.md#choice) | 95% | 92% | – |
 | 2. Discharge | `med_status` | Choice | 99% | 98% | – |
 | 2. Discharge | `allergy_conflict` | Noul | 100% | 100% | 100% @ 0.50 |
 | 2. Discharge | `duplicate_therapy` | Noul | 88% | 85% | 90% @ 0.70 |
@@ -29,20 +29,20 @@ Noul accuracy is at the default 0.5 threshold. The last column is test accuracy 
 | 3. Inbox | `medication_issue` | Noul | 100% | 95% | 95% @ 0.50 |
 | 3. Inbox | `safeguarding` | Noul | 78% | 72% | 95% @ 0.85 |
 
-The tuned thresholds are informative in their own right. `safeguarding` wants 0.85 and `red_flag` 0.75: Jev leans towards yes on these, and a higher bar fixes most of the over-calling (safeguarding goes from 72% to 95% on test). `interaction` still tops out at 80%: no threshold rescues a multi-hop question.
+The tuned thresholds are informative in their own right. `safeguarding` wants 0.85 and `red_flag` 0.75: [Jev](vocabulary.md#jev) leans towards yes on these, and a higher bar fixes most of the over-calling ([safeguarding](vocabulary.md#safeguarding) goes from 72% to 95% on test). `interaction` still tops out at 80%: no threshold rescues a multi-hop question.
 
 ## Scenario policies
 
-**Ward:** under-triage against the reference band, NEWS2 alone vs NEWS2 + Jev.
+**Ward:** [under-triage](vocabulary.md#under-triage) against the reference band, [NEWS2](vocabulary.md#news2) alone vs NEWS2 + Jev.
 
-| Split | Cases | NEWS2 only: under-triaged | NEWS2 + Jev: under-triaged | NEWS2 + Jev: over-triaged | NEWS2 + Jev: band exact |
+| Split | Cases | NEWS2 only: under-triaged | NEWS2 + Jev: under-triaged | NEWS2 + Jev: [over-triaged](vocabulary.md#over-triage) | NEWS2 + Jev: band exact |
 | --- | --- | --- | --- | --- | --- |
 | dev | 40 | 23 | 3 | 1 | 90% |
 | test | 40 | 22 | 8 | 1 | 78% |
 
 The hand-case result holds: NEWS2 alone under-triages about half the patients, because the generated notes (like real ones) carry the decisive signal in text. On test, NEWS2 + Jev still under-triages 8 of 40. Every one is a concern Score one level low, with no confusion misses. Five are *routine* instead of *ward review*, and two are *urgent* instead of *emergency*.
 
-**Inbox:** the confidence gate (route confidence ≥ 0.6, red flag outside 0.2–0.8, route and urgency agree, no safeguarding flag) auto-dispatched 24/40 dev and 16/40 test messages, all routed correctly (100%). The rest go to review. Overall route accuracy is 85% on test.
+**Inbox:** the [confidence gate](vocabulary.md#confidence-gate) (route [confidence](vocabulary.md#confidence) ≥ 0.6, red flag outside 0.2–0.8, route and urgency agree, no safeguarding flag) auto-dispatched 24/40 dev and 16/40 test messages, all routed correctly (100%). The rest go to review. Overall route accuracy is 85% on test.
 
 ## Discharge: decomposing the weak checks
 
@@ -52,7 +52,7 @@ In v1, a single Noul asks "is there a duplicate?" or "is there an interaction?" 
 - new-drug candidates are found by exact formulary lookup in code, then one Noul per candidate asks whether it is **prescribed after discharge**;
 - one Noul per *(new drug, other drug)* pair for **interactions**, and one per *(drug, drug allergy)* pair for **allergy class**.
 
-A v2 request carries up to 71 questions, and p50 latency is still 337 ms.
+A v2 request carries up to 71 questions, and [p50](vocabulary.md#p50) latency is still 337 ms.
 
 | Version | Hand (20) | Generated dev (40) | Generated test (40) |
 | --- | --- | --- | --- |

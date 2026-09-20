@@ -1,17 +1,17 @@
 # Jev vs an LLM baseline
 
-To put Jev's accuracy in context, the same states and questions were answered by **Claude Haiku 4.5**, which you might otherwise use for a classification step. Each request was a headless Claude Code call with no tools, a minimal system prompt and extended thinking disabled. Haiku returned the same typed answer space as JSON (a probability for Nouls, an option and confidence for Choices, a level and confidence for Scores).
+To put [Jev](vocabulary.md#jev)'s accuracy in context, the same states and questions were answered by **Claude Haiku 4.5**, which you might otherwise use for a classification step. Each request was a headless Claude Code call with no tools, a minimal system prompt and extended thinking disabled. Haiku returned the same typed answer space as JSON (a probability for [Nouls](vocabulary.md#noul), an option and [confidence](vocabulary.md#confidence) for Choices, a level and confidence for Scores).
 
 ## Accuracy
 
 Hand cases, and the **test** split of the generated cases:
 
-| Scenario | Question | Primitive | Jev | Haiku 4.5 |
+| Scenario | Question | [Primitive](vocabulary.md#primitive) | Jev | Haiku 4.5 |
 | --- | --- | --- | --- | --- |
 | 1. Ward (hand) | `new_confusion` | Noul | 100% | 100% |
 | 1. Ward (hand) | `infection` | Noul | 90% | 85% |
-| 1. Ward (hand) | `concern` | Score | 85% · MAE 0.18 | 95% · MAE 0.05 |
-| 1. Ward (hand) | `pattern` | Choice | 95% | 100% |
+| 1. Ward (hand) | `concern` | [Score](vocabulary.md#score) | 85% · [MAE](vocabulary.md#mae) 0.18 | 95% · MAE 0.05 |
+| 1. Ward (hand) | `pattern` | [Choice](vocabulary.md#choice) | 95% | 100% |
 | 2. Discharge (hand) | `med_status` | Choice | 98% | 99% |
 | 2. Discharge (hand) | `allergy_conflict` | Noul | 100% | 90% |
 | 2. Discharge (hand) | `duplicate_therapy` | Noul | 70% | 85% |
@@ -41,12 +41,12 @@ Note search (note-level F1): Jev 0.86, Haiku 0.83.
 
 The two models are **close on most questions**, and neither dominates:
 
-- **Haiku is stronger** on routing and on the questions where Jev over-calls (inbox route, safeguarding, discharge interactions).
+- **Haiku is stronger** on routing and on the questions where Jev over-calls (inbox route, [safeguarding](vocabulary.md#safeguarding), discharge [interactions](vocabulary.md#interaction)).
 - **Jev is stronger** on high-volume extraction over the generated plans (per-medication status 98% vs 92%), on the infection and allergy checks, on grading justifications, and on note search.
 
 ## Latency and cost
 
-| Run | Requests | p50 ms (Jev / Haiku) | p95 ms (Jev / Haiku) | Cost (Jev / Haiku) | Haiku cost multiple |
+| Run | Requests | [p50](vocabulary.md#p50) ms (Jev / Haiku) | [p95](vocabulary.md#p95) ms (Jev / Haiku) | Cost (Jev / Haiku) | Haiku cost multiple |
 | --- | --- | --- | --- | --- | --- |
 | s1 ward | 20 | 334 / 1587 | 588 / 1952 | $0.0009 / $0.0399 | 43× |
 | s2 discharge | 20 | 324 / 2692 | 388 / 3512 | $0.0022 / $0.0875 | 41× |

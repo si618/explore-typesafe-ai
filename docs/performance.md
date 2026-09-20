@@ -4,16 +4,16 @@
 
 | Role | Model | Tokens | Notes |
 | --- | --- | --- | --- |
-| System One judgments (every Jev run in this report) | `jev-1.13.0` (pinned; `jev-latest` resolved to the same build on the run date) | 6,206,761 in / 1,044,126 out | TypeSafe API, Python SDK `typesafe-sdk` 0.7.0 |
+| [System One](vocabulary.md#system-one) judgments (every [Jev](vocabulary.md#jev) run in this report) | `jev-1.13.0` (pinned; `jev-latest` resolved to the same build on the run date) | 6,206,761 in / 1,044,126 out | TypeSafe API, Python SDK `typesafe-sdk` 0.7.0 |
 | LLM baseline: the same states and questions ([comparison](llm-baseline.md)) | `claude-haiku-4-5` | not comparable (see note) | 600 headless Claude Code calls, $4.11 list-price estimate |
-| Orchestration: read docs, generate & map FHIR, author scenarios, reference labels and case generators, write pipeline and report | `claude-opus-5` | not measured (the session context was compacted, so no reliable total exists) | Claude Code main session |
-| System Two: blinded review of 65 escalated judgments | `claude-sonnet-5` | 139,819 | Claude Code subagent; 10 tool calls, 8.2 min wall-clock across two batches (58 + 7 items) |
+| Orchestration: read docs, generate & map [FHIR](vocabulary.md#fhir), author scenarios, [reference labels](vocabulary.md#reference-label) and case generators, write pipeline and report | `claude-opus-5` | not measured (the session context was compacted, so no reliable total exists) | Claude Code main session |
+| [System Two](vocabulary.md#system-two): blinded review of 65 escalated judgments | `claude-sonnet-5` | 139,819 | Claude Code subagent; 10 tool calls, 8.2 min wall-clock across two batches (58 + 7 items) |
 
 ## Jev timing and usage
 
 Latency is client-side wall-clock time for one `POST /v1/systemone`, measured with `time.perf_counter()` around the SDK call over the public internet, so it includes network round-trip. The hand-case runs were sequential; the larger runs used up to 8 concurrent requests, and *wall s* is the elapsed time for the whole run. Cost uses the published price of $0.042 per million **input** tokens; output tokens are free.
 
-| Run | Requests | Questions | Concurrency | p50 ms | p95 ms | Wall s | Input tok | Output tok | Cost |
+| Run | Requests | Questions | Concurrency | [p50](vocabulary.md#p50) ms | [p95](vocabulary.md#p95) ms | Wall s | Input tok | Output tok | Cost |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1. Ward, hand | 20 | 80 | 1 | 334 | 588 | – | 21,924 | 3,113 | $0.0009 |
 | 2. Discharge, hand | 20 | 223 | 1 | 324 | 388 | – | 51,446 | 9,808 | $0.0022 |

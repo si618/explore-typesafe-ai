@@ -1,8 +1,8 @@
 # 2. Discharge medication reconciliation
 
-Pharmacy discharge check. Pre-admission medications come from the FHIR record; the discharge summary medication section is free text written by the discharging doctor.
+Pharmacy discharge check. Pre-admission medications come from the [FHIR](vocabulary.md#fhir) record; the discharge summary medication section is free text written by the discharging doctor.
 
-**Question:** can one Jev request reconcile every pre-admission medication against a free-text plan, and verify the resulting regimen?
+**Question:** can one [Jev](vocabulary.md#jev) request reconcile every pre-admission medication against a free-text plan, and verify the resulting regimen?
 
 ```mermaid
 flowchart LR
@@ -17,13 +17,13 @@ flowchart LR
   C --> X[release · pharmacist review · hold]
 ```
 
-| Question | Primitive | Task category |
+| Question | [Primitive](vocabulary.md#primitive) | [Task category](vocabulary.md#task-categories) |
 | --- | --- | --- |
-| What happens to `pre_admission_medications[i]`? (one per med, fanned out) | Choice (5 options) | Structured data extraction |
-| Prescribed drug in an allergy's drug class? | Noul | Verification |
+| What happens to `pre_admission_medications[i]`? (one per med, fanned out) | [Choice](vocabulary.md#choice) (5 options) | Structured data extraction |
+| Prescribed drug in an allergy's drug class? | [Noul](vocabulary.md#noul) | Verification |
 | Same ingredient/class taken twice after discharge? | Noul | Verification |
-| New drug with a clinically important interaction? | Noul | Verification |
-| How well are the changes explained? | Score (4 levels) | Scoring |
+| New drug with a clinically important [interaction](vocabulary.md#interaction)? | Noul | Verification |
+| How well are the changes explained? | [Score](vocabulary.md#score) (4 levels) | Scoring |
 
 ## Example request and response
 
@@ -169,17 +169,17 @@ Every case of this run, untrimmed, is in [`results/s2_discharge.json`](https://g
 
 ## Results
 
-**20 requests, 223 questions** (8–15 per request) · latency p50 **324 ms**, p95 388 ms · 51,446 input / 9,808 output tokens · $0.0022
+**20 requests, 223 questions** (8–15 per request) · latency [p50](vocabulary.md#p50) **324 ms**, [p95](vocabulary.md#p95) 388 ms · 51,446 input / 9,808 output tokens · $0.0022
 
 | Question | Primitive | n | Result vs reference |
 | --- | --- | --- | --- |
 | `med_status (per medication)` | Choice | 143 | accuracy 98% |
-| `allergy_conflict` | Noul | 20 | accuracy 100% (unambiguous 100%), Brier 0.018 |
+| `allergy_conflict` | Noul | 20 | accuracy 100% (unambiguous 100%), [Brier](vocabulary.md#brier-score) 0.018 |
 | `duplicate_therapy` | Noul | 20 | accuracy 70% (unambiguous 68%), Brier 0.202 |
 | `interaction` | Noul | 20 | accuracy 75% (unambiguous 74%), Brier 0.171 |
-| `justification` | Score | 20 | exact level 55%, MAE 0.46 |
+| `justification` | Score | 20 | exact level 55%, [MAE](vocabulary.md#mae) 0.46 |
 
-**Extraction is the strong result.** Jev got 140 of 143 medication statuses right. That includes blanket statements ("continue all other medications"), brand names (Seretide, Norco, OxyContin) and Synthea's messy duplicate entries (simvastatin 10 mg *and* 20 mg). All 3 errors read an unchanged or unmentioned drug as *dose_changed*.
+**Extraction is the strong result.** Jev got 140 of 143 medication statuses right. That includes blanket statements ("continue all other medications"), brand names (Seretide, Norco, OxyContin) and [Synthea](vocabulary.md#synthea)'s messy duplicate entries (simvastatin 10 mg *and* 20 mg). All 3 errors read an unchanged or unmentioned drug as *dose_changed*.
 
 ??? note "Per-medication confusion matrix (rows: reference, columns: Jev)"
 
@@ -191,7 +191,7 @@ Every case of this run, untrimmed, is in [`results/s2_discharge.json`](https://g
     | **stopped** | · | · | · | 17 | · |
     | **not_mentioned** | · | 1 | · | · | 3 |
 
-    | Medication | Reference | Jev | Confidence |
+    | Medication | Reference | Jev | [Confidence](vocabulary.md#confidence) |
     | --- | --- | --- | --- |
     | Simvastatin 10 MG Oral Tablet | not_mentioned | dose_changed | 0.84 |
     | Diazepam 5 MG Oral Tablet | continued | dose_changed | 0.95 |
@@ -199,7 +199,7 @@ Every case of this run, untrimmed, is in [`results/s2_discharge.json`](https://g
 
 **The allergy check is perfect, including the hops.** *Augmentin* after *Tazocin* in a penicillin-allergic patient scored 0.93. Clarithromycin for a penicillin-allergic patient scored 0.25. Amoxicillin for a patient with *shellfish* and *mould* allergies scored 0.21.
 
-**Duplicate and interaction checks are where Jev is weakest.** True positives score high (Norco + Tylenol 0.89; terfenadine + erythromycin 0.94). But negatives drift to 0.4–0.7 instead of near 0. Both questions need several hops: enumerate the regimen, map each drug to a class or interaction table, then compare pairs. This is the *indirection* failure mode in the [Jev 1.13 jaggedness notes](https://docs.typesafe.ai/model-jaggedness/jev-1.13). A naive 0.5 threshold therefore holds 8 discharges unnecessarily, with 0 missed holds. The confidence gate sends most of that grey zone to [System Two](system-two.md) instead of acting on it.
+**Duplicate and interaction checks are where Jev is weakest.** True positives score high (Norco + Tylenol 0.89; terfenadine + erythromycin 0.94). But negatives drift to 0.4–0.7 instead of near 0. Both questions need several hops: enumerate the regimen, map each drug to a class or interaction table, then compare pairs. This is the *indirection* failure mode in the [Jev 1.13 jaggedness notes](https://docs.typesafe.ai/model-jaggedness/jev-1.13). A naive 0.5 threshold therefore holds 8 discharges unnecessarily, with 0 missed holds. The [confidence gate](vocabulary.md#confidence-gate) sends most of that grey zone to [System Two](system-two.md) instead of acting on it.
 
 ??? note "Per-discharge verification scores and action"
 
@@ -207,11 +207,11 @@ Every case of this run, untrimmed, is in [`results/s2_discharge.json`](https://g
     | --- | --- | --- | --- | --- | --- | --- | --- |
     | Left lower leg cellulitis | 0.94 | 0.34 | 0.51 | 2.8 | hold | hold | allergy_conflict |
     | Pyelonephritis with acute kidney injury | 0.12 | 0.37 | 0.43 | 2.9 | release | release | – |
-    | Delirium secondary to anticholinergic burden | 0.14 | 0.47 | 0.15 | 2.1 | release | pharmacist_review | – |
-    | NSTEMI | 0.05 | 0.92 | 0.47 | 0.0 | hold | hold | duplicate_therapy |
-    | NSTEMI treated with PCI | 0.05 | 0.65 | 0.45 | 2.7 | hold | release | – |
+    | [Delirium](vocabulary.md#delirium) secondary to anticholinergic burden | 0.14 | 0.47 | 0.15 | 2.1 | release | pharmacist_review | – |
+    | [NSTEMI](vocabulary.md#nstemi) | 0.05 | 0.92 | 0.47 | 0.0 | hold | hold | duplicate_therapy |
+    | NSTEMI treated with [PCI](vocabulary.md#pci) | 0.05 | 0.65 | 0.45 | 2.7 | hold | release | – |
     | Acute asthma with lower respiratory tract infection | 0.25 | 0.63 | 0.79 | 1.3 | hold | release | – |
-    | Anterior STEMI treated with PCI | 0.05 | 0.58 | 0.22 | 2.7 | hold | release | – |
+    | Anterior [STEMI](vocabulary.md#stemi) treated with PCI | 0.05 | 0.58 | 0.22 | 2.7 | hold | release | – |
     | Fall with distal radius fracture | 0.22 | 0.22 | 0.82 | 1.6 | hold | hold | interaction |
     | Lower respiratory tract infection | 0.05 | 0.39 | 0.91 | 1.6 | hold | hold | interaction |
     | Sepsis secondary to pneumonia | 0.21 | 0.44 | 0.34 | 2.3 | pharmacist_review | pharmacist_review | – |

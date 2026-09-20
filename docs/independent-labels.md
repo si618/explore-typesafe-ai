@@ -1,10 +1,10 @@
 # Independent reference labels
 
 [Issue #1](https://github.com/si618/explore-typesafe-ai/issues/1) identified a circularity risk: Claude authored the hand cases and
-labels, and a Claude reviewer judged Jev's uncertain answers. This page checks the
+labels, and a Claude reviewer judged [Jev](vocabulary.md#jev)'s uncertain answers. This page checks the
 reference against a blind sample of **15 cases per scenario** (302 typed
 judgments), labelled by a different model family. The sample favours cases marked
-ambiguous and cases where Jev and the reference disagree, so it is harder than the
+[ambiguous](vocabulary.md#ambiguous) and cases where Jev and the reference disagree, so it is harder than the
 full set.
 
 !!! danger "Correction"
@@ -17,9 +17,9 @@ full set.
 
 | Question type | Judgments | Reference vs independent κ | Jev vs independent κ | Jev vs reference κ | Reference ≠ independent |
 | --- | --- | --- | --- | --- | --- |
-| Noul | 120 | 0.73 | 0.77 | 0.61 | 14 |
-| Choice | 137 | 0.94 | 0.89 | 0.88 | 5 |
-| Score | 45 | 0.80 | 0.86 | 0.80 | 15 |
+| [Noul](vocabulary.md#noul) | 120 | 0.73 | 0.77 | 0.61 | 14 |
+| [Choice](vocabulary.md#choice) | 137 | 0.94 | 0.89 | 0.88 | 5 |
+| [Score](vocabulary.md#score) | 45 | 0.80 | 0.86 | 0.80 | 15 |
 
 κ is unweighted for Nouls and Choices, and quadratic weighted κ for Scores. Where
 the reference accepts several answers, any of them counts as agreement, as in the
@@ -46,9 +46,9 @@ across all cases.
 | 1. Ward | `new_confusion` | 1 | 0 | 1 |
 | 3. Inbox | `route` | 1 | 1 | 0 |
 
-Most disagreements are in discharge reconciliation: how well medication changes are
+Most disagreements are in discharge [reconciliation](vocabulary.md#medication-reconciliation): how well medication changes are
 justified (a Score where adjacent levels are close calls) and whether a regimen
-contains duplicate therapy. These are the questions where a pharmacist's view
+contains [duplicate therapy](vocabulary.md#duplicate-therapy). These are the questions where a pharmacist's view
 matters most.
 
 ??? note "All 34 disagreements"

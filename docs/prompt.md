@@ -14,11 +14,11 @@ This report was produced by Claude Code (Claude Opus 5) from the following promp
 
 | Prompt element | Interpretation |
 | --- | --- |
-| "/typesafe-ai skill" | The skill steered the design: read the live docs first, keep arithmetic and policy in code, ask narrow typed questions, fan out independent questions in one request, and gate on confidence. |
-| "in conjunction with Claude Code's own models" | Claude Opus 5 wrote the pipeline, authored the scenario text and wrote the reference labels. A separate, blinded Claude Sonnet 5 agent acts as the **System Two** reviewer for judgments that Jev flags as uncertain. |
-| "latest FHIR models" | Synthea's current exporter emits FHIR **R4** (US Core). The clinical snapshot used here is mapped to FHIR **R5** (5.0.0, the latest published release) and validated with `fhir.resources` 8.x. |
+| "/typesafe-ai skill" | The skill steered the design: read the live docs first, keep arithmetic and policy in code, ask narrow typed questions, fan out independent questions in one request, and gate on [confidence](vocabulary.md#confidence). |
+| "in conjunction with Claude Code's own models" | Claude Opus 5 wrote the pipeline, authored the scenario text and wrote the [reference labels](vocabulary.md#reference-label). A separate, blinded Claude Sonnet 5 agent acts as the [**System Two**](vocabulary.md#system-two) reviewer for judgments that [Jev](vocabulary.md#jev) flags as uncertain. |
+| "latest FHIR models" | [Synthea](vocabulary.md#synthea)'s current exporter emits [FHIR](vocabulary.md#fhir) **R4** ([US Core](vocabulary.md#us-core)). The clinical snapshot used here is mapped to FHIR **R5** (5.0.0, the latest published release) and validated with `fhir.resources` 8.x. |
 | "publicly available data if possible" | Public clinical datasets such as MIMIC need credentialed access and data-use agreements, so they can't be redistributed in a public repo. Synthea's output is openly licensed and reproducible from a seed. |
-| "each of the available primitives against suitable decision task categories" | Every scenario uses all three primitives (Choice, Score and Noul). Each question is mapped to one of the task categories in the TypeSafe docs (classification, detection, scoring, routing, ranking, verification, structured data extraction). |
+| "each of the available primitives against suitable decision task categories" | Every scenario uses all three [primitives](vocabulary.md#primitive) ([Choice](vocabulary.md#choice), [Score](vocabulary.md#score) and [Noul](vocabulary.md#noul)). Each question is mapped to one of the [task categories](vocabulary.md#task-categories) in the TypeSafe docs (classification, detection, scoring, routing, ranking, verification, structured data extraction). |
 | "Zeniscal" | [Zensical](https://zensical.org), the static site generator from the Material for MkDocs team. |
 
 ## Why these three scenarios
@@ -32,11 +32,11 @@ The docs describe Jev as a fast, calibrated judge of meaning. It is not a calcul
 
 | Scenario | Why it was chosen | Decision categories | Primitives |
 | --- | --- | --- | --- |
-| [1. Ward deterioration huddle](s1-ward.md) | NEWS2 (the UK National Early Warning Score) is computed from charted vital signs, but nurses often write "not himself" or "muddled" and still chart *Alert*. Undocumented new confusion and nurse worry are known causes of missed deterioration. | Detection, Scoring, Ranking, Classification | Noul ×2, Score, Choice |
-| [2. Discharge medication reconciliation](s2-discharge.md) | Medication errors at transitions of care are common and harmful. The pre-admission list is structured (FHIR), but the discharge plan is prose, full of blanket statements ("continue all other meds"), brand names and abbreviations. | Structured data extraction, Verification, Scoring | Choice (fan-out, one per medication), Noul ×3, Score |
+| [1. Ward deterioration huddle](s1-ward.md) | [NEWS2](vocabulary.md#news2) (the UK National Early Warning Score) is computed from charted vital signs, but nurses often write "not himself" or "muddled" and still chart *Alert*. Undocumented new confusion and nurse worry are known causes of missed deterioration. | Detection, Scoring, Ranking, Classification | Noul ×2, Score, Choice |
+| [2. Discharge medication reconciliation](s2-discharge.md) | Medication errors at transitions of care are common and harmful. The pre-admission list is structured (FHIR), but the discharge plan is prose, full of blanket statements ("continue all other meds"), brand names and abbreviations. | Structured data extraction, Verification, Scoring | Choice ([fan-out](vocabulary.md#fan-out), one per medication), Noul ×3, Score |
 | [3. Post-discharge message inbox](s3-inbox.md) | A 24/7 inbox must be triaged before a human reads it. Some messages are emergencies phrased casually, some are routine requests written in capitals, and one contains a prompt-injection attempt. | Routing, Classification, Scoring, Detection | Choice, Score, Noul ×3 |
 
-The scenarios deliberately include hard cases: dementia with **unchanged** baseline confusion versus dementia with **new** delirium; negated findings ("No chest pain. No confusion…"); brand-name hops (Augmentin is a penicillin, Norco contains paracetamol); black stool on iron (expected) versus black stool on clopidogrel (a GI bleed); and an embedded `SYSTEM NOTE:` instruction.
+The scenarios deliberately include hard cases: dementia with **unchanged** baseline confusion versus dementia with **new** [delirium](vocabulary.md#delirium); negated findings ("No chest pain. No confusion…"); brand-name hops (Augmentin is a penicillin, Norco contains paracetamol); black stool on iron (expected) versus black stool on clopidogrel (a GI bleed); and an embedded `SYSTEM NOTE:` instruction.
 
 ## Extending the study
 
